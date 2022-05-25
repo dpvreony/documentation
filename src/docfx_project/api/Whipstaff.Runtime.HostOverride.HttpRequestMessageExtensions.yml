@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions
+  commentId: T:Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions
+  id: HttpRequestMessageExtensions
+  parent: Whipstaff.Runtime.HostOverride
+  children:
+  - Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions.CheckForHostnameOverride(System.Net.Http.HttpRequestMessage,Whipstaff.Runtime.HostOverride.IHostOverride)
+  langs:
+  - csharp
+  - vb
+  name: HttpRequestMessageExtensions
+  nameWithType: HttpRequestMessageExtensions
+  fullName: Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions
+  type: Class
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.HostOverride
+  summary: "\nExtensions for HttpRequestMessage and host name overrides.\n"
+  syntax:
+    content: 'public static class HttpRequestMessageExtensions : Object'
+    content.vb: >-
+      Public Module HttpRequestMessageExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions.CheckForHostnameOverride(System.Net.Http.HttpRequestMessage,Whipstaff.Runtime.HostOverride.IHostOverride)
+  commentId: M:Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions.CheckForHostnameOverride(System.Net.Http.HttpRequestMessage,Whipstaff.Runtime.HostOverride.IHostOverride)
+  id: CheckForHostnameOverride(System.Net.Http.HttpRequestMessage,Whipstaff.Runtime.HostOverride.IHostOverride)
+  isExtensionMethod: true
+  parent: Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions
+  langs:
+  - csharp
+  - vb
+  name: CheckForHostnameOverride(HttpRequestMessage, IHostOverride)
+  nameWithType: HttpRequestMessageExtensions.CheckForHostnameOverride(HttpRequestMessage, IHostOverride)
+  fullName: Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions.CheckForHostnameOverride(System.Net.Http.HttpRequestMessage, Whipstaff.Runtime.HostOverride.IHostOverride)
+  type: Method
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.HostOverride
+  summary: "\nChecks to see if the host on a http request message should be overriden.\n"
+  syntax:
+    content: public static void CheckForHostnameOverride(this HttpRequestMessage instance, IHostOverride hostOverride)
+    parameters:
+    - id: instance
+      type: System.Net.Http.HttpRequestMessage
+      description: The Http Request Message.
+    - id: hostOverride
+      type: Whipstaff.Runtime.HostOverride.IHostOverride
+      description: The Host Override implementation to check.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub CheckForHostnameOverride(instance As HttpRequestMessage, hostOverride As IHostOverride)
+  overload: Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions.CheckForHostnameOverride*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Whipstaff.Runtime.HostOverride
+  commentId: N:Whipstaff.Runtime.HostOverride
+  isExternal: true
+  name: Whipstaff.Runtime.HostOverride
+  nameWithType: Whipstaff.Runtime.HostOverride
+  fullName: Whipstaff.Runtime.HostOverride
+- uid: Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions.CheckForHostnameOverride*
+  commentId: Overload:Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions.CheckForHostnameOverride
+  isExternal: true
+  name: CheckForHostnameOverride
+  nameWithType: HttpRequestMessageExtensions.CheckForHostnameOverride
+  fullName: Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions.CheckForHostnameOverride
+- uid: System.Net.Http.HttpRequestMessage
+  isExternal: true
+  name: HttpRequestMessage
+  nameWithType: HttpRequestMessage
+  fullName: System.Net.Http.HttpRequestMessage
+- uid: Whipstaff.Runtime.HostOverride.IHostOverride
+  commentId: T:Whipstaff.Runtime.HostOverride.IHostOverride
+  parent: Whipstaff.Runtime.HostOverride
+  isExternal: true
+  name: IHostOverride
+  nameWithType: IHostOverride
+  fullName: Whipstaff.Runtime.HostOverride.IHostOverride

@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.Entities.INameable
+  commentId: T:Whipstaff.Core.Entities.INameable
+  id: INameable
+  parent: Whipstaff.Core.Entities
+  children:
+  - Whipstaff.Core.Entities.INameable.Name
+  langs:
+  - csharp
+  - vb
+  name: INameable
+  nameWithType: INameable
+  fullName: Whipstaff.Core.Entities.INameable
+  type: Interface
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Entities
+  summary: "\nRepresents an object that has a name.\n"
+  syntax:
+    content: public interface INameable
+    content.vb: Public Interface INameable
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Whipstaff.Core.Entities.INameable.Name
+  commentId: P:Whipstaff.Core.Entities.INameable.Name
+  id: Name
+  parent: Whipstaff.Core.Entities.INameable
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: INameable.Name
+  fullName: Whipstaff.Core.Entities.INameable.Name
+  type: Property
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Entities
+  summary: "\nGets the name.\n"
+  syntax:
+    content: string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Name As String
+  overload: Whipstaff.Core.Entities.INameable.Name*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Whipstaff.Core.Entities
+  commentId: N:Whipstaff.Core.Entities
+  isExternal: true
+  name: Whipstaff.Core.Entities
+  nameWithType: Whipstaff.Core.Entities
+  fullName: Whipstaff.Core.Entities
+- uid: Whipstaff.Core.Entities.INameable.Name*
+  commentId: Overload:Whipstaff.Core.Entities.INameable.Name
+  isExternal: true
+  name: Name
+  nameWithType: INameable.Name
+  fullName: Whipstaff.Core.Entities.INameable.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

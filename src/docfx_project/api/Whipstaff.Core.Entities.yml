@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.Entities
+  commentId: N:Whipstaff.Core.Entities
+  id: Whipstaff.Core.Entities
+  children:
+  - Whipstaff.Core.Entities.ICreateable
+  - Whipstaff.Core.Entities.IDescribable
+  - Whipstaff.Core.Entities.IGbPostCode
+  - Whipstaff.Core.Entities.IGbPostCodeAsString
+  - Whipstaff.Core.Entities.IGuidId
+  - Whipstaff.Core.Entities.IGuidUserId
+  - Whipstaff.Core.Entities.IId`1
+  - Whipstaff.Core.Entities.IIntId
+  - Whipstaff.Core.Entities.IIntUserId
+  - Whipstaff.Core.Entities.ILongId
+  - Whipstaff.Core.Entities.ILongUserId
+  - Whipstaff.Core.Entities.IModifiable
+  - Whipstaff.Core.Entities.INameable
+  - Whipstaff.Core.Entities.ITitle
+  - Whipstaff.Core.Entities.IUserId`1
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.Core.Entities
+  nameWithType: Whipstaff.Core.Entities
+  fullName: Whipstaff.Core.Entities
+  type: Namespace
+  assemblies:
+  - Whipstaff.Core
+references:
+- uid: Whipstaff.Core.Entities.ICreateable
+  commentId: T:Whipstaff.Core.Entities.ICreateable
+  parent: Whipstaff.Core.Entities
+  isExternal: true
+  name: ICreateable
+  nameWithType: ICreateable
+  fullName: Whipstaff.Core.Entities.ICreateable
+- uid: Whipstaff.Core.Entities.IDescribable
+  commentId: T:Whipstaff.Core.Entities.IDescribable
+  isExternal: true
+  name: IDescribable
+  nameWithType: IDescribable
+  fullName: Whipstaff.Core.Entities.IDescribable
+- uid: Whipstaff.Core.Entities.IGbPostCode
+  commentId: T:Whipstaff.Core.Entities.IGbPostCode
+  isExternal: true
+  name: IGbPostCode
+  nameWithType: IGbPostCode
+  fullName: Whipstaff.Core.Entities.IGbPostCode
+- uid: Whipstaff.Core.Entities.IGbPostCodeAsString
+  commentId: T:Whipstaff.Core.Entities.IGbPostCodeAsString
+  isExternal: true
+  name: IGbPostCodeAsString
+  nameWithType: IGbPostCodeAsString
+  fullName: Whipstaff.Core.Entities.IGbPostCodeAsString
+- uid: Whipstaff.Core.Entities.IGuidId
+  commentId: T:Whipstaff.Core.Entities.IGuidId
+  isExternal: true
+  name: IGuidId
+  nameWithType: IGuidId
+  fullName: Whipstaff.Core.Entities.IGuidId
+- uid: Whipstaff.Core.Entities.IGuidUserId
+  commentId: T:Whipstaff.Core.Entities.IGuidUserId
+  isExternal: true
+  name: IGuidUserId
+  nameWithType: IGuidUserId
+  fullName: Whipstaff.Core.Entities.IGuidUserId
+- uid: Whipstaff.Core.Entities.IId`1
+  commentId: T:Whipstaff.Core.Entities.IId`1
+  isExternal: true
+  name: IId<T>
+  nameWithType: IId<T>
+  fullName: Whipstaff.Core.Entities.IId<T>
+  nameWithType.vb: IId(Of T)
+  fullName.vb: Whipstaff.Core.Entities.IId(Of T)
+  name.vb: IId(Of T)
+  spec.csharp:
+  - uid: Whipstaff.Core.Entities.IId`1
+    name: IId
+    nameWithType: IId
+    fullName: Whipstaff.Core.Entities.IId
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Core.Entities.IId`1
+    name: IId
+    nameWithType: IId
+    fullName: Whipstaff.Core.Entities.IId
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Core.Entities.IIntId
+  commentId: T:Whipstaff.Core.Entities.IIntId
+  isExternal: true
+  name: IIntId
+  nameWithType: IIntId
+  fullName: Whipstaff.Core.Entities.IIntId
+- uid: Whipstaff.Core.Entities.IIntUserId
+  commentId: T:Whipstaff.Core.Entities.IIntUserId
+  isExternal: true
+  name: IIntUserId
+  nameWithType: IIntUserId
+  fullName: Whipstaff.Core.Entities.IIntUserId
+- uid: Whipstaff.Core.Entities.ILongId
+  commentId: T:Whipstaff.Core.Entities.ILongId
+  isExternal: true
+  name: ILongId
+  nameWithType: ILongId
+  fullName: Whipstaff.Core.Entities.ILongId
+- uid: Whipstaff.Core.Entities.ILongUserId
+  commentId: T:Whipstaff.Core.Entities.ILongUserId
+  isExternal: true
+  name: ILongUserId
+  nameWithType: ILongUserId
+  fullName: Whipstaff.Core.Entities.ILongUserId
+- uid: Whipstaff.Core.Entities.IModifiable
+  commentId: T:Whipstaff.Core.Entities.IModifiable
+  isExternal: true
+  name: IModifiable
+  nameWithType: IModifiable
+  fullName: Whipstaff.Core.Entities.IModifiable
+- uid: Whipstaff.Core.Entities.INameable
+  commentId: T:Whipstaff.Core.Entities.INameable
+  isExternal: true
+  name: INameable
+  nameWithType: INameable
+  fullName: Whipstaff.Core.Entities.INameable
+- uid: Whipstaff.Core.Entities.ITitle
+  commentId: T:Whipstaff.Core.Entities.ITitle
+  isExternal: true
+  name: ITitle
+  nameWithType: ITitle
+  fullName: Whipstaff.Core.Entities.ITitle
+- uid: Whipstaff.Core.Entities.IUserId`1
+  commentId: T:Whipstaff.Core.Entities.IUserId`1
+  isExternal: true
+  name: IUserId<T>
+  nameWithType: IUserId<T>
+  fullName: Whipstaff.Core.Entities.IUserId<T>
+  nameWithType.vb: IUserId(Of T)
+  fullName.vb: Whipstaff.Core.Entities.IUserId(Of T)
+  name.vb: IUserId(Of T)
+  spec.csharp:
+  - uid: Whipstaff.Core.Entities.IUserId`1
+    name: IUserId
+    nameWithType: IUserId
+    fullName: Whipstaff.Core.Entities.IUserId
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Core.Entities.IUserId`1
+    name: IUserId
+    nameWithType: IUserId
+    fullName: Whipstaff.Core.Entities.IUserId
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Core.Entities
+  commentId: N:Whipstaff.Core.Entities
+  isExternal: true
+  name: Whipstaff.Core.Entities
+  nameWithType: Whipstaff.Core.Entities
+  fullName: Whipstaff.Core.Entities

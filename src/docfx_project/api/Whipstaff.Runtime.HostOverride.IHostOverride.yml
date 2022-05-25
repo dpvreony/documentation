@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.HostOverride.IHostOverride
+  commentId: T:Whipstaff.Runtime.HostOverride.IHostOverride
+  id: IHostOverride
+  parent: Whipstaff.Runtime.HostOverride
+  children:
+  - Whipstaff.Runtime.HostOverride.IHostOverride.Resolve(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IHostOverride
+  nameWithType: IHostOverride
+  fullName: Whipstaff.Runtime.HostOverride.IHostOverride
+  type: Interface
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.HostOverride
+  summary: "\nA mechanism for allowing the overriding of DNS\\hosts within webservice clients.\nThis has come from having an infrastructure that uses global messaging\ndesigns but we don&apos;t to direct traffic out and back into the network\nwhen there is no point.\nThis can be done via a hosts file on the system. but it adds a level of\ncomplication in managing systems. And a hosts file is global to the\nwhole operating system.\n"
+  syntax:
+    content: public interface IHostOverride
+    content.vb: Public Interface IHostOverride
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Whipstaff.Runtime.HostOverride.IHostOverride.Resolve(System.String)
+  commentId: M:Whipstaff.Runtime.HostOverride.IHostOverride.Resolve(System.String)
+  id: Resolve(System.String)
+  parent: Whipstaff.Runtime.HostOverride.IHostOverride
+  langs:
+  - csharp
+  - vb
+  name: Resolve(String)
+  nameWithType: IHostOverride.Resolve(String)
+  fullName: Whipstaff.Runtime.HostOverride.IHostOverride.Resolve(System.String)
+  type: Method
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.HostOverride
+  summary: "\nReturns an overridable hostname.\n"
+  syntax:
+    content: string Resolve(string host)
+    parameters:
+    - id: host
+      type: System.String
+      description: The host to check.
+    return:
+      type: System.String
+      description: A target host, or null if no override.
+    content.vb: Function Resolve(host As String) As String
+  overload: Whipstaff.Runtime.HostOverride.IHostOverride.Resolve*
+references:
+- uid: Whipstaff.Runtime.HostOverride
+  commentId: N:Whipstaff.Runtime.HostOverride
+  isExternal: true
+  name: Whipstaff.Runtime.HostOverride
+  nameWithType: Whipstaff.Runtime.HostOverride
+  fullName: Whipstaff.Runtime.HostOverride
+- uid: Whipstaff.Runtime.HostOverride.IHostOverride.Resolve*
+  commentId: Overload:Whipstaff.Runtime.HostOverride.IHostOverride.Resolve
+  isExternal: true
+  name: Resolve
+  nameWithType: IHostOverride.Resolve
+  fullName: Whipstaff.Runtime.HostOverride.IHostOverride.Resolve
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,397 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.IAuditableCommandFactory`8
+  commentId: T:Whipstaff.Core.IAuditableCommandFactory`8
+  id: IAuditableCommandFactory`8
+  parent: Whipstaff.Core
+  children:
+  - Whipstaff.Core.IAuditableCommandFactory`8.GetAddCommandAsync(`1,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  - Whipstaff.Core.IAuditableCommandFactory`8.GetDeleteCommandAsync(System.Int64,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  - Whipstaff.Core.IAuditableCommandFactory`8.GetUpdateCommandAsync(`6,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>
+  nameWithType: IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>
+  fullName: Whipstaff.Core.IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>
+  type: Interface
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core
+  summary: "\nRepresents a command factory for auditable Requests.\nThe command is the message that will be pumped into the CQRS architecture, it is not running any logic itself.\n"
+  syntax:
+    content: >-
+      public interface IAuditableCommandFactory<TAddCommand, in TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, in TUpdateRequestDto, TUpdateResponseDto>
+          where TAddCommand : IAuditableRequest<TAddRequestDto, TAddResponseDto> where TDeleteCommand : IAuditableRequest<long, TDeleteResponseDto> where TUpdateCommand : IAuditableRequest<TUpdateRequestDto, TUpdateResponseDto>
+    typeParameters:
+    - id: TAddCommand
+      description: The type of the Add command.
+    - id: TAddRequestDto
+      description: The type of the Request DTO for the Add Command.
+    - id: TAddResponseDto
+      description: The type of the Response DTO for the Add Command.
+    - id: TDeleteCommand
+      description: The type of the Delete command.
+    - id: TDeleteResponseDto
+      description: The type of the Response DTO for the Delete Command.
+    - id: TUpdateCommand
+      description: The type of the Update command.
+    - id: TUpdateRequestDto
+      description: The type of the Request DTO for the Update Command.
+    - id: TUpdateResponseDto
+      description: The type of the Response DTO for the Update Command.
+    content.vb: Public Interface IAuditableCommandFactory(Of TAddCommand As IAuditableRequest(Of TAddRequestDto, TAddResponseDto), In TAddRequestDto, TAddResponseDto, TDeleteCommand As IAuditableRequest(Of Long, TDeleteResponseDto), TDeleteResponseDto, TUpdateCommand As IAuditableRequest(Of TUpdateRequestDto, TUpdateResponseDto), In TUpdateRequestDto, TUpdateResponseDto)
+  nameWithType.vb: IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Whipstaff.Core.IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto)
+  name.vb: IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto)
+- uid: Whipstaff.Core.IAuditableCommandFactory`8.GetAddCommandAsync(`1,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  commentId: M:Whipstaff.Core.IAuditableCommandFactory`8.GetAddCommandAsync(`1,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  id: GetAddCommandAsync(`1,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  parent: Whipstaff.Core.IAuditableCommandFactory`8
+  langs:
+  - csharp
+  - vb
+  name: GetAddCommandAsync(TAddRequestDto, ClaimsPrincipal, CancellationToken)
+  nameWithType: IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetAddCommandAsync(TAddRequestDto, ClaimsPrincipal, CancellationToken)
+  fullName: Whipstaff.Core.IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetAddCommandAsync(TAddRequestDto, System.Security.Claims.ClaimsPrincipal, System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core
+  summary: "\nGets the auditable Command for use in an Add Operation.\n"
+  syntax:
+    content: Task<TAddCommand> GetAddCommandAsync(TAddRequestDto requestDto, ClaimsPrincipal claimsPrincipal, CancellationToken cancellationToken)
+    parameters:
+    - id: requestDto
+      type: '{TAddRequestDto}'
+      description: The Request DTO for the Add Command.
+    - id: claimsPrincipal
+      type: System.Security.Claims.ClaimsPrincipal
+      description: The Claims principal attached to the request.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{{TAddCommand}}
+      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> representing the result of the asynchronous operation.
+    content.vb: Function GetAddCommandAsync(requestDto As TAddRequestDto, claimsPrincipal As ClaimsPrincipal, cancellationToken As CancellationToken) As Task(Of TAddCommand)
+  overload: Whipstaff.Core.IAuditableCommandFactory`8.GetAddCommandAsync*
+  nameWithType.vb: IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetAddCommandAsync(TAddRequestDto, ClaimsPrincipal, CancellationToken)
+  fullName.vb: Whipstaff.Core.IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetAddCommandAsync(TAddRequestDto, System.Security.Claims.ClaimsPrincipal, System.Threading.CancellationToken)
+- uid: Whipstaff.Core.IAuditableCommandFactory`8.GetDeleteCommandAsync(System.Int64,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  commentId: M:Whipstaff.Core.IAuditableCommandFactory`8.GetDeleteCommandAsync(System.Int64,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  id: GetDeleteCommandAsync(System.Int64,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  parent: Whipstaff.Core.IAuditableCommandFactory`8
+  langs:
+  - csharp
+  - vb
+  name: GetDeleteCommandAsync(Int64, ClaimsPrincipal, CancellationToken)
+  nameWithType: IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetDeleteCommandAsync(Int64, ClaimsPrincipal, CancellationToken)
+  fullName: Whipstaff.Core.IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetDeleteCommandAsync(System.Int64, System.Security.Claims.ClaimsPrincipal, System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core
+  summary: "\nGets the auditable Command for use in an Delete Operation.\n"
+  syntax:
+    content: Task<TDeleteCommand> GetDeleteCommandAsync(long id, ClaimsPrincipal claimsPrincipal, CancellationToken cancellationToken)
+    parameters:
+    - id: id
+      type: System.Int64
+      description: The unique id of the object for the Delete Command.
+    - id: claimsPrincipal
+      type: System.Security.Claims.ClaimsPrincipal
+      description: The Claims principal attached to the request.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{{TDeleteCommand}}
+      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> representing the result of the asynchronous operation.
+    content.vb: Function GetDeleteCommandAsync(id As Long, claimsPrincipal As ClaimsPrincipal, cancellationToken As CancellationToken) As Task(Of TDeleteCommand)
+  overload: Whipstaff.Core.IAuditableCommandFactory`8.GetDeleteCommandAsync*
+  nameWithType.vb: IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetDeleteCommandAsync(Int64, ClaimsPrincipal, CancellationToken)
+  fullName.vb: Whipstaff.Core.IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetDeleteCommandAsync(System.Int64, System.Security.Claims.ClaimsPrincipal, System.Threading.CancellationToken)
+- uid: Whipstaff.Core.IAuditableCommandFactory`8.GetUpdateCommandAsync(`6,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  commentId: M:Whipstaff.Core.IAuditableCommandFactory`8.GetUpdateCommandAsync(`6,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  id: GetUpdateCommandAsync(`6,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  parent: Whipstaff.Core.IAuditableCommandFactory`8
+  langs:
+  - csharp
+  - vb
+  name: GetUpdateCommandAsync(TUpdateRequestDto, ClaimsPrincipal, CancellationToken)
+  nameWithType: IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetUpdateCommandAsync(TUpdateRequestDto, ClaimsPrincipal, CancellationToken)
+  fullName: Whipstaff.Core.IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetUpdateCommandAsync(TUpdateRequestDto, System.Security.Claims.ClaimsPrincipal, System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core
+  summary: "\nGets the auditable Command for use in an Update Operation.\n"
+  syntax:
+    content: Task<TUpdateCommand> GetUpdateCommandAsync(TUpdateRequestDto requestDto, ClaimsPrincipal claimsPrincipal, CancellationToken cancellationToken)
+    parameters:
+    - id: requestDto
+      type: '{TUpdateRequestDto}'
+      description: The Request DTO for the Update Command.
+    - id: claimsPrincipal
+      type: System.Security.Claims.ClaimsPrincipal
+      description: The Claims principal attached to the request.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{{TUpdateCommand}}
+      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> representing the result of the asynchronous operation.
+    content.vb: Function GetUpdateCommandAsync(requestDto As TUpdateRequestDto, claimsPrincipal As ClaimsPrincipal, cancellationToken As CancellationToken) As Task(Of TUpdateCommand)
+  overload: Whipstaff.Core.IAuditableCommandFactory`8.GetUpdateCommandAsync*
+  nameWithType.vb: IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetUpdateCommandAsync(TUpdateRequestDto, ClaimsPrincipal, CancellationToken)
+  fullName.vb: Whipstaff.Core.IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetUpdateCommandAsync(TUpdateRequestDto, System.Security.Claims.ClaimsPrincipal, System.Threading.CancellationToken)
+references:
+- uid: Whipstaff.Core
+  commentId: N:Whipstaff.Core
+  isExternal: true
+  name: Whipstaff.Core
+  nameWithType: Whipstaff.Core
+  fullName: Whipstaff.Core
+- uid: Whipstaff.Core.IAuditableCommandFactory`8.GetAddCommandAsync*
+  commentId: Overload:Whipstaff.Core.IAuditableCommandFactory`8.GetAddCommandAsync
+  isExternal: true
+  name: GetAddCommandAsync
+  nameWithType: IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetAddCommandAsync
+  fullName: Whipstaff.Core.IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetAddCommandAsync
+  nameWithType.vb: IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetAddCommandAsync
+  fullName.vb: Whipstaff.Core.IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetAddCommandAsync
+- uid: '{TAddRequestDto}'
+  commentId: '!:TAddRequestDto'
+  definition: TAddRequestDto
+  name: TAddRequestDto
+  nameWithType: TAddRequestDto
+  fullName: TAddRequestDto
+- uid: System.Security.Claims.ClaimsPrincipal
+  isExternal: true
+  name: ClaimsPrincipal
+  nameWithType: ClaimsPrincipal
+  fullName: System.Security.Claims.ClaimsPrincipal
+- uid: System.Threading.CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{{TAddCommand}}
+  commentId: '!:System.Threading.Tasks.Task{`0}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TAddCommand>
+  nameWithType: Task<TAddCommand>
+  fullName: System.Threading.Tasks.Task<TAddCommand>
+  nameWithType.vb: Task(Of TAddCommand)
+  fullName.vb: System.Threading.Tasks.Task(Of TAddCommand)
+  name.vb: Task(Of TAddCommand)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TAddCommand
+    nameWithType: TAddCommand
+    fullName: TAddCommand
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TAddCommand
+    nameWithType: TAddCommand
+    fullName: TAddCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TAddRequestDto
+  commentId: '!:TAddRequestDto'
+  name: TAddRequestDto
+  nameWithType: TAddRequestDto
+  fullName: TAddRequestDto
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Core.IAuditableCommandFactory`8.GetDeleteCommandAsync*
+  commentId: Overload:Whipstaff.Core.IAuditableCommandFactory`8.GetDeleteCommandAsync
+  isExternal: true
+  name: GetDeleteCommandAsync
+  nameWithType: IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetDeleteCommandAsync
+  fullName: Whipstaff.Core.IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetDeleteCommandAsync
+  nameWithType.vb: IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetDeleteCommandAsync
+  fullName.vb: Whipstaff.Core.IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetDeleteCommandAsync
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: System.Threading.Tasks.Task{{TDeleteCommand}}
+  commentId: '!:System.Threading.Tasks.Task{`3}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TDeleteCommand>
+  nameWithType: Task<TDeleteCommand>
+  fullName: System.Threading.Tasks.Task<TDeleteCommand>
+  nameWithType.vb: Task(Of TDeleteCommand)
+  fullName.vb: System.Threading.Tasks.Task(Of TDeleteCommand)
+  name.vb: Task(Of TDeleteCommand)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TDeleteCommand
+    nameWithType: TDeleteCommand
+    fullName: TDeleteCommand
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TDeleteCommand
+    nameWithType: TDeleteCommand
+    fullName: TDeleteCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Whipstaff.Core.IAuditableCommandFactory`8.GetUpdateCommandAsync*
+  commentId: Overload:Whipstaff.Core.IAuditableCommandFactory`8.GetUpdateCommandAsync
+  isExternal: true
+  name: GetUpdateCommandAsync
+  nameWithType: IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetUpdateCommandAsync
+  fullName: Whipstaff.Core.IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>.GetUpdateCommandAsync
+  nameWithType.vb: IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetUpdateCommandAsync
+  fullName.vb: Whipstaff.Core.IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto).GetUpdateCommandAsync
+- uid: '{TUpdateRequestDto}'
+  commentId: '!:TUpdateRequestDto'
+  definition: TUpdateRequestDto
+  name: TUpdateRequestDto
+  nameWithType: TUpdateRequestDto
+  fullName: TUpdateRequestDto
+- uid: System.Threading.Tasks.Task{{TUpdateCommand}}
+  commentId: '!:System.Threading.Tasks.Task{`5}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TUpdateCommand>
+  nameWithType: Task<TUpdateCommand>
+  fullName: System.Threading.Tasks.Task<TUpdateCommand>
+  nameWithType.vb: Task(Of TUpdateCommand)
+  fullName.vb: System.Threading.Tasks.Task(Of TUpdateCommand)
+  name.vb: Task(Of TUpdateCommand)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TUpdateCommand
+    nameWithType: TUpdateCommand
+    fullName: TUpdateCommand
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TUpdateCommand
+    nameWithType: TUpdateCommand
+    fullName: TUpdateCommand
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TUpdateRequestDto
+  commentId: '!:TUpdateRequestDto'
+  name: TUpdateRequestDto
+  nameWithType: TUpdateRequestDto
+  fullName: TUpdateRequestDto

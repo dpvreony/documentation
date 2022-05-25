@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception
+  commentId: T:Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception
+  id: NumberTooHighInteger16Exception
+  parent: Whipstaff.Runtime.Exceptions
+  children:
+  - Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor
+  - Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.String)
+  - Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.String,System.Exception)
+  - Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.String,System.Int16,System.Int16)
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighInteger16Exception
+  nameWithType: NumberTooHighInteger16Exception
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception
+  type: Class
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nThe number passed in was higher than the allowed maximum.\n"
+  syntax:
+    content: 'public class NumberTooHighInteger16Exception : Exception'
+    content.vb: >-
+      Public Class NumberTooHighInteger16Exception
+          Inherits Exception
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor
+  id: '#ctor'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighInteger16Exception()
+  nameWithType: NumberTooHighInteger16Exception.NumberTooHighInteger16Exception()
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.NumberTooHighInteger16Exception()
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooHighInteger16Exception()
+    content.vb: Public Sub New
+  overload: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.String)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighInteger16Exception(String)
+  nameWithType: NumberTooHighInteger16Exception.NumberTooHighInteger16Exception(String)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.NumberTooHighInteger16Exception(System.String)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooHighInteger16Exception(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Exception Message.
+    content.vb: Public Sub New(message As String)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.String,System.Exception)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighInteger16Exception(String, Exception)
+  nameWithType: NumberTooHighInteger16Exception.NumberTooHighInteger16Exception(String, Exception)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.NumberTooHighInteger16Exception(System.String, System.Exception)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooHighInteger16Exception(string message, Exception innerException)
+    parameters:
+    - id: message
+      type: System.String
+      description: Exception Message.
+    - id: innerException
+      type: System.Exception
+      description: Inner Exception.
+    content.vb: Public Sub New(message As String, innerException As Exception)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.String,System.Int16,System.Int16)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.String,System.Int16,System.Int16)
+  id: '#ctor(System.String,System.Int16,System.Int16)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighInteger16Exception(String, Int16, Int16)
+  nameWithType: NumberTooHighInteger16Exception.NumberTooHighInteger16Exception(String, Int16, Int16)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.NumberTooHighInteger16Exception(System.String, System.Int16, System.Int16)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooHighInteger16Exception(string parameterName, short maximumValid, short actual)
+    parameters:
+    - id: parameterName
+      type: System.String
+      description: The name of the parameter causing the exception.
+    - id: maximumValid
+      type: System.Int16
+      description: The maximum valid value.
+    - id: actual
+      type: System.Int16
+      description: The actual value received.
+    content.vb: Public Sub New(parameterName As String, maximumValid As Short, actual As Short)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  id: '#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighInteger16Exception(SerializationInfo, StreamingContext)
+  nameWithType: NumberTooHighInteger16Exception.NumberTooHighInteger16Exception(SerializationInfo, StreamingContext)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.NumberTooHighInteger16Exception(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: protected NumberTooHighInteger16Exception(SerializationInfo info, StreamingContext context)
+    parameters:
+    - id: info
+      type: System.Runtime.Serialization.SerializationInfo
+      description: The serialization information.
+    - id: context
+      type: System.Runtime.Serialization.StreamingContext
+      description: The streaming context.
+    content.vb: Protected Sub New(info As SerializationInfo, context As StreamingContext)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: Whipstaff.Runtime.Exceptions
+  commentId: N:Whipstaff.Runtime.Exceptions
+  isExternal: true
+  name: Whipstaff.Runtime.Exceptions
+  nameWithType: Whipstaff.Runtime.Exceptions
+  fullName: Whipstaff.Runtime.Exceptions
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.#ctor
+  isExternal: true
+  name: NumberTooHighInteger16Exception
+  nameWithType: NumberTooHighInteger16Exception.NumberTooHighInteger16Exception
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighInteger16Exception.NumberTooHighInteger16Exception
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  name: Int16
+  nameWithType: Int16
+  fullName: System.Int16
+- uid: System.Runtime.Serialization.SerializationInfo
+  isExternal: true
+  name: SerializationInfo
+  nameWithType: SerializationInfo
+  fullName: System.Runtime.Serialization.SerializationInfo
+- uid: System.Runtime.Serialization.StreamingContext
+  isExternal: true
+  name: StreamingContext
+  nameWithType: StreamingContext
+  fullName: System.Runtime.Serialization.StreamingContext

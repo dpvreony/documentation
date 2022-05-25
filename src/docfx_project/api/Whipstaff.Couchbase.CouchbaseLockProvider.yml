@@ -1,0 +1,636 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider
+  commentId: T:Whipstaff.Couchbase.CouchbaseLockProvider
+  id: CouchbaseLockProvider
+  parent: Whipstaff.Couchbase
+  children:
+  - Whipstaff.Couchbase.CouchbaseLockProvider.#ctor(Couchbase.KeyValue.ICouchbaseCollection)
+  - Whipstaff.Couchbase.CouchbaseLockProvider.AcquireAsync(System.String,System.Nullable{System.TimeSpan},System.Boolean,System.Threading.CancellationToken)
+  - Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance(Couchbase.Extensions.DependencyInjection.IBucketProvider)
+  - Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance(Couchbase.IBucket)
+  - Whipstaff.Couchbase.CouchbaseLockProvider.IsLockedAsync(System.String)
+  - Whipstaff.Couchbase.CouchbaseLockProvider.ReleaseAsync(System.String,System.String)
+  - Whipstaff.Couchbase.CouchbaseLockProvider.RenewAsync(System.String,System.String,System.Nullable{System.TimeSpan})
+  langs:
+  - csharp
+  - vb
+  name: CouchbaseLockProvider
+  nameWithType: CouchbaseLockProvider
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider
+  type: Class
+  source:
+    path: Whipstaff.Couchbase
+    isExternal: true
+  assemblies:
+  - Whipstaff.Couchbase
+  namespace: Whipstaff.Couchbase
+  summary: "\nA Couchbase Lock Distributed Log Provider.\n"
+  syntax:
+    content: 'public sealed class CouchbaseLockProvider : Object, ILockProvider'
+    content.vb: >-
+      Public NotInheritable Class CouchbaseLockProvider
+          Inherits Object
+          Implements ILockProvider
+  inheritance:
+  - System.Object
+  implements:
+  - Foundatio.Lock.ILockProvider
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.#ctor(Couchbase.KeyValue.ICouchbaseCollection)
+  commentId: M:Whipstaff.Couchbase.CouchbaseLockProvider.#ctor(Couchbase.KeyValue.ICouchbaseCollection)
+  id: '#ctor(Couchbase.KeyValue.ICouchbaseCollection)'
+  parent: Whipstaff.Couchbase.CouchbaseLockProvider
+  langs:
+  - csharp
+  - vb
+  name: CouchbaseLockProvider(ICouchbaseCollection)
+  nameWithType: CouchbaseLockProvider.CouchbaseLockProvider(ICouchbaseCollection)
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.CouchbaseLockProvider(Couchbase.KeyValue.ICouchbaseCollection)
+  type: Constructor
+  source:
+    path: Whipstaff.Couchbase
+    isExternal: true
+  assemblies:
+  - Whipstaff.Couchbase
+  namespace: Whipstaff.Couchbase
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Couchbase.CouchbaseLockProvider\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public CouchbaseLockProvider(ICouchbaseCollection couchbaseCollection)
+    parameters:
+    - id: couchbaseCollection
+      type: Couchbase.KeyValue.ICouchbaseCollection
+      description: The couchbase collection.
+    content.vb: Public Sub New(couchbaseCollection As ICouchbaseCollection)
+  overload: Whipstaff.Couchbase.CouchbaseLockProvider.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance(Couchbase.Extensions.DependencyInjection.IBucketProvider)
+  commentId: M:Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance(Couchbase.Extensions.DependencyInjection.IBucketProvider)
+  id: GetInstance(Couchbase.Extensions.DependencyInjection.IBucketProvider)
+  parent: Whipstaff.Couchbase.CouchbaseLockProvider
+  langs:
+  - csharp
+  - vb
+  name: GetInstance(IBucketProvider)
+  nameWithType: CouchbaseLockProvider.GetInstance(IBucketProvider)
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance(Couchbase.Extensions.DependencyInjection.IBucketProvider)
+  type: Method
+  source:
+    path: Whipstaff.Couchbase
+    isExternal: true
+  assemblies:
+  - Whipstaff.Couchbase
+  namespace: Whipstaff.Couchbase
+  summary: "\nGets a Couchbase Lock Provider using a bucket provider.\n"
+  syntax:
+    content: public static Task<CouchbaseLockProvider> GetInstance(IBucketProvider bucketProvider)
+    parameters:
+    - id: bucketProvider
+      type: Couchbase.Extensions.DependencyInjection.IBucketProvider
+      description: Bucket Provider Instance to use.
+    return:
+      type: System.Threading.Tasks.Task{Whipstaff.Couchbase.CouchbaseLockProvider}
+      description: Instance of <xref href="Whipstaff.Couchbase.CouchbaseLockProvider" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function GetInstance(bucketProvider As IBucketProvider) As Task(Of CouchbaseLockProvider)
+  overload: Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance(Couchbase.IBucket)
+  commentId: M:Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance(Couchbase.IBucket)
+  id: GetInstance(Couchbase.IBucket)
+  parent: Whipstaff.Couchbase.CouchbaseLockProvider
+  langs:
+  - csharp
+  - vb
+  name: GetInstance(IBucket)
+  nameWithType: CouchbaseLockProvider.GetInstance(IBucket)
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance(Couchbase.IBucket)
+  type: Method
+  source:
+    path: Whipstaff.Couchbase
+    isExternal: true
+  assemblies:
+  - Whipstaff.Couchbase
+  namespace: Whipstaff.Couchbase
+  summary: "\nGets a Couchbase Lock Provider using a bucket provider.\n"
+  syntax:
+    content: public static CouchbaseLockProvider GetInstance(IBucket bucket)
+    parameters:
+    - id: bucket
+      type: Couchbase.IBucket
+      description: Couchbase Bucket to use.
+    return:
+      type: Whipstaff.Couchbase.CouchbaseLockProvider
+      description: Instance of <xref href="Whipstaff.Couchbase.CouchbaseLockProvider" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function GetInstance(bucket As IBucket) As CouchbaseLockProvider
+  overload: Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.AcquireAsync(System.String,System.Nullable{System.TimeSpan},System.Boolean,System.Threading.CancellationToken)
+  commentId: M:Whipstaff.Couchbase.CouchbaseLockProvider.AcquireAsync(System.String,System.Nullable{System.TimeSpan},System.Boolean,System.Threading.CancellationToken)
+  id: AcquireAsync(System.String,System.Nullable{System.TimeSpan},System.Boolean,System.Threading.CancellationToken)
+  parent: Whipstaff.Couchbase.CouchbaseLockProvider
+  langs:
+  - csharp
+  - vb
+  name: AcquireAsync(String, Nullable<TimeSpan>, Boolean, CancellationToken)
+  nameWithType: CouchbaseLockProvider.AcquireAsync(String, Nullable<TimeSpan>, Boolean, CancellationToken)
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.AcquireAsync(System.String, System.Nullable<System.TimeSpan>, System.Boolean, System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: Whipstaff.Couchbase
+    isExternal: true
+  assemblies:
+  - Whipstaff.Couchbase
+  namespace: Whipstaff.Couchbase
+  syntax:
+    content: public Task<ILock> AcquireAsync(string resource, Nullable<TimeSpan> timeUntilExpires, bool releaseOnDispose, CancellationToken cancellationToken)
+    parameters:
+    - id: resource
+      type: System.String
+    - id: timeUntilExpires
+      type: System.Nullable{System.TimeSpan}
+    - id: releaseOnDispose
+      type: System.Boolean
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{Foundatio.Lock.ILock}
+    content.vb: Public Function AcquireAsync(resource As String, timeUntilExpires As Nullable(Of TimeSpan), releaseOnDispose As Boolean, cancellationToken As CancellationToken) As Task(Of ILock)
+  overload: Whipstaff.Couchbase.CouchbaseLockProvider.AcquireAsync*
+  nameWithType.vb: CouchbaseLockProvider.AcquireAsync(String, Nullable(Of TimeSpan), Boolean, CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Whipstaff.Couchbase.CouchbaseLockProvider.AcquireAsync(System.String, System.Nullable(Of System.TimeSpan), System.Boolean, System.Threading.CancellationToken)
+  name.vb: AcquireAsync(String, Nullable(Of TimeSpan), Boolean, CancellationToken)
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.IsLockedAsync(System.String)
+  commentId: M:Whipstaff.Couchbase.CouchbaseLockProvider.IsLockedAsync(System.String)
+  id: IsLockedAsync(System.String)
+  parent: Whipstaff.Couchbase.CouchbaseLockProvider
+  langs:
+  - csharp
+  - vb
+  name: IsLockedAsync(String)
+  nameWithType: CouchbaseLockProvider.IsLockedAsync(String)
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.IsLockedAsync(System.String)
+  type: Method
+  source:
+    path: Whipstaff.Couchbase
+    isExternal: true
+  assemblies:
+  - Whipstaff.Couchbase
+  namespace: Whipstaff.Couchbase
+  syntax:
+    content: public Task<bool> IsLockedAsync(string resource)
+    parameters:
+    - id: resource
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Public Function IsLockedAsync(resource As String) As Task(Of Boolean)
+  overload: Whipstaff.Couchbase.CouchbaseLockProvider.IsLockedAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.ReleaseAsync(System.String,System.String)
+  commentId: M:Whipstaff.Couchbase.CouchbaseLockProvider.ReleaseAsync(System.String,System.String)
+  id: ReleaseAsync(System.String,System.String)
+  parent: Whipstaff.Couchbase.CouchbaseLockProvider
+  langs:
+  - csharp
+  - vb
+  name: ReleaseAsync(String, String)
+  nameWithType: CouchbaseLockProvider.ReleaseAsync(String, String)
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.ReleaseAsync(System.String, System.String)
+  type: Method
+  source:
+    path: Whipstaff.Couchbase
+    isExternal: true
+  assemblies:
+  - Whipstaff.Couchbase
+  namespace: Whipstaff.Couchbase
+  syntax:
+    content: public Task ReleaseAsync(string resource, string lockId)
+    parameters:
+    - id: resource
+      type: System.String
+    - id: lockId
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function ReleaseAsync(resource As String, lockId As String) As Task
+  overload: Whipstaff.Couchbase.CouchbaseLockProvider.ReleaseAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.RenewAsync(System.String,System.String,System.Nullable{System.TimeSpan})
+  commentId: M:Whipstaff.Couchbase.CouchbaseLockProvider.RenewAsync(System.String,System.String,System.Nullable{System.TimeSpan})
+  id: RenewAsync(System.String,System.String,System.Nullable{System.TimeSpan})
+  parent: Whipstaff.Couchbase.CouchbaseLockProvider
+  langs:
+  - csharp
+  - vb
+  name: RenewAsync(String, String, Nullable<TimeSpan>)
+  nameWithType: CouchbaseLockProvider.RenewAsync(String, String, Nullable<TimeSpan>)
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.RenewAsync(System.String, System.String, System.Nullable<System.TimeSpan>)
+  type: Method
+  source:
+    path: Whipstaff.Couchbase
+    isExternal: true
+  assemblies:
+  - Whipstaff.Couchbase
+  namespace: Whipstaff.Couchbase
+  syntax:
+    content: public Task RenewAsync(string resource, string lockId, Nullable<TimeSpan> timeUntilExpires = null)
+    parameters:
+    - id: resource
+      type: System.String
+    - id: lockId
+      type: System.String
+    - id: timeUntilExpires
+      type: System.Nullable{System.TimeSpan}
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function RenewAsync(resource As String, lockId As String, timeUntilExpires As Nullable(Of TimeSpan) = Nothing) As Task
+  overload: Whipstaff.Couchbase.CouchbaseLockProvider.RenewAsync*
+  nameWithType.vb: CouchbaseLockProvider.RenewAsync(String, String, Nullable(Of TimeSpan))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Whipstaff.Couchbase.CouchbaseLockProvider.RenewAsync(System.String, System.String, System.Nullable(Of System.TimeSpan))
+  name.vb: RenewAsync(String, String, Nullable(Of TimeSpan))
+references:
+- uid: Whipstaff.Couchbase
+  commentId: N:Whipstaff.Couchbase
+  isExternal: true
+  name: Whipstaff.Couchbase
+  nameWithType: Whipstaff.Couchbase
+  fullName: Whipstaff.Couchbase
+- uid: Foundatio.Lock.ILockProvider
+  commentId: '!:Foundatio.Lock.ILockProvider'
+  isExternal: true
+  name: ILockProvider
+  nameWithType: ILockProvider
+  fullName: Foundatio.Lock.ILockProvider
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.#ctor*
+  commentId: Overload:Whipstaff.Couchbase.CouchbaseLockProvider.#ctor
+  isExternal: true
+  name: CouchbaseLockProvider
+  nameWithType: CouchbaseLockProvider.CouchbaseLockProvider
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.CouchbaseLockProvider
+- uid: Couchbase.KeyValue.ICouchbaseCollection
+  commentId: '!:Couchbase.KeyValue.ICouchbaseCollection'
+  isExternal: true
+  name: ICouchbaseCollection
+  nameWithType: ICouchbaseCollection
+  fullName: Couchbase.KeyValue.ICouchbaseCollection
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance*
+  commentId: Overload:Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance
+  isExternal: true
+  name: GetInstance
+  nameWithType: CouchbaseLockProvider.GetInstance
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.GetInstance
+- uid: Couchbase.Extensions.DependencyInjection.IBucketProvider
+  commentId: '!:Couchbase.Extensions.DependencyInjection.IBucketProvider'
+  isExternal: true
+  name: IBucketProvider
+  nameWithType: IBucketProvider
+  fullName: Couchbase.Extensions.DependencyInjection.IBucketProvider
+- uid: System.Threading.Tasks.Task{Whipstaff.Couchbase.CouchbaseLockProvider}
+  commentId: '!:System.Threading.Tasks.Task{Whipstaff.Couchbase.CouchbaseLockProvider}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<CouchbaseLockProvider>
+  nameWithType: Task<CouchbaseLockProvider>
+  fullName: System.Threading.Tasks.Task<Whipstaff.Couchbase.CouchbaseLockProvider>
+  nameWithType.vb: Task(Of CouchbaseLockProvider)
+  fullName.vb: System.Threading.Tasks.Task(Of Whipstaff.Couchbase.CouchbaseLockProvider)
+  name.vb: Task(Of CouchbaseLockProvider)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Whipstaff.Couchbase.CouchbaseLockProvider
+    name: CouchbaseLockProvider
+    nameWithType: CouchbaseLockProvider
+    fullName: Whipstaff.Couchbase.CouchbaseLockProvider
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Whipstaff.Couchbase.CouchbaseLockProvider
+    name: CouchbaseLockProvider
+    nameWithType: CouchbaseLockProvider
+    fullName: Whipstaff.Couchbase.CouchbaseLockProvider
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Couchbase.IBucket
+  commentId: '!:Couchbase.IBucket'
+  isExternal: true
+  name: IBucket
+  nameWithType: IBucket
+  fullName: Couchbase.IBucket
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider
+  commentId: T:Whipstaff.Couchbase.CouchbaseLockProvider
+  parent: Whipstaff.Couchbase
+  isExternal: true
+  name: CouchbaseLockProvider
+  nameWithType: CouchbaseLockProvider
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.AcquireAsync*
+  commentId: Overload:Whipstaff.Couchbase.CouchbaseLockProvider.AcquireAsync
+  isExternal: true
+  name: AcquireAsync
+  nameWithType: CouchbaseLockProvider.AcquireAsync
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.AcquireAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.TimeSpan}
+  commentId: '!:System.Nullable{System.TimeSpan}'
+  definition: System.Nullable`1
+  name: Nullable<TimeSpan>
+  nameWithType: Nullable<TimeSpan>
+  fullName: System.Nullable<System.TimeSpan>
+  nameWithType.vb: Nullable(Of TimeSpan)
+  fullName.vb: System.Nullable(Of System.TimeSpan)
+  name.vb: Nullable(Of TimeSpan)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Threading.CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{Foundatio.Lock.ILock}
+  commentId: '!:System.Threading.Tasks.Task{Foundatio.Lock.ILock}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<ILock>
+  nameWithType: Task<ILock>
+  fullName: System.Threading.Tasks.Task<Foundatio.Lock.ILock>
+  nameWithType.vb: Task(Of ILock)
+  fullName.vb: System.Threading.Tasks.Task(Of Foundatio.Lock.ILock)
+  name.vb: Task(Of ILock)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Foundatio.Lock.ILock
+    name: ILock
+    nameWithType: ILock
+    fullName: Foundatio.Lock.ILock
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Foundatio.Lock.ILock
+    name: ILock
+    nameWithType: ILock
+    fullName: Foundatio.Lock.ILock
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.IsLockedAsync*
+  commentId: Overload:Whipstaff.Couchbase.CouchbaseLockProvider.IsLockedAsync
+  isExternal: true
+  name: IsLockedAsync
+  nameWithType: CouchbaseLockProvider.IsLockedAsync
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.IsLockedAsync
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: '!:System.Threading.Tasks.Task{System.Boolean}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: System.Threading.Tasks.Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.ReleaseAsync*
+  commentId: Overload:Whipstaff.Couchbase.CouchbaseLockProvider.ReleaseAsync
+  isExternal: true
+  name: ReleaseAsync
+  nameWithType: CouchbaseLockProvider.ReleaseAsync
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.ReleaseAsync
+- uid: System.Threading.Tasks.Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider.RenewAsync*
+  commentId: Overload:Whipstaff.Couchbase.CouchbaseLockProvider.RenewAsync
+  isExternal: true
+  name: RenewAsync
+  nameWithType: CouchbaseLockProvider.RenewAsync
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider.RenewAsync

@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.Entities.IGbPostCodeAsString
+  commentId: T:Whipstaff.Core.Entities.IGbPostCodeAsString
+  id: IGbPostCodeAsString
+  parent: Whipstaff.Core.Entities
+  children:
+  - Whipstaff.Core.Entities.IGbPostCodeAsString.PostCode
+  langs:
+  - csharp
+  - vb
+  name: IGbPostCodeAsString
+  nameWithType: IGbPostCodeAsString
+  fullName: Whipstaff.Core.Entities.IGbPostCodeAsString
+  type: Interface
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Entities
+  summary: "\nRepresents an object that holds the GB Post Code as a simple string.\n"
+  syntax:
+    content: public interface IGbPostCodeAsString
+    content.vb: Public Interface IGbPostCodeAsString
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Whipstaff.Core.Entities.IGbPostCodeAsString.PostCode
+  commentId: P:Whipstaff.Core.Entities.IGbPostCodeAsString.PostCode
+  id: PostCode
+  parent: Whipstaff.Core.Entities.IGbPostCodeAsString
+  langs:
+  - csharp
+  - vb
+  name: PostCode
+  nameWithType: IGbPostCodeAsString.PostCode
+  fullName: Whipstaff.Core.Entities.IGbPostCodeAsString.PostCode
+  type: Property
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Entities
+  summary: "\nGets the postcode.\n"
+  syntax:
+    content: string PostCode { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property PostCode As String
+  overload: Whipstaff.Core.Entities.IGbPostCodeAsString.PostCode*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Whipstaff.Core.Entities
+  commentId: N:Whipstaff.Core.Entities
+  isExternal: true
+  name: Whipstaff.Core.Entities
+  nameWithType: Whipstaff.Core.Entities
+  fullName: Whipstaff.Core.Entities
+- uid: Whipstaff.Core.Entities.IGbPostCodeAsString.PostCode*
+  commentId: Overload:Whipstaff.Core.Entities.IGbPostCodeAsString.PostCode
+  isExternal: true
+  name: PostCode
+  nameWithType: IGbPostCodeAsString.PostCode
+  fullName: Whipstaff.Core.Entities.IGbPostCodeAsString.PostCode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

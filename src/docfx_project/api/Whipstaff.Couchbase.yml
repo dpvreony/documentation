@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Couchbase
+  commentId: N:Whipstaff.Couchbase
+  id: Whipstaff.Couchbase
+  children:
+  - Whipstaff.Couchbase.CouchbaseLock
+  - Whipstaff.Couchbase.CouchbaseLockProvider
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.Couchbase
+  nameWithType: Whipstaff.Couchbase
+  fullName: Whipstaff.Couchbase
+  type: Namespace
+  assemblies:
+  - Whipstaff.Couchbase
+references:
+- uid: Whipstaff.Couchbase.CouchbaseLock
+  commentId: T:Whipstaff.Couchbase.CouchbaseLock
+  isExternal: true
+  name: CouchbaseLock
+  nameWithType: CouchbaseLock
+  fullName: Whipstaff.Couchbase.CouchbaseLock
+- uid: Whipstaff.Couchbase.CouchbaseLockProvider
+  commentId: T:Whipstaff.Couchbase.CouchbaseLockProvider
+  parent: Whipstaff.Couchbase
+  isExternal: true
+  name: CouchbaseLockProvider
+  nameWithType: CouchbaseLockProvider
+  fullName: Whipstaff.Couchbase.CouchbaseLockProvider
+- uid: Whipstaff.Couchbase
+  commentId: N:Whipstaff.Couchbase
+  isExternal: true
+  name: Whipstaff.Couchbase
+  nameWithType: Whipstaff.Couchbase
+  fullName: Whipstaff.Couchbase

@@ -1,0 +1,565 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+  commentId: T:Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+  id: DistributedLockProcessManager
+  parent: Whipstaff.MediatR.Foundatio.DistributedLocking
+  children:
+  - Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.#ctor(Foundatio.Messaging.IMessageBus,System.String,Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior,Microsoft.Extensions.Logging.ILoggerFactory)
+  - Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.ExecuteAsync(System.Threading.CancellationToken)
+  - Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.HasLock
+  - Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.SubscribeAndStart(Foundatio.Messaging.IMessageBus,Microsoft.Extensions.Logging.ILoggerFactory,System.String,Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior,System.IObserver{System.Boolean},System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: DistributedLockProcessManager
+  nameWithType: DistributedLockProcessManager
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+  type: Class
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.DistributedLocking
+  summary: "\nProcess Manager for handling a distributed lock.\n"
+  syntax:
+    content: 'public sealed class DistributedLockProcessManager : BackgroundService'
+    content.vb: >-
+      Public NotInheritable Class DistributedLockProcessManager
+          Inherits BackgroundService
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.#ctor(Foundatio.Messaging.IMessageBus,System.String,Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior,Microsoft.Extensions.Logging.ILoggerFactory)
+  commentId: M:Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.#ctor(Foundatio.Messaging.IMessageBus,System.String,Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior,Microsoft.Extensions.Logging.ILoggerFactory)
+  id: '#ctor(Foundatio.Messaging.IMessageBus,System.String,Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior,Microsoft.Extensions.Logging.ILoggerFactory)'
+  parent: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+  langs:
+  - csharp
+  - vb
+  name: DistributedLockProcessManager(IMessageBus, String, LockLostBehavior, ILoggerFactory)
+  nameWithType: DistributedLockProcessManager.DistributedLockProcessManager(IMessageBus, String, LockLostBehavior, ILoggerFactory)
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.DistributedLockProcessManager(Foundatio.Messaging.IMessageBus, System.String, Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior, Microsoft.Extensions.Logging.ILoggerFactory)
+  type: Constructor
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.DistributedLocking
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public DistributedLockProcessManager(IMessageBus messageBus, string lockName, LockLostBehavior lockLostBehavior, ILoggerFactory loggerFactory)
+    parameters:
+    - id: messageBus
+      type: Foundatio.Messaging.IMessageBus
+      description: The message bus to attach to.
+    - id: lockName
+      type: System.String
+      description: The name of the lock.
+    - id: lockLostBehavior
+      type: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior
+      description: The behavior to carry out if the lock is lost.
+    - id: loggerFactory
+      type: Microsoft.Extensions.Logging.ILoggerFactory
+      description: The logging interface factory.
+    content.vb: Public Sub New(messageBus As IMessageBus, lockName As String, lockLostBehavior As LockLostBehavior, loggerFactory As ILoggerFactory)
+  overload: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.SubscribeAndStart(Foundatio.Messaging.IMessageBus,Microsoft.Extensions.Logging.ILoggerFactory,System.String,Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior,System.IObserver{System.Boolean},System.Threading.CancellationToken)
+  commentId: M:Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.SubscribeAndStart(Foundatio.Messaging.IMessageBus,Microsoft.Extensions.Logging.ILoggerFactory,System.String,Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior,System.IObserver{System.Boolean},System.Threading.CancellationToken)
+  id: SubscribeAndStart(Foundatio.Messaging.IMessageBus,Microsoft.Extensions.Logging.ILoggerFactory,System.String,Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior,System.IObserver{System.Boolean},System.Threading.CancellationToken)
+  parent: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+  langs:
+  - csharp
+  - vb
+  name: SubscribeAndStart(IMessageBus, ILoggerFactory, String, LockLostBehavior, IObserver<Boolean>, CancellationToken)
+  nameWithType: DistributedLockProcessManager.SubscribeAndStart(IMessageBus, ILoggerFactory, String, LockLostBehavior, IObserver<Boolean>, CancellationToken)
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.SubscribeAndStart(Foundatio.Messaging.IMessageBus, Microsoft.Extensions.Logging.ILoggerFactory, System.String, Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior, System.IObserver<System.Boolean>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.DistributedLocking
+  summary: "\nCreates and starts a Distributed Lock Process Manager.\n"
+  syntax:
+    content: public static ValueTuple<DistributedLockProcessManager, Task, IDisposable> SubscribeAndStart(IMessageBus messageBus, ILoggerFactory loggerFactory, string lockName, LockLostBehavior lockLostBehavior, IObserver<bool> hasLockObserver, CancellationToken cancellationToken)
+    parameters:
+    - id: messageBus
+      type: Foundatio.Messaging.IMessageBus
+      description: The message bus to attach to.
+    - id: loggerFactory
+      type: Microsoft.Extensions.Logging.ILoggerFactory
+      description: The logging interface factory.
+    - id: lockName
+      type: System.String
+      description: The name of the lock.
+    - id: lockLostBehavior
+      type: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior
+      description: The behavior to carry out if the lock is lost.
+    - id: hasLockObserver
+      type: System.IObserver{System.Boolean}
+      description: The observer for watching if the lock is aquired.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The cancellation token used to stop the process manager.
+    return:
+      type: System.ValueTuple{Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager,System.Threading.Tasks.Task,System.IDisposable}
+      description: Instance of the distributed lock process manager and the active task.
+    content.vb: Public Shared Function SubscribeAndStart(messageBus As IMessageBus, loggerFactory As ILoggerFactory, lockName As String, lockLostBehavior As LockLostBehavior, hasLockObserver As IObserver(Of Boolean), cancellationToken As CancellationToken) As ValueTuple(Of DistributedLockProcessManager, Task, IDisposable)
+  overload: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.SubscribeAndStart*
+  nameWithType.vb: DistributedLockProcessManager.SubscribeAndStart(IMessageBus, ILoggerFactory, String, LockLostBehavior, IObserver(Of Boolean), CancellationToken)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.SubscribeAndStart(Foundatio.Messaging.IMessageBus, Microsoft.Extensions.Logging.ILoggerFactory, System.String, Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior, System.IObserver(Of System.Boolean), System.Threading.CancellationToken)
+  name.vb: SubscribeAndStart(IMessageBus, ILoggerFactory, String, LockLostBehavior, IObserver(Of Boolean), CancellationToken)
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.ExecuteAsync(System.Threading.CancellationToken)
+  commentId: M:Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.ExecuteAsync(System.Threading.CancellationToken)
+  id: ExecuteAsync(System.Threading.CancellationToken)
+  parent: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsync(CancellationToken)
+  nameWithType: DistributedLockProcessManager.ExecuteAsync(CancellationToken)
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.ExecuteAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.DistributedLocking
+  syntax:
+    content: protected override Task ExecuteAsync(CancellationToken stoppingToken)
+    parameters:
+    - id: stoppingToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Protected Overrides Function ExecuteAsync(stoppingToken As CancellationToken) As Task
+  overload: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.ExecuteAsync*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.HasLock
+  commentId: P:Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.HasLock
+  id: HasLock
+  parent: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+  langs:
+  - csharp
+  - vb
+  name: HasLock
+  nameWithType: DistributedLockProcessManager.HasLock
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.HasLock
+  type: Property
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.DistributedLocking
+  summary: "\nGets an observable for tracking whether the process manager has the lock.\n"
+  syntax:
+    content: public IObservable<bool> HasLock { get; }
+    parameters: []
+    return:
+      type: System.IObservable{System.Boolean}
+    content.vb: Public ReadOnly Property HasLock As IObservable(Of Boolean)
+  overload: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.HasLock*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking
+  commentId: N:Whipstaff.MediatR.Foundatio.DistributedLocking
+  isExternal: true
+  name: Whipstaff.MediatR.Foundatio.DistributedLocking
+  nameWithType: Whipstaff.MediatR.Foundatio.DistributedLocking
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.#ctor*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.#ctor
+  isExternal: true
+  name: DistributedLockProcessManager
+  nameWithType: DistributedLockProcessManager.DistributedLockProcessManager
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.DistributedLockProcessManager
+- uid: Foundatio.Messaging.IMessageBus
+  isExternal: true
+  name: IMessageBus
+  nameWithType: IMessageBus
+  fullName: Foundatio.Messaging.IMessageBus
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior
+  commentId: T:Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior
+  parent: Whipstaff.MediatR.Foundatio.DistributedLocking
+  isExternal: true
+  name: LockLostBehavior
+  nameWithType: LockLostBehavior
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior
+- uid: Microsoft.Extensions.Logging.ILoggerFactory
+  isExternal: true
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Microsoft.Extensions.Logging.ILoggerFactory
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.SubscribeAndStart*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.SubscribeAndStart
+  isExternal: true
+  name: SubscribeAndStart
+  nameWithType: DistributedLockProcessManager.SubscribeAndStart
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.SubscribeAndStart
+- uid: System.IObserver{System.Boolean}
+  commentId: '!:System.IObserver{System.Boolean}'
+  definition: System.IObserver`1
+  name: IObserver<Boolean>
+  nameWithType: IObserver<Boolean>
+  fullName: System.IObserver<System.Boolean>
+  nameWithType.vb: IObserver(Of Boolean)
+  fullName.vb: System.IObserver(Of System.Boolean)
+  name.vb: IObserver(Of Boolean)
+  spec.csharp:
+  - uid: System.IObserver`1
+    name: IObserver
+    nameWithType: IObserver
+    fullName: System.IObserver
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IObserver`1
+    name: IObserver
+    nameWithType: IObserver
+    fullName: System.IObserver
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.ValueTuple{Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager,System.Threading.Tasks.Task,System.IDisposable}
+  commentId: '!:System.ValueTuple{Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager,System.Threading.Tasks.Task,System.IDisposable}'
+  definition: System.ValueTuple`3
+  name: ValueTuple<DistributedLockProcessManager, Task, IDisposable>
+  nameWithType: ValueTuple<DistributedLockProcessManager, Task, IDisposable>
+  fullName: System.ValueTuple<Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager, System.Threading.Tasks.Task, System.IDisposable>
+  nameWithType.vb: ValueTuple(Of DistributedLockProcessManager, Task, IDisposable)
+  fullName.vb: System.ValueTuple(Of Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager, System.Threading.Tasks.Task, System.IDisposable)
+  name.vb: ValueTuple(Of DistributedLockProcessManager, Task, IDisposable)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+    name: DistributedLockProcessManager
+    nameWithType: DistributedLockProcessManager
+    fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IDisposable
+    name: IDisposable
+    nameWithType: IDisposable
+    fullName: System.IDisposable
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+    name: DistributedLockProcessManager
+    nameWithType: DistributedLockProcessManager
+    fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IDisposable
+    name: IDisposable
+    nameWithType: IDisposable
+    fullName: System.IDisposable
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IObserver`1
+  isExternal: true
+  name: IObserver<>
+  nameWithType: IObserver<>
+  fullName: System.IObserver<>
+  nameWithType.vb: IObserver(Of )
+  fullName.vb: System.IObserver(Of )
+  name.vb: IObserver(Of )
+  spec.csharp:
+  - uid: System.IObserver`1
+    name: IObserver
+    nameWithType: IObserver
+    fullName: System.IObserver
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IObserver`1
+    name: IObserver
+    nameWithType: IObserver
+    fullName: System.IObserver
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`3
+  isExternal: true
+  name: ValueTuple<, , >
+  nameWithType: ValueTuple<, , >
+  fullName: System.ValueTuple<, , >
+  nameWithType.vb: ValueTuple(Of , , )
+  fullName.vb: System.ValueTuple(Of , , )
+  name.vb: ValueTuple(Of , , )
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.ExecuteAsync*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.ExecuteAsync
+  isExternal: true
+  name: ExecuteAsync
+  nameWithType: DistributedLockProcessManager.ExecuteAsync
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.ExecuteAsync
+- uid: System.Threading.Tasks.Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.HasLock*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.HasLock
+  isExternal: true
+  name: HasLock
+  nameWithType: DistributedLockProcessManager.HasLock
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager.HasLock
+- uid: System.IObservable{System.Boolean}
+  commentId: '!:System.IObservable{System.Boolean}'
+  definition: System.IObservable`1
+  name: IObservable<Boolean>
+  nameWithType: IObservable<Boolean>
+  fullName: System.IObservable<System.Boolean>
+  nameWithType.vb: IObservable(Of Boolean)
+  fullName.vb: System.IObservable(Of System.Boolean)
+  name.vb: IObservable(Of Boolean)
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    nameWithType: IObservable
+    fullName: System.IObservable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    nameWithType: IObservable
+    fullName: System.IObservable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IObservable`1
+  isExternal: true
+  name: IObservable<>
+  nameWithType: IObservable<>
+  fullName: System.IObservable<>
+  nameWithType.vb: IObservable(Of )
+  fullName.vb: System.IObservable(Of )
+  name.vb: IObservable(Of )
+  spec.csharp:
+  - uid: System.IObservable`1
+    name: IObservable
+    nameWithType: IObservable
+    fullName: System.IObservable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IObservable`1
+    name: IObservable
+    nameWithType: IObservable
+    fullName: System.IObservable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

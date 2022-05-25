@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException
+  commentId: T:Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException
+  id: NumberTooHighClrDoubleException
+  parent: Whipstaff.Runtime.Exceptions
+  children:
+  - Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor
+  - Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.String)
+  - Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.String,System.Double,System.Double)
+  - Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.String,System.Exception)
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighClrDoubleException
+  nameWithType: NumberTooHighClrDoubleException
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException
+  type: Class
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nThe number passed in was higher than the allowed maximum.\n"
+  syntax:
+    content: 'public class NumberTooHighClrDoubleException : Exception'
+    content.vb: >-
+      Public Class NumberTooHighClrDoubleException
+          Inherits Exception
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor
+  id: '#ctor'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighClrDoubleException()
+  nameWithType: NumberTooHighClrDoubleException.NumberTooHighClrDoubleException()
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.NumberTooHighClrDoubleException()
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooHighClrDoubleException()
+    content.vb: Public Sub New
+  overload: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.String)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighClrDoubleException(String)
+  nameWithType: NumberTooHighClrDoubleException.NumberTooHighClrDoubleException(String)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.NumberTooHighClrDoubleException(System.String)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooHighClrDoubleException(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Exception Message.
+    content.vb: Public Sub New(message As String)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.String,System.Exception)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighClrDoubleException(String, Exception)
+  nameWithType: NumberTooHighClrDoubleException.NumberTooHighClrDoubleException(String, Exception)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.NumberTooHighClrDoubleException(System.String, System.Exception)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooHighClrDoubleException(string message, Exception innerException)
+    parameters:
+    - id: message
+      type: System.String
+      description: Exception Message.
+    - id: innerException
+      type: System.Exception
+      description: Inner Exception.
+    content.vb: Public Sub New(message As String, innerException As Exception)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.String,System.Double,System.Double)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.String,System.Double,System.Double)
+  id: '#ctor(System.String,System.Double,System.Double)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighClrDoubleException(String, Double, Double)
+  nameWithType: NumberTooHighClrDoubleException.NumberTooHighClrDoubleException(String, Double, Double)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.NumberTooHighClrDoubleException(System.String, System.Double, System.Double)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooHighClrDoubleException(string parameterName, double maximumValid, double actual)
+    parameters:
+    - id: parameterName
+      type: System.String
+      description: The name of the parameter causing the exception.
+    - id: maximumValid
+      type: System.Double
+      description: The maximum valid value.
+    - id: actual
+      type: System.Double
+      description: The actual value received.
+    content.vb: Public Sub New(parameterName As String, maximumValid As Double, actual As Double)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  id: '#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooHighClrDoubleException(SerializationInfo, StreamingContext)
+  nameWithType: NumberTooHighClrDoubleException.NumberTooHighClrDoubleException(SerializationInfo, StreamingContext)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.NumberTooHighClrDoubleException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: protected NumberTooHighClrDoubleException(SerializationInfo info, StreamingContext context)
+    parameters:
+    - id: info
+      type: System.Runtime.Serialization.SerializationInfo
+      description: The serialization information.
+    - id: context
+      type: System.Runtime.Serialization.StreamingContext
+      description: The streaming context.
+    content.vb: Protected Sub New(info As SerializationInfo, context As StreamingContext)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: Whipstaff.Runtime.Exceptions
+  commentId: N:Whipstaff.Runtime.Exceptions
+  isExternal: true
+  name: Whipstaff.Runtime.Exceptions
+  nameWithType: Whipstaff.Runtime.Exceptions
+  fullName: Whipstaff.Runtime.Exceptions
+- uid: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.#ctor
+  isExternal: true
+  name: NumberTooHighClrDoubleException
+  nameWithType: NumberTooHighClrDoubleException.NumberTooHighClrDoubleException
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooHighClrDoubleException.NumberTooHighClrDoubleException
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.Runtime.Serialization.SerializationInfo
+  isExternal: true
+  name: SerializationInfo
+  nameWithType: SerializationInfo
+  fullName: System.Runtime.Serialization.SerializationInfo
+- uid: System.Runtime.Serialization.StreamingContext
+  isExternal: true
+  name: StreamingContext
+  nameWithType: StreamingContext
+  fullName: System.Runtime.Serialization.StreamingContext

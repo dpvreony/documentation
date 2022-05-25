@@ -1,0 +1,141 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.Entities.ILongId
+  commentId: T:Whipstaff.Core.Entities.ILongId
+  id: ILongId
+  parent: Whipstaff.Core.Entities
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ILongId
+  nameWithType: ILongId
+  fullName: Whipstaff.Core.Entities.ILongId
+  type: Interface
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Entities
+  summary: "\nRepresents an object that has a 64-bit integer as the Identifier.\n"
+  syntax:
+    content: 'public interface ILongId : IId<long>'
+    content.vb: >-
+      Public Interface ILongId
+          Inherits IId(Of Long)
+  inheritedMembers:
+  - Whipstaff.Core.Entities.IId{System.Int64}.Id
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: Whipstaff.Core.Entities
+  commentId: N:Whipstaff.Core.Entities
+  isExternal: true
+  name: Whipstaff.Core.Entities
+  nameWithType: Whipstaff.Core.Entities
+  fullName: Whipstaff.Core.Entities
+- uid: Whipstaff.Core.Entities.IId{System.Int64}.Id
+  commentId: P:Whipstaff.Core.Entities.IId{System.Int64}.Id
+  parent: Whipstaff.Core.Entities.IId{System.Int64}
+  definition: Whipstaff.Core.Entities.IId`1.Id
+  name: Id
+  nameWithType: IId<Int64>.Id
+  fullName: Whipstaff.Core.Entities.IId<System.Int64>.Id
+  nameWithType.vb: IId(Of Int64).Id
+  fullName.vb: Whipstaff.Core.Entities.IId(Of System.Int64).Id
+- uid: Whipstaff.Core.Entities.IId`1.Id
+  commentId: P:Whipstaff.Core.Entities.IId`1.Id
+  isExternal: true
+  name: Id
+  nameWithType: IId<T>.Id
+  fullName: Whipstaff.Core.Entities.IId<T>.Id
+  nameWithType.vb: IId(Of T).Id
+  fullName.vb: Whipstaff.Core.Entities.IId(Of T).Id
+- uid: Whipstaff.Core.Entities.IId{System.Int64}
+  commentId: T:Whipstaff.Core.Entities.IId{System.Int64}
+  parent: Whipstaff.Core.Entities
+  definition: Whipstaff.Core.Entities.IId`1
+  name: IId<Int64>
+  nameWithType: IId<Int64>
+  fullName: Whipstaff.Core.Entities.IId<System.Int64>
+  nameWithType.vb: IId(Of Int64)
+  fullName.vb: Whipstaff.Core.Entities.IId(Of System.Int64)
+  name.vb: IId(Of Int64)
+  spec.csharp:
+  - uid: Whipstaff.Core.Entities.IId`1
+    name: IId
+    nameWithType: IId
+    fullName: Whipstaff.Core.Entities.IId
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Core.Entities.IId`1
+    name: IId
+    nameWithType: IId
+    fullName: Whipstaff.Core.Entities.IId
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Core.Entities.IId`1
+  commentId: T:Whipstaff.Core.Entities.IId`1
+  isExternal: true
+  name: IId<T>
+  nameWithType: IId<T>
+  fullName: Whipstaff.Core.Entities.IId<T>
+  nameWithType.vb: IId(Of T)
+  fullName.vb: Whipstaff.Core.Entities.IId(Of T)
+  name.vb: IId(Of T)
+  spec.csharp:
+  - uid: Whipstaff.Core.Entities.IId`1
+    name: IId
+    nameWithType: IId
+    fullName: Whipstaff.Core.Entities.IId
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Core.Entities.IId`1
+    name: IId
+    nameWithType: IId
+    fullName: Whipstaff.Core.Entities.IId
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

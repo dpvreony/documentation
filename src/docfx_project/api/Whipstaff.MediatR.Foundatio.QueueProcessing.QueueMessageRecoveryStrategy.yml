@@ -1,0 +1,272 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  commentId: T:Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  id: QueueMessageRecoveryStrategy
+  parent: Whipstaff.MediatR.Foundatio.QueueProcessing
+  children:
+  - Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Abandon
+  - Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Complete
+  - Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.DeadLetter
+  - Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.None
+  - Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Requeue
+  - Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Retry
+  - Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.value__
+  langs:
+  - csharp
+  - vb
+  name: QueueMessageRecoveryStrategy
+  nameWithType: QueueMessageRecoveryStrategy
+  fullName: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  type: Class
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.QueueProcessing
+  summary: "\nRecovery Strategy for a failure in a Queue Message.\n"
+  syntax:
+    content: 'public sealed class QueueMessageRecoveryStrategy : Enum'
+    content.vb: >-
+      Public NotInheritable Class QueueMessageRecoveryStrategy
+          Inherits
+
+           Enum
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.value__
+  commentId: F:Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.value__
+  id: value__
+  parent: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  langs:
+  - csharp
+  - vb
+  name: value__
+  nameWithType: QueueMessageRecoveryStrategy.value__
+  fullName: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.value__
+  type: Field
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.QueueProcessing
+  syntax:
+    content: public int value__
+    return:
+      type: System.Int32
+    content.vb: Public value__ As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.None
+  commentId: F:Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.None
+  id: None
+  parent: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: QueueMessageRecoveryStrategy.None
+  fullName: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.None
+  type: Field
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.QueueProcessing
+  summary: "\nNone.\n"
+  syntax:
+    content: public const QueueMessageRecoveryStrategy None
+    return:
+      type: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+    content.vb: Public Const None As QueueMessageRecoveryStrategy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Abandon
+  commentId: F:Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Abandon
+  id: Abandon
+  parent: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  langs:
+  - csharp
+  - vb
+  name: Abandon
+  nameWithType: QueueMessageRecoveryStrategy.Abandon
+  fullName: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Abandon
+  type: Field
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.QueueProcessing
+  summary: "\nAbandon the message.\n"
+  syntax:
+    content: public const QueueMessageRecoveryStrategy Abandon
+    return:
+      type: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+    content.vb: Public Const Abandon As QueueMessageRecoveryStrategy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.DeadLetter
+  commentId: F:Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.DeadLetter
+  id: DeadLetter
+  parent: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  langs:
+  - csharp
+  - vb
+  name: DeadLetter
+  nameWithType: QueueMessageRecoveryStrategy.DeadLetter
+  fullName: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.DeadLetter
+  type: Field
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.QueueProcessing
+  summary: "\nDead Letter the message.\n"
+  syntax:
+    content: public const QueueMessageRecoveryStrategy DeadLetter
+    return:
+      type: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+    content.vb: Public Const DeadLetter As QueueMessageRecoveryStrategy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Retry
+  commentId: F:Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Retry
+  id: Retry
+  parent: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  langs:
+  - csharp
+  - vb
+  name: Retry
+  nameWithType: QueueMessageRecoveryStrategy.Retry
+  fullName: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Retry
+  type: Field
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.QueueProcessing
+  summary: "\nRetry the message.\n"
+  syntax:
+    content: public const QueueMessageRecoveryStrategy Retry
+    return:
+      type: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+    content.vb: Public Const Retry As QueueMessageRecoveryStrategy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Complete
+  commentId: F:Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Complete
+  id: Complete
+  parent: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  langs:
+  - csharp
+  - vb
+  name: Complete
+  nameWithType: QueueMessageRecoveryStrategy.Complete
+  fullName: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Complete
+  type: Field
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.QueueProcessing
+  summary: "\nMark the message as complete.\n"
+  syntax:
+    content: public const QueueMessageRecoveryStrategy Complete
+    return:
+      type: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+    content.vb: Public Const Complete As QueueMessageRecoveryStrategy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Requeue
+  commentId: F:Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Requeue
+  id: Requeue
+  parent: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  langs:
+  - csharp
+  - vb
+  name: Requeue
+  nameWithType: QueueMessageRecoveryStrategy.Requeue
+  fullName: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy.Requeue
+  type: Field
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.QueueProcessing
+  summary: "\nRequeue the message.\n"
+  syntax:
+    content: public const QueueMessageRecoveryStrategy Requeue
+    return:
+      type: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+    content.vb: Public Const Requeue As QueueMessageRecoveryStrategy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Whipstaff.MediatR.Foundatio.QueueProcessing
+  commentId: N:Whipstaff.MediatR.Foundatio.QueueProcessing
+  isExternal: true
+  name: Whipstaff.MediatR.Foundatio.QueueProcessing
+  nameWithType: Whipstaff.MediatR.Foundatio.QueueProcessing
+  fullName: Whipstaff.MediatR.Foundatio.QueueProcessing
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  commentId: T:Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy
+  parent: Whipstaff.MediatR.Foundatio.QueueProcessing
+  isExternal: true
+  name: QueueMessageRecoveryStrategy
+  nameWithType: QueueMessageRecoveryStrategy
+  fullName: Whipstaff.MediatR.Foundatio.QueueProcessing.QueueMessageRecoveryStrategy

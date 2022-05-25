@@ -1,0 +1,380 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.Logging.EventIdFactory
+  commentId: T:Whipstaff.Core.Logging.EventIdFactory
+  id: EventIdFactory
+  parent: Whipstaff.Core.Logging
+  children:
+  - Whipstaff.Core.Logging.EventIdFactory.CountOfMediatRHandlersRegisteredEventId
+  - Whipstaff.Core.Logging.EventIdFactory.DbContextSaveResultEventId
+  - Whipstaff.Core.Logging.EventIdFactory.DefaultIfException
+  - Whipstaff.Core.Logging.EventIdFactory.MethodEntryEventId
+  - Whipstaff.Core.Logging.EventIdFactory.MethodExitEventId
+  - Whipstaff.Core.Logging.EventIdFactory.MiddlewareException
+  - Whipstaff.Core.Logging.EventIdFactory.MiddlewareFinished
+  - Whipstaff.Core.Logging.EventIdFactory.MiddlewareStarting
+  - Whipstaff.Core.Logging.EventIdFactory.NoMediatRHandlersRegisteredForTypeEventId
+  langs:
+  - csharp
+  - vb
+  name: EventIdFactory
+  nameWithType: EventIdFactory
+  fullName: Whipstaff.Core.Logging.EventIdFactory
+  type: Class
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Logging
+  summary: "\nFactory for Event Ids.\n"
+  syntax:
+    content: 'public static class EventIdFactory : Object'
+    content.vb: >-
+      Public Module EventIdFactory
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Whipstaff.Core.Logging.EventIdFactory.DbContextSaveResultEventId
+  commentId: M:Whipstaff.Core.Logging.EventIdFactory.DbContextSaveResultEventId
+  id: DbContextSaveResultEventId
+  parent: Whipstaff.Core.Logging.EventIdFactory
+  langs:
+  - csharp
+  - vb
+  name: DbContextSaveResultEventId()
+  nameWithType: EventIdFactory.DbContextSaveResultEventId()
+  fullName: Whipstaff.Core.Logging.EventIdFactory.DbContextSaveResultEventId()
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Logging
+  summary: "\nGets the Event Id for the Db Context Save Result logging event.\n"
+  syntax:
+    content: public static EventId DbContextSaveResultEventId()
+    return:
+      type: Microsoft.Extensions.Logging.EventId
+    content.vb: Public Shared Function DbContextSaveResultEventId As EventId
+  overload: Whipstaff.Core.Logging.EventIdFactory.DbContextSaveResultEventId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Core.Logging.EventIdFactory.NoMediatRHandlersRegisteredForTypeEventId
+  commentId: M:Whipstaff.Core.Logging.EventIdFactory.NoMediatRHandlersRegisteredForTypeEventId
+  id: NoMediatRHandlersRegisteredForTypeEventId
+  parent: Whipstaff.Core.Logging.EventIdFactory
+  langs:
+  - csharp
+  - vb
+  name: NoMediatRHandlersRegisteredForTypeEventId()
+  nameWithType: EventIdFactory.NoMediatRHandlersRegisteredForTypeEventId()
+  fullName: Whipstaff.Core.Logging.EventIdFactory.NoMediatRHandlersRegisteredForTypeEventId()
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Logging
+  summary: "\nGets the Event Id for the No MediatR Handlers Registered for type logging event.\n"
+  syntax:
+    content: public static EventId NoMediatRHandlersRegisteredForTypeEventId()
+    return:
+      type: Microsoft.Extensions.Logging.EventId
+    content.vb: Public Shared Function NoMediatRHandlersRegisteredForTypeEventId As EventId
+  overload: Whipstaff.Core.Logging.EventIdFactory.NoMediatRHandlersRegisteredForTypeEventId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Core.Logging.EventIdFactory.CountOfMediatRHandlersRegisteredEventId
+  commentId: M:Whipstaff.Core.Logging.EventIdFactory.CountOfMediatRHandlersRegisteredEventId
+  id: CountOfMediatRHandlersRegisteredEventId
+  parent: Whipstaff.Core.Logging.EventIdFactory
+  langs:
+  - csharp
+  - vb
+  name: CountOfMediatRHandlersRegisteredEventId()
+  nameWithType: EventIdFactory.CountOfMediatRHandlersRegisteredEventId()
+  fullName: Whipstaff.Core.Logging.EventIdFactory.CountOfMediatRHandlersRegisteredEventId()
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Logging
+  summary: "\nGets the Event Id for the Number of MediatR Handlers Registered for type logging event.\n"
+  syntax:
+    content: public static EventId CountOfMediatRHandlersRegisteredEventId()
+    return:
+      type: Microsoft.Extensions.Logging.EventId
+    content.vb: Public Shared Function CountOfMediatRHandlersRegisteredEventId As EventId
+  overload: Whipstaff.Core.Logging.EventIdFactory.CountOfMediatRHandlersRegisteredEventId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Core.Logging.EventIdFactory.MethodEntryEventId
+  commentId: M:Whipstaff.Core.Logging.EventIdFactory.MethodEntryEventId
+  id: MethodEntryEventId
+  parent: Whipstaff.Core.Logging.EventIdFactory
+  langs:
+  - csharp
+  - vb
+  name: MethodEntryEventId()
+  nameWithType: EventIdFactory.MethodEntryEventId()
+  fullName: Whipstaff.Core.Logging.EventIdFactory.MethodEntryEventId()
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Logging
+  summary: "\nGets the Event Id for the Method Entry logging event.\n"
+  syntax:
+    content: public static EventId MethodEntryEventId()
+    return:
+      type: Microsoft.Extensions.Logging.EventId
+    content.vb: Public Shared Function MethodEntryEventId As EventId
+  overload: Whipstaff.Core.Logging.EventIdFactory.MethodEntryEventId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Core.Logging.EventIdFactory.MethodExitEventId
+  commentId: M:Whipstaff.Core.Logging.EventIdFactory.MethodExitEventId
+  id: MethodExitEventId
+  parent: Whipstaff.Core.Logging.EventIdFactory
+  langs:
+  - csharp
+  - vb
+  name: MethodExitEventId()
+  nameWithType: EventIdFactory.MethodExitEventId()
+  fullName: Whipstaff.Core.Logging.EventIdFactory.MethodExitEventId()
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Logging
+  summary: "\nGets the Event Id for the Method Exit logging event.\n"
+  syntax:
+    content: public static EventId MethodExitEventId()
+    return:
+      type: Microsoft.Extensions.Logging.EventId
+    content.vb: Public Shared Function MethodExitEventId As EventId
+  overload: Whipstaff.Core.Logging.EventIdFactory.MethodExitEventId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Core.Logging.EventIdFactory.DefaultIfException
+  commentId: M:Whipstaff.Core.Logging.EventIdFactory.DefaultIfException
+  id: DefaultIfException
+  parent: Whipstaff.Core.Logging.EventIdFactory
+  langs:
+  - csharp
+  - vb
+  name: DefaultIfException()
+  nameWithType: EventIdFactory.DefaultIfException()
+  fullName: Whipstaff.Core.Logging.EventIdFactory.DefaultIfException()
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Logging
+  summary: "\nGets the Event Id for the Method Exit logging event.\n"
+  syntax:
+    content: public static EventId DefaultIfException()
+    return:
+      type: Microsoft.Extensions.Logging.EventId
+    content.vb: Public Shared Function DefaultIfException As EventId
+  overload: Whipstaff.Core.Logging.EventIdFactory.DefaultIfException*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Core.Logging.EventIdFactory.MiddlewareStarting
+  commentId: M:Whipstaff.Core.Logging.EventIdFactory.MiddlewareStarting
+  id: MiddlewareStarting
+  parent: Whipstaff.Core.Logging.EventIdFactory
+  langs:
+  - csharp
+  - vb
+  name: MiddlewareStarting()
+  nameWithType: EventIdFactory.MiddlewareStarting()
+  fullName: Whipstaff.Core.Logging.EventIdFactory.MiddlewareStarting()
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Logging
+  summary: "\nGets the Event Id for the Middleware Starting event.\n"
+  syntax:
+    content: public static EventId MiddlewareStarting()
+    return:
+      type: Microsoft.Extensions.Logging.EventId
+    content.vb: Public Shared Function MiddlewareStarting As EventId
+  overload: Whipstaff.Core.Logging.EventIdFactory.MiddlewareStarting*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Core.Logging.EventIdFactory.MiddlewareException
+  commentId: M:Whipstaff.Core.Logging.EventIdFactory.MiddlewareException
+  id: MiddlewareException
+  parent: Whipstaff.Core.Logging.EventIdFactory
+  langs:
+  - csharp
+  - vb
+  name: MiddlewareException()
+  nameWithType: EventIdFactory.MiddlewareException()
+  fullName: Whipstaff.Core.Logging.EventIdFactory.MiddlewareException()
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Logging
+  summary: "\nGets the Event Id for the Middleware Exception event.\n"
+  syntax:
+    content: public static EventId MiddlewareException()
+    return:
+      type: Microsoft.Extensions.Logging.EventId
+    content.vb: Public Shared Function MiddlewareException As EventId
+  overload: Whipstaff.Core.Logging.EventIdFactory.MiddlewareException*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Core.Logging.EventIdFactory.MiddlewareFinished
+  commentId: M:Whipstaff.Core.Logging.EventIdFactory.MiddlewareFinished
+  id: MiddlewareFinished
+  parent: Whipstaff.Core.Logging.EventIdFactory
+  langs:
+  - csharp
+  - vb
+  name: MiddlewareFinished()
+  nameWithType: EventIdFactory.MiddlewareFinished()
+  fullName: Whipstaff.Core.Logging.EventIdFactory.MiddlewareFinished()
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Logging
+  summary: "\nGets the Event Id for the Middleware Finished event.\n"
+  syntax:
+    content: public static EventId MiddlewareFinished()
+    return:
+      type: Microsoft.Extensions.Logging.EventId
+    content.vb: Public Shared Function MiddlewareFinished As EventId
+  overload: Whipstaff.Core.Logging.EventIdFactory.MiddlewareFinished*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Whipstaff.Core.Logging
+  commentId: N:Whipstaff.Core.Logging
+  isExternal: true
+  name: Whipstaff.Core.Logging
+  nameWithType: Whipstaff.Core.Logging
+  fullName: Whipstaff.Core.Logging
+- uid: Whipstaff.Core.Logging.EventIdFactory.DbContextSaveResultEventId*
+  commentId: Overload:Whipstaff.Core.Logging.EventIdFactory.DbContextSaveResultEventId
+  isExternal: true
+  name: DbContextSaveResultEventId
+  nameWithType: EventIdFactory.DbContextSaveResultEventId
+  fullName: Whipstaff.Core.Logging.EventIdFactory.DbContextSaveResultEventId
+- uid: Microsoft.Extensions.Logging.EventId
+  isExternal: true
+  name: EventId
+  nameWithType: EventId
+  fullName: Microsoft.Extensions.Logging.EventId
+- uid: Whipstaff.Core.Logging.EventIdFactory.NoMediatRHandlersRegisteredForTypeEventId*
+  commentId: Overload:Whipstaff.Core.Logging.EventIdFactory.NoMediatRHandlersRegisteredForTypeEventId
+  isExternal: true
+  name: NoMediatRHandlersRegisteredForTypeEventId
+  nameWithType: EventIdFactory.NoMediatRHandlersRegisteredForTypeEventId
+  fullName: Whipstaff.Core.Logging.EventIdFactory.NoMediatRHandlersRegisteredForTypeEventId
+- uid: Whipstaff.Core.Logging.EventIdFactory.CountOfMediatRHandlersRegisteredEventId*
+  commentId: Overload:Whipstaff.Core.Logging.EventIdFactory.CountOfMediatRHandlersRegisteredEventId
+  isExternal: true
+  name: CountOfMediatRHandlersRegisteredEventId
+  nameWithType: EventIdFactory.CountOfMediatRHandlersRegisteredEventId
+  fullName: Whipstaff.Core.Logging.EventIdFactory.CountOfMediatRHandlersRegisteredEventId
+- uid: Whipstaff.Core.Logging.EventIdFactory.MethodEntryEventId*
+  commentId: Overload:Whipstaff.Core.Logging.EventIdFactory.MethodEntryEventId
+  isExternal: true
+  name: MethodEntryEventId
+  nameWithType: EventIdFactory.MethodEntryEventId
+  fullName: Whipstaff.Core.Logging.EventIdFactory.MethodEntryEventId
+- uid: Whipstaff.Core.Logging.EventIdFactory.MethodExitEventId*
+  commentId: Overload:Whipstaff.Core.Logging.EventIdFactory.MethodExitEventId
+  isExternal: true
+  name: MethodExitEventId
+  nameWithType: EventIdFactory.MethodExitEventId
+  fullName: Whipstaff.Core.Logging.EventIdFactory.MethodExitEventId
+- uid: Whipstaff.Core.Logging.EventIdFactory.DefaultIfException*
+  commentId: Overload:Whipstaff.Core.Logging.EventIdFactory.DefaultIfException
+  isExternal: true
+  name: DefaultIfException
+  nameWithType: EventIdFactory.DefaultIfException
+  fullName: Whipstaff.Core.Logging.EventIdFactory.DefaultIfException
+- uid: Whipstaff.Core.Logging.EventIdFactory.MiddlewareStarting*
+  commentId: Overload:Whipstaff.Core.Logging.EventIdFactory.MiddlewareStarting
+  isExternal: true
+  name: MiddlewareStarting
+  nameWithType: EventIdFactory.MiddlewareStarting
+  fullName: Whipstaff.Core.Logging.EventIdFactory.MiddlewareStarting
+- uid: Whipstaff.Core.Logging.EventIdFactory.MiddlewareException*
+  commentId: Overload:Whipstaff.Core.Logging.EventIdFactory.MiddlewareException
+  isExternal: true
+  name: MiddlewareException
+  nameWithType: EventIdFactory.MiddlewareException
+  fullName: Whipstaff.Core.Logging.EventIdFactory.MiddlewareException
+- uid: Whipstaff.Core.Logging.EventIdFactory.MiddlewareFinished*
+  commentId: Overload:Whipstaff.Core.Logging.EventIdFactory.MiddlewareFinished
+  isExternal: true
+  name: MiddlewareFinished
+  nameWithType: EventIdFactory.MiddlewareFinished
+  fullName: Whipstaff.Core.Logging.EventIdFactory.MiddlewareFinished

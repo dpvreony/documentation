@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Rx.ReadOnlyObservables
+  commentId: N:Whipstaff.Rx.ReadOnlyObservables
+  id: Whipstaff.Rx.ReadOnlyObservables
+  children:
+  - Whipstaff.Rx.ReadOnlyObservables.BehaviorSubjectExtensions
+  - Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1
+  - Whipstaff.Rx.ReadOnlyObservables.ReadOnlyBehaviorObservable`1
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.Rx.ReadOnlyObservables
+  nameWithType: Whipstaff.Rx.ReadOnlyObservables
+  fullName: Whipstaff.Rx.ReadOnlyObservables
+  type: Namespace
+  assemblies:
+  - Whipstaff.Rx
+references:
+- uid: Whipstaff.Rx.ReadOnlyObservables.BehaviorSubjectExtensions
+  commentId: T:Whipstaff.Rx.ReadOnlyObservables.BehaviorSubjectExtensions
+  isExternal: true
+  name: BehaviorSubjectExtensions
+  nameWithType: BehaviorSubjectExtensions
+  fullName: Whipstaff.Rx.ReadOnlyObservables.BehaviorSubjectExtensions
+- uid: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1
+  commentId: T:Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1
+  isExternal: true
+  name: IReadOnlyObservable<T>
+  nameWithType: IReadOnlyObservable<T>
+  fullName: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable<T>
+  nameWithType.vb: IReadOnlyObservable(Of T)
+  fullName.vb: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable(Of T)
+  name.vb: IReadOnlyObservable(Of T)
+  spec.csharp:
+  - uid: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1
+    name: IReadOnlyObservable
+    nameWithType: IReadOnlyObservable
+    fullName: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1
+    name: IReadOnlyObservable
+    nameWithType: IReadOnlyObservable
+    fullName: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Rx.ReadOnlyObservables.ReadOnlyBehaviorObservable`1
+  commentId: T:Whipstaff.Rx.ReadOnlyObservables.ReadOnlyBehaviorObservable`1
+  isExternal: true
+  name: ReadOnlyBehaviorObservable<T>
+  nameWithType: ReadOnlyBehaviorObservable<T>
+  fullName: Whipstaff.Rx.ReadOnlyObservables.ReadOnlyBehaviorObservable<T>
+  nameWithType.vb: ReadOnlyBehaviorObservable(Of T)
+  fullName.vb: Whipstaff.Rx.ReadOnlyObservables.ReadOnlyBehaviorObservable(Of T)
+  name.vb: ReadOnlyBehaviorObservable(Of T)
+  spec.csharp:
+  - uid: Whipstaff.Rx.ReadOnlyObservables.ReadOnlyBehaviorObservable`1
+    name: ReadOnlyBehaviorObservable
+    nameWithType: ReadOnlyBehaviorObservable
+    fullName: Whipstaff.Rx.ReadOnlyObservables.ReadOnlyBehaviorObservable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Rx.ReadOnlyObservables.ReadOnlyBehaviorObservable`1
+    name: ReadOnlyBehaviorObservable
+    nameWithType: ReadOnlyBehaviorObservable
+    fullName: Whipstaff.Rx.ReadOnlyObservables.ReadOnlyBehaviorObservable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

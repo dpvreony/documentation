@@ -1,0 +1,321 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception
+  commentId: T:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception
+  id: NumberTooLowInteger16Exception
+  parent: Whipstaff.Runtime.Exceptions
+  children:
+  - Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor
+  - Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.String)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.String,System.Exception)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.String,System.Int16,System.Int16)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.Actual
+  - Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.MinimumValid
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowInteger16Exception
+  nameWithType: NumberTooLowInteger16Exception
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception
+  type: Class
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nThe number passed in was higher than the allowed maximum.\n"
+  syntax:
+    content: 'public class NumberTooLowInteger16Exception : ArgumentOutOfRangeException'
+    content.vb: >-
+      Public Class NumberTooLowInteger16Exception
+          Inherits ArgumentOutOfRangeException
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor
+  id: '#ctor'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowInteger16Exception()
+  nameWithType: NumberTooLowInteger16Exception.NumberTooLowInteger16Exception()
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.NumberTooLowInteger16Exception()
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowInteger16Exception()
+    content.vb: Public Sub New
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.String)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowInteger16Exception(String)
+  nameWithType: NumberTooLowInteger16Exception.NumberTooLowInteger16Exception(String)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.NumberTooLowInteger16Exception(System.String)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowInteger16Exception(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Exception Message.
+    content.vb: Public Sub New(message As String)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.String,System.Exception)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowInteger16Exception(String, Exception)
+  nameWithType: NumberTooLowInteger16Exception.NumberTooLowInteger16Exception(String, Exception)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.NumberTooLowInteger16Exception(System.String, System.Exception)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowInteger16Exception(string message, Exception innerException)
+    parameters:
+    - id: message
+      type: System.String
+      description: Exception Message.
+    - id: innerException
+      type: System.Exception
+      description: Inner Exception.
+    content.vb: Public Sub New(message As String, innerException As Exception)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.String,System.Int16,System.Int16)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.String,System.Int16,System.Int16)
+  id: '#ctor(System.String,System.Int16,System.Int16)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowInteger16Exception(String, Int16, Int16)
+  nameWithType: NumberTooLowInteger16Exception.NumberTooLowInteger16Exception(String, Int16, Int16)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.NumberTooLowInteger16Exception(System.String, System.Int16, System.Int16)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowInteger16Exception(string parameterName, short minimumValid, short actual)
+    parameters:
+    - id: parameterName
+      type: System.String
+      description: The name of the parameter causing the exception.
+    - id: minimumValid
+      type: System.Int16
+      description: The minimum valid value.
+    - id: actual
+      type: System.Int16
+      description: The actual value received.
+    content.vb: Public Sub New(parameterName As String, minimumValid As Short, actual As Short)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  id: '#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowInteger16Exception(SerializationInfo, StreamingContext)
+  nameWithType: NumberTooLowInteger16Exception.NumberTooLowInteger16Exception(SerializationInfo, StreamingContext)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.NumberTooLowInteger16Exception(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception\" data-throw-if-not-resolved=\"false\"></xref> class with serialized data.\n"
+  syntax:
+    content: protected NumberTooLowInteger16Exception(SerializationInfo serializationInfo, StreamingContext streamingContext)
+    parameters:
+    - id: serializationInfo
+      type: System.Runtime.Serialization.SerializationInfo
+      description: The SerializationInfo that holds the serialized object data about the exception being thrown.
+    - id: streamingContext
+      type: System.Runtime.Serialization.StreamingContext
+      description: The StreamingContext that contains contextual information about the source or destination.
+    content.vb: Protected Sub New(serializationInfo As SerializationInfo, streamingContext As StreamingContext)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.Actual
+  commentId: P:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.Actual
+  id: Actual
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: Actual
+  nameWithType: NumberTooLowInteger16Exception.Actual
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.Actual
+  type: Property
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nGets the actual value that cause the exception.\n"
+  syntax:
+    content: public short Actual { get; }
+    parameters: []
+    return:
+      type: System.Int16
+    content.vb: Public ReadOnly Property Actual As Short
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.Actual*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.MinimumValid
+  commentId: P:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.MinimumValid
+  id: MinimumValid
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception
+  langs:
+  - csharp
+  - vb
+  name: MinimumValid
+  nameWithType: NumberTooLowInteger16Exception.MinimumValid
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.MinimumValid
+  type: Property
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nGets the minimum valid value.\n"
+  syntax:
+    content: public short MinimumValid { get; }
+    parameters: []
+    return:
+      type: System.Int16
+    content.vb: Public ReadOnly Property MinimumValid As Short
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.MinimumValid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Whipstaff.Runtime.Exceptions
+  commentId: N:Whipstaff.Runtime.Exceptions
+  isExternal: true
+  name: Whipstaff.Runtime.Exceptions
+  nameWithType: Whipstaff.Runtime.Exceptions
+  fullName: Whipstaff.Runtime.Exceptions
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.#ctor
+  isExternal: true
+  name: NumberTooLowInteger16Exception
+  nameWithType: NumberTooLowInteger16Exception.NumberTooLowInteger16Exception
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.NumberTooLowInteger16Exception
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  name: Int16
+  nameWithType: Int16
+  fullName: System.Int16
+- uid: System.Runtime.Serialization.SerializationInfo
+  isExternal: true
+  name: SerializationInfo
+  nameWithType: SerializationInfo
+  fullName: System.Runtime.Serialization.SerializationInfo
+- uid: System.Runtime.Serialization.StreamingContext
+  isExternal: true
+  name: StreamingContext
+  nameWithType: StreamingContext
+  fullName: System.Runtime.Serialization.StreamingContext
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.Actual*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.Actual
+  isExternal: true
+  name: Actual
+  nameWithType: NumberTooLowInteger16Exception.Actual
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.Actual
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.MinimumValid*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.MinimumValid
+  isExternal: true
+  name: MinimumValid
+  nameWithType: NumberTooLowInteger16Exception.MinimumValid
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowInteger16Exception.MinimumValid

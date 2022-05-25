@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.Entities.IModifiable
+  commentId: T:Whipstaff.Core.Entities.IModifiable
+  id: IModifiable
+  parent: Whipstaff.Core.Entities
+  children:
+  - Whipstaff.Core.Entities.IModifiable.Modified
+  langs:
+  - csharp
+  - vb
+  name: IModifiable
+  nameWithType: IModifiable
+  fullName: Whipstaff.Core.Entities.IModifiable
+  type: Interface
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Entities
+  summary: "\nEntity Interface for a record that supports tracking modification.\n"
+  syntax:
+    content: 'public interface IModifiable : ICreateable'
+    content.vb: >-
+      Public Interface IModifiable
+          Inherits ICreateable
+  inheritedMembers:
+  - Whipstaff.Core.Entities.ICreateable.Created
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Whipstaff.Core.Entities.IModifiable.Modified
+  commentId: P:Whipstaff.Core.Entities.IModifiable.Modified
+  id: Modified
+  parent: Whipstaff.Core.Entities.IModifiable
+  langs:
+  - csharp
+  - vb
+  name: Modified
+  nameWithType: IModifiable.Modified
+  fullName: Whipstaff.Core.Entities.IModifiable.Modified
+  type: Property
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Entities
+  summary: "\nGets when a record was modified.\n"
+  syntax:
+    content: DateTime Modified { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: ReadOnly Property Modified As DateTime
+  overload: Whipstaff.Core.Entities.IModifiable.Modified*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Whipstaff.Core.Entities
+  commentId: N:Whipstaff.Core.Entities
+  isExternal: true
+  name: Whipstaff.Core.Entities
+  nameWithType: Whipstaff.Core.Entities
+  fullName: Whipstaff.Core.Entities
+- uid: Whipstaff.Core.Entities.ICreateable.Created
+  commentId: P:Whipstaff.Core.Entities.ICreateable.Created
+  parent: Whipstaff.Core.Entities.ICreateable
+  isExternal: true
+  name: Created
+  nameWithType: ICreateable.Created
+  fullName: Whipstaff.Core.Entities.ICreateable.Created
+- uid: Whipstaff.Core.Entities.ICreateable
+  commentId: T:Whipstaff.Core.Entities.ICreateable
+  parent: Whipstaff.Core.Entities
+  isExternal: true
+  name: ICreateable
+  nameWithType: ICreateable
+  fullName: Whipstaff.Core.Entities.ICreateable
+- uid: Whipstaff.Core.Entities.IModifiable.Modified*
+  commentId: Overload:Whipstaff.Core.Entities.IModifiable.Modified
+  isExternal: true
+  name: Modified
+  nameWithType: IModifiable.Modified
+  fullName: Whipstaff.Core.Entities.IModifiable.Modified
+- uid: System.DateTime
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime

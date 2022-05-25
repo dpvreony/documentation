@@ -1,0 +1,259 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper
+  commentId: T:Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper
+  id: SpreadsheetDocumentHelper
+  parent: Whipstaff.OpenXml.Excel
+  children:
+  - Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument(System.IO.Stream,System.Collections.Generic.IList{System.ValueTuple{System.String,System.Action{DocumentFormat.OpenXml.Spreadsheet.Sheet,DocumentFormat.OpenXml.Packaging.WorksheetPart}}})
+  langs:
+  - csharp
+  - vb
+  name: SpreadsheetDocumentHelper
+  nameWithType: SpreadsheetDocumentHelper
+  fullName: Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper
+  type: Class
+  source:
+    path: Whipstaff.OpenXml
+    isExternal: true
+  assemblies:
+  - Whipstaff.OpenXml
+  namespace: Whipstaff.OpenXml.Excel
+  summary: "\nHelpers for working with Open XML Spreadsheet Documents.\n"
+  syntax:
+    content: 'public static class SpreadsheetDocumentHelper : Object'
+    content.vb: >-
+      Public Module SpreadsheetDocumentHelper
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument(System.IO.Stream,System.Collections.Generic.IList{System.ValueTuple{System.String,System.Action{DocumentFormat.OpenXml.Spreadsheet.Sheet,DocumentFormat.OpenXml.Packaging.WorksheetPart}}})
+  commentId: M:Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument(System.IO.Stream,System.Collections.Generic.IList{System.ValueTuple{System.String,System.Action{DocumentFormat.OpenXml.Spreadsheet.Sheet,DocumentFormat.OpenXml.Packaging.WorksheetPart}}})
+  id: GetWorkbookSpreadSheetDocument(System.IO.Stream,System.Collections.Generic.IList{System.ValueTuple{System.String,System.Action{DocumentFormat.OpenXml.Spreadsheet.Sheet,DocumentFormat.OpenXml.Packaging.WorksheetPart}}})
+  parent: Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper
+  langs:
+  - csharp
+  - vb
+  name: GetWorkbookSpreadSheetDocument(Stream, IList<ValueTuple<String, Action<Sheet, WorksheetPart>>>)
+  nameWithType: SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument(Stream, IList<ValueTuple<String, Action<Sheet, WorksheetPart>>>)
+  fullName: Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument(System.IO.Stream, System.Collections.Generic.IList<System.ValueTuple<System.String, System.Action<DocumentFormat.OpenXml.Spreadsheet.Sheet, DocumentFormat.OpenXml.Packaging.WorksheetPart>>>)
+  type: Method
+  source:
+    path: Whipstaff.OpenXml
+    isExternal: true
+  assemblies:
+  - Whipstaff.OpenXml
+  namespace: Whipstaff.OpenXml.Excel
+  summary: "\nGets a workbook spreadsheet document.\n"
+  syntax:
+    content: public static SpreadsheetDocument GetWorkbookSpreadSheetDocument(Stream stream, IList<ValueTuple<string, Action<Sheet, WorksheetPart>>> sheetActors)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+      description: Underlying stream for the file.
+    - id: sheetActors
+      type: System.Collections.Generic.IList{System.ValueTuple{System.String,System.Action{DocumentFormat.OpenXml.Spreadsheet.Sheet,DocumentFormat.OpenXml.Packaging.WorksheetPart}}}
+      description: A collection of actors used to build up worksheets inside the workbook.
+    return:
+      type: DocumentFormat.OpenXml.Packaging.SpreadsheetDocument
+      description: A spreadsheet document.
+    content.vb: Public Shared Function GetWorkbookSpreadSheetDocument(stream As Stream, sheetActors As IList(Of ValueTuple(Of String, Action(Of Sheet, WorksheetPart)))) As SpreadsheetDocument
+  overload: Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument*
+  nameWithType.vb: SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument(Stream, IList(Of ValueTuple(Of String, Action(Of Sheet, WorksheetPart))))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument(System.IO.Stream, System.Collections.Generic.IList(Of System.ValueTuple(Of System.String, System.Action(Of DocumentFormat.OpenXml.Spreadsheet.Sheet, DocumentFormat.OpenXml.Packaging.WorksheetPart))))
+  name.vb: GetWorkbookSpreadSheetDocument(Stream, IList(Of ValueTuple(Of String, Action(Of Sheet, WorksheetPart))))
+references:
+- uid: Whipstaff.OpenXml.Excel
+  commentId: N:Whipstaff.OpenXml.Excel
+  isExternal: true
+  name: Whipstaff.OpenXml.Excel
+  nameWithType: Whipstaff.OpenXml.Excel
+  fullName: Whipstaff.OpenXml.Excel
+- uid: Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument*
+  commentId: Overload:Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument
+  isExternal: true
+  name: GetWorkbookSpreadSheetDocument
+  nameWithType: SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument
+  fullName: Whipstaff.OpenXml.Excel.SpreadsheetDocumentHelper.GetWorkbookSpreadSheetDocument
+- uid: System.IO.Stream
+  commentId: '!:System.IO.Stream'
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.Collections.Generic.IList{System.ValueTuple{System.String,System.Action{DocumentFormat.OpenXml.Spreadsheet.Sheet,DocumentFormat.OpenXml.Packaging.WorksheetPart}}}
+  commentId: '!:System.Collections.Generic.IList{System.ValueTuple{System.String,System.Action{DocumentFormat.OpenXml.Spreadsheet.Sheet,DocumentFormat.OpenXml.Packaging.WorksheetPart}}}'
+  definition: System.Collections.Generic.IList`1
+  name: IList<ValueTuple<String, Action<Sheet, WorksheetPart>>>
+  nameWithType: IList<ValueTuple<String, Action<Sheet, WorksheetPart>>>
+  fullName: System.Collections.Generic.IList<System.ValueTuple<System.String, System.Action<DocumentFormat.OpenXml.Spreadsheet.Sheet, DocumentFormat.OpenXml.Packaging.WorksheetPart>>>
+  nameWithType.vb: IList(Of ValueTuple(Of String, Action(Of Sheet, WorksheetPart)))
+  fullName.vb: System.Collections.Generic.IList(Of System.ValueTuple(Of System.String, System.Action(Of DocumentFormat.OpenXml.Spreadsheet.Sheet, DocumentFormat.OpenXml.Packaging.WorksheetPart)))
+  name.vb: IList(Of ValueTuple(Of String, Action(Of Sheet, WorksheetPart)))
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.ValueTuple`2
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DocumentFormat.OpenXml.Spreadsheet.Sheet
+    name: Sheet
+    nameWithType: Sheet
+    fullName: DocumentFormat.OpenXml.Spreadsheet.Sheet
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DocumentFormat.OpenXml.Packaging.WorksheetPart
+    name: WorksheetPart
+    nameWithType: WorksheetPart
+    fullName: DocumentFormat.OpenXml.Packaging.WorksheetPart
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.ValueTuple`2
+    name: ValueTuple
+    nameWithType: ValueTuple
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Action`2
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DocumentFormat.OpenXml.Spreadsheet.Sheet
+    name: Sheet
+    nameWithType: Sheet
+    fullName: DocumentFormat.OpenXml.Spreadsheet.Sheet
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DocumentFormat.OpenXml.Packaging.WorksheetPart
+    name: WorksheetPart
+    nameWithType: WorksheetPart
+    fullName: DocumentFormat.OpenXml.Packaging.WorksheetPart
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DocumentFormat.OpenXml.Packaging.SpreadsheetDocument
+  commentId: '!:DocumentFormat.OpenXml.Packaging.SpreadsheetDocument'
+  isExternal: true
+  name: SpreadsheetDocument
+  nameWithType: SpreadsheetDocument
+  fullName: DocumentFormat.OpenXml.Packaging.SpreadsheetDocument
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<>
+  nameWithType: IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

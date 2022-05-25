@@ -1,0 +1,287 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core
+  commentId: N:Whipstaff.Core
+  id: Whipstaff.Core
+  children:
+  - Whipstaff.Core.IAuditableCommandFactory`8
+  - Whipstaff.Core.IAuditableQueryFactory`5
+  - Whipstaff.Core.IAuditableRequest`2
+  - Whipstaff.Core.IClassApiSchemaRegistration
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.Core
+  nameWithType: Whipstaff.Core
+  fullName: Whipstaff.Core
+  type: Namespace
+  assemblies:
+  - Whipstaff.Core
+references:
+- uid: Whipstaff.Core.IAuditableCommandFactory`8
+  commentId: T:Whipstaff.Core.IAuditableCommandFactory`8
+  isExternal: true
+  name: IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>
+  nameWithType: IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>
+  fullName: Whipstaff.Core.IAuditableCommandFactory<TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto>
+  nameWithType.vb: IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto)
+  fullName.vb: Whipstaff.Core.IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto)
+  name.vb: IAuditableCommandFactory(Of TAddCommand, TAddRequestDto, TAddResponseDto, TDeleteCommand, TDeleteResponseDto, TUpdateCommand, TUpdateRequestDto, TUpdateResponseDto)
+  spec.csharp:
+  - uid: Whipstaff.Core.IAuditableCommandFactory`8
+    name: IAuditableCommandFactory
+    nameWithType: IAuditableCommandFactory
+    fullName: Whipstaff.Core.IAuditableCommandFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TAddCommand
+    nameWithType: TAddCommand
+    fullName: TAddCommand
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TAddRequestDto
+    nameWithType: TAddRequestDto
+    fullName: TAddRequestDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TAddResponseDto
+    nameWithType: TAddResponseDto
+    fullName: TAddResponseDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDeleteCommand
+    nameWithType: TDeleteCommand
+    fullName: TDeleteCommand
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDeleteResponseDto
+    nameWithType: TDeleteResponseDto
+    fullName: TDeleteResponseDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TUpdateCommand
+    nameWithType: TUpdateCommand
+    fullName: TUpdateCommand
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TUpdateRequestDto
+    nameWithType: TUpdateRequestDto
+    fullName: TUpdateRequestDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TUpdateResponseDto
+    nameWithType: TUpdateResponseDto
+    fullName: TUpdateResponseDto
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Core.IAuditableCommandFactory`8
+    name: IAuditableCommandFactory
+    nameWithType: IAuditableCommandFactory
+    fullName: Whipstaff.Core.IAuditableCommandFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TAddCommand
+    nameWithType: TAddCommand
+    fullName: TAddCommand
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TAddRequestDto
+    nameWithType: TAddRequestDto
+    fullName: TAddRequestDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TAddResponseDto
+    nameWithType: TAddResponseDto
+    fullName: TAddResponseDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDeleteCommand
+    nameWithType: TDeleteCommand
+    fullName: TDeleteCommand
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDeleteResponseDto
+    nameWithType: TDeleteResponseDto
+    fullName: TDeleteResponseDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TUpdateCommand
+    nameWithType: TUpdateCommand
+    fullName: TUpdateCommand
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TUpdateRequestDto
+    nameWithType: TUpdateRequestDto
+    fullName: TUpdateRequestDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TUpdateResponseDto
+    nameWithType: TUpdateResponseDto
+    fullName: TUpdateResponseDto
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Core.IAuditableQueryFactory`5
+  commentId: T:Whipstaff.Core.IAuditableQueryFactory`5
+  isExternal: true
+  name: IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>
+  nameWithType: IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>
+  fullName: Whipstaff.Core.IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>
+  nameWithType.vb: IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse)
+  fullName.vb: Whipstaff.Core.IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse)
+  name.vb: IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse)
+  spec.csharp:
+  - uid: Whipstaff.Core.IAuditableQueryFactory`5
+    name: IAuditableQueryFactory
+    nameWithType: IAuditableQueryFactory
+    fullName: Whipstaff.Core.IAuditableQueryFactory
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TListQuery
+    nameWithType: TListQuery
+    fullName: TListQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TListRequestDto
+    nameWithType: TListRequestDto
+    fullName: TListRequestDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TListResponse
+    nameWithType: TListResponse
+    fullName: TListResponse
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TViewQuery
+    nameWithType: TViewQuery
+    fullName: TViewQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TViewResponse
+    nameWithType: TViewResponse
+    fullName: TViewResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Core.IAuditableQueryFactory`5
+    name: IAuditableQueryFactory
+    nameWithType: IAuditableQueryFactory
+    fullName: Whipstaff.Core.IAuditableQueryFactory
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TListQuery
+    nameWithType: TListQuery
+    fullName: TListQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TListRequestDto
+    nameWithType: TListRequestDto
+    fullName: TListRequestDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TListResponse
+    nameWithType: TListResponse
+    fullName: TListResponse
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TViewQuery
+    nameWithType: TViewQuery
+    fullName: TViewQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TViewResponse
+    nameWithType: TViewResponse
+    fullName: TViewResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Core.IAuditableRequest`2
+  commentId: T:Whipstaff.Core.IAuditableRequest`2
+  isExternal: true
+  name: IAuditableRequest<TRequestDto, TResponse>
+  nameWithType: IAuditableRequest<TRequestDto, TResponse>
+  fullName: Whipstaff.Core.IAuditableRequest<TRequestDto, TResponse>
+  nameWithType.vb: IAuditableRequest(Of TRequestDto, TResponse)
+  fullName.vb: Whipstaff.Core.IAuditableRequest(Of TRequestDto, TResponse)
+  name.vb: IAuditableRequest(Of TRequestDto, TResponse)
+  spec.csharp:
+  - uid: Whipstaff.Core.IAuditableRequest`2
+    name: IAuditableRequest
+    nameWithType: IAuditableRequest
+    fullName: Whipstaff.Core.IAuditableRequest
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequestDto
+    nameWithType: TRequestDto
+    fullName: TRequestDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Core.IAuditableRequest`2
+    name: IAuditableRequest
+    nameWithType: IAuditableRequest
+    fullName: Whipstaff.Core.IAuditableRequest
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequestDto
+    nameWithType: TRequestDto
+    fullName: TRequestDto
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Core.IClassApiSchemaRegistration
+  commentId: T:Whipstaff.Core.IClassApiSchemaRegistration
+  isExternal: true
+  name: IClassApiSchemaRegistration
+  nameWithType: IClassApiSchemaRegistration
+  fullName: Whipstaff.Core.IClassApiSchemaRegistration

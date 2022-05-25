@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2
+  commentId: T:Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2
+  id: RequestPreProcessorRegistrationHandler`2
+  parent: Whipstaff.Core.Mediatr
+  children:
+  - Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.#ctor
+  - Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ImplementationType
+  - Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ServiceType
+  langs:
+  - csharp
+  - vb
+  name: RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>
+  nameWithType: RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>
+  fullName: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>
+  type: Class
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Mediatr
+  summary: "\nRegisters a concrete type for MediatR pre processors.\n"
+  syntax:
+    content: 'public sealed class RequestPreProcessorRegistrationHandler<TImplementationType, TRequest> : Object, IRequestPreProcessorRegistrationHandler, IMediatrRegistrationModel where TImplementationType : class, IRequestPreProcessor<TRequest>'
+    typeParameters:
+    - id: TImplementationType
+      description: The type for the request handler.
+    - id: TRequest
+      description: The type for the mediatr request.
+    content.vb: >-
+      Public NotInheritable Class RequestPreProcessorRegistrationHandler(Of TImplementationType As {Class, IRequestPreProcessor(Of TRequest)}, TRequest)
+          Inherits Object
+          Implements IRequestPreProcessorRegistrationHandler, IMediatrRegistrationModel
+  inheritance:
+  - System.Object
+  implements:
+  - Whipstaff.Core.Mediatr.IRequestPreProcessorRegistrationHandler
+  - Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+  nameWithType.vb: RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+  fullName.vb: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest)
+  name.vb: RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest)
+- uid: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.#ctor
+  commentId: M:Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.#ctor
+  id: '#ctor'
+  parent: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2
+  langs:
+  - csharp
+  - vb
+  name: RequestPreProcessorRegistrationHandler()
+  nameWithType: RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.RequestPreProcessorRegistrationHandler()
+  fullName: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.RequestPreProcessorRegistrationHandler()
+  type: Constructor
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Mediatr
+  syntax:
+    content: public RequestPreProcessorRegistrationHandler()
+    content.vb: Public Sub New
+  overload: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.#ctor*
+  nameWithType.vb: RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).RequestPreProcessorRegistrationHandler()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).RequestPreProcessorRegistrationHandler()
+- uid: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ServiceType
+  commentId: P:Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ServiceType
+  id: ServiceType
+  parent: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2
+  langs:
+  - csharp
+  - vb
+  name: ServiceType
+  nameWithType: RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.ServiceType
+  fullName: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.ServiceType
+  type: Property
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Mediatr
+  summary: "\nGets the registration type.\n"
+  syntax:
+    content: public Type ServiceType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property ServiceType As Type
+  overload: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ServiceType*
+  implements:
+  - Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType
+  nameWithType.vb: RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).ServiceType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).ServiceType
+- uid: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ImplementationType
+  commentId: P:Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ImplementationType
+  id: ImplementationType
+  parent: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2
+  langs:
+  - csharp
+  - vb
+  name: ImplementationType
+  nameWithType: RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.ImplementationType
+  fullName: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.ImplementationType
+  type: Property
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Mediatr
+  summary: "\nGets the implementation type.\n"
+  syntax:
+    content: public Type ImplementationType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Public ReadOnly Property ImplementationType As Type
+  overload: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ImplementationType*
+  implements:
+  - Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType
+  nameWithType.vb: RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).ImplementationType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).ImplementationType
+references:
+- uid: Whipstaff.Core.Mediatr
+  commentId: N:Whipstaff.Core.Mediatr
+  isExternal: true
+  name: Whipstaff.Core.Mediatr
+  nameWithType: Whipstaff.Core.Mediatr
+  fullName: Whipstaff.Core.Mediatr
+- uid: Whipstaff.Core.Mediatr.IRequestPreProcessorRegistrationHandler
+  commentId: T:Whipstaff.Core.Mediatr.IRequestPreProcessorRegistrationHandler
+  parent: Whipstaff.Core.Mediatr
+  isExternal: true
+  name: IRequestPreProcessorRegistrationHandler
+  nameWithType: IRequestPreProcessorRegistrationHandler
+  fullName: Whipstaff.Core.Mediatr.IRequestPreProcessorRegistrationHandler
+- uid: Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+  commentId: T:Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+  parent: Whipstaff.Core.Mediatr
+  isExternal: true
+  name: IMediatrRegistrationModel
+  nameWithType: IMediatrRegistrationModel
+  fullName: Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+- uid: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.#ctor*
+  commentId: Overload:Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.#ctor
+  isExternal: true
+  name: RequestPreProcessorRegistrationHandler
+  nameWithType: RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.RequestPreProcessorRegistrationHandler
+  fullName: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.RequestPreProcessorRegistrationHandler
+  nameWithType.vb: RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).RequestPreProcessorRegistrationHandler
+  fullName.vb: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).RequestPreProcessorRegistrationHandler
+- uid: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ServiceType*
+  commentId: Overload:Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ServiceType
+  isExternal: true
+  name: ServiceType
+  nameWithType: RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.ServiceType
+  fullName: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.ServiceType
+  nameWithType.vb: RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).ServiceType
+  fullName.vb: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).ServiceType
+- uid: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType
+  commentId: P:Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType
+  parent: Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+  isExternal: true
+  name: ServiceType
+  nameWithType: IMediatrRegistrationModel.ServiceType
+  fullName: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType
+- uid: System.Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ImplementationType*
+  commentId: Overload:Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler`2.ImplementationType
+  isExternal: true
+  name: ImplementationType
+  nameWithType: RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.ImplementationType
+  fullName: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler<TImplementationType, TRequest>.ImplementationType
+  nameWithType.vb: RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).ImplementationType
+  fullName.vb: Whipstaff.Core.Mediatr.RequestPreProcessorRegistrationHandler(Of TImplementationType, TRequest).ImplementationType
+- uid: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType
+  commentId: P:Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType
+  parent: Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+  isExternal: true
+  name: ImplementationType
+  nameWithType: IMediatrRegistrationModel.ImplementationType
+  fullName: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType

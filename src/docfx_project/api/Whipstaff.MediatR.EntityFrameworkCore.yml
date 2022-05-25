@@ -1,0 +1,460 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.MediatR.EntityFrameworkCore
+  commentId: N:Whipstaff.MediatR.EntityFrameworkCore
+  id: Whipstaff.MediatR.EntityFrameworkCore
+  children:
+  - Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+  - Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByInt32IdRequestHandler`4
+  - Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByLongIdRequestHandler`4
+  - Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkRequestHandler`4
+  - Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByInt32IdRequestHandler`4
+  - Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByLongIdRequestHandler`4
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.MediatR.EntityFrameworkCore
+  nameWithType: Whipstaff.MediatR.EntityFrameworkCore
+  fullName: Whipstaff.MediatR.EntityFrameworkCore
+  type: Namespace
+  assemblies:
+  - Whipstaff.MediatR.EntityFrameworkCore
+references:
+- uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+  commentId: T:Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+  isExternal: true
+  name: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>
+  nameWithType: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>
+  nameWithType.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity)
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity)
+  name.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity)
+  spec.csharp:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+    name: ActOnDbSetRequestHandler
+    nameWithType: ActOnDbSetRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+    name: ActOnDbSetRequestHandler
+    nameWithType: ActOnDbSetRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByInt32IdRequestHandler`4
+  commentId: T:Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByInt32IdRequestHandler`4
+  isExternal: true
+  name: FetchFromEntityFrameworkByInt32IdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  nameWithType: FetchFromEntityFrameworkByInt32IdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByInt32IdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  nameWithType.vb: FetchFromEntityFrameworkByInt32IdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByInt32IdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  name.vb: FetchFromEntityFrameworkByInt32IdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  spec.csharp:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByInt32IdRequestHandler`4
+    name: FetchFromEntityFrameworkByInt32IdRequestHandler
+    nameWithType: FetchFromEntityFrameworkByInt32IdRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByInt32IdRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByInt32IdRequestHandler`4
+    name: FetchFromEntityFrameworkByInt32IdRequestHandler
+    nameWithType: FetchFromEntityFrameworkByInt32IdRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByInt32IdRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByLongIdRequestHandler`4
+  commentId: T:Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByLongIdRequestHandler`4
+  isExternal: true
+  name: FetchFromEntityFrameworkByLongIdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  nameWithType: FetchFromEntityFrameworkByLongIdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByLongIdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  nameWithType.vb: FetchFromEntityFrameworkByLongIdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByLongIdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  name.vb: FetchFromEntityFrameworkByLongIdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  spec.csharp:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByLongIdRequestHandler`4
+    name: FetchFromEntityFrameworkByLongIdRequestHandler
+    nameWithType: FetchFromEntityFrameworkByLongIdRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByLongIdRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByLongIdRequestHandler`4
+    name: FetchFromEntityFrameworkByLongIdRequestHandler
+    nameWithType: FetchFromEntityFrameworkByLongIdRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkByLongIdRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkRequestHandler`4
+  commentId: T:Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkRequestHandler`4
+  isExternal: true
+  name: FetchFromEntityFrameworkRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  nameWithType: FetchFromEntityFrameworkRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  nameWithType.vb: FetchFromEntityFrameworkRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  name.vb: FetchFromEntityFrameworkRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  spec.csharp:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkRequestHandler`4
+    name: FetchFromEntityFrameworkRequestHandler
+    nameWithType: FetchFromEntityFrameworkRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkRequestHandler`4
+    name: FetchFromEntityFrameworkRequestHandler
+    nameWithType: FetchFromEntityFrameworkRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.FetchFromEntityFrameworkRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByInt32IdRequestHandler`4
+  commentId: T:Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByInt32IdRequestHandler`4
+  isExternal: true
+  name: FuncFetchFromEntityFrameworkByInt32IdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  nameWithType: FuncFetchFromEntityFrameworkByInt32IdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByInt32IdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  nameWithType.vb: FuncFetchFromEntityFrameworkByInt32IdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByInt32IdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  name.vb: FuncFetchFromEntityFrameworkByInt32IdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  spec.csharp:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByInt32IdRequestHandler`4
+    name: FuncFetchFromEntityFrameworkByInt32IdRequestHandler
+    nameWithType: FuncFetchFromEntityFrameworkByInt32IdRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByInt32IdRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByInt32IdRequestHandler`4
+    name: FuncFetchFromEntityFrameworkByInt32IdRequestHandler
+    nameWithType: FuncFetchFromEntityFrameworkByInt32IdRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByInt32IdRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByLongIdRequestHandler`4
+  commentId: T:Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByLongIdRequestHandler`4
+  isExternal: true
+  name: FuncFetchFromEntityFrameworkByLongIdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  nameWithType: FuncFetchFromEntityFrameworkByLongIdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByLongIdRequestHandler<TRequest, TDbContext, TEntity, TResult>
+  nameWithType.vb: FuncFetchFromEntityFrameworkByLongIdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByLongIdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  name.vb: FuncFetchFromEntityFrameworkByLongIdRequestHandler(Of TRequest, TDbContext, TEntity, TResult)
+  spec.csharp:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByLongIdRequestHandler`4
+    name: FuncFetchFromEntityFrameworkByLongIdRequestHandler
+    nameWithType: FuncFetchFromEntityFrameworkByLongIdRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByLongIdRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByLongIdRequestHandler`4
+    name: FuncFetchFromEntityFrameworkByLongIdRequestHandler
+    nameWithType: FuncFetchFromEntityFrameworkByLongIdRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.FuncFetchFromEntityFrameworkByLongIdRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )

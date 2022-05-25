@@ -1,0 +1,321 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException
+  commentId: T:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException
+  id: NumberTooLowClrDoubleException
+  parent: Whipstaff.Runtime.Exceptions
+  children:
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.String)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.String,System.Double,System.Double)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.String,System.Exception)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.Actual
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.MinimumValid
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDoubleException
+  nameWithType: NumberTooLowClrDoubleException
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException
+  type: Class
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nThe number passed in was higher than the allowed maximum.\n"
+  syntax:
+    content: 'public class NumberTooLowClrDoubleException : ArgumentOutOfRangeException'
+    content.vb: >-
+      Public Class NumberTooLowClrDoubleException
+          Inherits ArgumentOutOfRangeException
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor
+  id: '#ctor'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDoubleException()
+  nameWithType: NumberTooLowClrDoubleException.NumberTooLowClrDoubleException()
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.NumberTooLowClrDoubleException()
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowClrDoubleException()
+    content.vb: Public Sub New
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.String)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDoubleException(String)
+  nameWithType: NumberTooLowClrDoubleException.NumberTooLowClrDoubleException(String)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.NumberTooLowClrDoubleException(System.String)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowClrDoubleException(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Exception Message.
+    content.vb: Public Sub New(message As String)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.String,System.Exception)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDoubleException(String, Exception)
+  nameWithType: NumberTooLowClrDoubleException.NumberTooLowClrDoubleException(String, Exception)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.NumberTooLowClrDoubleException(System.String, System.Exception)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowClrDoubleException(string message, Exception innerException)
+    parameters:
+    - id: message
+      type: System.String
+      description: Exception Message.
+    - id: innerException
+      type: System.Exception
+      description: Inner Exception.
+    content.vb: Public Sub New(message As String, innerException As Exception)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.String,System.Double,System.Double)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.String,System.Double,System.Double)
+  id: '#ctor(System.String,System.Double,System.Double)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDoubleException(String, Double, Double)
+  nameWithType: NumberTooLowClrDoubleException.NumberTooLowClrDoubleException(String, Double, Double)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.NumberTooLowClrDoubleException(System.String, System.Double, System.Double)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowClrDoubleException(string parameterName, double minimumValid, double actual)
+    parameters:
+    - id: parameterName
+      type: System.String
+      description: The name of the parameter causing the exception.
+    - id: minimumValid
+      type: System.Double
+      description: The minimum valid value.
+    - id: actual
+      type: System.Double
+      description: The actual value received.
+    content.vb: Public Sub New(parameterName As String, minimumValid As Double, actual As Double)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  id: '#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDoubleException(SerializationInfo, StreamingContext)
+  nameWithType: NumberTooLowClrDoubleException.NumberTooLowClrDoubleException(SerializationInfo, StreamingContext)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.NumberTooLowClrDoubleException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException\" data-throw-if-not-resolved=\"false\"></xref> class with serialized data.\n"
+  syntax:
+    content: protected NumberTooLowClrDoubleException(SerializationInfo serializationInfo, StreamingContext streamingContext)
+    parameters:
+    - id: serializationInfo
+      type: System.Runtime.Serialization.SerializationInfo
+      description: The SerializationInfo that holds the serialized object data about the exception being thrown.
+    - id: streamingContext
+      type: System.Runtime.Serialization.StreamingContext
+      description: The StreamingContext that contains contextual information about the source or destination.
+    content.vb: Protected Sub New(serializationInfo As SerializationInfo, streamingContext As StreamingContext)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.Actual
+  commentId: P:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.Actual
+  id: Actual
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: Actual
+  nameWithType: NumberTooLowClrDoubleException.Actual
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.Actual
+  type: Property
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nGets the actual value that cause the exception.\n"
+  syntax:
+    content: public double Actual { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Actual As Double
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.Actual*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.MinimumValid
+  commentId: P:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.MinimumValid
+  id: MinimumValid
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException
+  langs:
+  - csharp
+  - vb
+  name: MinimumValid
+  nameWithType: NumberTooLowClrDoubleException.MinimumValid
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.MinimumValid
+  type: Property
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nGets the minimum valid value.\n"
+  syntax:
+    content: public double MinimumValid { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property MinimumValid As Double
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.MinimumValid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Whipstaff.Runtime.Exceptions
+  commentId: N:Whipstaff.Runtime.Exceptions
+  isExternal: true
+  name: Whipstaff.Runtime.Exceptions
+  nameWithType: Whipstaff.Runtime.Exceptions
+  fullName: Whipstaff.Runtime.Exceptions
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.#ctor
+  isExternal: true
+  name: NumberTooLowClrDoubleException
+  nameWithType: NumberTooLowClrDoubleException.NumberTooLowClrDoubleException
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.NumberTooLowClrDoubleException
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.Runtime.Serialization.SerializationInfo
+  isExternal: true
+  name: SerializationInfo
+  nameWithType: SerializationInfo
+  fullName: System.Runtime.Serialization.SerializationInfo
+- uid: System.Runtime.Serialization.StreamingContext
+  isExternal: true
+  name: StreamingContext
+  nameWithType: StreamingContext
+  fullName: System.Runtime.Serialization.StreamingContext
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.Actual*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.Actual
+  isExternal: true
+  name: Actual
+  nameWithType: NumberTooLowClrDoubleException.Actual
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.Actual
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.MinimumValid*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.MinimumValid
+  isExternal: true
+  name: MinimumValid
+  nameWithType: NumberTooLowClrDoubleException.MinimumValid
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDoubleException.MinimumValid

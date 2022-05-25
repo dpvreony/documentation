@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.Bitwise
+  commentId: N:Whipstaff.Runtime.Bitwise
+  id: Whipstaff.Runtime.Bitwise
+  children:
+  - Whipstaff.Runtime.Bitwise.OnceTrueLatch
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.Runtime.Bitwise
+  nameWithType: Whipstaff.Runtime.Bitwise
+  fullName: Whipstaff.Runtime.Bitwise
+  type: Namespace
+  assemblies:
+  - Whipstaff.Runtime
+references:
+- uid: Whipstaff.Runtime.Bitwise.OnceTrueLatch
+  commentId: T:Whipstaff.Runtime.Bitwise.OnceTrueLatch
+  isExternal: true
+  name: OnceTrueLatch
+  nameWithType: OnceTrueLatch
+  fullName: Whipstaff.Runtime.Bitwise.OnceTrueLatch

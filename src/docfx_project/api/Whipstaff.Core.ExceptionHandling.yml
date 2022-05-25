@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.ExceptionHandling
+  commentId: N:Whipstaff.Core.ExceptionHandling
+  id: Whipstaff.Core.ExceptionHandling
+  children:
+  - Whipstaff.Core.ExceptionHandling.TaskHelpers
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.Core.ExceptionHandling
+  nameWithType: Whipstaff.Core.ExceptionHandling
+  fullName: Whipstaff.Core.ExceptionHandling
+  type: Namespace
+  assemblies:
+  - Whipstaff.Core
+references:
+- uid: Whipstaff.Core.ExceptionHandling.TaskHelpers
+  commentId: T:Whipstaff.Core.ExceptionHandling.TaskHelpers
+  isExternal: true
+  name: TaskHelpers
+  nameWithType: TaskHelpers
+  fullName: Whipstaff.Core.ExceptionHandling.TaskHelpers

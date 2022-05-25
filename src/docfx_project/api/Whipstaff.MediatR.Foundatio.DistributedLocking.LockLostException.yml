@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException
+  commentId: T:Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException
+  id: LockLostException
+  parent: Whipstaff.MediatR.Foundatio.DistributedLocking
+  children:
+  - Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException.#ctor(System.String,System.Exception)
+  langs:
+  - csharp
+  - vb
+  name: LockLostException
+  nameWithType: LockLostException
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException
+  type: Class
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.DistributedLocking
+  summary: "\nException for when a lock has been lost and the behaviour is to error.\n"
+  syntax:
+    content: 'public sealed class LockLostException : Exception'
+    content.vb: >-
+      Public NotInheritable Class LockLostException
+          Inherits Exception
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException.#ctor(System.String,System.Exception)
+  commentId: M:Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException
+  langs:
+  - csharp
+  - vb
+  name: LockLostException(String, Exception)
+  nameWithType: LockLostException.LockLostException(String, Exception)
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException.LockLostException(System.String, System.Exception)
+  type: Constructor
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio.DistributedLocking
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public LockLostException(string lockName, Exception innerException)
+    parameters:
+    - id: lockName
+      type: System.String
+      description: Name of the lock.
+    - id: innerException
+      type: System.Exception
+      description: Inner exception.
+    content.vb: Public Sub New(lockName As String, innerException As Exception)
+  overload: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking
+  commentId: N:Whipstaff.MediatR.Foundatio.DistributedLocking
+  isExternal: true
+  name: Whipstaff.MediatR.Foundatio.DistributedLocking
+  nameWithType: Whipstaff.MediatR.Foundatio.DistributedLocking
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException.#ctor*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException.#ctor
+  isExternal: true
+  name: LockLostException
+  nameWithType: LockLostException.LockLostException
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException.LockLostException
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

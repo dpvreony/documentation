@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking
+  commentId: N:Whipstaff.MediatR.Foundatio.DistributedLocking
+  id: Whipstaff.MediatR.Foundatio.DistributedLocking
+  children:
+  - Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+  - Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior
+  - Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.MediatR.Foundatio.DistributedLocking
+  nameWithType: Whipstaff.MediatR.Foundatio.DistributedLocking
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking
+  type: Namespace
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+references:
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+  commentId: T:Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+  isExternal: true
+  name: DistributedLockProcessManager
+  nameWithType: DistributedLockProcessManager
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.DistributedLockProcessManager
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior
+  commentId: T:Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior
+  parent: Whipstaff.MediatR.Foundatio.DistributedLocking
+  isExternal: true
+  name: LockLostBehavior
+  nameWithType: LockLostBehavior
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostBehavior
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException
+  commentId: T:Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException
+  isExternal: true
+  name: LockLostException
+  nameWithType: LockLostException
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking.LockLostException
+- uid: Whipstaff.MediatR.Foundatio.DistributedLocking
+  commentId: N:Whipstaff.MediatR.Foundatio.DistributedLocking
+  isExternal: true
+  name: Whipstaff.MediatR.Foundatio.DistributedLocking
+  nameWithType: Whipstaff.MediatR.Foundatio.DistributedLocking
+  fullName: Whipstaff.MediatR.Foundatio.DistributedLocking

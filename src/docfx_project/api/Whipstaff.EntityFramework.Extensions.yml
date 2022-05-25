@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.EntityFramework.Extensions
+  commentId: N:Whipstaff.EntityFramework.Extensions
+  id: Whipstaff.EntityFramework.Extensions
+  children:
+  - Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.EntityFramework.Extensions
+  nameWithType: Whipstaff.EntityFramework.Extensions
+  fullName: Whipstaff.EntityFramework.Extensions
+  type: Namespace
+  assemblies:
+  - Whipstaff.EntityFramework
+references:
+- uid: Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  commentId: T:Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  isExternal: true
+  name: DbContextExtensions
+  nameWithType: DbContextExtensions
+  fullName: Whipstaff.EntityFramework.Extensions.DbContextExtensions

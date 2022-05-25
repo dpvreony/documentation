@@ -1,0 +1,345 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Entityframework.Relational.ModelBuilderHelpers
+  commentId: T:Whipstaff.Entityframework.Relational.ModelBuilderHelpers
+  id: ModelBuilderHelpers
+  parent: Whipstaff.Entityframework.Relational
+  children:
+  - Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong(Microsoft.EntityFrameworkCore.ModelBuilder)
+  - Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong(Microsoft.EntityFrameworkCore.ModelBuilder,Microsoft.EntityFrameworkCore.Metadata.IMutableEntityType)
+  - Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertDateTimeOffSetPropertyToLong(Microsoft.EntityFrameworkCore.ModelBuilder,System.Type,System.String)
+  - Whipstaff.Entityframework.Relational.ModelBuilderHelpers.GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter
+  langs:
+  - csharp
+  - vb
+  name: ModelBuilderHelpers
+  nameWithType: ModelBuilderHelpers
+  fullName: Whipstaff.Entityframework.Relational.ModelBuilderHelpers
+  type: Class
+  source:
+    path: Whipstaff.Entityframework.Relational
+    isExternal: true
+  assemblies:
+  - Whipstaff.Entityframework.Relational
+  namespace: Whipstaff.Entityframework.Relational
+  summary: "\nEntity Framework Model Builder Helpers for SQL Lite.\n"
+  syntax:
+    content: 'public static class ModelBuilderHelpers : Object'
+    content.vb: >-
+      Public Module ModelBuilderHelpers
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong(Microsoft.EntityFrameworkCore.ModelBuilder)
+  id: ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: Whipstaff.Entityframework.Relational.ModelBuilderHelpers
+  langs:
+  - csharp
+  - vb
+  name: ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong(ModelBuilder)
+  nameWithType: ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong(ModelBuilder)
+  fullName: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong(Microsoft.EntityFrameworkCore.ModelBuilder)
+  type: Method
+  source:
+    path: Whipstaff.Entityframework.Relational
+    isExternal: true
+  assemblies:
+  - Whipstaff.Entityframework.Relational
+  namespace: Whipstaff.Entityframework.Relational
+  summary: "\nConverts all DBSet entities that contain a DateTimeOffset column to use a long database type within SQL Lite.\nIs used to workaround a limitation in SQL lite where you can&apos;t store as a DateTimeOffset and the workaround\nis to use a string or DateTime and lose the precision. Instead, so you don&apos;t need to adjust your model to cater\nfor SQL lite, you can retain the ability of databases that do support it, but use SQL lite for testing.\nThe caveat is that SQL lite loses timezone precision as it converts everything to UTC, but then you should\nprobably be storing the data as UTC anyway.\n"
+  syntax:
+    content: public static void ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong(ModelBuilder modelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+      description: Entity Framework Model Builder being configured.
+    content.vb: Public Shared Sub ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong(modelBuilder As ModelBuilder)
+  overload: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong(Microsoft.EntityFrameworkCore.ModelBuilder,Microsoft.EntityFrameworkCore.Metadata.IMutableEntityType)
+  commentId: M:Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong(Microsoft.EntityFrameworkCore.ModelBuilder,Microsoft.EntityFrameworkCore.Metadata.IMutableEntityType)
+  id: ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong(Microsoft.EntityFrameworkCore.ModelBuilder,Microsoft.EntityFrameworkCore.Metadata.IMutableEntityType)
+  parent: Whipstaff.Entityframework.Relational.ModelBuilderHelpers
+  langs:
+  - csharp
+  - vb
+  name: ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong(ModelBuilder, IMutableEntityType)
+  nameWithType: ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong(ModelBuilder, IMutableEntityType)
+  fullName: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong(Microsoft.EntityFrameworkCore.ModelBuilder, Microsoft.EntityFrameworkCore.Metadata.IMutableEntityType)
+  type: Method
+  source:
+    path: Whipstaff.Entityframework.Relational
+    isExternal: true
+  assemblies:
+  - Whipstaff.Entityframework.Relational
+  namespace: Whipstaff.Entityframework.Relational
+  summary: "\nConverts all properties on a DBSet entity that are a DateTimeOffset column to use a long database type within SQL Lite.\nIs used to workaround a limitation in SQL lite where you can&apos;t store as a DateTimeOffset and the workaround\nis to use a string or DateTime and lose the precision. Instead, so you don&apos;t need to adjust your model to cater\nfor SQL lite, you can retain the ability of databases that do support it, but use SQL lite for testing.\nThe caveat is that SQL lite loses timezone precision as it converts everything to UTC, but then you should\nprobably be storing the data as UTC anyway.\n"
+  syntax:
+    content: public static void ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong(ModelBuilder modelBuilder, IMutableEntityType mutableEntityType)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+      description: Entity Framework Model Builder being configured.
+    - id: mutableEntityType
+      type: Microsoft.EntityFrameworkCore.Metadata.IMutableEntityType
+      description: Mutable Entity Type Representing the DBSet to check.
+    content.vb: Public Shared Sub ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong(modelBuilder As ModelBuilder, mutableEntityType As IMutableEntityType)
+  overload: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertDateTimeOffSetPropertyToLong(Microsoft.EntityFrameworkCore.ModelBuilder,System.Type,System.String)
+  commentId: M:Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertDateTimeOffSetPropertyToLong(Microsoft.EntityFrameworkCore.ModelBuilder,System.Type,System.String)
+  id: ConvertDateTimeOffSetPropertyToLong(Microsoft.EntityFrameworkCore.ModelBuilder,System.Type,System.String)
+  parent: Whipstaff.Entityframework.Relational.ModelBuilderHelpers
+  langs:
+  - csharp
+  - vb
+  name: ConvertDateTimeOffSetPropertyToLong(ModelBuilder, Type, String)
+  nameWithType: ModelBuilderHelpers.ConvertDateTimeOffSetPropertyToLong(ModelBuilder, Type, String)
+  fullName: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertDateTimeOffSetPropertyToLong(Microsoft.EntityFrameworkCore.ModelBuilder, System.Type, System.String)
+  type: Method
+  source:
+    path: Whipstaff.Entityframework.Relational
+    isExternal: true
+  assemblies:
+  - Whipstaff.Entityframework.Relational
+  namespace: Whipstaff.Entityframework.Relational
+  summary: "\nConverts a property properties on a DBSet entity that are a DateTimeOffset column to use a long database type within SQL Lite.\nIs used to workaround a limitation in SQL lite where you can&apos;t store as a DateTimeOffset and the workaround\nis to use a string or DateTime and lose the precision. Instead, so you don&apos;t need to adjust your model to cater\nfor SQL lite, you can retain the ability of databases that do support it, but use SQL lite for testing.\nThe caveat is that SQL lite loses timezone precision as it converts everything to UTC, but then you should\nprobably be storing the data as UTC anyway.\n"
+  syntax:
+    content: public static void ConvertDateTimeOffSetPropertyToLong(ModelBuilder modelBuilder, Type entityClrType, string propertyName)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+      description: Entity Framework Model Builder being configured.
+    - id: entityClrType
+      type: System.Type
+      description: The CLR type of the Entity represented as a DBSet.
+    - id: propertyName
+      type: System.String
+      description: The name of the property that&apos;s to be converted from DateTimeOffset.
+    content.vb: Public Shared Sub ConvertDateTimeOffSetPropertyToLong(modelBuilder As ModelBuilder, entityClrType As Type, propertyName As String)
+  overload: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertDateTimeOffSetPropertyToLong*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter
+  commentId: M:Whipstaff.Entityframework.Relational.ModelBuilderHelpers.GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter
+  id: GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter
+  parent: Whipstaff.Entityframework.Relational.ModelBuilderHelpers
+  langs:
+  - csharp
+  - vb
+  name: GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter()
+  nameWithType: ModelBuilderHelpers.GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter()
+  fullName: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter()
+  type: Method
+  source:
+    path: Whipstaff.Entityframework.Relational
+    isExternal: true
+  assemblies:
+  - Whipstaff.Entityframework.Relational
+  namespace: Whipstaff.Entityframework.Relational
+  summary: "\nGets a value convertor for converting a date time offset to unix time milliseconds as a long.\n"
+  syntax:
+    content: public static ValueConverter<DateTimeOffset, long> GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter()
+    return:
+      type: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter{System.DateTimeOffset,System.Int64}
+      description: Value convertor.
+    content.vb: Public Shared Function GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter As ValueConverter(Of DateTimeOffset, Long)
+  overload: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Whipstaff.Entityframework.Relational
+  commentId: N:Whipstaff.Entityframework.Relational
+  isExternal: true
+  name: Whipstaff.Entityframework.Relational
+  nameWithType: Whipstaff.Entityframework.Relational
+  fullName: Whipstaff.Entityframework.Relational
+- uid: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong*
+  commentId: Overload:Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong
+  isExternal: true
+  name: ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong
+  nameWithType: ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong
+  fullName: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnModelBuilderToLong
+- uid: Microsoft.EntityFrameworkCore.ModelBuilder
+  isExternal: true
+  name: ModelBuilder
+  nameWithType: ModelBuilder
+  fullName: Microsoft.EntityFrameworkCore.ModelBuilder
+- uid: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong*
+  commentId: Overload:Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong
+  isExternal: true
+  name: ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong
+  nameWithType: ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong
+  fullName: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertAllDateTimeOffSetPropertiesOnMutableEntityToLong
+- uid: Microsoft.EntityFrameworkCore.Metadata.IMutableEntityType
+  commentId: '!:Microsoft.EntityFrameworkCore.Metadata.IMutableEntityType'
+  isExternal: true
+  name: IMutableEntityType
+  nameWithType: IMutableEntityType
+  fullName: Microsoft.EntityFrameworkCore.Metadata.IMutableEntityType
+- uid: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertDateTimeOffSetPropertyToLong*
+  commentId: Overload:Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertDateTimeOffSetPropertyToLong
+  isExternal: true
+  name: ConvertDateTimeOffSetPropertyToLong
+  nameWithType: ModelBuilderHelpers.ConvertDateTimeOffSetPropertyToLong
+  fullName: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.ConvertDateTimeOffSetPropertyToLong
+- uid: System.Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter*
+  commentId: Overload:Whipstaff.Entityframework.Relational.ModelBuilderHelpers.GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter
+  isExternal: true
+  name: GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter
+  nameWithType: ModelBuilderHelpers.GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter
+  fullName: Whipstaff.Entityframework.Relational.ModelBuilderHelpers.GetDateTimeOffSetToUnixTimeMillisecondsLongValueConverter
+- uid: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter{System.DateTimeOffset,System.Int64}
+  commentId: '!:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter{System.DateTimeOffset,System.Int64}'
+  definition: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter`2
+  name: ValueConverter<DateTimeOffset, Int64>
+  nameWithType: ValueConverter<DateTimeOffset, Int64>
+  fullName: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter<System.DateTimeOffset, System.Int64>
+  nameWithType.vb: ValueConverter(Of DateTimeOffset, Int64)
+  fullName.vb: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter(Of System.DateTimeOffset, System.Int64)
+  name.vb: ValueConverter(Of DateTimeOffset, Int64)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter`2
+    name: ValueConverter
+    nameWithType: ValueConverter
+    fullName: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter`2
+    name: ValueConverter
+    nameWithType: ValueConverter
+    fullName: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTimeOffset
+    name: DateTimeOffset
+    nameWithType: DateTimeOffset
+    fullName: System.DateTimeOffset
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter`2
+  commentId: '!:Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter`2'
+  isExternal: true
+  name: ValueConverter<, >
+  nameWithType: ValueConverter<, >
+  fullName: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter<, >
+  nameWithType.vb: ValueConverter(Of , )
+  fullName.vb: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter(Of , )
+  name.vb: ValueConverter(Of , )
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter`2
+    name: ValueConverter
+    nameWithType: ValueConverter
+    fullName: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter`2
+    name: ValueConverter
+    nameWithType: ValueConverter
+    fullName: Microsoft.EntityFrameworkCore.Storage.ValueConversion.ValueConverter
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

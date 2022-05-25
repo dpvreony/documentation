@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1
+  commentId: T:Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1
+  id: IReadOnlyObservable`1
+  parent: Whipstaff.Rx.ReadOnlyObservables
+  children:
+  - Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.TryGetValue(`0@)
+  - Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.Value
+  langs:
+  - csharp
+  - vb
+  name: IReadOnlyObservable<T>
+  nameWithType: IReadOnlyObservable<T>
+  fullName: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable<T>
+  type: Interface
+  source:
+    path: Whipstaff.Rx
+    isExternal: true
+  assemblies:
+  - Whipstaff.Rx
+  namespace: Whipstaff.Rx.ReadOnlyObservables
+  summary: "\nRepresents a <xref href=\"System.Reactive.Subjects.BehaviorSubject%601\" data-throw-if-not-resolved=\"false\"></xref> that has been wrapped to make it read only by hiding the next, error, completed methods.\n"
+  syntax:
+    content: 'public interface IReadOnlyObservable<T> : IObservable<T>'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public Interface IReadOnlyObservable(Of T)
+          Inherits IObservable(Of T)
+  nameWithType.vb: IReadOnlyObservable(Of T)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable(Of T)
+  name.vb: IReadOnlyObservable(Of T)
+- uid: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.TryGetValue(`0@)
+  commentId: M:Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.TryGetValue(`0@)
+  id: TryGetValue(`0@)
+  parent: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1
+  langs:
+  - csharp
+  - vb
+  name: TryGetValue(out T)
+  nameWithType: IReadOnlyObservable<T>.TryGetValue(out T)
+  fullName: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable<T>.TryGetValue(out T)
+  type: Method
+  source:
+    path: Whipstaff.Rx
+    isExternal: true
+  assemblies:
+  - Whipstaff.Rx
+  namespace: Whipstaff.Rx.ReadOnlyObservables
+  summary: "\nTries to get the value from the subject.\n"
+  syntax:
+    content: bool TryGetValue(out T value)
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The output value.
+    return:
+      type: System.Boolean
+      description: A flag indicating whether the Get attempt succeeded.
+    content.vb: Function TryGetValue(ByRef value As T) As Boolean
+  overload: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.TryGetValue*
+  nameWithType.vb: IReadOnlyObservable(Of T).TryGetValue(ByRef T)
+  fullName.vb: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable(Of T).TryGetValue(ByRef T)
+  name.vb: TryGetValue(ByRef T)
+- uid: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.Value
+  commentId: P:Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.Value
+  id: Value
+  parent: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: IReadOnlyObservable<T>.Value
+  fullName: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable<T>.Value
+  type: Property
+  source:
+    path: Whipstaff.Rx
+    isExternal: true
+  assemblies:
+  - Whipstaff.Rx
+  namespace: Whipstaff.Rx.ReadOnlyObservables
+  summary: "\nGets the value from the subject.\n"
+  syntax:
+    content: T Value { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: ReadOnly Property Value As T
+  overload: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.Value*
+  nameWithType.vb: IReadOnlyObservable(Of T).Value
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable(Of T).Value
+references:
+- uid: Whipstaff.Rx.ReadOnlyObservables
+  commentId: N:Whipstaff.Rx.ReadOnlyObservables
+  isExternal: true
+  name: Whipstaff.Rx.ReadOnlyObservables
+  nameWithType: Whipstaff.Rx.ReadOnlyObservables
+  fullName: Whipstaff.Rx.ReadOnlyObservables
+- uid: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.TryGetValue*
+  commentId: Overload:Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.TryGetValue
+  isExternal: true
+  name: TryGetValue
+  nameWithType: IReadOnlyObservable<T>.TryGetValue
+  fullName: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable<T>.TryGetValue
+  nameWithType.vb: IReadOnlyObservable(Of T).TryGetValue
+  fullName.vb: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable(Of T).TryGetValue
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.Value*
+  commentId: Overload:Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable`1.Value
+  isExternal: true
+  name: Value
+  nameWithType: IReadOnlyObservable<T>.Value
+  fullName: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable<T>.Value
+  nameWithType.vb: IReadOnlyObservable(Of T).Value
+  fullName.vb: Whipstaff.Rx.ReadOnlyObservables.IReadOnlyObservable(Of T).Value

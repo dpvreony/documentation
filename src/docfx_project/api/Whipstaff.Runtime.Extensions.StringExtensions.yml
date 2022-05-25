@@ -1,0 +1,251 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.Extensions.StringExtensions
+  commentId: T:Whipstaff.Runtime.Extensions.StringExtensions
+  id: StringExtensions
+  parent: Whipstaff.Runtime.Extensions
+  children:
+  - Whipstaff.Runtime.Extensions.StringExtensions.ActIfNotNullOrWhiteSpace(System.String,System.Action{System.String})
+  - Whipstaff.Runtime.Extensions.StringExtensions.Remove(System.String,System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: Whipstaff.Runtime.Extensions.StringExtensions
+  type: Class
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Extensions
+  summary: "\nExtensions for String manipulation.\n"
+  syntax:
+    content: 'public static class StringExtensions : Object'
+    content.vb: >-
+      Public Module StringExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Whipstaff.Runtime.Extensions.StringExtensions.ActIfNotNullOrWhiteSpace(System.String,System.Action{System.String})
+  commentId: M:Whipstaff.Runtime.Extensions.StringExtensions.ActIfNotNullOrWhiteSpace(System.String,System.Action{System.String})
+  id: ActIfNotNullOrWhiteSpace(System.String,System.Action{System.String})
+  isExtensionMethod: true
+  parent: Whipstaff.Runtime.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ActIfNotNullOrWhiteSpace(String, Action<String>)
+  nameWithType: StringExtensions.ActIfNotNullOrWhiteSpace(String, Action<String>)
+  fullName: Whipstaff.Runtime.Extensions.StringExtensions.ActIfNotNullOrWhiteSpace(System.String, System.Action<System.String>)
+  type: Method
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Extensions
+  summary: "\nCarries out an action if a string is not null or whitespace.\n"
+  syntax:
+    content: public static void ActIfNotNullOrWhiteSpace(this string input, Action<string> action)
+    parameters:
+    - id: input
+      type: System.String
+      description: The input string to check.
+    - id: action
+      type: System.Action{System.String}
+      description: The action to carry out.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub ActIfNotNullOrWhiteSpace(input As String, action As Action(Of String))
+  overload: Whipstaff.Runtime.Extensions.StringExtensions.ActIfNotNullOrWhiteSpace*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: No action is provided.
+  nameWithType.vb: StringExtensions.ActIfNotNullOrWhiteSpace(String, Action(Of String))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Whipstaff.Runtime.Extensions.StringExtensions.ActIfNotNullOrWhiteSpace(System.String, System.Action(Of System.String))
+  name.vb: ActIfNotNullOrWhiteSpace(String, Action(Of String))
+- uid: Whipstaff.Runtime.Extensions.StringExtensions.Remove(System.String,System.String,System.Boolean)
+  commentId: M:Whipstaff.Runtime.Extensions.StringExtensions.Remove(System.String,System.String,System.Boolean)
+  id: Remove(System.String,System.String,System.Boolean)
+  isExtensionMethod: true
+  parent: Whipstaff.Runtime.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: Remove(String, String, Boolean)
+  nameWithType: StringExtensions.Remove(String, String, Boolean)
+  fullName: Whipstaff.Runtime.Extensions.StringExtensions.Remove(System.String, System.String, System.Boolean)
+  type: Method
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Extensions
+  summary: "\nRemoves all instances of a string.\n"
+  syntax:
+    content: public static string Remove(this string instance, string value, bool ignoreCase = false)
+    parameters:
+    - id: instance
+      type: System.String
+      description: The string to work on.
+    - id: value
+      type: System.String
+      description: The string to remove.
+    - id: ignoreCase
+      type: System.Boolean
+      description: Whether to ignore the case, or be case-sensitive.
+    return:
+      type: System.String
+      description: Altered string.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Remove(instance As String, value As String, ignoreCase As Boolean = False) As String
+  overload: Whipstaff.Runtime.Extensions.StringExtensions.Remove*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Whipstaff.Runtime.Extensions
+  commentId: N:Whipstaff.Runtime.Extensions
+  isExternal: true
+  name: Whipstaff.Runtime.Extensions
+  nameWithType: Whipstaff.Runtime.Extensions
+  fullName: Whipstaff.Runtime.Extensions
+- uid: Whipstaff.Runtime.Extensions.StringExtensions.ActIfNotNullOrWhiteSpace*
+  commentId: Overload:Whipstaff.Runtime.Extensions.StringExtensions.ActIfNotNullOrWhiteSpace
+  isExternal: true
+  name: ActIfNotNullOrWhiteSpace
+  nameWithType: StringExtensions.ActIfNotNullOrWhiteSpace
+  fullName: Whipstaff.Runtime.Extensions.StringExtensions.ActIfNotNullOrWhiteSpace
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Action{System.String}
+  commentId: '!:System.Action{System.String}'
+  definition: System.Action`1
+  name: Action<String>
+  nameWithType: Action<String>
+  fullName: System.Action<System.String>
+  nameWithType.vb: Action(Of String)
+  fullName.vb: System.Action(Of System.String)
+  name.vb: Action(Of String)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Action`1
+  isExternal: true
+  name: Action<>
+  nameWithType: Action<>
+  fullName: System.Action<>
+  nameWithType.vb: Action(Of )
+  fullName.vb: System.Action(Of )
+  name.vb: Action(Of )
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.Extensions.StringExtensions.Remove*
+  commentId: Overload:Whipstaff.Runtime.Extensions.StringExtensions.Remove
+  isExternal: true
+  name: Remove
+  nameWithType: StringExtensions.Remove
+  fullName: Whipstaff.Runtime.Extensions.StringExtensions.Remove
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

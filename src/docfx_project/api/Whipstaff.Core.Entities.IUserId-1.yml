@@ -1,0 +1,93 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.Entities.IUserId`1
+  commentId: T:Whipstaff.Core.Entities.IUserId`1
+  id: IUserId`1
+  parent: Whipstaff.Core.Entities
+  children:
+  - Whipstaff.Core.Entities.IUserId`1.UserId
+  langs:
+  - csharp
+  - vb
+  name: IUserId<T>
+  nameWithType: IUserId<T>
+  fullName: Whipstaff.Core.Entities.IUserId<T>
+  type: Interface
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Entities
+  summary: "\nRepresents an object that has a User Id.\n"
+  syntax:
+    content: public interface IUserId<out T>
+    typeParameters:
+    - id: T
+      description: The type for user id.
+    content.vb: Public Interface IUserId(Of Out T)
+  nameWithType.vb: IUserId(Of T)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Whipstaff.Core.Entities.IUserId(Of T)
+  name.vb: IUserId(Of T)
+- uid: Whipstaff.Core.Entities.IUserId`1.UserId
+  commentId: P:Whipstaff.Core.Entities.IUserId`1.UserId
+  id: UserId
+  parent: Whipstaff.Core.Entities.IUserId`1
+  langs:
+  - csharp
+  - vb
+  name: UserId
+  nameWithType: IUserId<T>.UserId
+  fullName: Whipstaff.Core.Entities.IUserId<T>.UserId
+  type: Property
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Entities
+  summary: "\nGets the User Id.\n"
+  syntax:
+    content: T UserId { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: ReadOnly Property UserId As T
+  overload: Whipstaff.Core.Entities.IUserId`1.UserId*
+  nameWithType.vb: IUserId(Of T).UserId
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: Whipstaff.Core.Entities.IUserId(Of T).UserId
+references:
+- uid: Whipstaff.Core.Entities
+  commentId: N:Whipstaff.Core.Entities
+  isExternal: true
+  name: Whipstaff.Core.Entities
+  nameWithType: Whipstaff.Core.Entities
+  fullName: Whipstaff.Core.Entities
+- uid: Whipstaff.Core.Entities.IUserId`1.UserId*
+  commentId: Overload:Whipstaff.Core.Entities.IUserId`1.UserId
+  isExternal: true
+  name: UserId
+  nameWithType: IUserId<T>.UserId
+  fullName: Whipstaff.Core.Entities.IUserId<T>.UserId
+  nameWithType.vb: IUserId(Of T).UserId
+  fullName.vb: Whipstaff.Core.Entities.IUserId(Of T).UserId
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

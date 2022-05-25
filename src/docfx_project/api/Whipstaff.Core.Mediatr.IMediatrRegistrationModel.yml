@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+  commentId: T:Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+  id: IMediatrRegistrationModel
+  parent: Whipstaff.Core.Mediatr
+  children:
+  - Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType
+  - Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType
+  langs:
+  - csharp
+  - vb
+  name: IMediatrRegistrationModel
+  nameWithType: IMediatrRegistrationModel
+  fullName: Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+  type: Interface
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Mediatr
+  summary: "\nRepresents a MediatR registration.\n"
+  syntax:
+    content: public interface IMediatrRegistrationModel
+    content.vb: Public Interface IMediatrRegistrationModel
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType
+  commentId: P:Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType
+  id: ServiceType
+  parent: Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+  langs:
+  - csharp
+  - vb
+  name: ServiceType
+  nameWithType: IMediatrRegistrationModel.ServiceType
+  fullName: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType
+  type: Property
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Mediatr
+  summary: "\nGets the registration type.\n"
+  syntax:
+    content: Type ServiceType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: ReadOnly Property ServiceType As Type
+  overload: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType
+  commentId: P:Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType
+  id: ImplementationType
+  parent: Whipstaff.Core.Mediatr.IMediatrRegistrationModel
+  langs:
+  - csharp
+  - vb
+  name: ImplementationType
+  nameWithType: IMediatrRegistrationModel.ImplementationType
+  fullName: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType
+  type: Property
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Mediatr
+  summary: "\nGets the implementation type.\n"
+  syntax:
+    content: Type ImplementationType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: ReadOnly Property ImplementationType As Type
+  overload: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Whipstaff.Core.Mediatr
+  commentId: N:Whipstaff.Core.Mediatr
+  isExternal: true
+  name: Whipstaff.Core.Mediatr
+  nameWithType: Whipstaff.Core.Mediatr
+  fullName: Whipstaff.Core.Mediatr
+- uid: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType*
+  commentId: Overload:Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType
+  isExternal: true
+  name: ServiceType
+  nameWithType: IMediatrRegistrationModel.ServiceType
+  fullName: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ServiceType
+- uid: System.Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType*
+  commentId: Overload:Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType
+  isExternal: true
+  name: ImplementationType
+  nameWithType: IMediatrRegistrationModel.ImplementationType
+  fullName: Whipstaff.Core.Mediatr.IMediatrRegistrationModel.ImplementationType

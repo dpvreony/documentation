@@ -1,0 +1,1086 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+  commentId: T:Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+  id: FuncActOnEnumerable`1
+  parent: Whipstaff.Runtime.JobSequencing
+  children:
+  - Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.#ctor(System.Func{`0,System.Threading.Tasks.Task},System.Func{System.Threading.Tasks.Task})
+  - Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0},System.Func{`0,System.Threading.Tasks.Task},System.Func{System.Threading.Tasks.Task})
+  - Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnItemAsync(`0)
+  - Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.OnNoItemsHandledAsync
+  langs:
+  - csharp
+  - vb
+  name: FuncActOnEnumerable<T>
+  nameWithType: FuncActOnEnumerable<T>
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable<T>
+  type: Class
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.JobSequencing
+  summary: "\nJob Sequence helper for having a func work on an enumerable.\n"
+  syntax:
+    content: 'public sealed class FuncActOnEnumerable<T> : ActOnEnumerable<T>'
+    typeParameters:
+    - id: T
+      description: The type for the POCO object.
+    content.vb: >-
+      Public NotInheritable Class FuncActOnEnumerable(Of T)
+          Inherits ActOnEnumerable(Of T)
+  inheritance:
+  - System.Object
+  - Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}
+  - Whipstaff.Runtime.JobSequencing.ActOnEnumerable{{T}}
+  inheritedMembers:
+  - Whipstaff.Runtime.JobSequencing.ActOnEnumerable{{T}}.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{{T}})
+  - Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{{T}})
+  - Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}.ActOnItemAsync({T})
+  - Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}.OnNoItemsHandledAsync
+  nameWithType.vb: FuncActOnEnumerable(Of T)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+  fullName.vb: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable(Of T)
+  name.vb: FuncActOnEnumerable(Of T)
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.#ctor(System.Func{`0,System.Threading.Tasks.Task},System.Func{System.Threading.Tasks.Task})
+  commentId: M:Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.#ctor(System.Func{`0,System.Threading.Tasks.Task},System.Func{System.Threading.Tasks.Task})
+  id: '#ctor(System.Func{`0,System.Threading.Tasks.Task},System.Func{System.Threading.Tasks.Task})'
+  parent: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+  langs:
+  - csharp
+  - vb
+  name: FuncActOnEnumerable(Func<T, Task>, Func<Task>)
+  nameWithType: FuncActOnEnumerable<T>.FuncActOnEnumerable(Func<T, Task>, Func<Task>)
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable<T>.FuncActOnEnumerable(System.Func<T, System.Threading.Tasks.Task>, System.Func<System.Threading.Tasks.Task>)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.JobSequencing
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public FuncActOnEnumerable(Func<T, Task> actOnItemAsyncFunc, Func<Task> onNoItemsHandledAsync)
+    parameters:
+    - id: actOnItemAsyncFunc
+      type: System.Func{{T},System.Threading.Tasks.Task}
+      description: Function to execute on each item in the collection.
+    - id: onNoItemsHandledAsync
+      type: System.Func{System.Threading.Tasks.Task}
+      description: Function to execute if the collection is empty.
+    content.vb: Public Sub New(actOnItemAsyncFunc As Func(Of T, Task), onNoItemsHandledAsync As Func(Of Task))
+  overload: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.#ctor*
+  nameWithType.vb: FuncActOnEnumerable(Of T).FuncActOnEnumerable(Func(Of T, Task), Func(Of Task))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable(Of T).FuncActOnEnumerable(System.Func(Of T, System.Threading.Tasks.Task), System.Func(Of System.Threading.Tasks.Task))
+  name.vb: FuncActOnEnumerable(Func(Of T, Task), Func(Of Task))
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0},System.Func{`0,System.Threading.Tasks.Task},System.Func{System.Threading.Tasks.Task})
+  commentId: M:Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0},System.Func{`0,System.Threading.Tasks.Task},System.Func{System.Threading.Tasks.Task})
+  id: ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0},System.Func{`0,System.Threading.Tasks.Task},System.Func{System.Threading.Tasks.Task})
+  parent: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+  langs:
+  - csharp
+  - vb
+  name: ActOnCollectionAsync(IEnumerable<T>, Func<T, Task>, Func<Task>)
+  nameWithType: FuncActOnEnumerable<T>.ActOnCollectionAsync(IEnumerable<T>, Func<T, Task>, Func<Task>)
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable<T>.ActOnCollectionAsync(System.Collections.Generic.IEnumerable<T>, System.Func<T, System.Threading.Tasks.Task>, System.Func<System.Threading.Tasks.Task>)
+  type: Method
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.JobSequencing
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public static Task ActOnCollectionAsync(IEnumerable<T> enumerable, Func<T, Task> actOnItemAsyncFunc, Func<Task> onNoItemsHandledAsync)
+    parameters:
+    - id: enumerable
+      type: System.Collections.Generic.IEnumerable{{T}}
+      description: Enumerable object to iterate through.
+    - id: actOnItemAsyncFunc
+      type: System.Func{{T},System.Threading.Tasks.Task}
+      description: Function to execute on each item in the collection.
+    - id: onNoItemsHandledAsync
+      type: System.Func{System.Threading.Tasks.Task}
+      description: Function to execute if the collection is empty.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> representing the result of the asynchronous operation.
+    content.vb: Public Shared Function ActOnCollectionAsync(enumerable As IEnumerable(Of T), actOnItemAsyncFunc As Func(Of T, Task), onNoItemsHandledAsync As Func(Of Task)) As Task
+  overload: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnCollectionAsync*
+  nameWithType.vb: FuncActOnEnumerable(Of T).ActOnCollectionAsync(IEnumerable(Of T), Func(Of T, Task), Func(Of Task))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable(Of T).ActOnCollectionAsync(System.Collections.Generic.IEnumerable(Of T), System.Func(Of T, System.Threading.Tasks.Task), System.Func(Of System.Threading.Tasks.Task))
+  name.vb: ActOnCollectionAsync(IEnumerable(Of T), Func(Of T, Task), Func(Of Task))
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnItemAsync(`0)
+  commentId: M:Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnItemAsync(`0)
+  id: ActOnItemAsync(`0)
+  parent: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+  langs:
+  - csharp
+  - vb
+  name: ActOnItemAsync(T)
+  nameWithType: FuncActOnEnumerable<T>.ActOnItemAsync(T)
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable<T>.ActOnItemAsync(T)
+  type: Method
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.JobSequencing
+  syntax:
+    content: protected override Task ActOnItemAsync(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Protected Overrides Function ActOnItemAsync(item As T) As Task
+  overridden: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}.ActOnItemAsync({T})
+  overload: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnItemAsync*
+  nameWithType.vb: FuncActOnEnumerable(Of T).ActOnItemAsync(T)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable(Of T).ActOnItemAsync(T)
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.OnNoItemsHandledAsync
+  commentId: M:Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.OnNoItemsHandledAsync
+  id: OnNoItemsHandledAsync
+  parent: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+  langs:
+  - csharp
+  - vb
+  name: OnNoItemsHandledAsync()
+  nameWithType: FuncActOnEnumerable<T>.OnNoItemsHandledAsync()
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable<T>.OnNoItemsHandledAsync()
+  type: Method
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.JobSequencing
+  syntax:
+    content: protected override Task OnNoItemsHandledAsync()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Protected Overrides Function OnNoItemsHandledAsync As Task
+  overridden: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}.OnNoItemsHandledAsync
+  overload: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.OnNoItemsHandledAsync*
+  nameWithType.vb: FuncActOnEnumerable(Of T).OnNoItemsHandledAsync()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable(Of T).OnNoItemsHandledAsync()
+references:
+- uid: Whipstaff.Runtime.JobSequencing
+  commentId: N:Whipstaff.Runtime.JobSequencing
+  isExternal: true
+  name: Whipstaff.Runtime.JobSequencing
+  nameWithType: Whipstaff.Runtime.JobSequencing
+  fullName: Whipstaff.Runtime.JobSequencing
+- uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}
+  commentId: T:Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{`0},`0}
+  parent: Whipstaff.Runtime.JobSequencing
+  definition: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+  name: ActOnCollectionHelper<IEnumerable<T>, T>
+  nameWithType: ActOnCollectionHelper<IEnumerable<T>, T>
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<System.Collections.Generic.IEnumerable<T>, T>
+  nameWithType.vb: ActOnCollectionHelper(Of IEnumerable(Of T), T)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of System.Collections.Generic.IEnumerable(Of T), T)
+  name.vb: ActOnCollectionHelper(Of IEnumerable(Of T), T)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+    name: ActOnCollectionHelper
+    nameWithType: ActOnCollectionHelper
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+    name: ActOnCollectionHelper
+    nameWithType: ActOnCollectionHelper
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable{{T}}
+  commentId: T:Whipstaff.Runtime.JobSequencing.ActOnEnumerable{`0}
+  parent: Whipstaff.Runtime.JobSequencing
+  definition: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+  name: ActOnEnumerable<T>
+  nameWithType: ActOnEnumerable<T>
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable<T>
+  nameWithType.vb: ActOnEnumerable(Of T)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnEnumerable(Of T)
+  name.vb: ActOnEnumerable(Of T)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+    name: ActOnEnumerable
+    nameWithType: ActOnEnumerable
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+    name: ActOnEnumerable
+    nameWithType: ActOnEnumerable
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable{{T}}.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{{T}})
+  commentId: M:Whipstaff.Runtime.JobSequencing.ActOnEnumerable{`0}.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0})
+  parent: Whipstaff.Runtime.JobSequencing.ActOnEnumerable{{T}}
+  definition: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0})
+  name: ActOnCollectionAsync(IEnumerable<T>)
+  nameWithType: ActOnEnumerable<T>.ActOnCollectionAsync(IEnumerable<T>)
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable<T>.ActOnCollectionAsync(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: ActOnEnumerable(Of T).ActOnCollectionAsync(IEnumerable(Of T))
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnEnumerable(Of T).ActOnCollectionAsync(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ActOnCollectionAsync(IEnumerable(Of T))
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0})
+    name: ActOnCollectionAsync
+    nameWithType: ActOnEnumerable<T>.ActOnCollectionAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable<T>.ActOnCollectionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0})
+    name: ActOnCollectionAsync
+    nameWithType: ActOnEnumerable(Of T).ActOnCollectionAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable(Of T).ActOnCollectionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{{T}})
+  commentId: M:Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{`0},`0}.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0})
+  parent: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}
+  definition: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnCollectionAsync(`0)
+  name: ActOnCollectionAsync(IEnumerable<T>)
+  nameWithType: ActOnCollectionHelper<IEnumerable<T>, T>.ActOnCollectionAsync(IEnumerable<T>)
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<System.Collections.Generic.IEnumerable<T>, T>.ActOnCollectionAsync(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: ActOnCollectionHelper(Of IEnumerable(Of T), T).ActOnCollectionAsync(IEnumerable(Of T))
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of System.Collections.Generic.IEnumerable(Of T), T).ActOnCollectionAsync(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ActOnCollectionAsync(IEnumerable(Of T))
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnCollectionAsync(`0)
+    name: ActOnCollectionAsync
+    nameWithType: ActOnCollectionHelper<IEnumerable<T>, T>.ActOnCollectionAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<System.Collections.Generic.IEnumerable<T>, T>.ActOnCollectionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnCollectionAsync(`0)
+    name: ActOnCollectionAsync
+    nameWithType: ActOnCollectionHelper(Of IEnumerable(Of T), T).ActOnCollectionAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of System.Collections.Generic.IEnumerable(Of T), T).ActOnCollectionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}.ActOnItemAsync({T})
+  commentId: M:Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{`0},`0}.ActOnItemAsync(`0)
+  parent: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}
+  definition: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnItemAsync(`1)
+  name: ActOnItemAsync(T)
+  nameWithType: ActOnCollectionHelper<IEnumerable<T>, T>.ActOnItemAsync(T)
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<System.Collections.Generic.IEnumerable<T>, T>.ActOnItemAsync(T)
+  nameWithType.vb: ActOnCollectionHelper(Of IEnumerable(Of T), T).ActOnItemAsync(T)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of System.Collections.Generic.IEnumerable(Of T), T).ActOnItemAsync(T)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnItemAsync(`1)
+    name: ActOnItemAsync
+    nameWithType: ActOnCollectionHelper<IEnumerable<T>, T>.ActOnItemAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<System.Collections.Generic.IEnumerable<T>, T>.ActOnItemAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnItemAsync(`1)
+    name: ActOnItemAsync
+    nameWithType: ActOnCollectionHelper(Of IEnumerable(Of T), T).ActOnItemAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of System.Collections.Generic.IEnumerable(Of T), T).ActOnItemAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}.OnNoItemsHandledAsync
+  commentId: M:Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{`0},`0}.OnNoItemsHandledAsync
+  parent: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper{System.Collections.Generic.IEnumerable{{T}},{T}}
+  definition: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.OnNoItemsHandledAsync
+  name: OnNoItemsHandledAsync()
+  nameWithType: ActOnCollectionHelper<IEnumerable<T>, T>.OnNoItemsHandledAsync()
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<System.Collections.Generic.IEnumerable<T>, T>.OnNoItemsHandledAsync()
+  nameWithType.vb: ActOnCollectionHelper(Of IEnumerable(Of T), T).OnNoItemsHandledAsync()
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of System.Collections.Generic.IEnumerable(Of T), T).OnNoItemsHandledAsync()
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.OnNoItemsHandledAsync
+    name: OnNoItemsHandledAsync
+    nameWithType: ActOnCollectionHelper<IEnumerable<T>, T>.OnNoItemsHandledAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<System.Collections.Generic.IEnumerable<T>, T>.OnNoItemsHandledAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.OnNoItemsHandledAsync
+    name: OnNoItemsHandledAsync
+    nameWithType: ActOnCollectionHelper(Of IEnumerable(Of T), T).OnNoItemsHandledAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of System.Collections.Generic.IEnumerable(Of T), T).OnNoItemsHandledAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+  commentId: T:Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+  isExternal: true
+  name: ActOnCollectionHelper<TCollection, TItem>
+  nameWithType: ActOnCollectionHelper<TCollection, TItem>
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<TCollection, TItem>
+  nameWithType.vb: ActOnCollectionHelper(Of TCollection, TItem)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of TCollection, TItem)
+  name.vb: ActOnCollectionHelper(Of TCollection, TItem)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+    name: ActOnCollectionHelper
+    nameWithType: ActOnCollectionHelper
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TCollection
+    nameWithType: TCollection
+    fullName: TCollection
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+    name: ActOnCollectionHelper
+    nameWithType: ActOnCollectionHelper
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TCollection
+    nameWithType: TCollection
+    fullName: TCollection
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+  commentId: T:Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+  isExternal: true
+  name: ActOnEnumerable<T>
+  nameWithType: ActOnEnumerable<T>
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable<T>
+  nameWithType.vb: ActOnEnumerable(Of T)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnEnumerable(Of T)
+  name.vb: ActOnEnumerable(Of T)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+    name: ActOnEnumerable
+    nameWithType: ActOnEnumerable
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+    name: ActOnEnumerable
+    nameWithType: ActOnEnumerable
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0})
+  commentId: M:Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0})
+  isExternal: true
+  name: ActOnCollectionAsync(IEnumerable<T>)
+  nameWithType: ActOnEnumerable<T>.ActOnCollectionAsync(IEnumerable<T>)
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable<T>.ActOnCollectionAsync(System.Collections.Generic.IEnumerable<T>)
+  nameWithType.vb: ActOnEnumerable(Of T).ActOnCollectionAsync(IEnumerable(Of T))
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnEnumerable(Of T).ActOnCollectionAsync(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: ActOnCollectionAsync(IEnumerable(Of T))
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0})
+    name: ActOnCollectionAsync
+    nameWithType: ActOnEnumerable<T>.ActOnCollectionAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable<T>.ActOnCollectionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1.ActOnCollectionAsync(System.Collections.Generic.IEnumerable{`0})
+    name: ActOnCollectionAsync
+    nameWithType: ActOnEnumerable(Of T).ActOnCollectionAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable(Of T).ActOnCollectionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnCollectionAsync(`0)
+  commentId: M:Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnCollectionAsync(`0)
+  isExternal: true
+  name: ActOnCollectionAsync(TCollection)
+  nameWithType: ActOnCollectionHelper<TCollection, TItem>.ActOnCollectionAsync(TCollection)
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<TCollection, TItem>.ActOnCollectionAsync(TCollection)
+  nameWithType.vb: ActOnCollectionHelper(Of TCollection, TItem).ActOnCollectionAsync(TCollection)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of TCollection, TItem).ActOnCollectionAsync(TCollection)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnCollectionAsync(`0)
+    name: ActOnCollectionAsync
+    nameWithType: ActOnCollectionHelper<TCollection, TItem>.ActOnCollectionAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<TCollection, TItem>.ActOnCollectionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TCollection
+    nameWithType: TCollection
+    fullName: TCollection
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnCollectionAsync(`0)
+    name: ActOnCollectionAsync
+    nameWithType: ActOnCollectionHelper(Of TCollection, TItem).ActOnCollectionAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of TCollection, TItem).ActOnCollectionAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TCollection
+    nameWithType: TCollection
+    fullName: TCollection
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnItemAsync(`1)
+  commentId: M:Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnItemAsync(`1)
+  isExternal: true
+  name: ActOnItemAsync(TItem)
+  nameWithType: ActOnCollectionHelper<TCollection, TItem>.ActOnItemAsync(TItem)
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<TCollection, TItem>.ActOnItemAsync(TItem)
+  nameWithType.vb: ActOnCollectionHelper(Of TCollection, TItem).ActOnItemAsync(TItem)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of TCollection, TItem).ActOnItemAsync(TItem)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnItemAsync(`1)
+    name: ActOnItemAsync
+    nameWithType: ActOnCollectionHelper<TCollection, TItem>.ActOnItemAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<TCollection, TItem>.ActOnItemAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.ActOnItemAsync(`1)
+    name: ActOnItemAsync
+    nameWithType: ActOnCollectionHelper(Of TCollection, TItem).ActOnItemAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of TCollection, TItem).ActOnItemAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.OnNoItemsHandledAsync
+  commentId: M:Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.OnNoItemsHandledAsync
+  isExternal: true
+  name: OnNoItemsHandledAsync()
+  nameWithType: ActOnCollectionHelper<TCollection, TItem>.OnNoItemsHandledAsync()
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<TCollection, TItem>.OnNoItemsHandledAsync()
+  nameWithType.vb: ActOnCollectionHelper(Of TCollection, TItem).OnNoItemsHandledAsync()
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of TCollection, TItem).OnNoItemsHandledAsync()
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.OnNoItemsHandledAsync
+    name: OnNoItemsHandledAsync
+    nameWithType: ActOnCollectionHelper<TCollection, TItem>.OnNoItemsHandledAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<TCollection, TItem>.OnNoItemsHandledAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2.OnNoItemsHandledAsync
+    name: OnNoItemsHandledAsync
+    nameWithType: ActOnCollectionHelper(Of TCollection, TItem).OnNoItemsHandledAsync
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of TCollection, TItem).OnNoItemsHandledAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.#ctor*
+  commentId: Overload:Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.#ctor
+  isExternal: true
+  name: FuncActOnEnumerable
+  nameWithType: FuncActOnEnumerable<T>.FuncActOnEnumerable
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable<T>.FuncActOnEnumerable
+  nameWithType.vb: FuncActOnEnumerable(Of T).FuncActOnEnumerable
+  fullName.vb: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable(Of T).FuncActOnEnumerable
+- uid: System.Func{{T},System.Threading.Tasks.Task}
+  commentId: '!:System.Func{`0,System.Threading.Tasks.Task}'
+  definition: System.Func`2
+  name: Func<T, Task>
+  nameWithType: Func<T, Task>
+  fullName: System.Func<T, System.Threading.Tasks.Task>
+  nameWithType.vb: Func(Of T, Task)
+  fullName.vb: System.Func(Of T, System.Threading.Tasks.Task)
+  name.vb: Func(Of T, Task)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func{System.Threading.Tasks.Task}
+  commentId: '!:System.Func{System.Threading.Tasks.Task}'
+  definition: System.Func`1
+  name: Func<Task>
+  nameWithType: Func<Task>
+  fullName: System.Func<System.Threading.Tasks.Task>
+  nameWithType.vb: Func(Of Task)
+  fullName.vb: System.Func(Of System.Threading.Tasks.Task)
+  name.vb: Func(Of Task)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`2
+  isExternal: true
+  name: Func<, >
+  nameWithType: Func<, >
+  fullName: System.Func<, >
+  nameWithType.vb: Func(Of , )
+  fullName.vb: System.Func(Of , )
+  name.vb: Func(Of , )
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`1
+  isExternal: true
+  name: Func<>
+  nameWithType: Func<>
+  fullName: System.Func<>
+  nameWithType.vb: Func(Of )
+  fullName.vb: System.Func(Of )
+  name.vb: Func(Of )
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnCollectionAsync*
+  commentId: Overload:Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnCollectionAsync
+  isExternal: true
+  name: ActOnCollectionAsync
+  nameWithType: FuncActOnEnumerable<T>.ActOnCollectionAsync
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable<T>.ActOnCollectionAsync
+  nameWithType.vb: FuncActOnEnumerable(Of T).ActOnCollectionAsync
+  fullName.vb: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable(Of T).ActOnCollectionAsync
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: '!:System.Collections.Generic.IEnumerable{`0}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnItemAsync*
+  commentId: Overload:Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.ActOnItemAsync
+  isExternal: true
+  name: ActOnItemAsync
+  nameWithType: FuncActOnEnumerable<T>.ActOnItemAsync
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable<T>.ActOnItemAsync
+  nameWithType.vb: FuncActOnEnumerable(Of T).ActOnItemAsync
+  fullName.vb: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable(Of T).ActOnItemAsync
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.OnNoItemsHandledAsync*
+  commentId: Overload:Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1.OnNoItemsHandledAsync
+  isExternal: true
+  name: OnNoItemsHandledAsync
+  nameWithType: FuncActOnEnumerable<T>.OnNoItemsHandledAsync
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable<T>.OnNoItemsHandledAsync
+  nameWithType.vb: FuncActOnEnumerable(Of T).OnNoItemsHandledAsync
+  fullName.vb: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable(Of T).OnNoItemsHandledAsync

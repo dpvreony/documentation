@@ -1,0 +1,746 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+  commentId: T:Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+  id: ActOnDbSetRequestHandler`3
+  parent: Whipstaff.MediatR.EntityFrameworkCore
+  children:
+  - Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.#ctor(System.Func{System.Threading.Tasks.Task{`1}},Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler{`0,`1,`2}})
+  - Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.ActOnItemAsync(`2)
+  - Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.GetQueryAsync(`1)
+  - Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.Handle(`0,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>
+  nameWithType: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>
+  type: Class
+  source:
+    path: Whipstaff.MediatR.EntityFrameworkCore
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.EntityFrameworkCore
+  namespace: Whipstaff.MediatR.EntityFrameworkCore
+  summary: "\nMediatR request handler for acting on an entity framework dbset.\n"
+  syntax:
+    content: 'public abstract class ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity> : Object, IRequestHandler<TRequest, int> where TRequest : IRequest<int> where TDbContext : DbContext'
+    typeParameters:
+    - id: TRequest
+      description: The type for the MediatR Request.
+    - id: TDbContext
+      description: The type for the Entity Framework DB Context.
+    - id: TEntity
+      description: The type for the POCO object.
+    content.vb: >-
+      Public MustInherit Class ActOnDbSetRequestHandler(Of TRequest As IRequest(Of Integer), TDbContext As DbContext, TEntity)
+          Inherits Object
+          Implements IRequestHandler(Of TRequest, Integer)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{{TRequest},System.Int32}
+  nameWithType.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity)
+  name.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity)
+- uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.#ctor(System.Func{System.Threading.Tasks.Task{`1}},Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler{`0,`1,`2}})
+  commentId: M:Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.#ctor(System.Func{System.Threading.Tasks.Task{`1}},Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler{`0,`1,`2}})
+  id: '#ctor(System.Func{System.Threading.Tasks.Task{`1}},Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler{`0,`1,`2}})'
+  parent: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+  langs:
+  - csharp
+  - vb
+  name: ActOnDbSetRequestHandler(Func<Task<TDbContext>>, ILogger<ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>>)
+  nameWithType: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.ActOnDbSetRequestHandler(Func<Task<TDbContext>>, ILogger<ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>>)
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.ActOnDbSetRequestHandler(System.Func<System.Threading.Tasks.Task<TDbContext>>, Microsoft.Extensions.Logging.ILogger<Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>>)
+  type: Constructor
+  source:
+    path: Whipstaff.MediatR.EntityFrameworkCore
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.EntityFrameworkCore
+  namespace: Whipstaff.MediatR.EntityFrameworkCore
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler%603\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: protected ActOnDbSetRequestHandler(Func<Task<TDbContext>> dbContextFactory, ILogger<ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>> logger)
+    parameters:
+    - id: dbContextFactory
+      type: System.Func{System.Threading.Tasks.Task{{TDbContext}}}
+      description: The factory for the database context.
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler{{TRequest},{TDbContext},{TEntity}}}
+      description: Logging framework instance.
+    content.vb: Protected Sub New(dbContextFactory As Func(Of Task(Of TDbContext)), logger As ILogger(Of ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity)))
+  overload: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.#ctor*
+  nameWithType.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).ActOnDbSetRequestHandler(Func(Of Task(Of TDbContext)), ILogger(Of ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity)))
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).ActOnDbSetRequestHandler(System.Func(Of System.Threading.Tasks.Task(Of TDbContext)), Microsoft.Extensions.Logging.ILogger(Of Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity)))
+  name.vb: ActOnDbSetRequestHandler(Func(Of Task(Of TDbContext)), ILogger(Of ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity)))
+- uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.Handle(`0,System.Threading.CancellationToken)
+  id: Handle(`0,System.Threading.CancellationToken)
+  parent: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+  langs:
+  - csharp
+  - vb
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.Handle(TRequest, CancellationToken)
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.Handle(TRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: Whipstaff.MediatR.EntityFrameworkCore
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.EntityFrameworkCore
+  namespace: Whipstaff.MediatR.EntityFrameworkCore
+  syntax:
+    content: public Task<int> Handle(TRequest request, CancellationToken cancellationToken)
+    parameters:
+    - id: request
+      type: '{TRequest}'
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+    content.vb: Public Function Handle(request As TRequest, cancellationToken As CancellationToken) As Task(Of Integer)
+  overload: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.Handle*
+  nameWithType.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).Handle(TRequest, CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).Handle(TRequest, System.Threading.CancellationToken)
+- uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.GetQueryAsync(`1)
+  commentId: M:Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.GetQueryAsync(`1)
+  id: GetQueryAsync(`1)
+  parent: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+  langs:
+  - csharp
+  - vb
+  name: GetQueryAsync(TDbContext)
+  nameWithType: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.GetQueryAsync(TDbContext)
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.GetQueryAsync(TDbContext)
+  type: Method
+  source:
+    path: Whipstaff.MediatR.EntityFrameworkCore
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.EntityFrameworkCore
+  namespace: Whipstaff.MediatR.EntityFrameworkCore
+  summary: "\nGets the query to be executed.\n"
+  syntax:
+    content: protected abstract Task<IQueryable<TEntity>> GetQueryAsync(TDbContext dbContext)
+    parameters:
+    - id: dbContext
+      type: '{TDbContext}'
+      description: The Database Context.
+    return:
+      type: System.Threading.Tasks.Task{System.Linq.IQueryable{{TEntity}}}
+      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> representing the result of the asynchronous operation.
+    content.vb: Protected MustOverride Function GetQueryAsync(dbContext As TDbContext) As Task(Of IQueryable(Of TEntity))
+  overload: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.GetQueryAsync*
+  nameWithType.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).GetQueryAsync(TDbContext)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).GetQueryAsync(TDbContext)
+- uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.ActOnItemAsync(`2)
+  commentId: M:Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.ActOnItemAsync(`2)
+  id: ActOnItemAsync(`2)
+  parent: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+  langs:
+  - csharp
+  - vb
+  name: ActOnItemAsync(TEntity)
+  nameWithType: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.ActOnItemAsync(TEntity)
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.ActOnItemAsync(TEntity)
+  type: Method
+  source:
+    path: Whipstaff.MediatR.EntityFrameworkCore
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.EntityFrameworkCore
+  namespace: Whipstaff.MediatR.EntityFrameworkCore
+  summary: "\nAllows acting on a strongly typed entity.\n"
+  syntax:
+    content: protected abstract Task ActOnItemAsync(TEntity item)
+    parameters:
+    - id: item
+      type: '{TEntity}'
+      description: The item to act on.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> representing the result of the asynchronous operation.
+    content.vb: Protected MustOverride Function ActOnItemAsync(item As TEntity) As Task
+  overload: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.ActOnItemAsync*
+  nameWithType.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).ActOnItemAsync(TEntity)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).ActOnItemAsync(TEntity)
+references:
+- uid: Whipstaff.MediatR.EntityFrameworkCore
+  commentId: N:Whipstaff.MediatR.EntityFrameworkCore
+  isExternal: true
+  name: Whipstaff.MediatR.EntityFrameworkCore
+  nameWithType: Whipstaff.MediatR.EntityFrameworkCore
+  fullName: Whipstaff.MediatR.EntityFrameworkCore
+- uid: MediatR.IRequestHandler{{TRequest},System.Int32}
+  commentId: '!:MediatR.IRequestHandler{`0,System.Int32}'
+  definition: MediatR.IRequestHandler`2
+  name: IRequestHandler<TRequest, Int32>
+  nameWithType: IRequestHandler<TRequest, Int32>
+  fullName: MediatR.IRequestHandler<TRequest, System.Int32>
+  nameWithType.vb: IRequestHandler(Of TRequest, Int32)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, System.Int32)
+  name.vb: IRequestHandler(Of TRequest, Int32)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<, >
+  nameWithType: IRequestHandler<, >
+  fullName: MediatR.IRequestHandler<, >
+  nameWithType.vb: IRequestHandler(Of , )
+  fullName.vb: MediatR.IRequestHandler(Of , )
+  name.vb: IRequestHandler(Of , )
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.#ctor*
+  commentId: Overload:Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.#ctor
+  isExternal: true
+  name: ActOnDbSetRequestHandler
+  nameWithType: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.ActOnDbSetRequestHandler
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.ActOnDbSetRequestHandler
+  nameWithType.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).ActOnDbSetRequestHandler
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).ActOnDbSetRequestHandler
+- uid: System.Func{System.Threading.Tasks.Task{{TDbContext}}}
+  commentId: '!:System.Func{System.Threading.Tasks.Task{`1}}'
+  definition: System.Func`1
+  name: Func<Task<TDbContext>>
+  nameWithType: Func<Task<TDbContext>>
+  fullName: System.Func<System.Threading.Tasks.Task<TDbContext>>
+  nameWithType.vb: Func(Of Task(Of TDbContext))
+  fullName.vb: System.Func(Of System.Threading.Tasks.Task(Of TDbContext))
+  name.vb: Func(Of Task(Of TDbContext))
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler{{TRequest},{TDbContext},{TEntity}}}
+  commentId: '!:Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler{`0,`1,`2}}'
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  name: ILogger<ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>>
+  nameWithType: ILogger<ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>>
+  fullName: Microsoft.Extensions.Logging.ILogger<Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>>
+  nameWithType.vb: ILogger(Of ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity))
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity))
+  name.vb: ILogger(Of ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity))
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+    name: ActOnDbSetRequestHandler
+    nameWithType: ActOnDbSetRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3
+    name: ActOnDbSetRequestHandler
+    nameWithType: ActOnDbSetRequestHandler
+    fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`1
+  isExternal: true
+  name: Func<>
+  nameWithType: Func<>
+  fullName: System.Func<>
+  nameWithType.vb: Func(Of )
+  fullName.vb: System.Func(Of )
+  name.vb: Func(Of )
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  name: ILogger<>
+  nameWithType: ILogger<>
+  fullName: Microsoft.Extensions.Logging.ILogger<>
+  nameWithType.vb: ILogger(Of )
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of )
+  name.vb: ILogger(Of )
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.Handle*
+  commentId: Overload:Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.Handle
+  isExternal: true
+  name: Handle
+  nameWithType: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.Handle
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.Handle
+  nameWithType.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).Handle
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).Handle
+- uid: '{TRequest}'
+  commentId: '!:TRequest'
+  definition: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: System.Threading.CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: '!:System.Threading.Tasks.Task{System.Int32}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Int32>
+  nameWithType: Task<Int32>
+  fullName: System.Threading.Tasks.Task<System.Int32>
+  nameWithType.vb: Task(Of Int32)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Int32)
+  name.vb: Task(Of Int32)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.GetQueryAsync*
+  commentId: Overload:Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.GetQueryAsync
+  isExternal: true
+  name: GetQueryAsync
+  nameWithType: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.GetQueryAsync
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.GetQueryAsync
+  nameWithType.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).GetQueryAsync
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).GetQueryAsync
+- uid: '{TDbContext}'
+  commentId: '!:TDbContext'
+  definition: TDbContext
+  name: TDbContext
+  nameWithType: TDbContext
+  fullName: TDbContext
+- uid: System.Threading.Tasks.Task{System.Linq.IQueryable{{TEntity}}}
+  commentId: '!:System.Threading.Tasks.Task{System.Linq.IQueryable{`2}}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IQueryable<TEntity>>
+  nameWithType: Task<IQueryable<TEntity>>
+  fullName: System.Threading.Tasks.Task<System.Linq.IQueryable<TEntity>>
+  nameWithType.vb: Task(Of IQueryable(Of TEntity))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Linq.IQueryable(Of TEntity))
+  name.vb: Task(Of IQueryable(Of TEntity))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: System.Linq.IQueryable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: System.Linq.IQueryable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TDbContext
+  name: TDbContext
+  nameWithType: TDbContext
+  fullName: TDbContext
+- uid: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.ActOnItemAsync*
+  commentId: Overload:Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler`3.ActOnItemAsync
+  isExternal: true
+  name: ActOnItemAsync
+  nameWithType: ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.ActOnItemAsync
+  fullName: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler<TRequest, TDbContext, TEntity>.ActOnItemAsync
+  nameWithType.vb: ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).ActOnItemAsync
+  fullName.vb: Whipstaff.MediatR.EntityFrameworkCore.ActOnDbSetRequestHandler(Of TRequest, TDbContext, TEntity).ActOnItemAsync
+- uid: '{TEntity}'
+  commentId: '!:TEntity'
+  definition: TEntity
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
+- uid: System.Threading.Tasks.Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: TEntity
+  commentId: '!:TEntity'
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity

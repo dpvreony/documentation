@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.Mediatr.MediatrHelpers
+  commentId: T:Whipstaff.Core.Mediatr.MediatrHelpers
+  id: MediatrHelpers
+  parent: Whipstaff.Core.Mediatr
+  children:
+  - Whipstaff.Core.Mediatr.MediatrHelpers.RegisterMediatrWithExplicitTypes(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Logging.ILogger,MediatR.MediatRServiceConfiguration,Whipstaff.Core.Mediatr.IMediatrRegistration)
+  langs:
+  - csharp
+  - vb
+  name: MediatrHelpers
+  nameWithType: MediatrHelpers
+  fullName: Whipstaff.Core.Mediatr.MediatrHelpers
+  type: Class
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Mediatr
+  summary: "\nHelper methods for registration mediatr without using reflection.\n"
+  syntax:
+    content: 'public static class MediatrHelpers : Object'
+    content.vb: >-
+      Public Module MediatrHelpers
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Whipstaff.Core.Mediatr.MediatrHelpers.RegisterMediatrWithExplicitTypes(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Logging.ILogger,MediatR.MediatRServiceConfiguration,Whipstaff.Core.Mediatr.IMediatrRegistration)
+  commentId: M:Whipstaff.Core.Mediatr.MediatrHelpers.RegisterMediatrWithExplicitTypes(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Logging.ILogger,MediatR.MediatRServiceConfiguration,Whipstaff.Core.Mediatr.IMediatrRegistration)
+  id: RegisterMediatrWithExplicitTypes(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Logging.ILogger,MediatR.MediatRServiceConfiguration,Whipstaff.Core.Mediatr.IMediatrRegistration)
+  parent: Whipstaff.Core.Mediatr.MediatrHelpers
+  langs:
+  - csharp
+  - vb
+  name: RegisterMediatrWithExplicitTypes(IServiceCollection, ILogger, MediatRServiceConfiguration, IMediatrRegistration)
+  nameWithType: MediatrHelpers.RegisterMediatrWithExplicitTypes(IServiceCollection, ILogger, MediatRServiceConfiguration, IMediatrRegistration)
+  fullName: Whipstaff.Core.Mediatr.MediatrHelpers.RegisterMediatrWithExplicitTypes(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Logging.ILogger, MediatR.MediatRServiceConfiguration, Whipstaff.Core.Mediatr.IMediatrRegistration)
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core.Mediatr
+  summary: "\nRegisters mediatr to net core DI without relying on reflection.\n"
+  syntax:
+    content: public static void RegisterMediatrWithExplicitTypes(IServiceCollection services, ILogger logger, MediatRServiceConfiguration serviceConfiguration, IMediatrRegistration mediatrRegistration)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: .Net Core services collection to register mediatr to.
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger
+      description: Instance of logging framework.
+    - id: serviceConfiguration
+      type: MediatR.MediatRServiceConfiguration
+      description: The mediatr service configuration.
+    - id: mediatrRegistration
+      type: Whipstaff.Core.Mediatr.IMediatrRegistration
+      description: "\nThe mediatr explicit registration details.\nThis is the part specific to this functionality to avoid reflection.\nThe object contains all the relevant details compiled up front.\n"
+    content.vb: Public Shared Sub RegisterMediatrWithExplicitTypes(services As IServiceCollection, logger As ILogger, serviceConfiguration As MediatRServiceConfiguration, mediatrRegistration As IMediatrRegistration)
+  overload: Whipstaff.Core.Mediatr.MediatrHelpers.RegisterMediatrWithExplicitTypes*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Whipstaff.Core.Mediatr
+  commentId: N:Whipstaff.Core.Mediatr
+  isExternal: true
+  name: Whipstaff.Core.Mediatr
+  nameWithType: Whipstaff.Core.Mediatr
+  fullName: Whipstaff.Core.Mediatr
+- uid: Whipstaff.Core.Mediatr.MediatrHelpers.RegisterMediatrWithExplicitTypes*
+  commentId: Overload:Whipstaff.Core.Mediatr.MediatrHelpers.RegisterMediatrWithExplicitTypes
+  isExternal: true
+  name: RegisterMediatrWithExplicitTypes
+  nameWithType: MediatrHelpers.RegisterMediatrWithExplicitTypes
+  fullName: Whipstaff.Core.Mediatr.MediatrHelpers.RegisterMediatrWithExplicitTypes
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: '!:Microsoft.Extensions.DependencyInjection.IServiceCollection'
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: MediatR.MediatRServiceConfiguration
+  commentId: '!:MediatR.MediatRServiceConfiguration'
+  isExternal: true
+  name: MediatRServiceConfiguration
+  nameWithType: MediatRServiceConfiguration
+  fullName: MediatR.MediatRServiceConfiguration
+- uid: Whipstaff.Core.Mediatr.IMediatrRegistration
+  commentId: T:Whipstaff.Core.Mediatr.IMediatrRegistration
+  parent: Whipstaff.Core.Mediatr
+  isExternal: true
+  name: IMediatrRegistration
+  nameWithType: IMediatrRegistration
+  fullName: Whipstaff.Core.Mediatr.IMediatrRegistration

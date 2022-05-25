@@ -1,0 +1,295 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.IAuditableQueryFactory`5
+  commentId: T:Whipstaff.Core.IAuditableQueryFactory`5
+  id: IAuditableQueryFactory`5
+  parent: Whipstaff.Core
+  children:
+  - Whipstaff.Core.IAuditableQueryFactory`5.GetListQueryAsync(`1,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  - Whipstaff.Core.IAuditableQueryFactory`5.GetViewQueryAsync(System.Int64,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>
+  nameWithType: IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>
+  fullName: Whipstaff.Core.IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>
+  type: Interface
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core
+  summary: "\nRepresents a query factory for Auditable Requests.\nThe command is the message that will be pumped into the CQRS architecture, it is not running any logic itself.\nThe reason for having a factory is so you can push this into the controller without it having any knowledge\nof how the commands generate or operate.\n"
+  syntax:
+    content: >-
+      public interface IAuditableQueryFactory<TListQuery, in TListRequestDto, TListResponse, TViewQuery, TViewResponse>
+          where TListQuery : IAuditableRequest<TListRequestDto, TListResponse> where TViewQuery : IAuditableRequest<long, TViewResponse>
+    typeParameters:
+    - id: TListQuery
+      description: The type of the List query.
+    - id: TListRequestDto
+      description: The type of the Request DTO for the List Query.
+    - id: TListResponse
+      description: The type of the Response DTO for the List Query.
+    - id: TViewQuery
+      description: The type of the View query.
+    - id: TViewResponse
+      description: The type of the Response DTO for the View Query.
+    content.vb: Public Interface IAuditableQueryFactory(Of TListQuery As IAuditableRequest(Of TListRequestDto, TListResponse), In TListRequestDto, TListResponse, TViewQuery As IAuditableRequest(Of Long, TViewResponse), TViewResponse)
+  nameWithType.vb: IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Whipstaff.Core.IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse)
+  name.vb: IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse)
+- uid: Whipstaff.Core.IAuditableQueryFactory`5.GetListQueryAsync(`1,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  commentId: M:Whipstaff.Core.IAuditableQueryFactory`5.GetListQueryAsync(`1,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  id: GetListQueryAsync(`1,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  parent: Whipstaff.Core.IAuditableQueryFactory`5
+  langs:
+  - csharp
+  - vb
+  name: GetListQueryAsync(TListRequestDto, ClaimsPrincipal, CancellationToken)
+  nameWithType: IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>.GetListQueryAsync(TListRequestDto, ClaimsPrincipal, CancellationToken)
+  fullName: Whipstaff.Core.IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>.GetListQueryAsync(TListRequestDto, System.Security.Claims.ClaimsPrincipal, System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core
+  summary: "\nGets the auditable Query for use in a List Operation.\n"
+  syntax:
+    content: Task<TListQuery> GetListQueryAsync(TListRequestDto requestDto, ClaimsPrincipal claimsPrincipal, CancellationToken cancellationToken)
+    parameters:
+    - id: requestDto
+      type: '{TListRequestDto}'
+      description: The Request DTO for the List Query.
+    - id: claimsPrincipal
+      type: System.Security.Claims.ClaimsPrincipal
+      description: The Claims principal attached to the request.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{{TListQuery}}
+      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> representing the result of the asynchronous operation.
+    content.vb: Function GetListQueryAsync(requestDto As TListRequestDto, claimsPrincipal As ClaimsPrincipal, cancellationToken As CancellationToken) As Task(Of TListQuery)
+  overload: Whipstaff.Core.IAuditableQueryFactory`5.GetListQueryAsync*
+  nameWithType.vb: IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse).GetListQueryAsync(TListRequestDto, ClaimsPrincipal, CancellationToken)
+  fullName.vb: Whipstaff.Core.IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse).GetListQueryAsync(TListRequestDto, System.Security.Claims.ClaimsPrincipal, System.Threading.CancellationToken)
+- uid: Whipstaff.Core.IAuditableQueryFactory`5.GetViewQueryAsync(System.Int64,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  commentId: M:Whipstaff.Core.IAuditableQueryFactory`5.GetViewQueryAsync(System.Int64,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  id: GetViewQueryAsync(System.Int64,System.Security.Claims.ClaimsPrincipal,System.Threading.CancellationToken)
+  parent: Whipstaff.Core.IAuditableQueryFactory`5
+  langs:
+  - csharp
+  - vb
+  name: GetViewQueryAsync(Int64, ClaimsPrincipal, CancellationToken)
+  nameWithType: IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>.GetViewQueryAsync(Int64, ClaimsPrincipal, CancellationToken)
+  fullName: Whipstaff.Core.IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>.GetViewQueryAsync(System.Int64, System.Security.Claims.ClaimsPrincipal, System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: Whipstaff.Core
+    isExternal: true
+  assemblies:
+  - Whipstaff.Core
+  namespace: Whipstaff.Core
+  summary: "\nGets the auditable Query for use in a View Operation.\n"
+  syntax:
+    content: Task<TViewQuery> GetViewQueryAsync(long id, ClaimsPrincipal claimsPrincipal, CancellationToken cancellationToken)
+    parameters:
+    - id: id
+      type: System.Int64
+      description: The unique id for the view query.
+    - id: claimsPrincipal
+      type: System.Security.Claims.ClaimsPrincipal
+      description: The Claims principal attached to the request.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The cancellation token.
+    return:
+      type: System.Threading.Tasks.Task{{TViewQuery}}
+      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> representing the result of the asynchronous operation.
+    content.vb: Function GetViewQueryAsync(id As Long, claimsPrincipal As ClaimsPrincipal, cancellationToken As CancellationToken) As Task(Of TViewQuery)
+  overload: Whipstaff.Core.IAuditableQueryFactory`5.GetViewQueryAsync*
+  nameWithType.vb: IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse).GetViewQueryAsync(Int64, ClaimsPrincipal, CancellationToken)
+  fullName.vb: Whipstaff.Core.IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse).GetViewQueryAsync(System.Int64, System.Security.Claims.ClaimsPrincipal, System.Threading.CancellationToken)
+references:
+- uid: Whipstaff.Core
+  commentId: N:Whipstaff.Core
+  isExternal: true
+  name: Whipstaff.Core
+  nameWithType: Whipstaff.Core
+  fullName: Whipstaff.Core
+- uid: Whipstaff.Core.IAuditableQueryFactory`5.GetListQueryAsync*
+  commentId: Overload:Whipstaff.Core.IAuditableQueryFactory`5.GetListQueryAsync
+  isExternal: true
+  name: GetListQueryAsync
+  nameWithType: IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>.GetListQueryAsync
+  fullName: Whipstaff.Core.IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>.GetListQueryAsync
+  nameWithType.vb: IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse).GetListQueryAsync
+  fullName.vb: Whipstaff.Core.IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse).GetListQueryAsync
+- uid: '{TListRequestDto}'
+  commentId: '!:TListRequestDto'
+  definition: TListRequestDto
+  name: TListRequestDto
+  nameWithType: TListRequestDto
+  fullName: TListRequestDto
+- uid: System.Security.Claims.ClaimsPrincipal
+  isExternal: true
+  name: ClaimsPrincipal
+  nameWithType: ClaimsPrincipal
+  fullName: System.Security.Claims.ClaimsPrincipal
+- uid: System.Threading.CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{{TListQuery}}
+  commentId: '!:System.Threading.Tasks.Task{`0}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TListQuery>
+  nameWithType: Task<TListQuery>
+  fullName: System.Threading.Tasks.Task<TListQuery>
+  nameWithType.vb: Task(Of TListQuery)
+  fullName.vb: System.Threading.Tasks.Task(Of TListQuery)
+  name.vb: Task(Of TListQuery)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TListQuery
+    nameWithType: TListQuery
+    fullName: TListQuery
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TListQuery
+    nameWithType: TListQuery
+    fullName: TListQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TListRequestDto
+  commentId: '!:TListRequestDto'
+  name: TListRequestDto
+  nameWithType: TListRequestDto
+  fullName: TListRequestDto
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Core.IAuditableQueryFactory`5.GetViewQueryAsync*
+  commentId: Overload:Whipstaff.Core.IAuditableQueryFactory`5.GetViewQueryAsync
+  isExternal: true
+  name: GetViewQueryAsync
+  nameWithType: IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>.GetViewQueryAsync
+  fullName: Whipstaff.Core.IAuditableQueryFactory<TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse>.GetViewQueryAsync
+  nameWithType.vb: IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse).GetViewQueryAsync
+  fullName.vb: Whipstaff.Core.IAuditableQueryFactory(Of TListQuery, TListRequestDto, TListResponse, TViewQuery, TViewResponse).GetViewQueryAsync
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: System.Threading.Tasks.Task{{TViewQuery}}
+  commentId: '!:System.Threading.Tasks.Task{`3}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TViewQuery>
+  nameWithType: Task<TViewQuery>
+  fullName: System.Threading.Tasks.Task<TViewQuery>
+  nameWithType.vb: Task(Of TViewQuery)
+  fullName.vb: System.Threading.Tasks.Task(Of TViewQuery)
+  name.vb: Task(Of TViewQuery)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TViewQuery
+    nameWithType: TViewQuery
+    fullName: TViewQuery
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TViewQuery
+    nameWithType: TViewQuery
+    fullName: TViewQuery
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

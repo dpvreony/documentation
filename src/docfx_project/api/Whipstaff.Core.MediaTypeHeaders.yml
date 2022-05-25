@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Core.MediaTypeHeaders
+  commentId: N:Whipstaff.Core.MediaTypeHeaders
+  id: Whipstaff.Core.MediaTypeHeaders
+  children:
+  - Whipstaff.Core.MediaTypeHeaders.MediaTypeHeaderStringHelpers
+  - Whipstaff.Core.MediaTypeHeaders.MediaTypeHeaderValueHelpers
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.Core.MediaTypeHeaders
+  nameWithType: Whipstaff.Core.MediaTypeHeaders
+  fullName: Whipstaff.Core.MediaTypeHeaders
+  type: Namespace
+  assemblies:
+  - Whipstaff.Core
+references:
+- uid: Whipstaff.Core.MediaTypeHeaders.MediaTypeHeaderStringHelpers
+  commentId: T:Whipstaff.Core.MediaTypeHeaders.MediaTypeHeaderStringHelpers
+  isExternal: true
+  name: MediaTypeHeaderStringHelpers
+  nameWithType: MediaTypeHeaderStringHelpers
+  fullName: Whipstaff.Core.MediaTypeHeaders.MediaTypeHeaderStringHelpers
+- uid: Whipstaff.Core.MediaTypeHeaders.MediaTypeHeaderValueHelpers
+  commentId: T:Whipstaff.Core.MediaTypeHeaders.MediaTypeHeaderValueHelpers
+  isExternal: true
+  name: MediaTypeHeaderValueHelpers
+  nameWithType: MediaTypeHeaderValueHelpers
+  fullName: Whipstaff.Core.MediaTypeHeaders.MediaTypeHeaderValueHelpers

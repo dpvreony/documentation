@@ -1,0 +1,216 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.JobSequencing
+  commentId: N:Whipstaff.Runtime.JobSequencing
+  id: Whipstaff.Runtime.JobSequencing
+  children:
+  - Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+  - Whipstaff.Runtime.JobSequencing.ActOnDataReader
+  - Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+  - Whipstaff.Runtime.JobSequencing.FuncActOnDataReader
+  - Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+  - Whipstaff.Runtime.JobSequencing.JobSequenceByRange`1
+  - Whipstaff.Runtime.JobSequencing.JobSequencingHelpers
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.Runtime.JobSequencing
+  nameWithType: Whipstaff.Runtime.JobSequencing
+  fullName: Whipstaff.Runtime.JobSequencing
+  type: Namespace
+  assemblies:
+  - Whipstaff.Runtime
+references:
+- uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+  commentId: T:Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+  isExternal: true
+  name: ActOnCollectionHelper<TCollection, TItem>
+  nameWithType: ActOnCollectionHelper<TCollection, TItem>
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper<TCollection, TItem>
+  nameWithType.vb: ActOnCollectionHelper(Of TCollection, TItem)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper(Of TCollection, TItem)
+  name.vb: ActOnCollectionHelper(Of TCollection, TItem)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+    name: ActOnCollectionHelper
+    nameWithType: ActOnCollectionHelper
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TCollection
+    nameWithType: TCollection
+    fullName: TCollection
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper`2
+    name: ActOnCollectionHelper
+    nameWithType: ActOnCollectionHelper
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnCollectionHelper
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TCollection
+    nameWithType: TCollection
+    fullName: TCollection
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.ActOnDataReader
+  commentId: T:Whipstaff.Runtime.JobSequencing.ActOnDataReader
+  parent: Whipstaff.Runtime.JobSequencing
+  isExternal: true
+  name: ActOnDataReader
+  nameWithType: ActOnDataReader
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnDataReader
+- uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+  commentId: T:Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+  isExternal: true
+  name: ActOnEnumerable<T>
+  nameWithType: ActOnEnumerable<T>
+  fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable<T>
+  nameWithType.vb: ActOnEnumerable(Of T)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.ActOnEnumerable(Of T)
+  name.vb: ActOnEnumerable(Of T)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+    name: ActOnEnumerable
+    nameWithType: ActOnEnumerable
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.ActOnEnumerable`1
+    name: ActOnEnumerable
+    nameWithType: ActOnEnumerable
+    fullName: Whipstaff.Runtime.JobSequencing.ActOnEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnDataReader
+  commentId: T:Whipstaff.Runtime.JobSequencing.FuncActOnDataReader
+  isExternal: true
+  name: FuncActOnDataReader
+  nameWithType: FuncActOnDataReader
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnDataReader
+- uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+  commentId: T:Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+  isExternal: true
+  name: FuncActOnEnumerable<T>
+  nameWithType: FuncActOnEnumerable<T>
+  fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable<T>
+  nameWithType.vb: FuncActOnEnumerable(Of T)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable(Of T)
+  name.vb: FuncActOnEnumerable(Of T)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+    name: FuncActOnEnumerable
+    nameWithType: FuncActOnEnumerable
+    fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable`1
+    name: FuncActOnEnumerable
+    nameWithType: FuncActOnEnumerable
+    fullName: Whipstaff.Runtime.JobSequencing.FuncActOnEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.JobSequenceByRange`1
+  commentId: T:Whipstaff.Runtime.JobSequencing.JobSequenceByRange`1
+  isExternal: true
+  name: JobSequenceByRange<T>
+  nameWithType: JobSequenceByRange<T>
+  fullName: Whipstaff.Runtime.JobSequencing.JobSequenceByRange<T>
+  nameWithType.vb: JobSequenceByRange(Of T)
+  fullName.vb: Whipstaff.Runtime.JobSequencing.JobSequenceByRange(Of T)
+  name.vb: JobSequenceByRange(Of T)
+  spec.csharp:
+  - uid: Whipstaff.Runtime.JobSequencing.JobSequenceByRange`1
+    name: JobSequenceByRange
+    nameWithType: JobSequenceByRange
+    fullName: Whipstaff.Runtime.JobSequencing.JobSequenceByRange
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Whipstaff.Runtime.JobSequencing.JobSequenceByRange`1
+    name: JobSequenceByRange
+    nameWithType: JobSequenceByRange
+    fullName: Whipstaff.Runtime.JobSequencing.JobSequenceByRange
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.Runtime.JobSequencing.JobSequencingHelpers
+  commentId: T:Whipstaff.Runtime.JobSequencing.JobSequencingHelpers
+  isExternal: true
+  name: JobSequencingHelpers
+  nameWithType: JobSequencingHelpers
+  fullName: Whipstaff.Runtime.JobSequencing.JobSequencingHelpers
+- uid: Whipstaff.Runtime.JobSequencing
+  commentId: N:Whipstaff.Runtime.JobSequencing
+  isExternal: true
+  name: Whipstaff.Runtime.JobSequencing
+  nameWithType: Whipstaff.Runtime.JobSequencing
+  fullName: Whipstaff.Runtime.JobSequencing

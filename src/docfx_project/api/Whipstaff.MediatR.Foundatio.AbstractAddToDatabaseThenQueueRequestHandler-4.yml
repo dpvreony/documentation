@@ -1,0 +1,964 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4
+  commentId: T:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4
+  id: AbstractAddToDatabaseThenQueueRequestHandler`4
+  parent: Whipstaff.MediatR.Foundatio
+  children:
+  - Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.#ctor(System.Func{System.Threading.Tasks.Task{`1}},Foundatio.Queues.IQueue{`3},Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler{`0,`1,`2,`3}})
+  - Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetDbSet(`1)
+  - Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetEntityToAddToDatabase(`0)
+  - Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueEntryOptions(`0,`2)
+  - Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueMessage(`0,`2)
+  - Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.Handle(`0,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>
+  type: Class
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio
+  summary: "\nAbstract logic for a mediator request to insert a record to a database then send a message on a queue.\n"
+  syntax:
+    content: 'public abstract class AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage> : Object, IRequestHandler<TRequest, string> where TRequest : IRequest<string> where TDbContext : DbContext where TEntityFrameworkEntity : class where TQueueMessage : class'
+    typeParameters:
+    - id: TRequest
+      description: The type for the mediator request
+    - id: TDbContext
+      description: The type for the entity framework database context.
+    - id: TEntityFrameworkEntity
+      description: The type for the entity being inserted into the database.
+    - id: TQueueMessage
+      description: The type for the message being added to the queue.
+    content.vb: >-
+      Public MustInherit Class AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest As IRequest(Of String), TDbContext As DbContext, TEntityFrameworkEntity As Class, TQueueMessage As Class)
+          Inherits Object
+          Implements IRequestHandler(Of TRequest, String)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.IRequestHandler{{TRequest},System.String}
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage)
+  name.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage)
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.#ctor(System.Func{System.Threading.Tasks.Task{`1}},Foundatio.Queues.IQueue{`3},Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler{`0,`1,`2,`3}})
+  commentId: M:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.#ctor(System.Func{System.Threading.Tasks.Task{`1}},Foundatio.Queues.IQueue{`3},Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler{`0,`1,`2,`3}})
+  id: '#ctor(System.Func{System.Threading.Tasks.Task{`1}},Foundatio.Queues.IQueue{`3},Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler{`0,`1,`2,`3}})'
+  parent: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4
+  langs:
+  - csharp
+  - vb
+  name: AbstractAddToDatabaseThenQueueRequestHandler(Func<Task<TDbContext>>, IQueue<TQueueMessage>, ILogger<AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>>)
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.AbstractAddToDatabaseThenQueueRequestHandler(Func<Task<TDbContext>>, IQueue<TQueueMessage>, ILogger<AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>>)
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.AbstractAddToDatabaseThenQueueRequestHandler(System.Func<System.Threading.Tasks.Task<TDbContext>>, Foundatio.Queues.IQueue<TQueueMessage>, Microsoft.Extensions.Logging.ILogger<Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>>)
+  type: Constructor
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.MediatR.Foundatio.AddToQueueRequestHandler%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: protected AbstractAddToDatabaseThenQueueRequestHandler(Func<Task<TDbContext>> dbContextFactory, IQueue<TQueueMessage> queue, ILogger<AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>> logger)
+    parameters:
+    - id: dbContextFactory
+      type: System.Func{System.Threading.Tasks.Task{{TDbContext}}}
+      description: Factory for creating a database context instance.
+    - id: queue
+      type: Foundatio.Queues.IQueue{{TQueueMessage}}
+      description: The queue to add the requests to.
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler{{TRequest},{TDbContext},{TEntityFrameworkEntity},{TQueueMessage}}}
+      description: Logging framework instance.
+    content.vb: Protected Sub New(dbContextFactory As Func(Of Task(Of TDbContext)), queue As IQueue(Of TQueueMessage), logger As ILogger(Of AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage)))
+  overload: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.#ctor*
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).AbstractAddToDatabaseThenQueueRequestHandler(Func(Of Task(Of TDbContext)), IQueue(Of TQueueMessage), ILogger(Of AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage)))
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).AbstractAddToDatabaseThenQueueRequestHandler(System.Func(Of System.Threading.Tasks.Task(Of TDbContext)), Foundatio.Queues.IQueue(Of TQueueMessage), Microsoft.Extensions.Logging.ILogger(Of Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage)))
+  name.vb: AbstractAddToDatabaseThenQueueRequestHandler(Func(Of Task(Of TDbContext)), IQueue(Of TQueueMessage), ILogger(Of AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage)))
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.Handle(`0,System.Threading.CancellationToken)
+  id: Handle(`0,System.Threading.CancellationToken)
+  parent: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4
+  langs:
+  - csharp
+  - vb
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.Handle(TRequest, CancellationToken)
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.Handle(TRequest, System.Threading.CancellationToken)
+  type: Method
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio
+  syntax:
+    content: public Task<string> Handle(TRequest request, CancellationToken cancellationToken)
+    parameters:
+    - id: request
+      type: '{TRequest}'
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+    content.vb: Public Function Handle(request As TRequest, cancellationToken As CancellationToken) As Task(Of String)
+  overload: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.Handle*
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).Handle(TRequest, CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).Handle(TRequest, System.Threading.CancellationToken)
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetDbSet(`1)
+  commentId: M:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetDbSet(`1)
+  id: GetDbSet(`1)
+  parent: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4
+  langs:
+  - csharp
+  - vb
+  name: GetDbSet(TDbContext)
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetDbSet(TDbContext)
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetDbSet(TDbContext)
+  type: Method
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio
+  summary: "\nGets the DbSet the entity is to be inserted into.\n"
+  syntax:
+    content: protected abstract DbSet<TEntityFrameworkEntity> GetDbSet(TDbContext dbContext)
+    parameters:
+    - id: dbContext
+      type: '{TDbContext}'
+      description: database context instance.
+    return:
+      type: Microsoft.EntityFrameworkCore.DbSet{{TEntityFrameworkEntity}}
+      description: The DbSet entity.
+    content.vb: Protected MustOverride Function GetDbSet(dbContext As TDbContext) As DbSet(Of TEntityFrameworkEntity)
+  overload: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetDbSet*
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetDbSet(TDbContext)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetDbSet(TDbContext)
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetEntityToAddToDatabase(`0)
+  commentId: M:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetEntityToAddToDatabase(`0)
+  id: GetEntityToAddToDatabase(`0)
+  parent: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4
+  langs:
+  - csharp
+  - vb
+  name: GetEntityToAddToDatabase(TRequest)
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetEntityToAddToDatabase(TRequest)
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetEntityToAddToDatabase(TRequest)
+  type: Method
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio
+  summary: "\nGets the entity to add to the database based upon the request.\n"
+  syntax:
+    content: protected abstract TEntityFrameworkEntity GetEntityToAddToDatabase(TRequest request)
+    parameters:
+    - id: request
+      type: '{TRequest}'
+      description: The incoming mediator request.
+    return:
+      type: '{TEntityFrameworkEntity}'
+      description: The entity to insert.
+    content.vb: Protected MustOverride Function GetEntityToAddToDatabase(request As TRequest) As TEntityFrameworkEntity
+  overload: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetEntityToAddToDatabase*
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetEntityToAddToDatabase(TRequest)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetEntityToAddToDatabase(TRequest)
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueEntryOptions(`0,`2)
+  commentId: M:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueEntryOptions(`0,`2)
+  id: GetQueueEntryOptions(`0,`2)
+  parent: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4
+  langs:
+  - csharp
+  - vb
+  name: GetQueueEntryOptions(TRequest, TEntityFrameworkEntity)
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetQueueEntryOptions(TRequest, TEntityFrameworkEntity)
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetQueueEntryOptions(TRequest, TEntityFrameworkEntity)
+  type: Method
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio
+  summary: "\nGets the queue entry options, if required.\n"
+  syntax:
+    content: protected abstract QueueEntryOptions GetQueueEntryOptions(TRequest request, TEntityFrameworkEntity entityInserted)
+    parameters:
+    - id: request
+      type: '{TRequest}'
+      description: The original mediator request.
+    - id: entityInserted
+      type: '{TEntityFrameworkEntity}'
+      description: The entity inserted into the database.
+    return:
+      type: Foundatio.Queues.QueueEntryOptions
+      description: Queue entry options, or null if not required.
+    content.vb: Protected MustOverride Function GetQueueEntryOptions(request As TRequest, entityInserted As TEntityFrameworkEntity) As QueueEntryOptions
+  overload: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueEntryOptions*
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetQueueEntryOptions(TRequest, TEntityFrameworkEntity)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetQueueEntryOptions(TRequest, TEntityFrameworkEntity)
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueMessage(`0,`2)
+  commentId: M:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueMessage(`0,`2)
+  id: GetQueueMessage(`0,`2)
+  parent: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4
+  langs:
+  - csharp
+  - vb
+  name: GetQueueMessage(TRequest, TEntityFrameworkEntity)
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetQueueMessage(TRequest, TEntityFrameworkEntity)
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetQueueMessage(TRequest, TEntityFrameworkEntity)
+  type: Method
+  source:
+    path: Whipstaff.MediatR.Foundatio
+    isExternal: true
+  assemblies:
+  - Whipstaff.MediatR.Foundatio
+  namespace: Whipstaff.MediatR.Foundatio
+  summary: "\nGets the message to send to the queue.\n"
+  syntax:
+    content: protected abstract TQueueMessage GetQueueMessage(TRequest request, TEntityFrameworkEntity entityInserted)
+    parameters:
+    - id: request
+      type: '{TRequest}'
+      description: The original mediator request.
+    - id: entityInserted
+      type: '{TEntityFrameworkEntity}'
+      description: The entity inserted into the database.
+    return:
+      type: '{TQueueMessage}'
+    content.vb: Protected MustOverride Function GetQueueMessage(request As TRequest, entityInserted As TEntityFrameworkEntity) As TQueueMessage
+  overload: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueMessage*
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetQueueMessage(TRequest, TEntityFrameworkEntity)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetQueueMessage(TRequest, TEntityFrameworkEntity)
+references:
+- uid: Whipstaff.MediatR.Foundatio
+  commentId: N:Whipstaff.MediatR.Foundatio
+  isExternal: true
+  name: Whipstaff.MediatR.Foundatio
+  nameWithType: Whipstaff.MediatR.Foundatio
+  fullName: Whipstaff.MediatR.Foundatio
+- uid: MediatR.IRequestHandler{{TRequest},System.String}
+  commentId: '!:MediatR.IRequestHandler{`0,System.String}'
+  definition: MediatR.IRequestHandler`2
+  name: IRequestHandler<TRequest, String>
+  nameWithType: IRequestHandler<TRequest, String>
+  fullName: MediatR.IRequestHandler<TRequest, System.String>
+  nameWithType.vb: IRequestHandler(Of TRequest, String)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, System.String)
+  name.vb: IRequestHandler(Of TRequest, String)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<, >
+  nameWithType: IRequestHandler<, >
+  fullName: MediatR.IRequestHandler<, >
+  nameWithType.vb: IRequestHandler(Of , )
+  fullName.vb: MediatR.IRequestHandler(Of , )
+  name.vb: IRequestHandler(Of , )
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.#ctor*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.#ctor
+  isExternal: true
+  name: AbstractAddToDatabaseThenQueueRequestHandler
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.AbstractAddToDatabaseThenQueueRequestHandler
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.AbstractAddToDatabaseThenQueueRequestHandler
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).AbstractAddToDatabaseThenQueueRequestHandler
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).AbstractAddToDatabaseThenQueueRequestHandler
+- uid: System.Func{System.Threading.Tasks.Task{{TDbContext}}}
+  commentId: '!:System.Func{System.Threading.Tasks.Task{`1}}'
+  definition: System.Func`1
+  name: Func<Task<TDbContext>>
+  nameWithType: Func<Task<TDbContext>>
+  fullName: System.Func<System.Threading.Tasks.Task<TDbContext>>
+  nameWithType.vb: Func(Of Task(Of TDbContext))
+  fullName.vb: System.Func(Of System.Threading.Tasks.Task(Of TDbContext))
+  name.vb: Func(Of Task(Of TDbContext))
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Foundatio.Queues.IQueue{{TQueueMessage}}
+  commentId: '!:Foundatio.Queues.IQueue{`3}'
+  definition: Foundatio.Queues.IQueue`1
+  name: IQueue<TQueueMessage>
+  nameWithType: IQueue<TQueueMessage>
+  fullName: Foundatio.Queues.IQueue<TQueueMessage>
+  nameWithType.vb: IQueue(Of TQueueMessage)
+  fullName.vb: Foundatio.Queues.IQueue(Of TQueueMessage)
+  name.vb: IQueue(Of TQueueMessage)
+  spec.csharp:
+  - uid: Foundatio.Queues.IQueue`1
+    name: IQueue
+    nameWithType: IQueue
+    fullName: Foundatio.Queues.IQueue
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TQueueMessage
+    nameWithType: TQueueMessage
+    fullName: TQueueMessage
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Foundatio.Queues.IQueue`1
+    name: IQueue
+    nameWithType: IQueue
+    fullName: Foundatio.Queues.IQueue
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TQueueMessage
+    nameWithType: TQueueMessage
+    fullName: TQueueMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler{{TRequest},{TDbContext},{TEntityFrameworkEntity},{TQueueMessage}}}
+  commentId: '!:Microsoft.Extensions.Logging.ILogger{Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler{`0,`1,`2,`3}}'
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  name: ILogger<AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>>
+  nameWithType: ILogger<AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>>
+  fullName: Microsoft.Extensions.Logging.ILogger<Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>>
+  nameWithType.vb: ILogger(Of AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage))
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage))
+  name.vb: ILogger(Of AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage))
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4
+    name: AbstractAddToDatabaseThenQueueRequestHandler
+    nameWithType: AbstractAddToDatabaseThenQueueRequestHandler
+    fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntityFrameworkEntity
+    nameWithType: TEntityFrameworkEntity
+    fullName: TEntityFrameworkEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TQueueMessage
+    nameWithType: TQueueMessage
+    fullName: TQueueMessage
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4
+    name: AbstractAddToDatabaseThenQueueRequestHandler
+    nameWithType: AbstractAddToDatabaseThenQueueRequestHandler
+    fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntityFrameworkEntity
+    nameWithType: TEntityFrameworkEntity
+    fullName: TEntityFrameworkEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TQueueMessage
+    nameWithType: TQueueMessage
+    fullName: TQueueMessage
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`1
+  isExternal: true
+  name: Func<>
+  nameWithType: Func<>
+  fullName: System.Func<>
+  nameWithType.vb: Func(Of )
+  fullName.vb: System.Func(Of )
+  name.vb: Func(Of )
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Foundatio.Queues.IQueue`1
+  isExternal: true
+  name: IQueue<>
+  nameWithType: IQueue<>
+  fullName: Foundatio.Queues.IQueue<>
+  nameWithType.vb: IQueue(Of )
+  fullName.vb: Foundatio.Queues.IQueue(Of )
+  name.vb: IQueue(Of )
+  spec.csharp:
+  - uid: Foundatio.Queues.IQueue`1
+    name: IQueue
+    nameWithType: IQueue
+    fullName: Foundatio.Queues.IQueue
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Foundatio.Queues.IQueue`1
+    name: IQueue
+    nameWithType: IQueue
+    fullName: Foundatio.Queues.IQueue
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  name: ILogger<>
+  nameWithType: ILogger<>
+  fullName: Microsoft.Extensions.Logging.ILogger<>
+  nameWithType.vb: ILogger(Of )
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of )
+  name.vb: ILogger(Of )
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: Microsoft.Extensions.Logging.ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.Handle*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.Handle
+  isExternal: true
+  name: Handle
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.Handle
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.Handle
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).Handle
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).Handle
+- uid: '{TRequest}'
+  commentId: '!:TRequest'
+  definition: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: System.Threading.CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: '!:System.Threading.Tasks.Task{System.String}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: System.Threading.Tasks.Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetDbSet*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetDbSet
+  isExternal: true
+  name: GetDbSet
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetDbSet
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetDbSet
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetDbSet
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetDbSet
+- uid: '{TDbContext}'
+  commentId: '!:TDbContext'
+  definition: TDbContext
+  name: TDbContext
+  nameWithType: TDbContext
+  fullName: TDbContext
+- uid: Microsoft.EntityFrameworkCore.DbSet{{TEntityFrameworkEntity}}
+  commentId: '!:Microsoft.EntityFrameworkCore.DbSet{`2}'
+  definition: Microsoft.EntityFrameworkCore.DbSet`1
+  name: DbSet<TEntityFrameworkEntity>
+  nameWithType: DbSet<TEntityFrameworkEntity>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<TEntityFrameworkEntity>
+  nameWithType.vb: DbSet(Of TEntityFrameworkEntity)
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of TEntityFrameworkEntity)
+  name.vb: DbSet(Of TEntityFrameworkEntity)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntityFrameworkEntity
+    nameWithType: TEntityFrameworkEntity
+    fullName: TEntityFrameworkEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntityFrameworkEntity
+    nameWithType: TEntityFrameworkEntity
+    fullName: TEntityFrameworkEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TDbContext
+  name: TDbContext
+  nameWithType: TDbContext
+  fullName: TDbContext
+- uid: Microsoft.EntityFrameworkCore.DbSet`1
+  isExternal: true
+  name: DbSet<>
+  nameWithType: DbSet<>
+  fullName: Microsoft.EntityFrameworkCore.DbSet<>
+  nameWithType.vb: DbSet(Of )
+  fullName.vb: Microsoft.EntityFrameworkCore.DbSet(Of )
+  name.vb: DbSet(Of )
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetEntityToAddToDatabase*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetEntityToAddToDatabase
+  isExternal: true
+  name: GetEntityToAddToDatabase
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetEntityToAddToDatabase
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetEntityToAddToDatabase
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetEntityToAddToDatabase
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetEntityToAddToDatabase
+- uid: '{TEntityFrameworkEntity}'
+  commentId: '!:TEntityFrameworkEntity'
+  definition: TEntityFrameworkEntity
+  name: TEntityFrameworkEntity
+  nameWithType: TEntityFrameworkEntity
+  fullName: TEntityFrameworkEntity
+- uid: TEntityFrameworkEntity
+  name: TEntityFrameworkEntity
+  nameWithType: TEntityFrameworkEntity
+  fullName: TEntityFrameworkEntity
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueEntryOptions*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueEntryOptions
+  isExternal: true
+  name: GetQueueEntryOptions
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetQueueEntryOptions
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetQueueEntryOptions
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetQueueEntryOptions
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetQueueEntryOptions
+- uid: Foundatio.Queues.QueueEntryOptions
+  commentId: '!:Foundatio.Queues.QueueEntryOptions'
+  isExternal: true
+  name: QueueEntryOptions
+  nameWithType: QueueEntryOptions
+  fullName: Foundatio.Queues.QueueEntryOptions
+- uid: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueMessage*
+  commentId: Overload:Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler`4.GetQueueMessage
+  isExternal: true
+  name: GetQueueMessage
+  nameWithType: AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetQueueMessage
+  fullName: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler<TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage>.GetQueueMessage
+  nameWithType.vb: AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetQueueMessage
+  fullName.vb: Whipstaff.MediatR.Foundatio.AbstractAddToDatabaseThenQueueRequestHandler(Of TRequest, TDbContext, TEntityFrameworkEntity, TQueueMessage).GetQueueMessage
+- uid: '{TQueueMessage}'
+  commentId: '!:TQueueMessage'
+  definition: TQueueMessage
+  name: TQueueMessage
+  nameWithType: TQueueMessage
+  fullName: TQueueMessage
+- uid: TQueueMessage
+  commentId: '!:TQueueMessage'
+  name: TQueueMessage
+  nameWithType: TQueueMessage
+  fullName: TQueueMessage

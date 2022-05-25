@@ -1,0 +1,275 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException
+  commentId: T:Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException
+  id: NumberTooLowClrDateTimeException
+  parent: Whipstaff.Runtime.Exceptions
+  children:
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor(System.String)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor(System.String,System.DateTime,System.DateTime)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor(System.String,System.Exception)
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.Actual
+  - Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.MinimumValid
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDateTimeException
+  nameWithType: NumberTooLowClrDateTimeException
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException
+  type: Class
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nThe number passed in was higher than the allowed maximum.\n"
+  syntax:
+    content: 'public class NumberTooLowClrDateTimeException : ArgumentOutOfRangeException'
+    content.vb: >-
+      Public Class NumberTooLowClrDateTimeException
+          Inherits ArgumentOutOfRangeException
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor
+  id: '#ctor'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDateTimeException()
+  nameWithType: NumberTooLowClrDateTimeException.NumberTooLowClrDateTimeException()
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.NumberTooLowClrDateTimeException()
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowClrDateTimeException()
+    content.vb: Public Sub New
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor(System.String)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDateTimeException(String)
+  nameWithType: NumberTooLowClrDateTimeException.NumberTooLowClrDateTimeException(String)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.NumberTooLowClrDateTimeException(System.String)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowClrDateTimeException(string message)
+    parameters:
+    - id: message
+      type: System.String
+      description: Exception Message.
+    content.vb: Public Sub New(message As String)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor(System.String,System.Exception)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDateTimeException(String, Exception)
+  nameWithType: NumberTooLowClrDateTimeException.NumberTooLowClrDateTimeException(String, Exception)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.NumberTooLowClrDateTimeException(System.String, System.Exception)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowClrDateTimeException(string message, Exception innerException)
+    parameters:
+    - id: message
+      type: System.String
+      description: Exception Message.
+    - id: innerException
+      type: System.Exception
+      description: Inner Exception.
+    content.vb: Public Sub New(message As String, innerException As Exception)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor(System.String,System.DateTime,System.DateTime)
+  commentId: M:Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor(System.String,System.DateTime,System.DateTime)
+  id: '#ctor(System.String,System.DateTime,System.DateTime)'
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException
+  langs:
+  - csharp
+  - vb
+  name: NumberTooLowClrDateTimeException(String, DateTime, DateTime)
+  nameWithType: NumberTooLowClrDateTimeException.NumberTooLowClrDateTimeException(String, DateTime, DateTime)
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.NumberTooLowClrDateTimeException(System.String, System.DateTime, System.DateTime)
+  type: Constructor
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  syntax:
+    content: public NumberTooLowClrDateTimeException(string parameterName, DateTime minimumValid, DateTime actual)
+    parameters:
+    - id: parameterName
+      type: System.String
+      description: The name of the parameter causing the exception.
+    - id: minimumValid
+      type: System.DateTime
+      description: The minimum valid value.
+    - id: actual
+      type: System.DateTime
+      description: The actual value received.
+    content.vb: Public Sub New(parameterName As String, minimumValid As DateTime, actual As DateTime)
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.Actual
+  commentId: P:Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.Actual
+  id: Actual
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException
+  langs:
+  - csharp
+  - vb
+  name: Actual
+  nameWithType: NumberTooLowClrDateTimeException.Actual
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.Actual
+  type: Property
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nGets the actual value that cause the exception.\n"
+  syntax:
+    content: public DateTime Actual { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public ReadOnly Property Actual As DateTime
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.Actual*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.MinimumValid
+  commentId: P:Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.MinimumValid
+  id: MinimumValid
+  parent: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException
+  langs:
+  - csharp
+  - vb
+  name: MinimumValid
+  nameWithType: NumberTooLowClrDateTimeException.MinimumValid
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.MinimumValid
+  type: Property
+  source:
+    path: Whipstaff.Runtime
+    isExternal: true
+  assemblies:
+  - Whipstaff.Runtime
+  namespace: Whipstaff.Runtime.Exceptions
+  summary: "\nGets the minimum valid value.\n"
+  syntax:
+    content: public DateTime MinimumValid { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public ReadOnly Property MinimumValid As DateTime
+  overload: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.MinimumValid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Whipstaff.Runtime.Exceptions
+  commentId: N:Whipstaff.Runtime.Exceptions
+  isExternal: true
+  name: Whipstaff.Runtime.Exceptions
+  nameWithType: Whipstaff.Runtime.Exceptions
+  fullName: Whipstaff.Runtime.Exceptions
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.#ctor
+  isExternal: true
+  name: NumberTooLowClrDateTimeException
+  nameWithType: NumberTooLowClrDateTimeException.NumberTooLowClrDateTimeException
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.NumberTooLowClrDateTimeException
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.DateTime
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.Actual*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.Actual
+  isExternal: true
+  name: Actual
+  nameWithType: NumberTooLowClrDateTimeException.Actual
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.Actual
+- uid: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.MinimumValid*
+  commentId: Overload:Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.MinimumValid
+  isExternal: true
+  name: MinimumValid
+  nameWithType: NumberTooLowClrDateTimeException.MinimumValid
+  fullName: Whipstaff.Runtime.Exceptions.NumberTooLowClrDateTimeException.MinimumValid

@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.Runtime.HostOverride
+  commentId: N:Whipstaff.Runtime.HostOverride
+  id: Whipstaff.Runtime.HostOverride
+  children:
+  - Whipstaff.Runtime.HostOverride.HostOverridableHttpClientHandler
+  - Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions
+  - Whipstaff.Runtime.HostOverride.IHostOverride
+  - Whipstaff.Runtime.HostOverride.InMemoryHostOverride
+  langs:
+  - csharp
+  - vb
+  name: Whipstaff.Runtime.HostOverride
+  nameWithType: Whipstaff.Runtime.HostOverride
+  fullName: Whipstaff.Runtime.HostOverride
+  type: Namespace
+  assemblies:
+  - Whipstaff.Runtime
+references:
+- uid: Whipstaff.Runtime.HostOverride.HostOverridableHttpClientHandler
+  commentId: T:Whipstaff.Runtime.HostOverride.HostOverridableHttpClientHandler
+  isExternal: true
+  name: HostOverridableHttpClientHandler
+  nameWithType: HostOverridableHttpClientHandler
+  fullName: Whipstaff.Runtime.HostOverride.HostOverridableHttpClientHandler
+- uid: Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions
+  commentId: T:Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions
+  isExternal: true
+  name: HttpRequestMessageExtensions
+  nameWithType: HttpRequestMessageExtensions
+  fullName: Whipstaff.Runtime.HostOverride.HttpRequestMessageExtensions
+- uid: Whipstaff.Runtime.HostOverride.IHostOverride
+  commentId: T:Whipstaff.Runtime.HostOverride.IHostOverride
+  parent: Whipstaff.Runtime.HostOverride
+  isExternal: true
+  name: IHostOverride
+  nameWithType: IHostOverride
+  fullName: Whipstaff.Runtime.HostOverride.IHostOverride
+- uid: Whipstaff.Runtime.HostOverride.InMemoryHostOverride
+  commentId: T:Whipstaff.Runtime.HostOverride.InMemoryHostOverride
+  isExternal: true
+  name: InMemoryHostOverride
+  nameWithType: InMemoryHostOverride
+  fullName: Whipstaff.Runtime.HostOverride.InMemoryHostOverride
+- uid: Whipstaff.Runtime.HostOverride
+  commentId: N:Whipstaff.Runtime.HostOverride
+  isExternal: true
+  name: Whipstaff.Runtime.HostOverride
+  nameWithType: Whipstaff.Runtime.HostOverride
+  fullName: Whipstaff.Runtime.HostOverride

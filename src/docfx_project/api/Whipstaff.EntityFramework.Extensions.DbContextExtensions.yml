@@ -1,0 +1,790 @@
+### YamlMime:ManagedReference
+items:
+- uid: Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  commentId: T:Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  id: DbContextExtensions
+  parent: Whipstaff.EntityFramework.Extensions
+  children:
+  - Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Linq.Expressions.Expression{System.Func{``1,System.Boolean}},System.Func{``1})
+  - Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Guid,System.Func{``1})
+  - Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Int32,System.Func{``1})
+  - Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Int64,System.Func{``1})
+  - Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByName``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.String,System.Func{``1})
+  langs:
+  - csharp
+  - vb
+  name: DbContextExtensions
+  nameWithType: DbContextExtensions
+  fullName: Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  type: Class
+  source:
+    path: Whipstaff.EntityFramework
+    isExternal: true
+  assemblies:
+  - Whipstaff.EntityFramework
+  namespace: Whipstaff.EntityFramework.Extensions
+  summary: "\nExtensions for Entity Framework DBContext.\n"
+  syntax:
+    content: 'public static class DbContextExtensions : Object'
+    content.vb: >-
+      Public Module DbContextExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Linq.Expressions.Expression{System.Func{``1,System.Boolean}},System.Func{``1})
+  commentId: M:Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Linq.Expressions.Expression{System.Func{``1,System.Boolean}},System.Func{``1})
+  id: GetOrAddAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Linq.Expressions.Expression{System.Func{``1,System.Boolean}},System.Func{``1})
+  isExtensionMethod: true
+  parent: Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOrAddAsync<TDbContext, TEntity>(TDbContext, Func<TDbContext, DbSet<TEntity>>, Expression<Func<TEntity, Boolean>>, Func<TEntity>)
+  nameWithType: DbContextExtensions.GetOrAddAsync<TDbContext, TEntity>(TDbContext, Func<TDbContext, DbSet<TEntity>>, Expression<Func<TEntity, Boolean>>, Func<TEntity>)
+  fullName: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddAsync<TDbContext, TEntity>(TDbContext, System.Func<TDbContext, Microsoft.EntityFrameworkCore.DbSet<TEntity>>, System.Linq.Expressions.Expression<System.Func<TEntity, System.Boolean>>, System.Func<TEntity>)
+  type: Method
+  source:
+    path: Whipstaff.EntityFramework
+    isExternal: true
+  assemblies:
+  - Whipstaff.EntityFramework
+  namespace: Whipstaff.EntityFramework.Extensions
+  summary: "\nGet or adds an entity to a DBSet.\n"
+  syntax:
+    content: >-
+      public static Task<TEntity> GetOrAddAsync<TDbContext, TEntity>(this TDbContext instance, Func<TDbContext, DbSet<TEntity>> dbSetSelectorFunc, Expression<Func<TEntity, bool>> predicate, Func<TEntity> addEntityFactoryFunc)
+          where TDbContext : DbContext where TEntity : class
+    parameters:
+    - id: instance
+      type: '{TDbContext}'
+      description: Instance of the Database Context.
+    - id: dbSetSelectorFunc
+      type: System.Func{{TDbContext},Microsoft.EntityFrameworkCore.DbSet{{TEntity}}}
+      description: Selector for the database context.
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
+      description: Predicate for checking if the entity exists.
+    - id: addEntityFactoryFunc
+      type: System.Func{{TEntity}}
+      description: Function for creating the item if it&apos;s not found.
+    typeParameters:
+    - id: TDbContext
+      description: The type for the Database Context.
+    - id: TEntity
+      description: The type for the DBSet Entity.
+    return:
+      type: System.Threading.Tasks.Task{{TEntity}}
+      description: The matched or newly created entity.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetOrAddAsync(Of TDbContext As DbContext, TEntity As Class)(instance As TDbContext, dbSetSelectorFunc As Func(Of TDbContext, DbSet(Of TEntity)), predicate As Expression(Of Func(Of TEntity, Boolean)), addEntityFactoryFunc As Func(Of TEntity)) As Task(Of TEntity)
+  overload: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddAsync*
+  nameWithType.vb: DbContextExtensions.GetOrAddAsync(Of TDbContext, TEntity)(TDbContext, Func(Of TDbContext, DbSet(Of TEntity)), Expression(Of Func(Of TEntity, Boolean)), Func(Of TEntity))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddAsync(Of TDbContext, TEntity)(TDbContext, System.Func(Of TDbContext, Microsoft.EntityFrameworkCore.DbSet(Of TEntity)), System.Linq.Expressions.Expression(Of System.Func(Of TEntity, System.Boolean)), System.Func(Of TEntity))
+  name.vb: GetOrAddAsync(Of TDbContext, TEntity)(TDbContext, Func(Of TDbContext, DbSet(Of TEntity)), Expression(Of Func(Of TEntity, Boolean)), Func(Of TEntity))
+- uid: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Int32,System.Func{``1})
+  commentId: M:Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Int32,System.Func{``1})
+  id: GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Int32,System.Func{``1})
+  isExtensionMethod: true
+  parent: Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOrAddByIdAsync<TDbContext, TEntity>(TDbContext, Func<TDbContext, DbSet<TEntity>>, Int32, Func<TEntity>)
+  nameWithType: DbContextExtensions.GetOrAddByIdAsync<TDbContext, TEntity>(TDbContext, Func<TDbContext, DbSet<TEntity>>, Int32, Func<TEntity>)
+  fullName: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync<TDbContext, TEntity>(TDbContext, System.Func<TDbContext, Microsoft.EntityFrameworkCore.DbSet<TEntity>>, System.Int32, System.Func<TEntity>)
+  type: Method
+  source:
+    path: Whipstaff.EntityFramework
+    isExternal: true
+  assemblies:
+  - Whipstaff.EntityFramework
+  namespace: Whipstaff.EntityFramework.Extensions
+  summary: "\nGet or adds an entity to a DBSet when searching by id. Useful when you have keyed reference data to ensure exists.\n"
+  syntax:
+    content: >-
+      public static Task<TEntity> GetOrAddByIdAsync<TDbContext, TEntity>(this TDbContext instance, Func<TDbContext, DbSet<TEntity>> dbSetSelectorFunc, int id, Func<TEntity> addEntityFactoryFunc)
+          where TDbContext : DbContext where TEntity : class, IIntId
+    parameters:
+    - id: instance
+      type: '{TDbContext}'
+      description: Instance of the Database Context.
+    - id: dbSetSelectorFunc
+      type: System.Func{{TDbContext},Microsoft.EntityFrameworkCore.DbSet{{TEntity}}}
+      description: Selector for the database context.
+    - id: id
+      type: System.Int32
+      description: The id to search for.
+    - id: addEntityFactoryFunc
+      type: System.Func{{TEntity}}
+      description: Function for creating the item if it&apos;s not found.
+    typeParameters:
+    - id: TDbContext
+      description: The type for the Database Context.
+    - id: TEntity
+      description: The type for the DBSet Entity.
+    return:
+      type: System.Threading.Tasks.Task{{TEntity}}
+      description: The matched or newly created entity.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetOrAddByIdAsync(Of TDbContext As DbContext, TEntity As {Class, IIntId})(instance As TDbContext, dbSetSelectorFunc As Func(Of TDbContext, DbSet(Of TEntity)), id As Integer, addEntityFactoryFunc As Func(Of TEntity)) As Task(Of TEntity)
+  overload: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync*
+  nameWithType.vb: DbContextExtensions.GetOrAddByIdAsync(Of TDbContext, TEntity)(TDbContext, Func(Of TDbContext, DbSet(Of TEntity)), Int32, Func(Of TEntity))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync(Of TDbContext, TEntity)(TDbContext, System.Func(Of TDbContext, Microsoft.EntityFrameworkCore.DbSet(Of TEntity)), System.Int32, System.Func(Of TEntity))
+  name.vb: GetOrAddByIdAsync(Of TDbContext, TEntity)(TDbContext, Func(Of TDbContext, DbSet(Of TEntity)), Int32, Func(Of TEntity))
+- uid: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Int64,System.Func{``1})
+  commentId: M:Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Int64,System.Func{``1})
+  id: GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Int64,System.Func{``1})
+  isExtensionMethod: true
+  parent: Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOrAddByIdAsync<TDbContext, TEntity>(TDbContext, Func<TDbContext, DbSet<TEntity>>, Int64, Func<TEntity>)
+  nameWithType: DbContextExtensions.GetOrAddByIdAsync<TDbContext, TEntity>(TDbContext, Func<TDbContext, DbSet<TEntity>>, Int64, Func<TEntity>)
+  fullName: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync<TDbContext, TEntity>(TDbContext, System.Func<TDbContext, Microsoft.EntityFrameworkCore.DbSet<TEntity>>, System.Int64, System.Func<TEntity>)
+  type: Method
+  source:
+    path: Whipstaff.EntityFramework
+    isExternal: true
+  assemblies:
+  - Whipstaff.EntityFramework
+  namespace: Whipstaff.EntityFramework.Extensions
+  summary: "\nGet or adds an entity to a DBSet when searching by id. Useful when you have keyed reference data to ensure exists.\n"
+  syntax:
+    content: >-
+      public static Task<TEntity> GetOrAddByIdAsync<TDbContext, TEntity>(this TDbContext instance, Func<TDbContext, DbSet<TEntity>> dbSetSelectorFunc, long id, Func<TEntity> addEntityFactoryFunc)
+          where TDbContext : DbContext where TEntity : class, ILongId
+    parameters:
+    - id: instance
+      type: '{TDbContext}'
+      description: Instance of the Database Context.
+    - id: dbSetSelectorFunc
+      type: System.Func{{TDbContext},Microsoft.EntityFrameworkCore.DbSet{{TEntity}}}
+      description: Selector for the database context.
+    - id: id
+      type: System.Int64
+      description: The id to search for.
+    - id: addEntityFactoryFunc
+      type: System.Func{{TEntity}}
+      description: Function for creating the item if it&apos;s not found.
+    typeParameters:
+    - id: TDbContext
+      description: The type for the Database Context.
+    - id: TEntity
+      description: The type for the DBSet Entity.
+    return:
+      type: System.Threading.Tasks.Task{{TEntity}}
+      description: The matched or newly created entity.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetOrAddByIdAsync(Of TDbContext As DbContext, TEntity As {Class, ILongId})(instance As TDbContext, dbSetSelectorFunc As Func(Of TDbContext, DbSet(Of TEntity)), id As Long, addEntityFactoryFunc As Func(Of TEntity)) As Task(Of TEntity)
+  overload: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync*
+  nameWithType.vb: DbContextExtensions.GetOrAddByIdAsync(Of TDbContext, TEntity)(TDbContext, Func(Of TDbContext, DbSet(Of TEntity)), Int64, Func(Of TEntity))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync(Of TDbContext, TEntity)(TDbContext, System.Func(Of TDbContext, Microsoft.EntityFrameworkCore.DbSet(Of TEntity)), System.Int64, System.Func(Of TEntity))
+  name.vb: GetOrAddByIdAsync(Of TDbContext, TEntity)(TDbContext, Func(Of TDbContext, DbSet(Of TEntity)), Int64, Func(Of TEntity))
+- uid: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Guid,System.Func{``1})
+  commentId: M:Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Guid,System.Func{``1})
+  id: GetOrAddByIdAsync``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.Guid,System.Func{``1})
+  isExtensionMethod: true
+  parent: Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOrAddByIdAsync<TDbContext, TEntity>(TDbContext, Func<TDbContext, DbSet<TEntity>>, Guid, Func<TEntity>)
+  nameWithType: DbContextExtensions.GetOrAddByIdAsync<TDbContext, TEntity>(TDbContext, Func<TDbContext, DbSet<TEntity>>, Guid, Func<TEntity>)
+  fullName: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync<TDbContext, TEntity>(TDbContext, System.Func<TDbContext, Microsoft.EntityFrameworkCore.DbSet<TEntity>>, System.Guid, System.Func<TEntity>)
+  type: Method
+  source:
+    path: Whipstaff.EntityFramework
+    isExternal: true
+  assemblies:
+  - Whipstaff.EntityFramework
+  namespace: Whipstaff.EntityFramework.Extensions
+  summary: "\nGet or adds an entity to a DBSet when searching by id. Useful when you have keyed reference data to ensure exists.\n"
+  syntax:
+    content: >-
+      public static Task<TEntity> GetOrAddByIdAsync<TDbContext, TEntity>(this TDbContext instance, Func<TDbContext, DbSet<TEntity>> dbSetSelectorFunc, Guid id, Func<TEntity> addEntityFactoryFunc)
+          where TDbContext : DbContext where TEntity : class, IGuidId
+    parameters:
+    - id: instance
+      type: '{TDbContext}'
+      description: Instance of the Database Context.
+    - id: dbSetSelectorFunc
+      type: System.Func{{TDbContext},Microsoft.EntityFrameworkCore.DbSet{{TEntity}}}
+      description: Selector for the database context.
+    - id: id
+      type: System.Guid
+      description: The id to search for.
+    - id: addEntityFactoryFunc
+      type: System.Func{{TEntity}}
+      description: Function for creating the item if it&apos;s not found.
+    typeParameters:
+    - id: TDbContext
+      description: The type for the Database Context.
+    - id: TEntity
+      description: The type for the DBSet Entity.
+    return:
+      type: System.Threading.Tasks.Task{{TEntity}}
+      description: The matched or newly created entity.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetOrAddByIdAsync(Of TDbContext As DbContext, TEntity As {Class, IGuidId})(instance As TDbContext, dbSetSelectorFunc As Func(Of TDbContext, DbSet(Of TEntity)), id As Guid, addEntityFactoryFunc As Func(Of TEntity)) As Task(Of TEntity)
+  overload: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync*
+  nameWithType.vb: DbContextExtensions.GetOrAddByIdAsync(Of TDbContext, TEntity)(TDbContext, Func(Of TDbContext, DbSet(Of TEntity)), Guid, Func(Of TEntity))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync(Of TDbContext, TEntity)(TDbContext, System.Func(Of TDbContext, Microsoft.EntityFrameworkCore.DbSet(Of TEntity)), System.Guid, System.Func(Of TEntity))
+  name.vb: GetOrAddByIdAsync(Of TDbContext, TEntity)(TDbContext, Func(Of TDbContext, DbSet(Of TEntity)), Guid, Func(Of TEntity))
+- uid: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByName``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.String,System.Func{``1})
+  commentId: M:Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByName``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.String,System.Func{``1})
+  id: GetOrAddByName``2(``0,System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}},System.String,System.Func{``1})
+  isExtensionMethod: true
+  parent: Whipstaff.EntityFramework.Extensions.DbContextExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetOrAddByName<TDbContext, TEntity>(TDbContext, Func<TDbContext, DbSet<TEntity>>, String, Func<TEntity>)
+  nameWithType: DbContextExtensions.GetOrAddByName<TDbContext, TEntity>(TDbContext, Func<TDbContext, DbSet<TEntity>>, String, Func<TEntity>)
+  fullName: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByName<TDbContext, TEntity>(TDbContext, System.Func<TDbContext, Microsoft.EntityFrameworkCore.DbSet<TEntity>>, System.String, System.Func<TEntity>)
+  type: Method
+  source:
+    path: Whipstaff.EntityFramework
+    isExternal: true
+  assemblies:
+  - Whipstaff.EntityFramework
+  namespace: Whipstaff.EntityFramework.Extensions
+  summary: "\nGet or adds an entity to a DBSet when searching by name.\n"
+  syntax:
+    content: >-
+      public static Task<TEntity> GetOrAddByName<TDbContext, TEntity>(this TDbContext instance, Func<TDbContext, DbSet<TEntity>> dbSetSelectorFunc, string name, Func<TEntity> addEntityFactoryFunc)
+          where TDbContext : DbContext where TEntity : class, INameable
+    parameters:
+    - id: instance
+      type: '{TDbContext}'
+      description: Instance of the Database Context.
+    - id: dbSetSelectorFunc
+      type: System.Func{{TDbContext},Microsoft.EntityFrameworkCore.DbSet{{TEntity}}}
+      description: Selector for the database context.
+    - id: name
+      type: System.String
+      description: The name to search for.
+    - id: addEntityFactoryFunc
+      type: System.Func{{TEntity}}
+      description: Function for creating the item if it&apos;s not found.
+    typeParameters:
+    - id: TDbContext
+      description: The type for the Database Context.
+    - id: TEntity
+      description: The type for the DBSet Entity.
+    return:
+      type: System.Threading.Tasks.Task{{TEntity}}
+      description: The matched or newly created entity.
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetOrAddByName(Of TDbContext As DbContext, TEntity As {Class, INameable})(instance As TDbContext, dbSetSelectorFunc As Func(Of TDbContext, DbSet(Of TEntity)), name As String, addEntityFactoryFunc As Func(Of TEntity)) As Task(Of TEntity)
+  overload: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByName*
+  nameWithType.vb: DbContextExtensions.GetOrAddByName(Of TDbContext, TEntity)(TDbContext, Func(Of TDbContext, DbSet(Of TEntity)), String, Func(Of TEntity))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByName(Of TDbContext, TEntity)(TDbContext, System.Func(Of TDbContext, Microsoft.EntityFrameworkCore.DbSet(Of TEntity)), System.String, System.Func(Of TEntity))
+  name.vb: GetOrAddByName(Of TDbContext, TEntity)(TDbContext, Func(Of TDbContext, DbSet(Of TEntity)), String, Func(Of TEntity))
+references:
+- uid: Whipstaff.EntityFramework.Extensions
+  commentId: N:Whipstaff.EntityFramework.Extensions
+  isExternal: true
+  name: Whipstaff.EntityFramework.Extensions
+  nameWithType: Whipstaff.EntityFramework.Extensions
+  fullName: Whipstaff.EntityFramework.Extensions
+- uid: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddAsync*
+  commentId: Overload:Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddAsync
+  isExternal: true
+  name: GetOrAddAsync
+  nameWithType: DbContextExtensions.GetOrAddAsync
+  fullName: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddAsync
+- uid: '{TDbContext}'
+  commentId: '!:TDbContext'
+  definition: TDbContext
+  name: TDbContext
+  nameWithType: TDbContext
+  fullName: TDbContext
+- uid: System.Func{{TDbContext},Microsoft.EntityFrameworkCore.DbSet{{TEntity}}}
+  commentId: '!:System.Func{``0,Microsoft.EntityFrameworkCore.DbSet{``1}}'
+  definition: System.Func`2
+  name: Func<TDbContext, DbSet<TEntity>>
+  nameWithType: Func<TDbContext, DbSet<TEntity>>
+  fullName: System.Func<TDbContext, Microsoft.EntityFrameworkCore.DbSet<TEntity>>
+  nameWithType.vb: Func(Of TDbContext, DbSet(Of TEntity))
+  fullName.vb: System.Func(Of TDbContext, Microsoft.EntityFrameworkCore.DbSet(Of TEntity))
+  name.vb: Func(Of TDbContext, DbSet(Of TEntity))
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TDbContext
+    nameWithType: TDbContext
+    fullName: TDbContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Microsoft.EntityFrameworkCore.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: Microsoft.EntityFrameworkCore.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
+  commentId: '!:System.Linq.Expressions.Expression{System.Func{``1,System.Boolean}}'
+  definition: System.Linq.Expressions.Expression`1
+  name: Expression<Func<TEntity, Boolean>>
+  nameWithType: Expression<Func<TEntity, Boolean>>
+  fullName: System.Linq.Expressions.Expression<System.Func<TEntity, System.Boolean>>
+  nameWithType.vb: Expression(Of Func(Of TEntity, Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of TEntity, System.Boolean))
+  name.vb: Expression(Of Func(Of TEntity, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func{{TEntity}}
+  commentId: '!:System.Func{``1}'
+  definition: System.Func`1
+  name: Func<TEntity>
+  nameWithType: Func<TEntity>
+  fullName: System.Func<TEntity>
+  nameWithType.vb: Func(Of TEntity)
+  fullName.vb: System.Func(Of TEntity)
+  name.vb: Func(Of TEntity)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{{TEntity}}
+  commentId: '!:System.Threading.Tasks.Task{``1}'
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TEntity>
+  nameWithType: Task<TEntity>
+  fullName: System.Threading.Tasks.Task<TEntity>
+  nameWithType.vb: Task(Of TEntity)
+  fullName.vb: System.Threading.Tasks.Task(Of TEntity)
+  name.vb: Task(Of TEntity)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TDbContext
+  name: TDbContext
+  nameWithType: TDbContext
+  fullName: TDbContext
+- uid: System.Func`2
+  isExternal: true
+  name: Func<, >
+  nameWithType: Func<, >
+  fullName: System.Func<, >
+  nameWithType.vb: Func(Of , )
+  fullName.vb: System.Func(Of , )
+  name.vb: Func(Of , )
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Expressions.Expression`1
+  isExternal: true
+  name: Expression<>
+  nameWithType: Expression<>
+  fullName: System.Linq.Expressions.Expression<>
+  nameWithType.vb: Expression(Of )
+  fullName.vb: System.Linq.Expressions.Expression(Of )
+  name.vb: Expression(Of )
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`1
+  isExternal: true
+  name: Func<>
+  nameWithType: Func<>
+  fullName: System.Func<>
+  nameWithType.vb: Func(Of )
+  fullName.vb: System.Func(Of )
+  name.vb: Func(Of )
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync*
+  commentId: Overload:Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync
+  isExternal: true
+  name: GetOrAddByIdAsync
+  nameWithType: DbContextExtensions.GetOrAddByIdAsync
+  fullName: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByIdAsync
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: System.Guid
+  commentId: '!:System.Guid'
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByName*
+  commentId: Overload:Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByName
+  isExternal: true
+  name: GetOrAddByName
+  nameWithType: DbContextExtensions.GetOrAddByName
+  fullName: Whipstaff.EntityFramework.Extensions.DbContextExtensions.GetOrAddByName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
