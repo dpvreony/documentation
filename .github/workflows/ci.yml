@@ -1,0 +1,76 @@
+name: .NET Core
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-2022
+    outputs:
+      nbgv: ${{ steps.nbgv.outputs.SemVer2 }}
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_NOLOGO: true
+      DOTNET_GENERATE_ASPNET_CERTIFICATE: false
+      solutionpath: src\\DPVreony.documentation.sln
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Verify the ref context
+      run: echo 'Ref Context is ${{ github.ref }}'
+
+    - name: Verify the head ref context
+      run: echo 'Head Ref Context is ${{ github.head_ref }}'
+
+# don't move beyond 6.0.100 until https://github.com/dotnet/sdk/issues/23972 is resolved
+    - name: Install .NET 6
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.100
+
+    - name: Add MSBuild to PATH
+      uses: glennawatson/setup-msbuild@v1.0.3
+      with:
+        prerelease: true
+
+    # This mitigates an issue with websdk projects loading analyzers from old packages.
+    - name: Cleanup nuget local storage
+      run: dotnet nuget locals all --clear
+
+    - name: Restore Packages
+      run: |
+        dotnet restore ${{ env.solutionpath }} /bl:artifacts\\binlog\\restore.binlog
+
+    - name: Run Build
+      run: |
+        msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true
+      working-directory: src
+
+    # only store binlog on failure      
+    - name: store binlogs
+      if: ${{ failure() }}
+      uses: actions/upload-artifact@v3
+      with:
+        name: binlogs
+        path: artifacts/binlog
+        
+    - name: store docfx
+      uses: actions/upload-artifact@v3
+      with:
+        name: docfx
+        path: src/docfx_project/_site
+        
+    - name: store outdated
+      uses: actions/upload-artifact@v3
+      with:
+        name: outdated
+        path: artifacts/outdated
+        
