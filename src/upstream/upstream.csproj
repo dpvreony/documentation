@@ -16,7 +16,7 @@
     <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="6.0.134" />
     <PackageReference Include="Whipstaff.MsSql" Version="6.0.134" />
     <PackageReference Include="Whipstaff.OpenXml" Version="6.0.134" />
-    <PackageReference Include="Whipstaff.Oracle" Version="6.0.134" />
+    <PackageReference Include="Whipstaff.Oracle" Version="6.0.220" />
     <PackageReference Include="Whipstaff.ReactiveUI" Version="6.0.134" />
     <PackageReference Include="Whipstaff.Runtime" Version="6.0.134" />
     <PackageReference Include="Whipstaff.Rx" Version="6.0.134" />
