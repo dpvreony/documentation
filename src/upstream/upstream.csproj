@@ -13,7 +13,7 @@
     <PackageReference Include="Whipstaff.EntityFramework" Version="6.0.134" />
     <PackageReference Include="Whipstaff.Entityframework.Relational" Version="6.0.134" />
     <PackageReference Include="Whipstaff.MediatR.EntityFrameworkCore" Version="6.0.134" />
-    <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="6.0.134" />
+    <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="6.0.220" />
     <PackageReference Include="Whipstaff.MsSql" Version="6.0.134" />
     <PackageReference Include="Whipstaff.OpenXml" Version="6.0.134" />
     <PackageReference Include="Whipstaff.Oracle" Version="6.0.134" />
