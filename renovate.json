@@ -34,9 +34,15 @@
             "labels": ["dependencies"]
         },
         {
-            "matchPackagePatterns": ["Xamarin.*"],
-            "groupName": "all xamarin dependencies",
-            "groupSlug": "all-xamarin",
+            "matchPackagePatterns": ["Whipstaff.*"],
+            "groupName": "all whipstaff dependencies",
+            "groupSlug": "all-whipstaff",
+            "labels": ["dependencies"]
+        },
+        {
+            "matchPackagePatterns": ["Xunit.*"],
+            "groupName": "all xunit dependencies",
+            "groupSlug": "all-xunit",
             "labels": ["dependencies"]
         },
         {
