@@ -7,19 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Whipstaff.AspNetCore" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.Core" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.Couchbase" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.EntityFramework" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.Entityframework.Relational" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.MediatR.EntityFrameworkCore" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.MsSql" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.OpenXml" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.Oracle" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.ReactiveUI" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.Runtime" Version="6.0.220" />
-    <PackageReference Include="Whipstaff.Rx" Version="6.0.220" />
+    <PackageReference Include="Whipstaff.AspNetCore" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.Core" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.Couchbase" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.EntityFramework" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.Entityframework.Relational" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.MediatR.EntityFrameworkCore" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.MsSql" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.OpenXml" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.Oracle" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.ReactiveUI" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.Runtime" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.Rx" Version="6.0.245" />
   </ItemGroup>
 
   <!-- https://stackoverflow.com/questions/70602507/retrieve-docfx-metadata-from-nuget-packages -->
