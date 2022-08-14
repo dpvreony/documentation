@@ -1,12 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp6.0</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dhgms.Nucleotide" Version="3.2.27" />
+    <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.27" />
+    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.27" />
+    <PackageReference Include="NetTestRegimentation" Version="1.5.3" />
+    <PackageReference Include="NetTestRegimentation.Moq" Version="1.5.3" />
+    <PackageReference Include="Vetuviem.Core" Version="0.9.69" />
+    <PackageReference Include="Vetuviem.SourceGenerator" Version="0.9.69" />
     <PackageReference Include="Whipstaff.AspNetCore" Version="6.0.245" />
     <PackageReference Include="Whipstaff.Core" Version="6.0.245" />
     <PackageReference Include="Whipstaff.Couchbase" Version="6.0.245" />
@@ -15,19 +22,22 @@
     <PackageReference Include="Whipstaff.MediatR.EntityFrameworkCore" Version="6.0.245" />
     <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="6.0.245" />
     <PackageReference Include="Whipstaff.MsSql" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.NodaTime" Version="6.0.245" />
     <PackageReference Include="Whipstaff.OpenXml" Version="6.0.245" />
     <PackageReference Include="Whipstaff.Oracle" Version="6.0.245" />
     <PackageReference Include="Whipstaff.ReactiveUI" Version="6.0.245" />
     <PackageReference Include="Whipstaff.Runtime" Version="6.0.245" />
     <PackageReference Include="Whipstaff.Rx" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.Windows" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.Wpf" Version="6.0.245" />
+    <PackageReference Include="Whipstaff.Wpf.Mahapps" Version="6.0.245" />
   </ItemGroup>
 
   <!-- https://stackoverflow.com/questions/70602507/retrieve-docfx-metadata-from-nuget-packages -->
   <Target Name="_ResolveCopyLocalNuGetPkgXmls" AfterTargets="ResolveReferences">
     <ItemGroup>
       <!-- Copy XML files from all PackageReferences to output dir -->
-      <ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).xml')"
-                               Condition="'%(ReferenceCopyLocalPaths.NuGetPackageId)'!='' and Exists('%(RootDir)%(Directory)%(Filename).xml')" />
+      <ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).xml')" Condition="'%(ReferenceCopyLocalPaths.NuGetPackageId)'!='' and Exists('%(RootDir)%(Directory)%(Filename).xml')" />
     </ItemGroup>
   </Target>
 </Project>
