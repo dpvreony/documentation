@@ -5,6 +5,9 @@
         {
             "files": [
                 //"Whipstaff.AspNetCore.dll",
+                "**/**/Dhgms.Nucleotide.*.dll",
+                "**/**/NetTestRegimentation.*.dll",
+                "**/**/Vetuviem.*.dll",
                 "**/**/Whipstaff.*.dll"
             ],
           "src": "../upstream/bin/"

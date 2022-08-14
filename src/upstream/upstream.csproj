@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dhgms.Nucleotide" Version="3.2.27" />
+    <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.27" />
+    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.27" />
+    <PackageReference Include="NetTestRegimentation" Version="1.5.3" />
+    <PackageReference Include="NetTestRegimentation.Moq" Version="1.5.3" />
     <PackageReference Include="Vetuviem.Core" Version="0.9.69" />
     <PackageReference Include="Vetuviem.SourceGenerator" Version="0.9.69" />
     <PackageReference Include="Whipstaff.AspNetCore" Version="6.0.245" />
