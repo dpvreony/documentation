@@ -5,18 +5,7 @@
         {
             "files": [
                 //"Whipstaff.AspNetCore.dll",
-                "**/**/Whipstaff.Core.dll",
-                "**/**/Whipstaff.Couchbase.dll",
-                "**/**/Whipstaff.EntityFramework.dll",
-                "**/**/Whipstaff.Entityframework.Relational.dll",
-                "**/**/Whipstaff.MediatR.EntityFrameworkCore.dll",
-                "**/**/Whipstaff.MediatR.Foundatio.dll",
-                "**/**/Whipstaff.MsSql.dll",
-                "**/**/Whipstaff.OpenXml.dll",
-                "**/**/Whipstaff.Oracle.dll",
-                "**/**/Whipstaff.ReactiveUI.dll",
-                "**/**/Whipstaff.Runtime.dll",
-                "**/**/Whipstaff.Rx.dll"
+                "**/**/Whipstaff.*.dll"
             ],
           "src": "../upstream/bin/"
         }
