@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.12.14" />
     <PackageReference Include="Dhgms.Nucleotide" Version="3.2.27" />
-    <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.27" />
+    <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.131" />
     <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.131" />
     <PackageReference Include="NetTestRegimentation" Version="1.5.3" />
     <PackageReference Include="NetTestRegimentation.Moq" Version="1.5.3" />
