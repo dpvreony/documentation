@@ -15,7 +15,7 @@
     <PackageReference Include="NetTestRegimentation.Moq" Version="1.5.3" />
     <PackageReference Include="NLog.Targets.TextWriter" Version="1.2.0" />
     <PackageReference Include="Vetuviem.Core" Version="0.9.167" />
-    <PackageReference Include="Vetuviem.SourceGenerator" Version="0.9.69" />
+    <PackageReference Include="Vetuviem.SourceGenerator" Version="0.9.167" />
     <PackageReference Include="Whipstaff.AspNetCore" Version="6.0.245" />
     <PackageReference Include="Whipstaff.Core" Version="6.0.245" />
     <PackageReference Include="Whipstaff.Couchbase" Version="6.0.245" />
