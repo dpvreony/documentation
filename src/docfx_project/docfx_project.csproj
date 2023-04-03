@@ -3,12 +3,27 @@
   <PropertyGroup>
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
+    <LogLevel>Debug</LogLevel>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DocFx.Console" Version="2.59.3" />
-    <PackageReference Include="DocFx.Plugins.PlantUml" Version="1.1.24" />
+    <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="1.0.101" GeneratePathProperty="true">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="DocFx.Console" Version="2.59.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
+
+  <PropertyGroup>
+    <!--This is a workaround until I can feed a fix for env variables -->
+    <!--$([MSBuild]::ValueOrDefault('$(PkgDhgms_DocFx_MermaidJs_Plugin)', '').Replace('\', '\\') -->
+    <!--<BuildDocFx>False</BuildDocFx>
+    <DocFxEnvVariables>PkgDhgms_DocFx_MermaidJs_Plugin="$([MSBuild]::ValueOrDefault('$(PkgDhgms_DocFx_MermaidJs_Plugin)', '').Replace('\', '/'))"</DocFxEnvVariables>
+    -->
+  </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\upstream\upstream.csproj" />
@@ -17,4 +32,12 @@
   <ItemGroup>
     <Folder Include="api\" />
   </ItemGroup>
+
+  <!--This is a workaround until DocFx 2.60 is released as the plug in model is changing. -->
+  <Target Name="SetTemplate" BeforeTargets="DocGenerateMetadata">
+    <PropertyGroup>
+      <DocTemplate>$(PkgDhgms_DocFx_MermaidJs_Plugin)\template\mermaidjs,default</DocTemplate>
+    </PropertyGroup>
+  </Target>
+
 </Project>
