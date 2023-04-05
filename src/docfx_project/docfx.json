@@ -27,7 +27,8 @@
             },
             {
                 "files": [
-                    "articles/**.md",
+                    "projects/**.md",
+                    "projects/**.yml",
                     "toc.yml",
                     "*.md"
                 ]
@@ -61,13 +62,6 @@
             "default"
         ],
         "postProcessors": [],
-        "markdownEngineProperties": {
-            // "plantUml.localGraphvizDotPath": "C:/Program Files (x86)/Graphviz2.38/bin/dot.exe",
-            "plantUml.localPlantUmlPath": "../../tools/plantuml.jar",
-            //"plantUml.outputFormat": "png",
-            "plantUml.remoteUrl": "http://www.plantuml.com/plantuml/",
-            "plantUml.renderingMode": "remote"
-        },
         "noLangKeyword": false,
         "keepFileLink": false,
         "cleanupCacheHistory": false,

@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="1.0.116" />
     <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.12.14" />
     <PackageReference Include="Dhgms.Nucleotide" Version="3.2.131" />
     <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.131" />
