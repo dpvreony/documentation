@@ -1,20 +1,35 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
+    <LogLevel>Debug</LogLevel>
+    <OutputType>Exe</OutputType>
+    <NoWarn>$(NoWarn);NU1701</NoWarn>
+    <IsPackable>False</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DocFx.Console" Version="2.59.3" />
-    <PackageReference Include="DocFx.Plugins.PlantUml" Version="1.1.24" />
+    <None Remove="*.md" />
+    <None Remove="*.yml" />
+    <None Remove="api/*.md" />
+    <None Remove="articles/*.md" />
+    <Content Include="**/*.md" />
+    <Content Include="**/*.yml" />
+    <Content Include="api/*.md" />
+    <Content Include="articles/*.md" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\upstream\upstream.csproj" />
+    <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="1.0.116" />
+    <PackageReference Include="Microsoft.DocAsCode.App" Version="2.64.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="api\" />
   </ItemGroup>
+
+  <Target Name="RunDocFxGeneration" AfterTargets="Build">
+    <Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" />
+  </Target>
 </Project>
