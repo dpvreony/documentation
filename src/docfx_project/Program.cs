@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Dhgms.DocFx.MermaidJs.Plugin.Markdig;
 using Microsoft.DocAsCode;
+using Microsoft.DocAsCode.Dotnet;
 using Microsoft.DocAsCode.MarkdigEngine.Extensions;
 
 namespace docfx_project
@@ -19,12 +20,18 @@ namespace docfx_project
         {
             try
             {
+                const string configPath = "docfx.json";
+                await DotnetApiCatalog.GenerateManagedReferenceYamlFiles(configPath).ConfigureAwait(false);
+
                 var options = new BuildOptions
                 {
                     // Enable MermaidJS markdown extension
                     ConfigureMarkdig = pipeline => pipeline.UseMermaidJsExtension(new MarkdownContext())
                 };
-                await Docset.Build("docfx.json", options);
+
+                await Docset.Build(configPath, options).ConfigureAwait(false);
+
+                // TODO: we need to generate the PDF.
             }
 #pragma warning disable CA1031
             catch (Exception ex)
