@@ -52,9 +52,7 @@ jobs:
         dotnet-version: 6.0.100
 
     - name: Add MSBuild to PATH
-      uses: glennawatson/setup-msbuild@v1.0.3
-      with:
-        prerelease: true
+      uses: microsoft/setup-msbuild@v1.3.1
 
     # This mitigates an issue with websdk projects loading analyzers from old packages.
     - name: Cleanup nuget local storage
