@@ -30,6 +30,6 @@
   </ItemGroup>
 
   <Target Name="RunDocFxGeneration" AfterTargets="Build">
-    <Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" />
+    <Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" WorkingDirectory="$(MSBuildProjectDirectory)" />
   </Target>
 </Project>
