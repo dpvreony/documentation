@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="1.0.136" />
-    <PackageReference Include="Microsoft.DocAsCode.App" Version="2.67.0" />
+    <PackageReference Include="Microsoft.DocAsCode.App" Version="2.67.1" />
   </ItemGroup>
 
   <ItemGroup>
