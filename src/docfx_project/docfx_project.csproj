@@ -21,6 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="concepts\project-tiering.md" />
+    <None Remove="projects\dpvreony-documentation.md" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="1.0.198" />
     <PackageReference Include="Microsoft.DocAsCode.App" Version="2.67.2" />
   </ItemGroup>
