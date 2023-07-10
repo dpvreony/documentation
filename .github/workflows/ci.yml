@@ -61,7 +61,7 @@ jobs:
         path: artifacts/binlog
         
     - name: store docfx
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v2
       with:
         path: src/docfx_project/_site
         
