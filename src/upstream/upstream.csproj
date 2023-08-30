@@ -19,7 +19,7 @@
     <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.131">
       <PrivateAssets>all"</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.131">
+    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.186">
       <PrivateAssets>all"</PrivateAssets>
     </PackageReference>
     <PackageReference Include="NetTestRegimentation" Version="1.7.2">
