@@ -4,8 +4,7 @@
       "src": [
         {
             "files": [
-                //"Whipstaff.AspNetCore.dll",
-                "**/**/Dhgms.Nucleotide.*.dll",
+                "**/**/Dhgms.*.dll",
                 "**/**/NetTestRegimentation.*.dll",
                 "**/**/Vetuviem.*.dll",
                 "**/**/Whipstaff.*.dll"
