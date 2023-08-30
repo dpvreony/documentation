@@ -7,33 +7,87 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="1.0.315" />
-    <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.12.14" />
-    <PackageReference Include="Dhgms.Nucleotide" Version="3.2.131" />
-    <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.131" />
-    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.131" />
-    <PackageReference Include="NetTestRegimentation" Version="1.7.2" />
-    <PackageReference Include="NetTestRegimentation.Moq" Version="1.7.2" />
-    <PackageReference Include="NLog.Targets.TextWriter" Version="1.2.0" />
-    <PackageReference Include="Vetuviem.Core" Version="0.9.215" />
-    <PackageReference Include="Vetuviem.SourceGenerator" Version="0.9.167" />
-    <PackageReference Include="Whipstaff.AspNetCore" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.Core" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.Couchbase" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.EntityFramework" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.Entityframework.Relational" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.MediatR.EntityFrameworkCore" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.MsSql" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.NodaTime" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.OpenXml" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.Oracle" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.ReactiveUI" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.Runtime" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.Rx" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.Windows" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.Wpf" Version="6.1.83" />
-    <PackageReference Include="Whipstaff.Wpf.Mahapps" Version="6.1.83" />
+    <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="1.0.315">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.12.14">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Dhgms.Nucleotide" Version="3.2.131">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.131">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.131">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NetTestRegimentation" Version="1.7.2">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NetTestRegimentation.Moq" Version="1.7.2">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NLog.Targets.TextWriter" Version="1.2.0">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Vetuviem.Core" Version="0.9.215">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Vetuviem.SourceGenerator" Version="0.9.215">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.AspNetCore" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.Core" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.Couchbase" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.EntityFramework" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.Entityframework.Relational" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.MediatR.EntityFrameworkCore" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.MsSql" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.NodaTime" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.OpenXml" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.Oracle" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.ReactiveUI" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.Runtime" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.Rx" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.Windows" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.Wpf" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Whipstaff.Wpf.Mahapps" Version="6.1.83">
+      <PrivateAssets>all"</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
   <!-- https://stackoverflow.com/questions/70602507/retrieve-docfx-metadata-from-nuget-packages -->
