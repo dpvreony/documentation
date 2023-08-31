@@ -10,7 +10,7 @@
             "labels": ["dependencies"]
         },
         {
-            "matchPackagePatterns": ["^Dhgms.Nucleotide.*"],
+            "matchPackagePatterns": ["^Dhgms.Nucleotide", "^Dhgms.Nucleotide.*"],
             "groupName": "all nucleotide dependencies",
             "groupSlug": "all-nucleotide",
             "labels": ["dependencies"]
