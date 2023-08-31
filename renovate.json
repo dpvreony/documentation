@@ -10,6 +10,12 @@
             "labels": ["dependencies"]
         },
         {
+            "matchPackagePatterns": ["^Dhgms.Nucleotide.*"],
+            "groupName": "all nucleotide dependencies",
+            "groupSlug": "all-nucleotide",
+            "labels": ["dependencies"]
+        },
+        {
             "matchPackagePatterns": ["^Exceptionless.*"],
             "groupName": "all exceptionless dependencies",
             "groupSlug": "all-exceptionless",
