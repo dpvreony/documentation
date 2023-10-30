@@ -55,6 +55,12 @@
       "commands": [
         "docfx"
       ]
+    },
+    "doclinkchecker": {
+      "version": "1.13.0",
+      "commands": [
+        "DocLinkChecker"
+      ]
     }
   }
 }

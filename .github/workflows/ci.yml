@@ -52,6 +52,11 @@ jobs:
         msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true
       working-directory: src
 
+    - name: Check document links
+      run: |
+        DocLinkChecker -d docfx_project -a
+      working-directory: src
+
     # only store binlog on failure      
     - name: store binlogs
       if: ${{ failure() }}
