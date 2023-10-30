@@ -57,7 +57,7 @@ jobs:
 
     - name: Check document links
       run: |
-        dotnet DocLinkChecker -d .\\DPVreony.documentation\\docfx_project\\ -a
+        dotnet doclinkchecker -- -d docfx_project -f docfx_project\docfx-companion-tools.json -v
       working-directory: src
 
     # only store binlog on failure      

@@ -30,6 +30,7 @@
   </ItemGroup>
 
   <Target Name="RunDocFxGeneration" AfterTargets="Build">
-    <Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" WorkingDirectory="$(MSBuildProjectDirectory)" />
+    <!-- CustomErrorRegularExpression is a workaround until docfx allows treat warnings as errors. -->
+    <Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" WorkingDirectory="$(MSBuildProjectDirectory)" CustomErrorRegularExpression=": warning\s" />
   </Target>
 </Project>
