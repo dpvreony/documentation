@@ -3,7 +3,7 @@
 - name: DocFx MermaidJS
   href: docfx-mermaidjs/index.md
 - name: DocFX Tools - Add Missing Upstream Project
-  href: docfx-tools-add-missing-upstream/index.md
+  href: docfxtools-addmissingupstream/index.md
 - name: DPVreony Documentation
   href: dpvreony-documentation/index.md
 - name: Gripe
