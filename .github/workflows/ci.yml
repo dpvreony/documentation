@@ -43,6 +43,9 @@ jobs:
     - name: Cleanup nuget local storage
       run: dotnet nuget locals all --clear
 
+    - name: Install dotnet tools
+      run: dotnet tool restore
+
     - name: Restore Packages
       run: |
         dotnet restore ${{ env.solutionpath }} /bl:artifacts\\binlog\\restore.binlog
