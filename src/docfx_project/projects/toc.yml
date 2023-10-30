@@ -1,18 +1,20 @@
 - name: Introduction
   href: index.md
 - name: DocFx MermaidJS
-  href: docfx-mermaidjs.md
+  href: docfx-mermaidjs/index.md
 - name: DocFX Tools - Add Missing Upstream Project
-  href: docfx-tools-add-missing-upstream.md
+  href: docfx-tools-add-missing-upstream/index.md
 - name: DPVreony Documentation
-  href: dpvreony-documentation.md
+  href: dpvreony-documentation/index.md
 - name: Gripe
-  href: gripe.md
+  href: gripe/index.md
 - name: Net Test Regimentation
-  href: net-test-regimentation.md
+  href: net-test-regimentation/index.md
 - name: Nucleotide
-  href: nucleotide.md
+  href: nucleotide/index.md
 - name: Vetuviem
-  href: vetuviem.md
+  href: vetuviem/index.md
+- name: Whipstaff
+  href: whipstaff/index.md
 - name: WSUS Smart Approve
-  href: wsus-smart-approve.md
+  href: wsus-smart-approve/index.md
