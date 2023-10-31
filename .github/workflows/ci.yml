@@ -43,6 +43,9 @@ jobs:
     - name: Cleanup nuget local storage
       run: dotnet nuget locals all --clear
 
+    - name: Install dotnet tools
+      run: dotnet tool restore
+
     - name: Restore Packages
       run: |
         dotnet restore ${{ env.solutionpath }} /bl:artifacts\\binlog\\restore.binlog
@@ -50,6 +53,11 @@ jobs:
     - name: Run Build
       run: |
         msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true
+      working-directory: src
+
+    - name: Check document links
+      run: |
+        dotnet doclinkchecker -- -d docfx_project -f docfx_project\docfx-companion-tools.json -v
       working-directory: src
 
     # only store binlog on failure      

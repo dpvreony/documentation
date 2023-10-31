@@ -13,7 +13,7 @@ To provide build time generation of MermaidJS diagrams in DocFX generated sites 
 | Release Status | Published |
 | Language | C# |
 | License | MIT |
-| Build Status | ![.NET]()
+| Build Status | ![.NET]() |
 | Nuget | ![Nuget](https://img.shields.io/nuget/v/Dhgms.DocFx.MermaidJs.Plugin) |
 | Code Coverage | ![Code Coverage]() |
 | Code Quality | ![Code Quality]() |

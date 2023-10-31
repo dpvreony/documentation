@@ -1,0 +1,27 @@
+{
+    "DocumentationFiles": {
+        "src": "",
+        "Files": [
+            "**/*.md"
+        ],
+        "Exclude": [
+            "bin",
+            "obj"
+        ]
+    },
+    "ResourceFolderNames": [
+        ".attachments"
+    ],
+    "DocLinkChecker": {
+        "RelativeLinkStrategy": "All",
+        "CheckForOrphanedResources": true,
+        "CleanupOrphanedResources": false,
+        "ValidatePipeTableFormatting": true,
+        "ValidateExternalLinks": false,
+        "ConcurrencyLevel": 5,
+        "MaxHttpRedirects": 20,
+        "ExternalLinkDurationWarning": 3000,
+        "WhitelistUrls": [
+        ]
+    }
+}
