@@ -58,7 +58,8 @@
         },
         "fileMetadataFiles": [],
         "template": [
-            "default"
+            "default",
+            "modern"
         ],
         "postProcessors": [],
         "noLangKeyword": false,
