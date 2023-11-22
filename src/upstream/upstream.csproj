@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="1.0.410" />
-    <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.13.7" />
+    <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.13.19" />
     <PackageReference Include="Dhgms.Nucleotide" Version="3.2.189" />
     <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.189" />
     <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.189" />
