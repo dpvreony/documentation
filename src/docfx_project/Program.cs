@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Dhgms.DocFx.MermaidJs.Plugin.Markdig;
-using Microsoft.DocAsCode;
-using Microsoft.DocAsCode.Dotnet;
+using Docfx;
+using Docfx.Dotnet;
 using Microsoft.DocAsCode.MarkdigEngine.Extensions;
 
 namespace docfx_project
@@ -30,6 +30,7 @@ namespace docfx_project
                 };
 
                 await Docset.Build(configPath, options).ConfigureAwait(false);
+                await Docset.Pdf(configPath, options).ConfigureAwait(false);
 
                 // TODO: we need to generate the PDF.
             }

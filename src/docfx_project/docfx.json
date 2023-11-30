@@ -54,7 +54,8 @@
         "dest": "_site",
         "globalMetadataFiles": [],
         "globalMetadata": {
-            "_enableSearch": true
+            "_enableSearch": true,
+            "pdf": true
         },
         "fileMetadataFiles": [],
         "template": [
@@ -67,9 +68,9 @@
         "cleanupCacheHistory": false,
         "disableGitFeatures": false,
         "sitemap": {
-          "baseUrl": "https://docs.dpvreony.com",
-          "priority": 0.1,
-          "changefreq": "monthly"
+            "baseUrl": "https://docs.dpvreony.com",
+            "priority": 0.1,
+            "changefreq": "monthly"
         }
     }
 }
