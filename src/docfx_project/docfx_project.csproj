@@ -21,15 +21,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="2.0.1" />
+    <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="2.0.2" />
     <PackageReference Include="Microsoft.DocAsCode.App" Version="2.67.5" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="api\" />
-  </ItemGroup>
-
   <Target Name="RunDocFxGeneration" AfterTargets="Build">
+    <Exec Command="pwsh $(OutDir)playwright.ps1 install" ConsoleToMSBuild="true" LogStandardErrorAsError="true" />
     <!-- CustomErrorRegularExpression is a workaround until docfx allows treat warnings as errors. -->
     <Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" WorkingDirectory="$(MSBuildProjectDirectory)" CustomErrorRegularExpression=": warning\s" />
   </Target>
