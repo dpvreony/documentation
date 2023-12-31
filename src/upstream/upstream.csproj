@@ -9,9 +9,9 @@
   <ItemGroup>
     <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="2.0.2" />
     <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.13.24" />
-    <PackageReference Include="Dhgms.Nucleotide" Version="3.2.225" />
-    <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.225" />
-    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.225" />
+    <PackageReference Include="Dhgms.Nucleotide" Version="3.2.228" />
+    <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.228" />
+    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.228" />
     <PackageReference Include="NetTestRegimentation" Version="1.7.48" />
     <PackageReference Include="NetTestRegimentation.Moq" Version="1.7.48" />
     <PackageReference Include="NLog.Targets.TextWriter" Version="1.2.0" />
