@@ -78,7 +78,7 @@ namespace DPvreony.Documentation.RoslynAnalyzersToMarkdown.DotNetTool
 #pragma warning restore S3885
 
                 var outputFilePath = commandLineArgModel.OutputFilePath;
-                var analyzers = GetAnalyzersFromAssembly();
+                var analyzers = GetAnalyzersFromAssembly(assembly);
 
                 GenerateMarkdownFromAnalyzers(
                     analyzers,
@@ -89,14 +89,54 @@ namespace DPvreony.Documentation.RoslynAnalyzersToMarkdown.DotNetTool
             });
         }
 
-        private void GenerateMarkdownFromAnalyzers(object analyzers, IFileSystem fileSystem, object outputFilePath)
+        private void GenerateMarkdownFromAnalyzers(IEnumerable<> analyzers, IFileSystem fileSystem, object outputFilePath)
         {
-            throw new NotImplementedException();
         }
 
-        private object GetAnalyzersFromAssembly()
+        private IEnumerable<DiagnosticAnalyzer>? GetAnalyzersFromAssembly(Assembly assembly)
         {
-            throw new NotImplementedException();
+            var allTypes = assembly.GetTypes();
+
+#pragma warning disable S6602 // "Find" method should be used instead of the "FirstOrDefault" extension
+            var matchingType = allTypes.FirstOrDefault(type => IsDiagnosticAnalyzer(type));
+#pragma warning restore S6602 // "Find" method should be used instead of the "FirstOrDefault" extension
+
+            if (matchingType == null)
+            {
+                return null;
+            }
+
+            var ctor = matchingType.GetParameterlessConstructor();
+            if (ctor == null)
+            {
+                return null;
+            }
+
+            var instance = ctor.Invoke(null);
+
+            var analysisContext = new AnalysisContext();
+
+            var method = matchingType.GetMethod(nameof(DiagnosticAnalyzer.Initialize));
+            var res = method!.Invoke(
+                instance,
+                analysisContext);
+
+            return res as DiagnosticAnalyzer;
+        }
+
+        private bool IsDiagnosticAnalyzer(Type type)
+        {
+            if (!type.IsPublic || type.IsAbstract)
+            {
+                return false;
+            }
+
+            if (type.ContainsGenericParameters)
+            {
+                return false;
+            }
+
+            return type.IsAssignableTo(typeof(DiagnosticAnalyzer));
         }
     }
 }
