@@ -44,13 +44,16 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
                 .Append(category)
                 .Append(" | ")
                 .Append(severity)
-                .Append(" | ");
+                .AppendLine(" | ");
         }
 
-        public void GenerateContentForAnalyzer(DiagnosticAnalyzer diagnosticAnalyzer, StringBuilder stringBuilder)
+        public void GenerateContentForDiagnosticDescriptor(DiagnosticDescriptor diagnosticDescriptor, StringBuilder stringBuilder)
         {
-            ArgumentNullException.ThrowIfNull(diagnosticAnalyzer);
-            ArgumentNullException.ThrowIfNull(stringBuilder);
+            GenerateDescriptorRow("Title", diagnosticDescriptor.Title);
+            GenerateDescriptorRow("Id", diagnosticDescriptor.Id);
+            GenerateDescriptorRow("Category", diagnosticDescriptor.Category);
+            GenerateDescriptorRow("Severity", diagnosticDescriptor.Severity);
+            GenerateDescriptorRow("Enabled By Default", diagnosticDescriptor.EnabledByDefault);
         }
     }
 }
