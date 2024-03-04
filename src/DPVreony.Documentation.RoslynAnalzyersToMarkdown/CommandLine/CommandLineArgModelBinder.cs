@@ -7,7 +7,7 @@ using System.CommandLine;
 using System.CommandLine.Binding;
 using System.IO;
 
-namespace DPvreony.Documentation.RoslynAnalyzersToMarkdown.DotNetTool.CommandLine
+namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
 {
     /// <summary>
     /// Binding logic for the command line arguments.

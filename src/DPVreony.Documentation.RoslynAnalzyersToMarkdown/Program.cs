@@ -6,7 +6,7 @@ using System.IO.Abstractions;
 using System.Threading.Tasks;
 using Whipstaff.CommandLine.Hosting;
 
-namespace DPvreony.Documentation.RoslynAnalyzersToMarkdown.DotNetTool
+namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 {
     /// <summary>
     /// Hosts the program entry point.

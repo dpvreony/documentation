@@ -6,7 +6,7 @@ using System;
 using Microsoft.Extensions.Logging;
 using Whipstaff.Core.Logging;
 
-namespace DPvreony.Documentation.RoslynAnalyzersToMarkdown.DotNetTool
+namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 {
     /// <summary>
     /// Log message actions for <see cref="CommandLineJob"/>.

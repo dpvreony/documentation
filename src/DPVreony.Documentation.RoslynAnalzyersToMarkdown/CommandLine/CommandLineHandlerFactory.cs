@@ -7,7 +7,7 @@ using System.IO;
 using System.IO.Abstractions;
 using Whipstaff.CommandLine;
 
-namespace DPvreony.Documentation.RoslynAnalyzersToMarkdown.DotNetTool.CommandLine
+namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
 {
     /// <summary>
     /// Factory for creating the root command and binder.

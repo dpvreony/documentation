@@ -4,18 +4,16 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+using DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine;
+using Microsoft.CodeAnalysis.Diagnostics;
 using Whipstaff.CommandLine;
-using Whipstaff.EntityFramework.Diagram.DotNetTool.CommandLine;
-using Whipstaff.EntityFramework.Reflection;
+using Whipstaff.Runtime.Extensions;
 
-namespace DPvreony.Documentation.RoslynAnalyzersToMarkdown.DotNetTool
+namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 {
     /// <summary>
     /// Command line job for handling the creation of the Entity Framework Diagram.
@@ -89,7 +87,7 @@ namespace DPvreony.Documentation.RoslynAnalyzersToMarkdown.DotNetTool
             });
         }
 
-        private void GenerateMarkdownFromAnalyzers(IEnumerable<> analyzers, IFileSystem fileSystem, object outputFilePath)
+        private void GenerateMarkdownFromAnalyzers(IEnumerable<DiagnosticAnalyzer> analyzers, IFileSystem fileSystem, object outputFilePath)
         {
         }
 

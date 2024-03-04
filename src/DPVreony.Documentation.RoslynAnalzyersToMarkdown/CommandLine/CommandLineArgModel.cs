@@ -4,7 +4,7 @@
 
 using System.IO;
 
-namespace DPvreony.Documentation.RoslynAnalyzersToMarkdown.DotNetTool.CommandLine
+namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
 {
     /// <summary>
     /// Model that represents the command line arguments.

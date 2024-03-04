@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.Diagnostics;
 
 namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
 {

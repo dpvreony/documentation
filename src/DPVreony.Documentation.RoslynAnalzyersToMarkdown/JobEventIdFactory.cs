@@ -4,7 +4,7 @@
 
 using Microsoft.Extensions.Logging;
 
-namespace DPvreony.Documentation.RoslynAnalyzersToMarkdown.DotNetTool
+namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 {
     internal static class JobEventIdFactory
     {
