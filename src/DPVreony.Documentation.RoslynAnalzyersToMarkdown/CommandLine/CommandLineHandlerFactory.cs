@@ -31,7 +31,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
                 ".dll")
                 .ExistingOnly();
 
-            var outputDirectoryOption = new Option<FileInfo>(
+            var outputDirectoryOption = new Option<DirectoryInfo>(
                 [
                     "--output-directory",
                     "-o"
@@ -46,7 +46,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
                     "--output-file-per-analyzer",
                     "-ofpn"
                 ],
-                "Whether to output each analyzer to a seperate markdown file.")
+                "Whether to output each analyzer to a separate markdown file.")
             {
                 IsRequired = true
             };

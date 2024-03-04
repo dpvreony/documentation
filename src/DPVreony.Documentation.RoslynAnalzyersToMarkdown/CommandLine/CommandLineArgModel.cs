@@ -9,5 +9,5 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
     /// <summary>
     /// Model that represents the command line arguments.
     /// </summary>
-    public sealed record CommandLineArgModel(FileInfo AssemblyPath, DirectoryInfo outputDirectory, bool outputFilePerAnalyzer);
+    public sealed record CommandLineArgModel(FileInfo AssemblyPath, DirectoryInfo OutputDirectory, bool OutputFilePerAnalyzer);
 }

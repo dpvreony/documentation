@@ -32,7 +32,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
                 JobEventIdFactory.FailedToLoadAssembly(),
                 "Failed to load assembly: {AssemblyName}");
 
-            _failedToFindAnalyzersAssembly = LoggerMessage.Define<string>(
+            _failedToFindAnalyzersInAssembly = LoggerMessage.Define<string>(
                 LogLevel.Information,
                 JobEventIdFactory.FailedToFindAnalyzersInAssembly(),
                 "Failed to find analyzers in assembly: {AssemblyName}");
@@ -48,7 +48,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
             _failedToLoadAssembly(logger, assemblyName, null);
         }
 
-        internal void FailedToFindAnakyzersInAssembly(ILogger<CommandLineJob> logger, string assemblyName)
+        internal void FailedToFindAnalyzersInAssembly(ILogger<CommandLineJob> logger, string assemblyName)
         {
             _failedToFindAnalyzersInAssembly(logger, assemblyName, null);
         }

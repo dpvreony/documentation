@@ -11,5 +11,9 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
         internal static EventId StartingHandleCommand() => new(1, nameof(StartingHandleCommand));
 
         internal static EventId FailedToFindDbContext() => new(2, nameof(FailedToFindDbContext));
+
+        internal static EventId FailedToLoadAssembly() => new(3, nameof(FailedToLoadAssembly));
+
+        internal static EventId FailedToFindAnalyzersInAssembly() => new(4, nameof(FailedToFindAnalyzersInAssembly));
     }
 }

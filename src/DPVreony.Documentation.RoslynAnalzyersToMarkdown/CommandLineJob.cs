@@ -4,11 +4,13 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Whipstaff.CommandLine;
 using Whipstaff.Runtime.Extensions;
@@ -40,86 +42,93 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
         }
 
         /// <inheritdoc/>
-        public Task<int> HandleCommand(CommandLineArgModel commandLineArgModel)
+        public async Task<int> HandleCommand(CommandLineArgModel commandLineArgModel)
         {
-            return Task.Run(() =>
+            var appDomain = AppDomain.CurrentDomain;
+            var loadedAssemblies = new List<string>();
+            appDomain.AssemblyResolve += (_, args) =>
             {
-                var appDomain = AppDomain.CurrentDomain;
-                var loadedAssemblies = new List<string>();
-                appDomain.AssemblyResolve += (_, args) =>
+                var assemblyName = new AssemblyName(args.Name);
+
+                if (args.RequestingAssembly?.Location.Equals(commandLineArgModel.AssemblyPath.FullName, StringComparison.Ordinal) != true
+                    && loadedAssemblies.Exists(la => la.Equals(args.RequestingAssembly?.Location, StringComparison.Ordinal)))
                 {
-                    var assemblyName = new AssemblyName(args.Name);
-
-                    if (args.RequestingAssembly?.Location.Equals(commandLineArgModel.AssemblyPath.FullName, StringComparison.Ordinal) != true
-                        && loadedAssemblies.Exists(la => la.Equals(args.RequestingAssembly?.Location, StringComparison.Ordinal)))
-                    {
-                        return null;
-                    }
-
-                    var assemblyPath = _fileSystem.Path.Combine(commandLineArgModel.AssemblyPath.DirectoryName!, $"{assemblyName.Name}.dll");
-
-                    if (_fileSystem.File.Exists(assemblyPath))
-                    {
-                        loadedAssemblies.Add(assemblyPath);
-#pragma warning disable S3885
-                        return Assembly.LoadFrom(assemblyPath);
-#pragma warning restore S3885
-                    }
-
                     return null;
-                };
+                }
 
-                _commandLineJobLogMessageActionsWrapper.StartingHandleCommand();
+                var assemblyPath = _fileSystem.Path.Combine(commandLineArgModel.AssemblyPath.DirectoryName!, $"{assemblyName.Name}.dll");
+
+                if (_fileSystem.File.Exists(assemblyPath))
+                {
+                    loadedAssemblies.Add(assemblyPath);
+#pragma warning disable S3885
+                    return Assembly.LoadFrom(assemblyPath);
+#pragma warning restore S3885
+                }
+
+                return null;
+            };
+
+            _commandLineJobLogMessageActionsWrapper.StartingHandleCommand();
 
 #pragma warning disable S3885
-                var assembly = Assembly.LoadFrom(commandLineArgModel.AssemblyPath.FullName);
+            var assembly = Assembly.LoadFrom(commandLineArgModel.AssemblyPath.FullName);
 #pragma warning restore S3885
 
-                var outputFilePath = commandLineArgModel.OutputFilePath;
-                var analyzers = GetAnalyzersFromAssembly(assembly);
+            var outputDirectory = commandLineArgModel.OutputDirectory;
+            var analyzers = GetAnalyzersFromAssembly(assembly);
 
-                GenerateMarkdownFromAnalyzers(
-                    analyzers,
-                    _fileSystem,
-                    outputFilePath);
+            if (analyzers == null)
+            {
+                _commandLineJobLogMessageActionsWrapper.FailedToFindAnalyzersInAssembly(commandLineArgModel.AssemblyPath.FullName);
+                return 1;
+            }
 
-                return 0;
-            });
+            await GenerateMarkdownFromAnalyzers(
+                analyzers.Value,
+                _fileSystem,
+                outputDirectory).ConfigureAwait(false);
+
+            return 0;
         }
 
-        private void GenerateMarkdownFromAnalyzers(IEnumerable<DiagnosticAnalyzer> analyzers, IFileSystem fileSystem, object outputFilePath)
+        private async Task GenerateMarkdownFromAnalyzers(ImmutableArray<DiagnosticAnalyzer> analyzers, IFileSystem fileSystem, object outputFilePath)
         {
+            var workspace = new AdhocWorkspace();
+            var solution = workspace.CurrentSolution;
+            var project = solution.Projects.First();
+            var compilation = await project.GetCompilationAsync();
+            if (compilation == null)
+            {
+                throw new InvalidOperationException("Failed to get compilation");
+            }
+
+            var compilationWithAnalyzers = compilation.WithAnalyzers(analyzers);
+
         }
 
-        private IEnumerable<DiagnosticAnalyzer>? GetAnalyzersFromAssembly(Assembly assembly)
+        private ImmutableArray<DiagnosticAnalyzer>? GetAnalyzersFromAssembly(Assembly assembly)
         {
             var allTypes = assembly.GetTypes();
 
-#pragma warning disable S6602 // "Find" method should be used instead of the "FirstOrDefault" extension
-            var matchingType = allTypes.FirstOrDefault(type => IsDiagnosticAnalyzer(type));
-#pragma warning restore S6602 // "Find" method should be used instead of the "FirstOrDefault" extension
+            var matchingTypes = allTypes.Where(type => IsDiagnosticAnalyzer(type));
 
-            if (matchingType == null)
+            var result = new List<DiagnosticAnalyzer>();
+
+            foreach (var matchingType in matchingTypes)
             {
-                return null;
+                var ctor = matchingType.GetParameterlessConstructor();
+                if (ctor == null)
+                {
+                    continue;
+                }
+
+                var instance = ctor.Invoke(null);
+
+                result.Add((DiagnosticAnalyzer)instance);
             }
 
-            var ctor = matchingType.GetParameterlessConstructor();
-            if (ctor == null)
-            {
-                return null;
-            }
-
-            var instance = ctor.Invoke(null);
-
-            var analysisContext = new AnalysisContext();
-
-            var method = matchingType.GetMethod(nameof(DiagnosticAnalyzer.Initialize));
-            var res = method!.Invoke(
-                instance,
-                analysisContext);
-
-            return res as DiagnosticAnalyzer;
+            return result.ToImmutableArray();
         }
 
         private bool IsDiagnosticAnalyzer(Type type)

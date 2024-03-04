@@ -22,12 +22,11 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
         /// Initializes a new instance of the <see cref="CommandLineArgModelBinder"/> class.
         /// </summary>
         /// <param name="assemblyOption">Assembly to parse and bind against.</param>
-        /// <param name="dbContextNameOption">Name of the db context to parse and bind against.</param>
-        /// <param name="outputFilePathOption">Output file path to parse and bind against.</param>
-        /// <param name="diagramTypeOption">Diagram type to parse and bind against.</param>
+        /// <param name="outputDirectoryOption">Option to parse and bind against for the output directory.</param>
+        /// <param name="outputFilePerAnalyzerOption">Option to bind against for parsing whether to output each analyzer to a separate file.</param>
         public CommandLineArgModelBinder(
             Option<FileInfo> assemblyOption,
-            Option<FileInfo> outputDirectoryOption,
+            Option<DirectoryInfo> outputDirectoryOption,
             Option<bool> outputFilePerAnalyzerOption)
         {
             ArgumentNullException.ThrowIfNull(assemblyOption);
@@ -36,7 +35,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
 
             _assemblyOption = assemblyOption;
             _outputDirectoryOption = outputDirectoryOption;
-            _outputDirectoryOption = outputDirectoryOption;
+            _outputFilePerAnalyzerOption = outputFilePerAnalyzerOption;
         }
 
         /// <inheritdoc/>

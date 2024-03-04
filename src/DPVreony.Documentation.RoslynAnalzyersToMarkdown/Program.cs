@@ -4,6 +4,7 @@
 
 using System.IO.Abstractions;
 using System.Threading.Tasks;
+using DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine;
 using Whipstaff.CommandLine.Hosting;
 
 namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown

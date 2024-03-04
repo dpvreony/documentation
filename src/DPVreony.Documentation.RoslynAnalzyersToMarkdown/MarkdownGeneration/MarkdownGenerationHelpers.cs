@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
@@ -19,7 +20,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
                     stringBuilder);
             }
 
-            stringBuilder.Insert(0, "| Id | Title | Category | Severity |");
+            stringBuilder.Insert(0, "| Id | Title | Category | Default Severity |");
         }
 
         private void GenerateTableOfContentRowsForDiagnosticAnalyzer(DiagnosticAnalyzer diagnosticAnalyzer, StringBuilder stringBuilder)
@@ -37,26 +38,38 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
             var diagnosticId = diagnosticDescriptor.Id;
             var title = diagnosticDescriptor.Title;
             var category = diagnosticDescriptor.Category;
-            var severity = diagnosticDescriptor.Severity;
+            var defaultSeverity = diagnosticDescriptor.DefaultSeverity;
 
-            stringBuilder.Append("| ")
+            stringBuilder.Append('|')
                 .Append(diagnosticId)
-                .Append(" | ")
+                .Append('|')
                 .Append(title)
-                .Append(" | ")
+                .Append('|')
                 .Append(category)
-                .Append(" | ")
-                .Append(severity)
-                .AppendLine(" | ");
+                .Append('|')
+                .Append(defaultSeverity)
+                .AppendLine("|");
         }
 
         public void GenerateContentForDiagnosticDescriptor(DiagnosticDescriptor diagnosticDescriptor, StringBuilder stringBuilder)
         {
-            GenerateDescriptorRow("Title", diagnosticDescriptor.Title);
-            GenerateDescriptorRow("Id", diagnosticDescriptor.Id);
-            GenerateDescriptorRow("Category", diagnosticDescriptor.Category);
-            GenerateDescriptorRow("Severity", diagnosticDescriptor.Severity);
-            GenerateDescriptorRow("Enabled By Default", diagnosticDescriptor.EnabledByDefault);
+            GenerateDescriptorRow(stringBuilder, "Title", diagnosticDescriptor.Title.ToString());
+            GenerateDescriptorRow(stringBuilder, "Id", diagnosticDescriptor.Id);
+            GenerateDescriptorRow(stringBuilder, "Category", diagnosticDescriptor.Category);
+            GenerateDescriptorRow(stringBuilder, "Default Severity", diagnosticDescriptor.DefaultSeverity.ToString());
+            GenerateDescriptorRow(stringBuilder, "Enabled By Default", diagnosticDescriptor.IsEnabledByDefault.ToString());
+            GenerateDescriptorRow(stringBuilder, "Description", diagnosticDescriptor.Description.ToString());
+            GenerateDescriptorRow(stringBuilder, "Help link", diagnosticDescriptor.HelpLinkUri);
+            GenerateDescriptorRow(stringBuilder, "Custom Tags", string.Join(", ", diagnosticDescriptor.CustomTags));
+        }
+
+        private void GenerateDescriptorRow(StringBuilder stringBuilder, string title, string value)
+        {
+            stringBuilder.Append('|')
+                .Append(title)
+                .Append('|')
+                .Append(value)
+                .AppendLine("|");
         }
     }
 }

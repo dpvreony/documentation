@@ -48,7 +48,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
         /// <summary>
         /// Log message action for when we failed to find the requested db context.
         /// </summary>
-        /// <param name="dbContextName">The name of the db context.</param>
+        /// <param name="assemblyName">The name of the assembly.</param>
         public void FailedToLoadAssembly(string assemblyName)
         {
             _commandLineJobLogMessageActions.FailedToLoadAssembly(
@@ -57,12 +57,12 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
         }
 
         /// <summary>
-        /// Log message action for when we failed to find the requested db context.
+        /// Log message action for when we failed to find any analyzers in the assembly.
         /// </summary>
-        /// <param name="dbContextName">The name of the db context.</param>
-        public void FailedToFindAnakyzersInAssembly(string assemblyName)
+        /// <param name="assemblyName">The name of the assembly.</param>
+        public void FailedToFindAnalyzersInAssembly(string assemblyName)
         {
-            _commandLineJobLogMessageActions.FailedToFindAnakyzersInAssembly(
+            _commandLineJobLogMessageActions.FailedToFindAnalyzersInAssembly(
                 Logger,
                 assemblyName);
         }
