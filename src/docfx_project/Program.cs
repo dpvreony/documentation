@@ -20,6 +20,8 @@ namespace docfx_project
         {
             try
             {
+                // TODO: embed roslyn doc gen
+
                 const string configPath = "docfx.json";
                 await DotnetApiCatalog.GenerateManagedReferenceYamlFiles(configPath).ConfigureAwait(false);
 

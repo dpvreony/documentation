@@ -76,7 +76,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 #pragma warning restore S3885
 
             var outputDirectory = commandLineArgModel.OutputDirectory;
-            var analyzers = GetAnalyzersFromAssembly(assembly);
+            var analyzers = ReflectionHelpers.GetAnalyzersFromAssembly(assembly);
 
             if (analyzers == null)
             {
@@ -92,7 +92,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
             return 0;
         }
 
-        private async Task GenerateMarkdownFromAnalyzers(ImmutableArray<DiagnosticAnalyzer> analyzers, IFileSystem fileSystem, object outputFilePath)
+        private async Task GenerateMarkdownFromAnalyzers(ImmutableArray<DiagnosticAnalyzer> analyzers, IFileSystem fileSystem, IDirectoryInfo outputFilePath)
         {
             var workspace = new AdhocWorkspace();
             var solution = workspace.CurrentSolution;
@@ -105,45 +105,14 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 
             var compilationWithAnalyzers = compilation.WithAnalyzers(analyzers);
 
-        }
-
-        private ImmutableArray<DiagnosticAnalyzer>? GetAnalyzersFromAssembly(Assembly assembly)
-        {
-            var allTypes = assembly.GetTypes();
-
-            var matchingTypes = allTypes.Where(type => IsDiagnosticAnalyzer(type));
-
-            var result = new List<DiagnosticAnalyzer>();
-
-            foreach (var matchingType in matchingTypes)
-            {
-                var ctor = matchingType.GetParameterlessConstructor();
-                if (ctor == null)
-                {
-                    continue;
-                }
-
-                var instance = ctor.Invoke(null);
-
-                result.Add((DiagnosticAnalyzer)instance);
-            }
-
-            return result.ToImmutableArray();
-        }
-
-        private bool IsDiagnosticAnalyzer(Type type)
-        {
-            if (!type.IsPublic || type.IsAbstract)
-            {
-                return false;
-            }
-
-            if (type.ContainsGenericParameters)
-            {
-                return false;
-            }
-
-            return type.IsAssignableTo(typeof(DiagnosticAnalyzer));
+            // TODO: refactor to have a documentation helper dll that can be injected into our pipeline instead of running out of process.
+            // TODO: loop through loaded analyzers
+            // TODO: get the diagnostics
+            // TODO: create index file
+            // TODO: create per analyzer file
+            // TODO: add support for custom formatting
+            // TODO: add ability to attach additional documentation via injectable resolver.
+            //       this should come from a documentation resource as it should be maintained with the documentation rather than the code?
         }
     }
 }
