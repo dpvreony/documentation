@@ -5,11 +5,14 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
 using DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine;
+using DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Whipstaff.CommandLine;
@@ -76,7 +79,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 #pragma warning restore S3885
 
             var outputDirectory = commandLineArgModel.OutputDirectory;
-            var analyzers = ReflectionHelpers.GetAnalyzersFromAssembly(assembly);
+            var analyzers = Helpers.ReflectionHelpers.GetAnalyzersFromAssembly(assembly);
 
             if (analyzers == null)
             {
@@ -86,13 +89,14 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 
             await GenerateMarkdownFromAnalyzers(
                 analyzers.Value,
-                _fileSystem,
                 outputDirectory).ConfigureAwait(false);
 
             return 0;
         }
 
-        private async Task GenerateMarkdownFromAnalyzers(ImmutableArray<DiagnosticAnalyzer> analyzers, IFileSystem fileSystem, IDirectoryInfo outputFilePath)
+        private async Task GenerateMarkdownFromAnalyzers(
+            ImmutableArray<DiagnosticAnalyzer> analyzers,
+            DirectoryInfo outputFilePath)
         {
             var workspace = new AdhocWorkspace();
             var solution = workspace.CurrentSolution;
@@ -104,15 +108,103 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
             }
 
             var compilationWithAnalyzers = compilation.WithAnalyzers(analyzers);
+            if (compilationWithAnalyzers == null)
+            {
+                throw new InvalidOperationException("Failed to set up analyzers into compilation session");
+            }
+
+            var outputFilePathFullName= outputFilePath.FullName;
+
+            _fileSystem.Directory.CreateDirectory(outputFilePathFullName);
+
+            var pathWrapper = _fileSystem.Path;
+            var fileWrapper = _fileSystem.File;
+
+            await CreateIndexFile(
+                analyzers,
+                pathWrapper,
+                fileWrapper,
+                outputFilePathFullName)
+                .ConfigureAwait(false);
+
+            await CreateIndividualFiles(
+                analyzers,
+                pathWrapper,
+                fileWrapper,
+                outputFilePathFullName)
+                .ConfigureAwait(false);
+
 
             // TODO: refactor to have a documentation helper dll that can be injected into our pipeline instead of running out of process.
-            // TODO: loop through loaded analyzers
-            // TODO: get the diagnostics
-            // TODO: create index file
-            // TODO: create per analyzer file
             // TODO: add support for custom formatting
+            // TODO: add support for toc.yml?
             // TODO: add ability to attach additional documentation via injectable resolver.
             //       this should come from a documentation resource as it should be maintained with the documentation rather than the code?
+        }
+
+        private async Task CreateIndividualFiles(
+            ImmutableArray<DiagnosticAnalyzer> analyzers,
+            IPath pathWrapper,
+            IFile fileWrapper,
+            string outputFilePathFullName)
+        {
+            foreach (var diagnosticAnalyzer in analyzers)
+            {
+                await CreateIndividualFiles(
+                        diagnosticAnalyzer,
+                        pathWrapper,
+                        fileWrapper,
+                        outputFilePathFullName)
+                    .ConfigureAwait(false);
+            }
+        }
+
+        private async Task CreateIndividualFiles(
+            DiagnosticAnalyzer diagnosticAnalyzer,
+            IPath pathWrapper,
+            IFile fileWrapper,
+            string outputFilePathFullName)
+        {
+            var supportedDiagnostics = diagnosticAnalyzer.SupportedDiagnostics;
+            foreach (var diagnostic in supportedDiagnostics)
+            {
+                var stringBuilder = new StringBuilder();
+                MarkdownGenerationHelpers.GenerateContentForDiagnosticDescriptor(diagnostic, stringBuilder);
+
+                var filename = $"{diagnostic.Id}.md";
+
+                var outputFilePath = pathWrapper.Combine(
+                    outputFilePathFullName,
+                    filename
+                    );
+
+                await fileWrapper.WriteAllTextAsync(
+                        outputFilePath,
+                        stringBuilder.ToString())
+                    .ConfigureAwait(false);
+            }
+        }
+
+        private async Task CreateIndexFile(
+            ImmutableArray<DiagnosticAnalyzer> analyzers,
+            IPath pathWrapper,
+            IFile fileWrapper,
+            string outputFilePathFullName)
+        {
+            var indexFilePath = pathWrapper.Combine(
+                outputFilePathFullName,
+                "index.md");
+
+            var stringBuilder = new StringBuilder();
+
+            MarkdownGenerationHelpers.GenerateTableOfContentTable(
+                analyzers,
+                stringBuilder);
+
+            await fileWrapper.WriteAllTextAsync(
+                    indexFilePath,
+                    stringBuilder.ToString())
+                .ConfigureAwait(false);
         }
     }
 }

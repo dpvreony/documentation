@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
+using Microsoft.CodeAnalysis.Diagnostics;
+using Whipstaff.Runtime.Extensions;
 
 namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.Helpers
 {
-    internal class ReflectionHelpers
+    public static class ReflectionHelpers
     {
-        internal ImmutableArray<DiagnosticAnalyzer>? GetAnalyzersFromAssembly(Assembly assembly)
+        public static ImmutableArray<DiagnosticAnalyzer>? GetAnalyzersFromAssembly(Assembly assembly)
         {
             var allTypes = assembly.GetTypes();
 
@@ -32,7 +34,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.Helpers
             return result.ToImmutableArray();
         }
 
-        private bool IsDiagnosticAnalyzer(Type type)
+        private static bool IsDiagnosticAnalyzer(Type type)
         {
             if (!type.IsPublic || type.IsAbstract)
             {

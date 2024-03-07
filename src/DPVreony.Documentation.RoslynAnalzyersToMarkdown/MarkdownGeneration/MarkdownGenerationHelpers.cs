@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
@@ -6,9 +7,21 @@ using Microsoft.CodeAnalysis.Diagnostics;
 
 namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
 {
-    internal class MarkdownGenerationHelpers
+    public static class MarkdownGenerationHelpers
     {
-        internal void GenerateTableOfContentTable(DiagnosticAnalyzer[] diagnosticAnalyzers, StringBuilder stringBuilder)
+        public static void GenerateContentForDiagnosticDescriptor(DiagnosticDescriptor diagnosticDescriptor, StringBuilder stringBuilder)
+        {
+            GenerateDescriptorRow(stringBuilder, "Title", diagnosticDescriptor.Title.ToString());
+            GenerateDescriptorRow(stringBuilder, "Id", diagnosticDescriptor.Id);
+            GenerateDescriptorRow(stringBuilder, "Category", diagnosticDescriptor.Category);
+            GenerateDescriptorRow(stringBuilder, "Default Severity", diagnosticDescriptor.DefaultSeverity.ToString());
+            GenerateDescriptorRow(stringBuilder, "Enabled By Default", diagnosticDescriptor.IsEnabledByDefault.ToString());
+            GenerateDescriptorRow(stringBuilder, "Description", diagnosticDescriptor.Description.ToString());
+            GenerateDescriptorRow(stringBuilder, "Help link", diagnosticDescriptor.HelpLinkUri);
+            GenerateDescriptorRow(stringBuilder, "Custom Tags", string.Join(", ", diagnosticDescriptor.CustomTags));
+        }
+
+        public static void GenerateTableOfContentTable(ImmutableArray<DiagnosticAnalyzer> diagnosticAnalyzers, StringBuilder stringBuilder)
         {
             ArgumentNullException.ThrowIfNull(diagnosticAnalyzers);
             ArgumentNullException.ThrowIfNull(stringBuilder);
@@ -23,7 +36,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
             stringBuilder.Insert(0, "| Id | Title | Category | Default Severity |");
         }
 
-        private void GenerateTableOfContentRowsForDiagnosticAnalyzer(DiagnosticAnalyzer diagnosticAnalyzer, StringBuilder stringBuilder)
+        private static void GenerateTableOfContentRowsForDiagnosticAnalyzer(DiagnosticAnalyzer diagnosticAnalyzer, StringBuilder stringBuilder)
         {
             var supportedDiagnostics = diagnosticAnalyzer.SupportedDiagnostics;
 
@@ -33,7 +46,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
             }
         }
 
-        private void GenerateTableOfContentRow(DiagnosticDescriptor diagnosticDescriptor, StringBuilder stringBuilder)
+        private static void GenerateTableOfContentRow(DiagnosticDescriptor diagnosticDescriptor, StringBuilder stringBuilder)
         {
             var diagnosticId = diagnosticDescriptor.Id;
             var title = diagnosticDescriptor.Title;
@@ -51,19 +64,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
                 .AppendLine("|");
         }
 
-        public void GenerateContentForDiagnosticDescriptor(DiagnosticDescriptor diagnosticDescriptor, StringBuilder stringBuilder)
-        {
-            GenerateDescriptorRow(stringBuilder, "Title", diagnosticDescriptor.Title.ToString());
-            GenerateDescriptorRow(stringBuilder, "Id", diagnosticDescriptor.Id);
-            GenerateDescriptorRow(stringBuilder, "Category", diagnosticDescriptor.Category);
-            GenerateDescriptorRow(stringBuilder, "Default Severity", diagnosticDescriptor.DefaultSeverity.ToString());
-            GenerateDescriptorRow(stringBuilder, "Enabled By Default", diagnosticDescriptor.IsEnabledByDefault.ToString());
-            GenerateDescriptorRow(stringBuilder, "Description", diagnosticDescriptor.Description.ToString());
-            GenerateDescriptorRow(stringBuilder, "Help link", diagnosticDescriptor.HelpLinkUri);
-            GenerateDescriptorRow(stringBuilder, "Custom Tags", string.Join(", ", diagnosticDescriptor.CustomTags));
-        }
-
-        private void GenerateDescriptorRow(StringBuilder stringBuilder, string title, string value)
+        private static void GenerateDescriptorRow(StringBuilder stringBuilder, string title, string value)
         {
             stringBuilder.Append('|')
                 .Append(title)
