@@ -31,7 +31,8 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
                     new CommandLineJobLogMessageActionsWrapper(
                         logger,
                         new CommandLineJobLogMessageActions()),
-                    fileSystem),
+                    fileSystem,
+                    logger),
                 new FileSystem());
         }
     }

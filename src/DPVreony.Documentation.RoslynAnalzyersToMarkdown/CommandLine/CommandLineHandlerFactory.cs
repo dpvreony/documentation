@@ -23,7 +23,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
                     "--assembly-path",
                     "-a"
                 ],
-                "Path to the assembly containing the DbContext")
+                "Path to the assembly containing the Roslyn Analyzers")
             {
                 IsRequired = true
             }.SpecificFileExtensionOnly(

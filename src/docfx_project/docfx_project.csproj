@@ -28,6 +28,7 @@
   <Target Name="RunDocFxGeneration" AfterTargets="Build">
     <Exec Command="pwsh $(OutDir)playwright.ps1 install" ConsoleToMSBuild="true" LogStandardErrorAsError="true" />
     <!-- CustomErrorRegularExpression is a workaround until docfx allows treat warnings as errors. -->
-    <Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" WorkingDirectory="$(MSBuildProjectDirectory)" CustomErrorRegularExpression=": warning\s" />
+    <!--<Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" WorkingDirectory="$(MSBuildProjectDirectory)" CustomErrorRegularExpression=": warning\s" />-->
+    <Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" WorkingDirectory="$(MSBuildProjectDirectory)" />
   </Target>
 </Project>

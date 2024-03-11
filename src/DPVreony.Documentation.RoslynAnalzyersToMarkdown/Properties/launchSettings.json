@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DPVreony.Documentation.RoslynAnalzyersToMarkdown": {
+      "commandName": "Project",
+      "commandLineArgs": "-a \"$(SolutionDir)upstream_analyzers\\bin\\debug\\net8.0\\dhgms.gripewithroslyn.dll\" -o \"$(SolutionDir)docfx_project\\obj\" -ofpn"
+    }
+  }
+}

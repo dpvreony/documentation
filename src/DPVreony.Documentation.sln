@@ -10,9 +10,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "docfx_project", "docfx_proj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "upstream", "upstream\upstream.csproj", "{52E16012-FDEA-4FA4-A1F2-9F4CEA3143BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPVreony.Documentation.RoslynAnalzyersToMarkdown", "DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj", "{5E24F078-1106-43AE-865D-B6FD7A6F6BC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DPVreony.Documentation.RoslynAnalzyersToMarkdown", "DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj", "{5E24F078-1106-43AE-865D-B6FD7A6F6BC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DPVreony.Documentation.UnitTests", "DPVreony.Documentation.UnitTests\DPVreony.Documentation.UnitTests.csproj", "{1E13D0C6-C329-4931-B179-EA4ECBA8A903}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DPVreony.Documentation.UnitTests", "DPVreony.Documentation.UnitTests\DPVreony.Documentation.UnitTests.csproj", "{1E13D0C6-C329-4931-B179-EA4ECBA8A903}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

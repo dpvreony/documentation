@@ -10,13 +10,20 @@ using System.IO.Abstractions;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine;
 using DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
+using Microsoft.Extensions.Logging;
+using NuGet.Configuration;
+using NuGet.Packaging;
+using NuGet.Packaging.Core;
+using NuGet.Protocol.Core.Types;
+using NuGet.Versioning;
 using Whipstaff.CommandLine;
-using Whipstaff.Runtime.Extensions;
+using Whipstaff.Nuget;
 
 namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 {
@@ -27,21 +34,26 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
     {
         private readonly CommandLineJobLogMessageActionsWrapper _commandLineJobLogMessageActionsWrapper;
         private readonly IFileSystem _fileSystem;
+        private readonly ILogger<CommandLineJob> _logger;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandLineJob"/> class.
         /// </summary>
         /// <param name="commandLineJobLogMessageActionsWrapper">Wrapper for logging framework messages.</param>
         /// <param name="fileSystem">File System abstraction.</param>
+        /// <param name="logger">Logging framework instance.</param>
         public CommandLineJob(
             CommandLineJobLogMessageActionsWrapper commandLineJobLogMessageActionsWrapper,
-            IFileSystem fileSystem)
+            IFileSystem fileSystem,
+            ILogger<CommandLineJob> logger)
         {
             ArgumentNullException.ThrowIfNull(commandLineJobLogMessageActionsWrapper);
             ArgumentNullException.ThrowIfNull(fileSystem);
+            ArgumentNullException.ThrowIfNull(logger);
 
             _commandLineJobLogMessageActionsWrapper = commandLineJobLogMessageActionsWrapper;
             _fileSystem = fileSystem;
+            _logger = logger;
         }
 
         /// <inheritdoc/>
@@ -73,6 +85,38 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
             };
 
             _commandLineJobLogMessageActionsWrapper.StartingHandleCommand();
+
+            // TODO: pull the assembly in from nuget helper
+            var packageSourceProvider = new PackageSourceProvider(new Settings(Environment.CurrentDirectory));
+            var packageSources = packageSourceProvider.LoadPackageSources();
+
+
+            foreach (var packageSource in packageSources)
+            {
+                var sourceRepository = packageSource.GetRepository();
+
+                string packageId = commandLineArgModel.AssemblyPath.FullName;
+                var packageVersion = new NuGetVersion("12.0.1");
+                using MemoryStream packageStream = new MemoryStream();
+
+                var resource = await sourceRepository.GetResourceAsync<FindPackageByIdResource>();
+
+                var cache = new SourceCacheContext();
+                var logger = new Whipstaff.Nuget.NugetForwardingToNetCoreLogger(_logger);
+
+                var downloader = await resource.GetPackageDownloaderAsync(new PackageIdentity(packageId, packageVersion), cache, logger, CancellationToken.None);
+                var files = await downloader.CoreReader.GetPackageFilesAsync(PackageSaveMode.Defaultv3, CancellationToken.None);
+
+                /*
+                await resource.CopyNupkgToStreamAsync(
+                    packageId,
+                    packageVersion,
+                    packageStream,
+                    cache,
+                    logger,
+                    CancellationToken.None);
+                */
+            }
 
 #pragma warning disable S3885
             var assembly = Assembly.LoadFrom(commandLineArgModel.AssemblyPath.FullName);
