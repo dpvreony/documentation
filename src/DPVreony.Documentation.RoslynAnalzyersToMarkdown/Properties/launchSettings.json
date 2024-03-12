@@ -2,7 +2,7 @@
   "profiles": {
     "DPVreony.Documentation.RoslynAnalzyersToMarkdown": {
       "commandName": "Project",
-      "commandLineArgs": "-a \"$(SolutionDir)upstream_analyzers\\bin\\debug\\net8.0\\dhgms.gripewithroslyn.dll\" -o \"$(SolutionDir)docfx_project\\obj\" -ofpn"
+      "commandLineArgs": "-a \"%userprofile%\\Downloads\\dhgms.gripewithroslyn.analyzer.1.13.24\\analyzers\\dotnet\\cs\\dhgms.gripewithroslyn.analyzer.dll\" -o \"$(SolutionDir)docfx_project\\obj\\gripe\" -ofpn"
     }
   }
 }

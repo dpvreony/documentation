@@ -26,14 +26,14 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
             ArgumentNullException.ThrowIfNull(diagnosticAnalyzers);
             ArgumentNullException.ThrowIfNull(stringBuilder);
 
+            stringBuilder.AppendLine("| Id | Title | Category | Default Severity |");
+            stringBuilder.AppendLine("| - | - | - | - |");
             foreach (var diagnosticAnalyzer in diagnosticAnalyzers)
             {
                 GenerateTableOfContentRowsForDiagnosticAnalyzer(
                     diagnosticAnalyzer,
                     stringBuilder);
             }
-
-            stringBuilder.Insert(0, "| Id | Title | Category | Default Severity |");
         }
 
         private static void GenerateTableOfContentRowsForDiagnosticAnalyzer(DiagnosticAnalyzer diagnosticAnalyzer, StringBuilder stringBuilder)

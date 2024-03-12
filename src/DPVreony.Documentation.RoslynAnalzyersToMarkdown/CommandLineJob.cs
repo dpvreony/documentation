@@ -10,20 +10,13 @@ using System.IO.Abstractions;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine;
 using DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.Extensions.Logging;
-using NuGet.Configuration;
-using NuGet.Packaging;
-using NuGet.Packaging.Core;
-using NuGet.Protocol.Core.Types;
-using NuGet.Versioning;
 using Whipstaff.CommandLine;
-using Whipstaff.Nuget;
 
 namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 {
@@ -86,38 +79,6 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 
             _commandLineJobLogMessageActionsWrapper.StartingHandleCommand();
 
-            // TODO: pull the assembly in from nuget helper
-            var packageSourceProvider = new PackageSourceProvider(new Settings(Environment.CurrentDirectory));
-            var packageSources = packageSourceProvider.LoadPackageSources();
-
-
-            foreach (var packageSource in packageSources)
-            {
-                var sourceRepository = packageSource.GetRepository();
-
-                string packageId = commandLineArgModel.AssemblyPath.FullName;
-                var packageVersion = new NuGetVersion("12.0.1");
-                using MemoryStream packageStream = new MemoryStream();
-
-                var resource = await sourceRepository.GetResourceAsync<FindPackageByIdResource>();
-
-                var cache = new SourceCacheContext();
-                var logger = new Whipstaff.Nuget.NugetForwardingToNetCoreLogger(_logger);
-
-                var downloader = await resource.GetPackageDownloaderAsync(new PackageIdentity(packageId, packageVersion), cache, logger, CancellationToken.None);
-                var files = await downloader.CoreReader.GetPackageFilesAsync(PackageSaveMode.Defaultv3, CancellationToken.None);
-
-                /*
-                await resource.CopyNupkgToStreamAsync(
-                    packageId,
-                    packageVersion,
-                    packageStream,
-                    cache,
-                    logger,
-                    CancellationToken.None);
-                */
-            }
-
 #pragma warning disable S3885
             var assembly = Assembly.LoadFrom(commandLineArgModel.AssemblyPath.FullName);
 #pragma warning restore S3885
@@ -144,7 +105,8 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
         {
             var workspace = new AdhocWorkspace();
             var solution = workspace.CurrentSolution;
-            var project = solution.Projects.First();
+            var project = solution.AddProject("Project", "Project", LanguageNames.CSharp);
+
             var compilation = await project.GetCompilationAsync();
             if (compilation == null)
             {
