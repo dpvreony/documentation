@@ -28,21 +28,15 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
 
             stringBuilder.AppendLine("| Id | Title | Category | Default Severity |");
             stringBuilder.AppendLine("| - | - | - | - |");
-            foreach (var diagnosticAnalyzer in diagnosticAnalyzers)
-            {
-                GenerateTableOfContentRowsForDiagnosticAnalyzer(
-                    diagnosticAnalyzer,
-                    stringBuilder);
-            }
-        }
 
-        private static void GenerateTableOfContentRowsForDiagnosticAnalyzer(DiagnosticAnalyzer diagnosticAnalyzer, StringBuilder stringBuilder)
-        {
-            var supportedDiagnostics = diagnosticAnalyzer.SupportedDiagnostics;
+            var orderedDiagnostics = diagnosticAnalyzers.Select(analyzer => analyzer.SupportedDiagnostics)
+                .SelectMany(supportedDiagnostics => supportedDiagnostics)
+                .OrderBy(diagnosticDescriptor => diagnosticDescriptor.Id)
+                .ToArray();
 
-            foreach (var diagnosticDescriptor in supportedDiagnostics)
+            foreach (var diagnostic in orderedDiagnostics)
             {
-                GenerateTableOfContentRow(diagnosticDescriptor, stringBuilder);
+                GenerateTableOfContentRow(diagnostic, stringBuilder);
             }
         }
 
