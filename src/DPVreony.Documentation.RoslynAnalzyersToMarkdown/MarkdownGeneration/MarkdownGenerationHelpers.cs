@@ -47,9 +47,11 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
             var category = diagnosticDescriptor.Category;
             var defaultSeverity = diagnosticDescriptor.DefaultSeverity;
 
-            stringBuilder.Append('|')
+            stringBuilder.Append("| [")
                 .Append(diagnosticId)
-                .Append('|')
+                .Append("](")
+                .Append(diagnosticId)
+                .Append(".md) |")
                 .Append(title)
                 .Append('|')
                 .Append(category)
