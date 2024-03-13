@@ -30,7 +30,6 @@ jobs:
     - name: Verify the head ref context
       run: echo 'Head Ref Context is ${{ github.head_ref }}'
 
-# don't move beyond 6.0.100 until https://github.com/dotnet/sdk/issues/23972 is resolved
     - name: Install .NET 8
       uses: actions/setup-dotnet@v4
       with:
@@ -49,6 +48,20 @@ jobs:
     - name: Restore Packages
       run: |
         dotnet restore ${{ env.solutionpath }} /bl:artifacts\\binlog\\restore.binlog
+
+    - name: Download roslyn analyzer nuget packages
+      run: |
+        $packageReferences = (Select-Xml -Path "src\upstream_analyzers\upstream_analyzers.csproj" -XPath 'Project/ItemGroup/PackageReference')
+        foreach ($pr in $packageReferences)
+        {
+          $include = $pr.Node.Attributes.GetNamedItem("Include")
+          $version = $pr.Node.Attributes.GetNamedItem("Version")
+          $url = 'https://www.nuget.org/api/v2/package/' + $include.Value + '/' + $version.Value
+          $destination = 'downloads\nuget\' + $include.Value + '.zip'
+          $extractto = = 'downloads\nuget\' + $include.Value + '\'
+          Invoke-WebRequest -Uri $url -OutFile $destination
+          Expand-Archive -Path $destination -DestinationPath $extractto
+        }
 
     - name: Run Build
       run: |
