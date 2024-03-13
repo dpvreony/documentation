@@ -74,14 +74,14 @@ jobs:
         dotnet publish DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj --no-build --configuration release --output artifacts\cmd\rosan2md
       working-directory: src
 
-    - name: Publish roslyn analyzer doc gen
+    - name: Publish docfx gen
       run: |
         dotnet publish docfx_project\docfx_project.csproj --no-build --configuration release --output artifacts\cmd\docfx_project
       working-directory: src
 
     - name: Generate gripe analzyer documentation
       run: |
-        .\artifacts\cmd\rosan2md\dpvdocs-rosan2md.exe -a "downloads\nuget\dhgms.gripewithroslyn.analyzers\analyzers\dotnet\cs\dhgms.gripewithroslyn.analyzer.dll" -o "src\docfx_project\obj\gripe"
+        dotnet artifacts\cmd\rosan2md\dpvdocs-rosan2md.dll -a "downloads\nuget\dhgms.gripewithroslyn.analyzers\analyzers\dotnet\cs\dhgms.gripewithroslyn.analyzer.dll" -o "src\docfx_project\obj\gripe"
 
     - name: Install playwright
       run: |
@@ -90,7 +90,7 @@ jobs:
 
     - name: Generate documentation site
       run: |
-        .\artifacts\cmd\docfx_project\docfx_project.exe 
+        dotnet artifacts\cmd\docfx_project\docfx_project.dll 
       working-directory: src\docfx_project
 
     - name: Check document links
