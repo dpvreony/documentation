@@ -68,6 +68,30 @@ jobs:
         msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true
       working-directory: src
 
+    - name: Publish roslyn analyzer doc gen
+      run: |
+        dotnet publish DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj.csproj --no-build --configuration release --outdir artifacts\cmd\rosan2md
+      working-directory: src
+
+    - name: Publish roslyn analyzer doc gen
+      run: |
+        dotnet publish docfx_project\docfx_project.csproj --no-build --configuration release --outdir artifacts\cmd\docfx_project
+      working-directory: src
+
+    - name: Generate gripe analzyer documentation
+      run: |
+        artifacts\cmd\rosan2md\dpvdocs-rosan2md.exe -a "downloads\nuget\dhgms.gripewithroslyn.analyzers\analyzers\dotnet\cs\dhgms.gripewithroslyn.analyzer.dll" -o "src\docfx_project\obj\gripe"
+
+    - name: Install playwright
+      run: |
+        artifacts\cmd\docfx_project\playwright.ps1 install
+      working-directory: src
+
+    - name: Generate documentation site
+      run: |
+        artifacts\cmd\docfx_project\docfx_project.exe 
+      working-directory: src\docfx_project
+
     - name: Check document links
       run: |
         dotnet doclinkchecker -- -d docfx_project -f docfx_project\docfx-companion-tools.json -v
