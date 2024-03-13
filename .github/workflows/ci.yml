@@ -81,7 +81,7 @@ jobs:
 
     - name: Publish docfx gen
       run: |
-        dotnet publish docfx_project\docfx_project.csproj --no-build --configuration release --output "..\artifacts\cmd\docfx_project"
+        dotnet publish docfx_project\docfx_project.csproj --no-build --configuration release --output "..\artifacts\cmd\docfx_project" --verbosity detailed
       working-directory: src
 
     - name: Generate gripe analzyer documentation
