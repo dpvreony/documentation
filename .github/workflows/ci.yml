@@ -71,12 +71,12 @@ jobs:
 
     - name: Publish roslyn analyzer doc gen
       run: |
-        dotnet publish DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj --no-build --configuration release --output artifacts\cmd\rosan2md
+        dotnet publish DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj --no-build --configuration release --output "..\artifacts\cmd\rosan2md"
       working-directory: src
 
     - name: Publish docfx gen
       run: |
-        dotnet publish docfx_project\docfx_project.csproj --no-build --configuration release --output artifacts\cmd\docfx_project
+        dotnet publish docfx_project\docfx_project.csproj --no-build --configuration release --output "..\artifacts\cmd\docfx_project"
       working-directory: src
 
     - name: Generate gripe analzyer documentation
