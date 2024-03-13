@@ -86,7 +86,7 @@ jobs:
 
     - name: Generate gripe analzyer documentation
       run: |
-        dotnet artifacts\cmd\rosan2md\dpvdocs-rosan2md.dll -a "downloads\nuget\dhgms.gripewithroslyn.analyzers\analyzers\dotnet\cs\dhgms.gripewithroslyn.analyzer.dll" -o "src\docfx_project\obj\gripe" --output-file-per-analyzer
+        dotnet artifacts\cmd\rosan2md\dpvdocs-rosan2md.dll -a "downloads\nuget\dhgms.gripewithroslyn.analyzer\analyzers\dotnet\cs\dhgms.gripewithroslyn.analyzer.dll" -o "src\docfx_project\obj\gripe" --output-file-per-analyzer
 
     - name: Install playwright
       run: |
