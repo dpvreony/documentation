@@ -66,7 +66,7 @@ jobs:
 
     - name: Run Build
       run: |
-        msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true /verbosity:normal
+        msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true /verbosity:minimal
       working-directory: src
 
     - name: Publish roslyn analyzer doc gen
