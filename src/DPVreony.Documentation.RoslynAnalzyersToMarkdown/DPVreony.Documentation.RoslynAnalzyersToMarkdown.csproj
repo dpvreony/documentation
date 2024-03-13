@@ -7,7 +7,7 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dpvdocs-rosan2md</ToolCommandName>
     <AssemblyName>$(ToolCommandName)</AssemblyName>
-    <PackageDescription>dot net tool for producing markdown documentation for roslyn analyzers..</PackageDescription>
+    <PackageDescription>dot net tool for producing markdown documentation for roslyn analyzers.</PackageDescription>
   </PropertyGroup>
 
   <Target Name="AdjustVersion" DependsOnTargets="GetBuildVersion" AfterTargets="GetBuildVersion">
