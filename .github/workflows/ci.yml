@@ -58,7 +58,7 @@ jobs:
           $version = $pr.Node.Attributes.GetNamedItem("Version")
           $url = 'https://www.nuget.org/api/v2/package/' + $include.Value + '/' + $version.Value
           $destination = 'downloads\nuget\' + $include.Value + '.zip'
-          $extractto = = 'downloads\nuget\' + $include.Value + '\'
+          $extractto = 'downloads\nuget\' + $include.Value + '\'
           Invoke-WebRequest -Uri $url -OutFile $destination
           Expand-Archive -Path $destination -DestinationPath $extractto
         }
