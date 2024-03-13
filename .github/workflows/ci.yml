@@ -52,6 +52,7 @@ jobs:
     - name: Download roslyn analyzer nuget packages
       run: |
         $packageReferences = (Select-Xml -Path "src\upstream_analyzers\upstream_analyzers.csproj" -XPath 'Project/ItemGroup/PackageReference')
+        New-Item -ItemType Directory -Force -Path 'downloads\nuget'
         foreach ($pr in $packageReferences)
         {
           $include = $pr.Node.Attributes.GetNamedItem("Include")
