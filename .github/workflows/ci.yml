@@ -66,12 +66,12 @@ jobs:
 
     - name: Run Build
       run: |
-        msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true
+        msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true /verbosity:normal
       working-directory: src
 
     - name: Publish roslyn analyzer doc gen
       run: |
-        dotnet publish DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj.csproj --no-build --configuration release --output artifacts\cmd\rosan2md
+        dotnet publish DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj --no-build --configuration release --output artifacts\cmd\rosan2md
       working-directory: src
 
     - name: Publish roslyn analyzer doc gen
