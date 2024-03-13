@@ -11,13 +11,19 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
     {
         public static void GenerateContentForDiagnosticDescriptor(DiagnosticDescriptor diagnosticDescriptor, StringBuilder stringBuilder)
         {
-            GenerateDescriptorRow(stringBuilder, "Title", diagnosticDescriptor.Title.ToString());
+            var title = diagnosticDescriptor.Title.ToString();
+            stringBuilder.Append("# ")
+                .Append(diagnosticDescriptor.Id)
+                .Append(" : ")
+                .AppendLine(title);
+
+            GenerateDescriptorRow(stringBuilder, "Title", title);
             GenerateDescriptorRow(stringBuilder, "Id", diagnosticDescriptor.Id);
             GenerateDescriptorRow(stringBuilder, "Category", diagnosticDescriptor.Category);
             GenerateDescriptorRow(stringBuilder, "Default Severity", diagnosticDescriptor.DefaultSeverity.ToString());
             GenerateDescriptorRow(stringBuilder, "Enabled By Default", diagnosticDescriptor.IsEnabledByDefault.ToString());
             GenerateDescriptorRow(stringBuilder, "Description", diagnosticDescriptor.Description.ToString());
-            GenerateDescriptorRow(stringBuilder, "Help link", diagnosticDescriptor.HelpLinkUri);
+            // GenerateDescriptorRow(stringBuilder, "Help link", diagnosticDescriptor.HelpLinkUri);
             GenerateDescriptorRow(stringBuilder, "Custom Tags", string.Join(", ", diagnosticDescriptor.CustomTags));
         }
 
