@@ -95,7 +95,7 @@ jobs:
 
     - name: Generate documentation site
       run: |
-        .\..\artifacts\cmd\docfx_project\docfx_project.exe
+        ..\..\artifacts\cmd\docfx_project\docfx_project.exe
       working-directory: src\docfx_project
 
     - name: Check document links
