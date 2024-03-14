@@ -15,7 +15,6 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
             var title = diagnosticDescriptor.Title.ToString();
             stringBuilder.AppendLine("<table>");
 
-            GenerateDescriptorRow(stringBuilder, "-", "-");
             GenerateDescriptorRow(stringBuilder, "Title", title);
             GenerateDescriptorRow(stringBuilder, "Id", diagnosticDescriptor.Id);
             GenerateDescriptorRow(stringBuilder, "Category", diagnosticDescriptor.Category);
