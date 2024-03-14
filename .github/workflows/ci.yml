@@ -90,8 +90,8 @@ jobs:
 
     - name: Install playwright
       run: |
-        .\artifacts\cmd\docfx_project\playwright.ps1 install
-      working-directory: src
+        .\playwright.ps1 install
+      working-directory: artifacts\cmd\docfx_project
 
     - name: Generate documentation site
       run: |
