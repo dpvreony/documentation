@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
+using Newtonsoft.Json.Linq;
 
 namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
 {
@@ -15,8 +16,10 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
             stringBuilder.Append("# ")
                 .Append(diagnosticDescriptor.Id)
                 .Append(" : ")
-                .AppendLine(title);
+                .AppendLine(title)
+                .AppendLine();
 
+            GenerateDescriptorRow(stringBuilder, "-", "-");
             GenerateDescriptorRow(stringBuilder, "Title", title);
             GenerateDescriptorRow(stringBuilder, "Id", diagnosticDescriptor.Id);
             GenerateDescriptorRow(stringBuilder, "Category", diagnosticDescriptor.Category);
@@ -73,6 +76,15 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
                 .Append('|')
                 .Append(value)
                 .AppendLine("|");
+        }
+
+        public static void AddMetadataHeader(StringBuilder stringBuilder)
+        {
+            stringBuilder.AppendLine("---");
+            stringBuilder.Append("_disableContribution")
+                .Append(" : ")
+                .AppendLine("true");
+            stringBuilder.AppendLine("---");
         }
     }
 }
