@@ -26,6 +26,14 @@
             },
             {
                 "files": [
+                    "**/*.yml",
+                    "**/*.md"
+                ],
+                "src": "obj/gripe",
+                "dest": "gripe"
+            },
+            {
+                "files": [
                     "projects/**.md",
                     "projects/**.yml",
                     "toc.yml",

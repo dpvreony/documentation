@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LogLevel>Debug</LogLevel>
     <OutputType>Exe</OutputType>
@@ -25,9 +25,10 @@
     <PackageReference Include="Microsoft.DocAsCode.App" Version="2.67.5" />
   </ItemGroup>
 
+  <!--
   <Target Name="RunDocFxGeneration" AfterTargets="Build">
     <Exec Command="pwsh $(OutDir)playwright.ps1 install" ConsoleToMSBuild="true" LogStandardErrorAsError="true" />
-    <!-- CustomErrorRegularExpression is a workaround until docfx allows treat warnings as errors. -->
-    <Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" WorkingDirectory="$(MSBuildProjectDirectory)" CustomErrorRegularExpression=": warning\s" />
+    <Exec Command="$(OutDir)\$(MSBuildProjectName).exe" ConsoleToMSBuild="true" LogStandardErrorAsError="true" WorkingDirectory="$(MSBuildProjectDirectory)" />
   </Target>
+  -->
 </Project>

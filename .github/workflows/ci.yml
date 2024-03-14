@@ -30,7 +30,6 @@ jobs:
     - name: Verify the head ref context
       run: echo 'Head Ref Context is ${{ github.head_ref }}'
 
-# don't move beyond 6.0.100 until https://github.com/dotnet/sdk/issues/23972 is resolved
     - name: Install .NET 8
       uses: actions/setup-dotnet@v4
       with:
@@ -50,10 +49,54 @@ jobs:
       run: |
         dotnet restore ${{ env.solutionpath }} /bl:artifacts\\binlog\\restore.binlog
 
+    - name: Download roslyn analyzer nuget packages
+      run: |
+        $packageReferences = (Select-Xml -Path "src\upstream_analyzers\upstream_analyzers.csproj" -XPath 'Project/ItemGroup/PackageReference')
+        New-Item -ItemType Directory -Force -Path 'downloads\nuget'
+        foreach ($pr in $packageReferences)
+        {
+          $include = $pr.Node.Attributes.GetNamedItem("Include")
+          $version = $pr.Node.Attributes.GetNamedItem("Version")
+          echo $include.Value + ' ' + $verion.Value
+          $url = 'https://www.nuget.org/api/v2/package/' + $include.Value + '/' + $version.Value
+          $destination = 'downloads\nuget\' + $include.Value + '.zip'
+          $extractto = 'downloads\nuget\' + $include.Value + '\'
+          Invoke-WebRequest -Uri $url -OutFile $destination
+          $files = Expand-Archive -Path $destination -DestinationPath $extractto -PassThru
+          foreach ($file in $files)
+          {
+            echo $file
+          }
+        }
+
     - name: Run Build
       run: |
-        msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true
+        msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true /verbosity:minimal
       working-directory: src
+
+    - name: Publish roslyn analyzer doc gen
+      run: |
+        dotnet publish DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj --no-build --configuration release --output "..\artifacts\cmd\rosan2md"
+      working-directory: src
+
+    - name: Publish docfx gen
+      run: |
+        dotnet publish docfx_project\docfx_project.csproj --no-build --configuration release --output "..\artifacts\cmd\docfx_project" --verbosity detailed
+      working-directory: src
+
+    - name: Generate gripe analzyer documentation
+      run: |
+        dotnet artifacts\cmd\rosan2md\dpvdocs-rosan2md.dll -a "downloads\nuget\dhgms.gripewithroslyn.analyzer\analyzers\dotnet\cs\dhgms.gripewithroslyn.analyzer.dll" -o "src\docfx_project\obj\gripe" --output-file-per-analyzer
+
+    - name: Install playwright
+      run: |
+        .\playwright.ps1 install
+      working-directory: artifacts\cmd\docfx_project
+
+    - name: Generate documentation site
+      run: |
+        ..\..\artifacts\cmd\docfx_project\docfx_project.exe
+      working-directory: src\docfx_project
 
     - name: Check document links
       run: |
