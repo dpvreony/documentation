@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
-using Newtonsoft.Json.Linq;
 
 namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
 {
@@ -13,6 +12,8 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
         public static void GenerateContentForDiagnosticDescriptor(DiagnosticDescriptor diagnosticDescriptor, StringBuilder stringBuilder)
         {
             var title = diagnosticDescriptor.Title.ToString();
+            stringBuilder.Append("# ").Append(diagnosticDescriptor.Id).Append(": ").AppendLine(title);
+            stringBuilder.AppendLine();
             stringBuilder.AppendLine("<table>");
 
             GenerateDescriptorRow(stringBuilder, "Title", title);
