@@ -168,12 +168,12 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
                 .OrderBy(diagnosticDescriptor => diagnosticDescriptor.Id)
                 .ToArray();
 
-            stringBuilder.Append("- name: ").Append("Table of Analyzers");
+            stringBuilder.Append("- name: ").AppendLine("Table of Analyzers");
             stringBuilder.Append("  href: ").AppendLine("index.md");
 
             foreach (var diagnostic in orderedDiagnostics)
             {
-                stringBuilder.Append("- name: ").Append(diagnostic.Id).Append(" : ").AppendLine(diagnostic.Title.ToString());
+                stringBuilder.Append("- name: \"").Append(diagnostic.Id).Append(": ").Append(diagnostic.Title.ToString().Replace("\"", "\\\"")).AppendLine("\"");
                 stringBuilder.Append("  href: ").Append(diagnostic.Id).AppendLine(".md");
             }
 
