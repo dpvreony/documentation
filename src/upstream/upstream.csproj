@@ -17,23 +17,23 @@
     <PackageReference Include="NLog.Targets.TextWriter" Version="1.2.0" />
     <PackageReference Include="Vetuviem.Core" Version="0.9.244" />
     <PackageReference Include="Vetuviem.SourceGenerator" Version="0.9.244" />
-    <PackageReference Include="Whipstaff.AspNetCore" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.Core" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.Couchbase" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.EntityFramework" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.Entityframework.Relational" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.MediatR.EntityFrameworkCore" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.MsSql" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.NodaTime" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.OpenXml" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.Oracle" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.ReactiveUI" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.Runtime" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.Rx" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.Windows" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.Wpf" Version="7.1.70" />
-    <PackageReference Include="Whipstaff.Wpf.Mahapps" Version="7.1.70" />
+    <PackageReference Include="Whipstaff.AspNetCore" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.Core" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.Couchbase" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.EntityFramework" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.Entityframework.Relational" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.MediatR.EntityFrameworkCore" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.MsSql" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.NodaTime" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.OpenXml" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.Oracle" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.ReactiveUI" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.Runtime" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.Rx" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.Windows" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.Wpf" Version="7.1.100" />
+    <PackageReference Include="Whipstaff.Wpf.Mahapps" Version="7.1.100" />
   </ItemGroup>
 
   <!-- https://stackoverflow.com/questions/70602507/retrieve-docfx-metadata-from-nuget-packages -->
