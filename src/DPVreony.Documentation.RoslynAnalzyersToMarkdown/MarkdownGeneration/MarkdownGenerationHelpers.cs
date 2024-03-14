@@ -12,10 +12,9 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
         public static void GenerateContentForDiagnosticDescriptor(DiagnosticDescriptor diagnosticDescriptor, StringBuilder stringBuilder)
         {
             var title = diagnosticDescriptor.Title.ToString();
-            stringBuilder.Append("# ")
-                .Append(diagnosticDescriptor.Id)
-                .Append(" : ")
-                .AppendLine(title);
+            stringBuilder.Append("# ").Append(diagnosticDescriptor.Id).Append(": ").AppendLine(title);
+            stringBuilder.AppendLine();
+            stringBuilder.AppendLine("<table>");
 
             GenerateDescriptorRow(stringBuilder, "Title", title);
             GenerateDescriptorRow(stringBuilder, "Id", diagnosticDescriptor.Id);
@@ -25,6 +24,8 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
             GenerateDescriptorRow(stringBuilder, "Description", diagnosticDescriptor.Description.ToString());
             // GenerateDescriptorRow(stringBuilder, "Help link", diagnosticDescriptor.HelpLinkUri);
             GenerateDescriptorRow(stringBuilder, "Custom Tags", string.Join(", ", diagnosticDescriptor.CustomTags));
+
+            stringBuilder.AppendLine("</table>");
         }
 
         public static void GenerateTableOfContentTable(ImmutableArray<DiagnosticAnalyzer> diagnosticAnalyzers, StringBuilder stringBuilder)
@@ -68,11 +69,22 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
 
         private static void GenerateDescriptorRow(StringBuilder stringBuilder, string title, string value)
         {
-            stringBuilder.Append('|')
+            stringBuilder.AppendLine("<tr>");
+            stringBuilder.Append("<th>")
                 .Append(title)
-                .Append('|')
+                .Append("</th><td>")
                 .Append(value)
-                .AppendLine("|");
+                .AppendLine("</td>");
+            stringBuilder.AppendLine("</tr>");
+        }
+
+        public static void AddMetadataHeader(StringBuilder stringBuilder)
+        {
+            stringBuilder.AppendLine("---");
+            stringBuilder.Append("_disableContribution")
+                .Append(" : ")
+                .AppendLine("true");
+            stringBuilder.AppendLine("---");
         }
     }
 }
