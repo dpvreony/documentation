@@ -11,6 +11,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine;
 using DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration;
 using Microsoft.CodeAnalysis;
@@ -126,6 +127,13 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
             var pathWrapper = _fileSystem.Path;
             var fileWrapper = _fileSystem.File;
 
+            await CreateTocFile(
+                    analyzers,
+                    pathWrapper,
+                    fileWrapper,
+                    outputFilePathFullName)
+                .ConfigureAwait(false);
+
             await CreateIndexFile(
                 analyzers,
                 pathWrapper,
@@ -143,9 +151,36 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 
             // TODO: refactor to have a documentation helper dll that can be injected into our pipeline instead of running out of process.
             // TODO: add support for custom formatting
-            // TODO: add support for toc.yml?
             // TODO: add ability to attach additional documentation via injectable resolver.
             //       this should come from a documentation resource as it should be maintained with the documentation rather than the code?
+        }
+
+        private async Task CreateTocFile(ImmutableArray<DiagnosticAnalyzer> diagnosticAnalyzers, IPath pathWrapper, IFile fileWrapper, string outputFilePathFullName)
+        {
+            var indexFilePath = pathWrapper.Combine(
+                outputFilePathFullName,
+                "toc.yml");
+
+            var stringBuilder = new StringBuilder();
+
+            var orderedDiagnostics = diagnosticAnalyzers.Select(analyzer => analyzer.SupportedDiagnostics)
+                .SelectMany(supportedDiagnostics => supportedDiagnostics)
+                .OrderBy(diagnosticDescriptor => diagnosticDescriptor.Id)
+                .ToArray();
+
+            stringBuilder.Append("- name: ").Append("Table of Analyzers");
+            stringBuilder.Append("  href: ").AppendLine("index.md");
+
+            foreach (var diagnostic in orderedDiagnostics)
+            {
+                stringBuilder.Append("- name: ").Append(diagnostic.Id).Append(" : ").AppendLine(diagnostic.Title.ToString());
+                stringBuilder.Append("  href: ").Append(diagnostic.Id).AppendLine(".md");
+            }
+
+            await fileWrapper.WriteAllTextAsync(
+                    indexFilePath,
+                    stringBuilder.ToString())
+                .ConfigureAwait(false);
         }
 
         private async Task CreateIndividualFiles(
@@ -175,6 +210,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
             foreach (var diagnostic in supportedDiagnostics)
             {
                 var stringBuilder = new StringBuilder();
+                MarkdownGenerationHelpers.AddMetadataHeader(stringBuilder);
                 MarkdownGenerationHelpers.GenerateContentForDiagnosticDescriptor(diagnostic, stringBuilder);
 
                 var filename = $"{diagnostic.Id}.md";
@@ -203,6 +239,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
 
             var stringBuilder = new StringBuilder();
 
+            MarkdownGenerationHelpers.AddMetadataHeader(stringBuilder);
             MarkdownGenerationHelpers.GenerateTableOfContentTable(
                 analyzers,
                 stringBuilder);
