@@ -7,6 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.13.28" ReferenceOutputAssembly="true" DevelopmentDependency="false" />
+    <PackageReference Include="Dhgms.GripeWithRoslyn.Analyzer" Version="1.13.30" ReferenceOutputAssembly="true" DevelopmentDependency="false" />
   </ItemGroup>
 </Project>
