@@ -21,6 +21,7 @@
     <PackageReference Include="Whipstaff.Couchbase" Version="8.0.26" />
     <PackageReference Include="Whipstaff.EntityFramework" Version="8.0.26" />
     <PackageReference Include="Whipstaff.Entityframework.Relational" Version="8.0.26" />
+    <PackageReference Include="Whipstaff.MediatR" Version="8.0.26" />
     <PackageReference Include="Whipstaff.MediatR.EntityFrameworkCore" Version="8.0.26" />
     <PackageReference Include="Whipstaff.MediatR.Foundatio" Version="8.0.26" />
     <PackageReference Include="Whipstaff.MsSql" Version="8.0.26" />
