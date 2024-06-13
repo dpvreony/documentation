@@ -9,17 +9,18 @@ This project has the following objectives
 
 ## High Level Design
 
-There are essentially 3 types of content that need to flow into the system.
+There are essentially 4 types of content that need to flow into the system.
 
 ```mermaid
 flowchart TD
     A[Rosyln Analyzers] --> D[DocFx]
     B[Xml Doc] --> D
     C[Articles and Diagrams] --> D
+    E[Application Instructions] --> D
 ```
 
 * .NET XML Documentation is supported natively in DocFX.
-* Mermaid Diagrams are not natively supported, but we have created a Nuget package to extend DocFX.
+* Mermaid Diagrams are generated per site visit by the default DocFX template, but we have created a Nuget package to extend DocFX and generate them at build time.
 * Roslyn Analyzers need custom processing to produce the necessary markdown\ html to be processed by DocFX.
 * The Github Actions CI\CD workflow needs to handle the generation and deployment of all the content.
 
