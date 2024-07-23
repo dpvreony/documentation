@@ -13,7 +13,7 @@
     <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="3.0.1" />
     <PackageReference Include="Dhgms.Nucleotide" Version="3.2.280" />
     <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.280" />
-    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.280" />
+    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.281" />
     <PackageReference Include="NetTestRegimentation" Version="1.7.48" />
     <PackageReference Include="NetTestRegimentation.Moq" Version="1.7.48" />
     <PackageReference Include="NLog.Targets.TextWriter" Version="1.2.0" />
