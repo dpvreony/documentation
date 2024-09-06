@@ -2,6 +2,7 @@
 using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
+using System.Web;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 
@@ -55,15 +56,15 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
             var defaultSeverity = diagnosticDescriptor.DefaultSeverity;
 
             stringBuilder.Append("| [")
-                .Append(diagnosticId)
+                .Append(HttpUtility.HtmlEncode(diagnosticId))
                 .Append("](")
-                .Append(diagnosticId)
+                .Append(HttpUtility.HtmlEncode(diagnosticId))
                 .Append(".md) |")
-                .Append(title)
+                .Append(HttpUtility.HtmlEncode(title))
                 .Append('|')
-                .Append(category)
+                .Append(HttpUtility.HtmlEncode(category))
                 .Append('|')
-                .Append(defaultSeverity)
+                .Append(HttpUtility.HtmlEncode(defaultSeverity))
                 .AppendLine("|");
         }
 
@@ -71,9 +72,9 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
         {
             stringBuilder.AppendLine("<tr>");
             stringBuilder.Append("<th>")
-                .Append(title)
+                .Append(HttpUtility.HtmlEncode(title))
                 .Append("</th><td>")
-                .Append(value)
+                .Append(HttpUtility.HtmlEncode(value))
                 .AppendLine("</td>");
             stringBuilder.AppendLine("</tr>");
         }
