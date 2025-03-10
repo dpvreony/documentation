@@ -14,7 +14,7 @@
     <PackageReference Include="Dhgms.Nucleotide" Version="3.2.326" />
     <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="3.2.326" />
     <PackageReference Include="Dhgms.Nucleotide.Generators" Version="3.2.326" />
-    <PackageReference Include="NetTestRegimentation" Version="1.7.48" />
+    <PackageReference Include="NetTestRegimentation" Version="2.0.4" />
     <PackageReference Include="NetTestRegimentation.Moq" Version="1.7.48" />
     <PackageReference Include="NLog.Targets.TextWriter" Version="1.2.0" />
     <PackageReference Include="Vetuviem.Core" Version="0.10.67" />
