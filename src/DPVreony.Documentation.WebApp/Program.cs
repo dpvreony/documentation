@@ -2,6 +2,8 @@
 // DHGMS Solutions and Contributors licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for full license information.
 
+using System;
+using System.IO;
 using Microsoft.AspNetCore.Builder;
 
 namespace DPVreony.Documentation.WebApp
@@ -19,10 +21,13 @@ namespace DPVreony.Documentation.WebApp
         {
             // WebApplicationFactory.GetHostApplicationBuilder<WebAppStartUp>(args, null).Run();
 
+            // TODO: check where we are running from, or allow Aspire app host to inject the setting.
+            var path = Path.GetFullPath("../docfx_project/_site");
+
             var builder = WebApplication.CreateBuilder(new WebApplicationOptions
             {
-                ContentRootPath = "F:\\github\\dpvreony\\documentation\\src\\docfx_project\\_site",
-                WebRootPath = "F:\\github\\dpvreony\\documentation\\src\\docfx_project\\_site"
+                ContentRootPath = path,
+                WebRootPath = path
             });
 
             var app = builder.Build();
