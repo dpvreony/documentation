@@ -1,9 +1,7 @@
-﻿using System;
+﻿using System.IO.Abstractions;
 using System.Threading.Tasks;
-using Dhgms.DocFx.MermaidJs.Plugin.Markdig;
-using Microsoft.DocAsCode;
-using Microsoft.DocAsCode.Dotnet;
-using Microsoft.DocAsCode.MarkdigEngine.Extensions;
+using docfx_project.CommandLine;
+using Whipstaff.CommandLine.Hosting;
 
 namespace docfx_project
 {
@@ -15,35 +13,22 @@ namespace docfx_project
         /// <summary>
         /// Program entry point.
         /// </summary>
-        /// <returns>Zero for success, non-zero for failure.</returns>
-        public static async Task<int> Main()
+        /// <param name="args">Command line arguments.</param>
+        /// <returns>0 for success, non 0 for failure.</returns>
+        public static Task<int> Main(string[] args)
         {
-            try
-            {
-                // TODO: embed roslyn doc gen
-
-                const string configPath = "docfx.json";
-                await DotnetApiCatalog.GenerateManagedReferenceYamlFiles(configPath).ConfigureAwait(false);
-
-                var options = new BuildOptions
-                {
-                    // Enable MermaidJS markdown extension
-                    ConfigureMarkdig = pipeline => pipeline.UseMermaidJsExtension(new MarkdownContext())
-                };
-
-                await Docset.Build(configPath, options).ConfigureAwait(false);
-
-                // TODO: we need to generate the PDF.
-            }
-#pragma warning disable CA1031
-            catch (Exception ex)
-#pragma warning restore CA1031
-            {
-                Console.Error.WriteLine(ex);
-                return 1;
-            }
-
-            return 0;
+            return HostRunner.RunSimpleCliJob<
+                CommandLineJob,
+                CommandLineArgModel,
+                CommandLineArgModelBinder,
+                CommandLineHandlerFactory>(
+                args,
+                (fileSystem, logger) => new CommandLineJob(
+                    new CommandLineJobLogMessageActionsWrapper(
+                        new CommandLineJobLogMessageActions(),
+                        logger),
+                    fileSystem),
+                new FileSystem());
         }
     }
 }
