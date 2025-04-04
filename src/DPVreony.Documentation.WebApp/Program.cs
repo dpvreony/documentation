@@ -3,7 +3,6 @@
 // See the LICENSE file in the project root for full license information.
 
 using Microsoft.AspNetCore.Builder;
-using Whipstaff.AspNetCore.Features.ApplicationStartup;
 
 namespace DPVreony.Documentation.WebApp
 {
