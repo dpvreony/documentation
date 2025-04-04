@@ -12,11 +12,20 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" Version="9.1.0" />
+    <PackageReference Include="Microsoft.Build" Version="17.6.3" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build.Locator" Version="1.9.1" />
+    <PackageReference Include="NuGet.Configuration" Version="6.13.2" />
+    <PackageReference Include="NuGet.Protocol" Version="6.13.2" />
+    <PackageReference Include="NuGet.Versioning" Version="6.13.2" />
+    <PackageReference Include="Whipstaff.Nuget" Version="8.1.178" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\docfx_project\docfx_project.csproj" />
+    <ProjectReference Include="..\DPVreony.Documentation.AspireServiceDefaults\DPVreony.Documentation.AspireServiceDefaults.csproj" />
+    <ProjectReference Include="..\DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj" />
     <ProjectReference Include="..\DPVreony.Documentation.WebApp\DPVreony.Documentation.WebApp.csproj" />
+    <ProjectReference Include="..\upstream_analyzers\upstream_analyzers.csproj" />
   </ItemGroup>
 
 </Project>

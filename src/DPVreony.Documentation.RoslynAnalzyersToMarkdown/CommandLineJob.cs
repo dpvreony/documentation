@@ -97,6 +97,9 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
                 analyzers.Value,
                 outputDirectory).ConfigureAwait(false);
 
+            _commandLineJobLogMessageActionsWrapper.GenerationComplete(
+                commandLineArgModel.AssemblyPath.FullName,
+                analyzers.Value.Length);
             return 0;
         }
 

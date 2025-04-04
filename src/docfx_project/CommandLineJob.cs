@@ -44,6 +44,8 @@ namespace docfx_project
             // TODO: embed roslyn doc gen
 
             var configPath = commandLineArgModel.DocFxJsonConfigPath.FullName;
+            var workingDirectory = _fileSystem.Path.GetDirectoryName(configPath)!;
+            Environment.CurrentDirectory = workingDirectory;
             await DotnetApiCatalog.GenerateManagedReferenceYamlFiles(configPath).ConfigureAwait(false);
 
             var options = new BuildOptions

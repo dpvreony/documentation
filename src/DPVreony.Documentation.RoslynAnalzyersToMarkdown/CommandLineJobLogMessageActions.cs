@@ -16,6 +16,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
         private readonly Action<ILogger, Exception?> _startingHandleCommand;
         private readonly Action<ILogger, string, Exception?> _failedToLoadAssembly;
         private readonly Action<ILogger, string, Exception?> _failedToFindAnalyzersInAssembly;
+        private readonly Action<ILogger, string, int, Exception?> _generationComplete;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandLineJobLogMessageActions"/> class.
@@ -36,6 +37,11 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
                 LogLevel.Information,
                 JobEventIdFactory.FailedToFindAnalyzersInAssembly(),
                 "Failed to find analyzers in assembly: {AssemblyName}");
+
+            _generationComplete = LoggerMessage.Define<string, int>(
+                LogLevel.Information,
+                JobEventIdFactory.GenerationComplete(),
+                "Generation complete for assembly: {AssemblyName}, Analyzers process: {NumberOfAnalyzersProcessed}");
         }
 
         internal void StartingHandleCommand(ILogger<CommandLineJob> logger)
@@ -52,5 +58,11 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
         {
             _failedToFindAnalyzersInAssembly(logger, assemblyName, null);
         }
+
+        internal void GenerationComplete(ILogger<CommandLineJob> logger, string assemblyName, int numberOfAnalyzersProcessed)
+        {
+            _generationComplete(logger, assemblyName, numberOfAnalyzersProcessed, null);
+        }
+        
     }
 }

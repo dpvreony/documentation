@@ -66,5 +66,18 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
                 Logger,
                 assemblyName);
         }
+
+        /// <summary>
+        /// Log message action for when we failed to find any analyzers in the assembly.
+        /// </summary>
+        /// <param name="assemblyName">The name of the assembly.</param>
+        /// <param name="numberOfAnalyzersProcessed">The number of analyzers processed by the job.</param>
+        public void GenerationComplete(string assemblyName, int numberOfAnalyzersProcessed)
+        {
+            _commandLineJobLogMessageActions.GenerationComplete(
+                Logger,
+                assemblyName,
+                numberOfAnalyzersProcessed);
+        }
     }
 }
