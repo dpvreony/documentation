@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Dhgms.DocFx.MermaidJs.Plugin.Markdig;
-using Microsoft.DocAsCode;
-using Microsoft.DocAsCode.Dotnet;
-using Microsoft.DocAsCode.MarkdigEngine.Extensions;
+using Docfx;
+using Docfx.Dotnet;
+using Docfx.MarkdigEngine.Extensions;
 
 namespace docfx_project
 {
