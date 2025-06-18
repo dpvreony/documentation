@@ -4,6 +4,7 @@ using Dhgms.DocFx.MermaidJs.Plugin.Markdig;
 using Docfx;
 using Docfx.Dotnet;
 using Docfx.MarkdigEngine.Extensions;
+using Whipstaff.Playwright;
 
 namespace docfx_project
 {
@@ -28,7 +29,7 @@ namespace docfx_project
                 var options = new BuildOptions
                 {
                     // Enable MermaidJS markdown extension
-                    ConfigureMarkdig = pipeline => pipeline.UseMermaidJsExtension(new MarkdownContext())
+                    ConfigureMarkdig = pipeline => pipeline.UseMermaidJsExtension(PlaywrightBrowserTypeAndChannel.Chrome())
                 };
 
                 await Docset.Build(configPath, options).ConfigureAwait(false);
