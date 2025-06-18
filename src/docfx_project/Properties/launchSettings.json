@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "docfx_project": {
+      "commandName": "Project",
+      "workingDirectory": "$(ProjectDir)"
+    }
+  }
+}
