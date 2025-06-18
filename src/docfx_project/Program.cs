@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Dhgms.DocFx.MermaidJs.Plugin.Markdig;
 using Docfx;
 using Docfx.Dotnet;
-using Docfx.MarkdigEngine.Extensions;
+using docfx_project.Mermaid;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
+using Whipstaff.Mermaid.HttpServer;
+using Whipstaff.Mermaid.Playwright;
 using Whipstaff.Playwright;
 
 namespace docfx_project
@@ -26,10 +29,22 @@ namespace docfx_project
                 const string configPath = "docfx.json";
                 await DotnetApiCatalog.GenerateManagedReferenceYamlFiles(configPath).ConfigureAwait(false);
 
+                var loggerFactory = new NullLoggerFactory();
+                var mermaidHttpServer = MermaidHttpServerFactory.GetTestServer(loggerFactory);
+                var logMessageActions = new PlaywrightRendererLogMessageActions();
+                var logMessageActionsWrapper = new PlaywrightRendererLogMessageActionsWrapper(
+                    logMessageActions,
+                    loggerFactory.CreateLogger<PlaywrightRenderer>());
+                var playwrightRenderer = new PlaywrightRenderer(
+                    mermaidHttpServer,
+                    logMessageActionsWrapper);
+
+                var browserSession = await playwrightRenderer.GetBrowserSessionAsync(PlaywrightBrowserTypeAndChannel.Chrome());
+
                 var options = new BuildOptions
                 {
                     // Enable MermaidJS markdown extension
-                    ConfigureMarkdig = pipeline => pipeline.UseMermaidJsExtension(PlaywrightBrowserTypeAndChannel.Chrome())
+                    ConfigureMarkdig = pipeline => pipeline.UseMermaidJsExtension(browserSession)
                 };
 
                 await Docset.Build(configPath, options).ConfigureAwait(false);
