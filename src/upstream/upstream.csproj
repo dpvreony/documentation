@@ -17,8 +17,8 @@
     <PackageReference Include="NetTestRegimentation" Version="2.0.8" />
     <PackageReference Include="NetTestRegimentation.Moq" Version="2.0.8" />
     <PackageReference Include="NLog.Targets.TextWriter" Version="1.2.0" />
-    <PackageReference Include="Vetuviem.Core" Version="0.10.88" />
-    <PackageReference Include="Vetuviem.SourceGenerator" Version="0.10.88" />
+    <PackageReference Include="Vetuviem.Core" Version="0.10.102" />
+    <PackageReference Include="Vetuviem.SourceGenerator" Version="0.10.102" />
     <PackageReference Include="Whipstaff.AspNetCore" Version="8.2.105" />
     <PackageReference Include="Whipstaff.Blazor" Version="8.2.105" />
     <PackageReference Include="Whipstaff.Core" Version="8.2.105" />
