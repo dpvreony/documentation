@@ -27,7 +27,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
             }.SpecificFileExtensionOnly(
                 fileSystem,
                 ".dll")
-                .ExistingOnly();
+                .ExistingOnly(fileSystem);
 
             var outputDirectoryOption = new Option<DirectoryInfo>(
                 "--output-directory",
