@@ -6,13 +6,14 @@ using System;
 using System.CommandLine;
 using System.CommandLine.Binding;
 using System.IO;
+using Whipstaff.CommandLine;
 
 namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
 {
     /// <summary>
     /// Binding logic for the command line arguments.
     /// </summary>
-    public sealed class CommandLineArgModelBinder : BinderBase<CommandLineArgModel>
+    public sealed class CommandLineArgModelBinder : IBinderBase<CommandLineArgModel>
     {
         private readonly Option<FileInfo> _assemblyOption;
         private readonly Option<DirectoryInfo> _outputDirectoryOption;
@@ -39,18 +40,18 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
         }
 
         /// <inheritdoc/>
-        protected override CommandLineArgModel GetBoundValue(BindingContext bindingContext)
+        public CommandLineArgModel GetBoundValue(ParseResult parseResult)
         {
-            ArgumentNullException.ThrowIfNull(bindingContext);
+            ArgumentNullException.ThrowIfNull(parseResult);
 
-            var assembly = bindingContext.ParseResult.GetValueForOption(_assemblyOption);
-            var outputDirectory = bindingContext.ParseResult.GetValueForOption(_outputDirectoryOption);
-            var outputFilePerAnalyzer = bindingContext.ParseResult.GetValueForOption(_outputFilePerAnalyzerOption);
+            var assembly = parseResult.GetRequiredValue(_assemblyOption);
+            var outputDirectory = parseResult.GetRequiredValue(_outputDirectoryOption);
+            var outputFilePerAnalyzer = parseResult.GetRequiredValue(_outputFilePerAnalyzerOption);
 
             return new CommandLineArgModel(
-                assembly!,
-                outputDirectory!,
-                outputFilePerAnalyzer!);
+                assembly,
+                outputDirectory,
+                outputFilePerAnalyzer);
         }
     }
 }
