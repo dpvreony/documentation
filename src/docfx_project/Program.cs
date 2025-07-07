@@ -4,6 +4,8 @@ using Dhgms.DocFx.MermaidJs.Plugin.Markdig;
 using Microsoft.DocAsCode;
 using Microsoft.DocAsCode.Dotnet;
 using Microsoft.DocAsCode.MarkdigEngine.Extensions;
+using Microsoft.Extensions.Logging.Abstractions;
+using Whipstaff.Markdig.Settings;
 using Whipstaff.Playwright;
 
 namespace docfx_project
@@ -22,14 +24,16 @@ namespace docfx_project
             try
             {
                 // TODO: embed roslyn doc gen
-
                 const string configPath = "docfx.json";
                 await DotnetApiCatalog.GenerateManagedReferenceYamlFiles(configPath).ConfigureAwait(false);
+
+                var settings =
+                    new MarkdownJsExtensionSettings(PlaywrightBrowserTypeAndChannel.Chrome(), OutputMode.Png);
 
                 var options = new BuildOptions
                 {
                     // Enable MermaidJS markdown extension
-                    ConfigureMarkdig = pipeline => pipeline.UseMermaidJsExtension(PlaywrightBrowserTypeAndChannel.Chrome())
+                    ConfigureMarkdig = pipeline => pipeline.UseMermaidJsExtension(settings, new NullLoggerFactory())
                 };
 
                 await Docset.Build(configPath, options).ConfigureAwait(false);
