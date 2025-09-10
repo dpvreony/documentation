@@ -20,7 +20,7 @@ jobs:
       solutionpath: src\\DPVreony.documentation.sln
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         fetch-depth: 0
 
@@ -31,7 +31,7 @@ jobs:
       run: echo 'Head Ref Context is ${{ github.head_ref }}'
 
     - name: Install .NET 8
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: 8.0.x
 
@@ -112,7 +112,7 @@ jobs:
         path: artifacts/binlog
         
     - name: store docfx
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v4
       with:
         path: src/docfx_project/_site
         
