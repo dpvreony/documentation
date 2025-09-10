@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="4.0.1" />
+    <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="4.0.25" />
     <PackageReference Include="Dhgms.Nucleotide" Version="4.0.9" />
     <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="4.0.9" />
     <PackageReference Include="Dhgms.Nucleotide.Generators" Version="4.0.9" />
