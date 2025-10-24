@@ -106,7 +106,7 @@ jobs:
     # only store binlog on failure      
     - name: store binlogs
       if: ${{ failure() }}
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: binlogs
         path: artifacts/binlog
@@ -117,7 +117,7 @@ jobs:
         path: src/docfx_project/_site
         
     - name: store outdated
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       with:
         name: outdated
         path: artifacts/outdated
