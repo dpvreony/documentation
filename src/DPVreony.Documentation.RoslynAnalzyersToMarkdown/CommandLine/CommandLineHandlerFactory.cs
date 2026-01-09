@@ -19,36 +19,30 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.CommandLine
         {
 #pragma warning disable CA1861 // Avoid constant arrays as arguments
             var assemblyOption = new Option<FileInfo>(
-                [
                     "--assembly-path",
-                    "-a"
-                ],
-                "Path to the assembly containing the Roslyn Analyzers")
+                    "-a")
             {
-                IsRequired = true
+                Description = "Path to the assembly containing the Roslyn Analyzers",
+                Required = true
             }.SpecificFileExtensionOnly(
                 fileSystem,
                 ".dll")
-                .ExistingOnly();
+                .ExistingOnly(fileSystem);
 
             var outputDirectoryOption = new Option<DirectoryInfo>(
-                [
-                    "--output-directory",
-                    "-o"
-                ],
-                "Path to the output directory")
+                "--output-directory",
+                "-o")
             {
-                IsRequired = true
+                Description = "Path to the output directory",
+                Required = true
             };
 
             var outputFilePerAnalyzerOption = new Option<bool>(
-                [
-                    "--output-file-per-analyzer",
-                    "-ofpn"
-                ],
-                "Whether to output each analyzer to a separate markdown file.")
+                "--output-file-per-analyzer",
+                "-ofpn")
             {
-                IsRequired = true
+                Description = "Whether to output each analyzer to a separate markdown file.",
+                Required = true
             };
 #pragma warning restore CA1861 // Avoid constant arrays as arguments
 

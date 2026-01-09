@@ -9,7 +9,7 @@
       ]
     },
     "dotmorten.omdgenerator": {
-      "version": "1.4.0",
+      "version": "1.5.2",
       "commands": [
         "generateomd"
       ]
@@ -21,25 +21,25 @@
       ]
     },
     "dotnet-sonarscanner": {
-      "version": "6.2.0",
+      "version": "11.0.0",
       "commands": [
         "dotnet-sonarscanner"
       ]
     },
     "jetbrains.resharper.globaltools": {
-      "version": "2024.1.4",
+      "version": "2025.3.1",
       "commands": [
         "jb"
       ]
     },
     "dotnet-outdated-tool": {
-      "version": "4.6.4",
+      "version": "4.6.9",
       "commands": [
         "dotnet-outdated"
       ]
     },
     "microsoft.cst.applicationinspector.cli": {
-      "version": "1.9.22",
+      "version": "1.9.53",
       "commands": [
         "appinspector"
       ]
@@ -51,13 +51,13 @@
       ]
     },
     "docfx": {
-      "version": "2.77.0",
+      "version": "2.78.4",
       "commands": [
         "docfx"
       ]
     },
     "doclinkchecker": {
-      "version": "1.19.0",
+      "version": "1.39.0",
       "commands": [
         "DocLinkChecker"
       ]
