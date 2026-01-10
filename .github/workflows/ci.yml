@@ -20,9 +20,34 @@ jobs:
       solutionpath: src\\DPVreony.documentation.sln
     steps:
     - name: Checkout code
-      uses: actions/checkout@v6
+      uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
       with:
+        path: a
         fetch-depth: 0
+
+    - name: Checkout dpvreony/github-action-workflow
+      uses: actions/checkout@c2d88d3ecc89a9ef08eebf45d9637801dcee7eb5
+      with:
+        repository: dpvreony/nettestregimentation
+        path: nettestregimentation
+
+    - name: Checkout dpvreony/github-action-workflow
+      uses: actions/checkout@c2d88d3ecc89a9ef08eebf45d9637801dcee7eb5
+      with:
+        repository: dpvreony/nucleotide
+        path: nucleotide
+
+    - name: Checkout dpvreony/github-action-workflow
+      uses: actions/checkout@c2d88d3ecc89a9ef08eebf45d9637801dcee7eb5
+      with:
+        repository: dpvreony/vetuviem
+        path: vetuviem
+
+    - name: Checkout dpvreony/github-action-workflow
+      uses: actions/checkout@c2d88d3ecc89a9ef08eebf45d9637801dcee7eb5
+      with:
+        repository: dpvreony/whipstaff
+        path: whipstaff
 
     - name: Verify the ref context
       run: echo 'Ref Context is ${{ github.ref }}'
