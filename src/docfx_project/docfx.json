@@ -1,17 +1,32 @@
 {
   "metadata": [
     {
-      "src": [
-        {
-            "files": [
-                "**/**/Dhgms.*.dll",
-                "**/**/NetTestRegimentation.*.dll",
-                "**/**/Vetuviem.*.dll",
-                "**/**/Whipstaff.*.dll"
-            ],
-          "src": "../upstream/bin/"
-        }
-      ],
+        "src": [
+            {
+                "files": [
+                    "Whipstaff.sln"
+                ],
+                "src": "../../../whipstaff/src/"
+            },
+            {
+                "files": [
+                    "NetTestRegimentation.sln"
+                ],
+                "src": "../../../NetTestRegimentation/src/"
+            },
+            {
+                "files": [
+                    "Dhgms.Nucleotide.sln"
+                ],
+                "src": "../../../nucleotide/src/"
+            },
+            {
+                "files": [
+                    "Vetuviem.sln"
+                ],
+                "src": "../../../vetuviem/src/"
+            }
+        ],
       "dest": "obj/api",
       "disableGitFeatures": false,
       "disableDefaultFilter": false
