@@ -31,7 +31,6 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown.MarkdownGeneration
 
         public static void GenerateTableOfContentTable(ImmutableArray<DiagnosticAnalyzer> diagnosticAnalyzers, StringBuilder stringBuilder)
         {
-            ArgumentNullException.ThrowIfNull(diagnosticAnalyzers);
             ArgumentNullException.ThrowIfNull(stringBuilder);
 
             stringBuilder.AppendLine("| Id | Title | Category | Default Severity |");

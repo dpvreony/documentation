@@ -52,7 +52,7 @@ namespace DPVreony.Documentation.RoslynAnalzyersToMarkdown
         }
 
         /// <inheritdoc/>
-        public async Task<int> HandleCommand(
+        public async Task<int> HandleCommandAsync(
             CommandLineArgModel commandLineArgModel,
             CancellationToken cancellationToken)
         {
