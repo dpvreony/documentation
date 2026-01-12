@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    types: [opened, synchronize, reopened, closed]
+    types: [opened, synchronize, reopened]
     branches: [ main ]
 
 jobs:
@@ -60,9 +60,6 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
-    - name: Add MSBuild to PATH
-      uses: microsoft/setup-msbuild@v2.0.0
-
     # This mitigates an issue with websdk projects loading analyzers from old packages.
     - name: Cleanup nuget local storage
       run: dotnet nuget locals all --clear
@@ -71,12 +68,14 @@ jobs:
       run: dotnet tool restore
 
     - name: Restore Packages
+      shell: pwsh
+      working-directory: a/src
       run: |
-        dotnet restore ${{ env.solutionpath }} /bl:artifacts\\binlog\\restore.binlog
+        dotnet restore ${{ env.solutionpath }} /bl:${{ github.workspace }}/artifacts/binlog/restore.binlog
 
     - name: Download roslyn analyzer nuget packages
       run: |
-        $packageReferences = (Select-Xml -Path "src\upstream_analyzers\upstream_analyzers.csproj" -XPath 'Project/ItemGroup/PackageReference')
+        $packageReferences = (Select-Xml -Path "a\src\upstream_analyzers\upstream_analyzers.csproj" -XPath 'Project/ItemGroup/PackageReference')
         New-Item -ItemType Directory -Force -Path 'downloads\nuget'
         foreach ($pr in $packageReferences)
         {
@@ -97,17 +96,17 @@ jobs:
     - name: Run Build
       run: |
         msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true /verbosity:minimal
-      working-directory: src
+      working-directory: a/src
 
     - name: Publish roslyn analyzer doc gen
       run: |
         dotnet publish DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj --no-build --configuration release --output "..\artifacts\cmd\rosan2md"
-      working-directory: src
+      working-directory: a/src
 
     - name: Publish docfx gen
       run: |
         dotnet publish docfx_project\docfx_project.csproj --no-build --configuration release --output "..\artifacts\cmd\docfx_project" --verbosity detailed
-      working-directory: src
+      working-directory: a/src
 
     - name: Generate gripe analzyer documentation
       run: |
@@ -121,12 +120,12 @@ jobs:
     - name: Generate documentation site
       run: |
         ..\..\artifacts\cmd\docfx_project\docfx_project.exe
-      working-directory: src\docfx_project
+      working-directory: a\src\docfx_project
 
     - name: Check document links
       run: |
         dotnet doclinkchecker -- -d docfx_project -f docfx_project\docfx-companion-tools.json -v
-      working-directory: src
+      working-directory: a\src
 
     # only store binlog on failure      
     - name: store binlogs
