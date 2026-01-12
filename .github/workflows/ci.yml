@@ -17,7 +17,7 @@ jobs:
       DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
       DOTNET_NOLOGO: true
       DOTNET_GENERATE_ASPNET_CERTIFICATE: false
-      solutionpath: a\\src\\DPVreony.documentation.sln
+      solutionpath: DPVreony.documentation.sln
     steps:
     - name: Checkout code
       uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
@@ -55,10 +55,10 @@ jobs:
     - name: Verify the head ref context
       run: echo 'Head Ref Context is ${{ github.head_ref }}'
 
-    - name: Install .NET 8
+    - name: Install .NET
       uses: actions/setup-dotnet@v5
       with:
-        dotnet-version: 8.0.x
+        global-json-file: "a/global.json"
 
     # This mitigates an issue with websdk projects loading analyzers from old packages.
     - name: Cleanup nuget local storage
@@ -71,7 +71,7 @@ jobs:
       shell: pwsh
       working-directory: a/src
       run: |
-        dotnet restore ${{ env.solutionpath }} /bl:${{ github.workspace }}/artifacts/binlog/restore.binlog
+        dotnet restore "${{ env.solutionpath }}" /bl:${{ github.workspace }}/artifacts/binlog/restore.binlog
 
     - name: Download roslyn analyzer nuget packages
       run: |
@@ -94,9 +94,14 @@ jobs:
         }
 
     - name: Run Build
-      run: |
-        msbuild /t:build /p:Configuration=Release /maxcpucount /bl:artifacts\\binlog\\build.binlog /p:ContinuousIntegrationBuild=true /verbosity:minimal
+      id: run-build
+      shell: pwsh
       working-directory: a/src
+      run: |
+        $env:CHANGE_COMMIT_LOG = @'
+        ${{ steps.changelog.outputs.commitLog }}
+        '@
+        dotnet build "${{ env.solutionpath }}" --configuration Release --no-restore /bl:${{ github.workspace }}/artifacts/binlog/build.binlog /p:ContinuousIntegrationBuild=true
 
     - name: Publish roslyn analyzer doc gen
       run: |
@@ -111,11 +116,6 @@ jobs:
     - name: Generate gripe analzyer documentation
       run: |
         dotnet artifacts\cmd\rosan2md\dpvdocs-rosan2md.dll -a "downloads\nuget\dhgms.gripewithroslyn.analyzer\analyzers\dotnet\cs\dhgms.gripewithroslyn.analyzer.dll" -o "src\docfx_project\obj\gripe" --output-file-per-analyzer
-
-    - name: Install playwright
-      run: |
-        .\playwright.ps1 install
-      working-directory: artifacts\cmd\docfx_project
 
     - name: Generate documentation site
       run: |
