@@ -17,7 +17,7 @@ jobs:
       DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
       DOTNET_NOLOGO: true
       DOTNET_GENERATE_ASPNET_CERTIFICATE: false
-      solutionpath: src\\DPVreony.documentation.sln
+      solutionpath: a\\src\\DPVreony.documentation.sln
     steps:
     - name: Checkout code
       uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6
