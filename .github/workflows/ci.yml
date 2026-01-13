@@ -105,21 +105,21 @@ jobs:
 
     - name: Publish roslyn analyzer doc gen
       run: |
-        dotnet publish DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj --no-build --configuration release --output "..\artifacts\cmd\rosan2md"
+        dotnet publish DPVreony.Documentation.RoslynAnalzyersToMarkdown\DPVreony.Documentation.RoslynAnalzyersToMarkdown.csproj --no-build --configuration release --output "${{ github.workspace }}\artifacts\cmd\rosan2md"
       working-directory: a/src
 
     - name: Publish docfx gen
       run: |
-        dotnet publish docfx_project\docfx_project.csproj --no-build --configuration release --output "..\..\artifacts\cmd\docfx_project" --verbosity detailed
+        dotnet publish docfx_project\docfx_project.csproj --no-build --configuration release --output "${{ github.workspace }}\artifacts\cmd\docfx_project" --verbosity detailed
       working-directory: a/src
 
     - name: Generate gripe analzyer documentation
       run: |
-        dotnet artifacts\cmd\rosan2md\dpvdocs-rosan2md.dll -a "downloads\nuget\dhgms.gripewithroslyn.analyzer\analyzers\dotnet\cs\dhgms.gripewithroslyn.analyzer.dll" -o "a\src\docfx_project\obj\gripe" --output-file-per-analyzer
+        dotnet "${{ github.workspace }}\artifacts\cmd\rosan2md\dpvdocs-rosan2md.dll" -a "downloads\nuget\dhgms.gripewithroslyn.analyzer\analyzers\dotnet\cs\dhgms.gripewithroslyn.analyzer.dll" -o "a\src\docfx_project\obj\gripe" --output-file-per-analyzer
 
     - name: Generate documentation site
       run: |
-        ..\..\artifacts\cmd\docfx_project\docfx_project.exe
+        ${{ github.workspace }}\artifacts\cmd\docfx_project\docfx_project.exe
       working-directory: a\src\docfx_project
 
     - name: Check document links
