@@ -26,9 +26,9 @@
     <PackageReference Include="NuGet.Packaging" Version="7.0.1" />
     <PackageReference Include="NuGet.ProjectModel" Version="7.0.1" />
     <PackageReference Include="NuGet.Protocol" Version="7.0.1" />
-    <PackageReference Include="Whipstaff.CommandLine" Version="9.0.7" />
-    <PackageReference Include="Whipstaff.Core" Version="9.0.7" />
-    <PackageReference Include="Whipstaff.Nuget" Version="9.0.7" />
+    <PackageReference Include="Whipstaff.CommandLine" Version="9.0.41" />
+    <PackageReference Include="Whipstaff.Core" Version="9.0.41" />
+    <PackageReference Include="Whipstaff.Nuget" Version="9.0.41" />
   </ItemGroup>
 
 </Project>
