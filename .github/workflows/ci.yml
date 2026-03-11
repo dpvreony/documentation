@@ -30,11 +30,11 @@ jobs:
     - name: Verify the head ref context
       run: echo 'Head Ref Context is ${{ github.head_ref }}'
 
-    - name: Install .NET 8
+    - name: Install .NET
       uses: actions/setup-dotnet@v5
       with:
-        dotnet-version: 8.0.x
-
+        global-json-file: "global.json"
+        
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v2.0.0
 
