@@ -74,7 +74,7 @@ jobs:
       shell: pwsh
       working-directory: a/src
       run: |
-        dotnet build "${{ env.solutionpath }}" --configuration Release --no-restore /bl:${{ github.workspace }}/artifacts/binlog/build.binlog /p:ContinuousIntegrationBuild=true "/p:SyncfusionLicense={inputs.syncFusionLicense}"
+        dotnet build ${{ env.solutionpath }} --configuration Release --no-restore /bl:${{ github.workspace }}/artifacts/binlog/build.binlog /p:ContinuousIntegrationBuild=true "/p:SyncfusionLicense={inputs.syncFusionLicense}"
 
     - name: Publish roslyn analyzer doc gen
       run: |
