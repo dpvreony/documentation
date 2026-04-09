@@ -76,7 +76,7 @@ jobs:
       id: run-build
       shell: pwsh
       run: |
-        dotnet build ${{ env.solutionpath }} --configuration Release --no-restore /bl:${{ github.workspace }}/artifacts/binlog/build.binlog /p:ContinuousIntegrationBuild=true "/p:SyncfusionLicense={inputs.syncFusionLicense}"
+        dotnet build ${{ env.SOLUTION_PATH }} --configuration Release --no-restore /bl:${{ github.workspace }}/artifacts/binlog/build.binlog /p:ContinuousIntegrationBuild=true "/p:SyncfusionLicense={inputs.syncFusionLicense}"
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
