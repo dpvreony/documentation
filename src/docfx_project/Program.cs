@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Dhgms.DocFx.MermaidJs.Plugin.Markdig;
-using Microsoft.DocAsCode;
-using Microsoft.DocAsCode.Dotnet;
-using Microsoft.DocAsCode.MarkdigEngine.Extensions;
+using Docfx;
+using Docfx.Dotnet;
+using Whipstaff.Markdig.Settings;
+using Whipstaff.Mermaid.Playwright;
+using Whipstaff.Playwright;
 
 namespace docfx_project
 {
@@ -20,18 +22,32 @@ namespace docfx_project
         {
             try
             {
-                // TODO: embed roslyn doc gen
+                // TODO: embed roslyn doc gen - this is blocked by docfx #10969
 
                 const string configPath = "docfx.json";
                 await DotnetApiCatalog.GenerateManagedReferenceYamlFiles(configPath).ConfigureAwait(false);
 
-                var options = new BuildOptions
+                using (var loggerFactory = new Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory())
                 {
-                    // Enable MermaidJS markdown extension
-                    ConfigureMarkdig = pipeline => pipeline.UseMermaidJsExtension(new MarkdownContext())
-                };
+                    var playwrightRenderer = PlaywrightRenderer.Default(loggerFactory);
+                    var browserSession = await playwrightRenderer.GetBrowserSessionAsync(PlaywrightBrowserTypeAndChannel.Chrome())
+                        .ConfigureAwait(false);
 
-                await Docset.Build(configPath, options).ConfigureAwait(false);
+                    var markdownJsExtensionSettings = new MarkdownJsExtensionSettings(
+                        browserSession,
+                        OutputMode.Svg);
+
+                    var options = new BuildOptions
+                    {
+                        // Enable MermaidJS markdown extension
+                        ConfigureMarkdig = pipeline => pipeline.UseMermaidJsExtension(
+                            markdownJsExtensionSettings,
+                            loggerFactory)
+                    };
+
+                    await Docset.Build("docfx.json", options);
+                    await Docset.Pdf("docfx.json", options);
+                }
 
                 // TODO: we need to generate the PDF.
             }
