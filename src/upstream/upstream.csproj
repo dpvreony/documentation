@@ -10,9 +10,9 @@
 
   <ItemGroup>
     <PackageReference Include="Dhgms.DocFx.MermaidJs.Plugin" Version="5.0.61" />
-    <PackageReference Include="Dhgms.Nucleotide" Version="5.0.5" />
-    <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="5.0.5" />
-    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="5.0.5" />
+    <PackageReference Include="Dhgms.Nucleotide" Version="5.0.83" />
+    <PackageReference Include="Dhgms.Nucleotide.Analyzers" Version="5.0.83" />
+    <PackageReference Include="Dhgms.Nucleotide.Generators" Version="5.0.83" />
     <PackageReference Include="NetTestRegimentation" Version="2.0.114" />
     <PackageReference Include="NetTestRegimentation.Moq" Version="2.0.8" />
     <PackageReference Include="NLog.Targets.TextWriter" Version="1.2.0" />
