@@ -50,12 +50,6 @@
         "dotnet-project-licenses"
       ]
     },
-    "docfx": {
-      "version": "2.78.5",
-      "commands": [
-        "docfx"
-      ]
-    },
     "doclinkchecker": {
       "version": "2.0.0",
       "commands": [
